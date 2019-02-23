@@ -1,0 +1,743 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A142F96922138D03006A2A17 /* SavedGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142F96822138D02006A2A17 /* SavedGameViewController.swift */; };
+		A142F96A22138D03006A2A17 /* SavedGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142F96822138D02006A2A17 /* SavedGameViewController.swift */; };
+		A15BF74B21FCF7E3005F4B74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15BF74A21FCF7E3005F4B74 /* Main.storyboard */; };
+		A15BF75821FD02A0005F4B74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75721FD02A0005F4B74 /* AppDelegate.m */; };
+		A15BF75E21FD0604005F4B74 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75D21FD0604005F4B74 /* MainMenuViewController.swift */; };
+		A15BF76021FD0819005F4B74 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75F21FD0819005F4B74 /* GameViewController.swift */; };
+		A16571B9220B9FD900FE9FC9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16571B8220B9FD900FE9FC9 /* OptionsViewController.swift */; };
+		A1B80A4721F96DAA00560711 /* DOOM3LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B80A0221F438C200560711 /* DOOM3LaunchScreen.storyboard */; };
+		A1B80AD121F96DAA00560711 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13B68A421D54D3B00AA2472 /* Metal.framework */; };
+		A1B80AD221F96DAA00560711 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A131F34C21D530B500B4BB5D /* libSDL2.a */; };
+		A1B80AD321F96DAA00560711 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A131F33921D52FA700B4BB5D /* AVFoundation.framework */; };
+		A1B80AD421F96DAA00560711 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE0E9641BAF967F0098DFA4 /* GameController.framework */; };
+		A1B80AD521F96DAA00560711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		A1B80AD621F96DAA00560711 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		A1B80AD721F96DAA00560711 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		A1B80AD821F96DAA00560711 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		A1B80AD921F96DAA00560711 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD779EDD0E26BA1200F39101 /* CoreAudio.framework */; };
+		A1B80ADA21F96DAA00560711 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD77A0840E26BDB800F39101 /* AudioToolbox.framework */; };
+		A1B80ADB21F96DAA00560711 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB8BFC50E5A0F6A00980157 /* CoreGraphics.framework */; };
+		A1B80ADC21F96DAA00560711 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8B4B96196703B400F8EB7C /* CoreMotion.framework */; };
+		A1B80AF421F98E6500560711 /* DOOM3-iOS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B80AF121F98E6400560711 /* DOOM3-iOS.xcassets */; };
+		A1B80B0521FA5BF200560711 /* DOOM3-tvOS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B80B0421FA5BF200560711 /* DOOM3-tvOS.xcassets */; };
+		A1B80B0E21FA5C9400560711 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A131F34E21D530B500B4BB5D /* libSDL2.a */; };
+		A1B80B1921FA5D0500560711 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B0F21FA5D0500560711 /* CoreAudio.framework */; };
+		A1B80B1A21FA5D0500560711 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1021FA5D0500560711 /* QuartzCore.framework */; };
+		A1B80B1B21FA5D0500560711 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1121FA5D0500560711 /* AudioToolbox.framework */; };
+		A1B80B1C21FA5D0500560711 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1221FA5D0500560711 /* UIKit.framework */; };
+		A1B80B1D21FA5D0500560711 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1321FA5D0500560711 /* AVFoundation.framework */; };
+		A1B80B1E21FA5D0500560711 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1421FA5D0500560711 /* Metal.framework */; };
+		A1B80B1F21FA5D0500560711 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1521FA5D0500560711 /* CoreGraphics.framework */; };
+		A1B80B2021FA5D0500560711 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1621FA5D0500560711 /* GameController.framework */; };
+		A1B80B2121FA5D0500560711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1721FA5D0500560711 /* Foundation.framework */; };
+		A1B80B2221FA5D0500560711 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1821FA5D0500560711 /* OpenGLES.framework */; };
+		A1C1205421FD178100EAD9CB /* dpquake.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1C1204E21FD178100EAD9CB /* dpquake.ttf */; };
+		A1C1205521FD178100EAD9CB /* dpquake.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1C1204E21FD178100EAD9CB /* dpquake.ttf */; };
+		A1C1205721FE821900EAD9CB /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1205621FE821900EAD9CB /* JoyStickView.swift */; };
+		A1C1206021FE840D00EAD9CB /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1205F21FE840C00EAD9CB /* CoreGraphics+Additions.swift */; };
+		A1C120632200C27B00EAD9CB /* SDL_uikitviewcontroller+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1206121FFC92400EAD9CB /* SDL_uikitviewcontroller+Additions.swift */; };
+		A1C1206722026DED00EAD9CB /* DifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1206622026DED00EAD9CB /* DifficultyViewController.swift */; };
+		A1C1206822026DED00EAD9CB /* DifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1206622026DED00EAD9CB /* DifficultyViewController.swift */; };
+		A1C124FE2204F3D200EAD9CB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75F21FD0819005F4B74 /* GameViewController.swift */; };
+		A1C124FF2204F3D700EAD9CB /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75D21FD0604005F4B74 /* MainMenuViewController.swift */; };
+		A1C125002204F4C900EAD9CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75721FD02A0005F4B74 /* AppDelegate.m */; };
+		A1C125052204F73000EAD9CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C125042204F73000EAD9CB /* Main.storyboard */; };
+		A1C1267D220908DF00EAD9CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1267C220908DF00EAD9CB /* Extensions.swift */; };
+		A1C1267E220908DF00EAD9CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1267C220908DF00EAD9CB /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A131F34B21D530B500B4BB5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A131F34321D530B500B4BB5D /* SDL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD6526630DE8FCCB002AD96B;
+			remoteInfo = "libSDL-iOS";
+		};
+		A131F34D21D530B500B4BB5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A131F34321D530B500B4BB5D /* SDL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FAB598141BB5C1B100BE72C5;
+			remoteInfo = "libSDL-tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8D1107310486CEB800E47090 /* DOOM3-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DOOM3-Info.plist"; sourceTree = "<group>"; };
+		A131F33921D52FA700B4BB5D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A131F34321D530B500B4BB5D /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = SDL/SDL.xcodeproj; sourceTree = "<group>"; };
+		A13B68A421D54D3B00AA2472 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		A142F96822138D02006A2A17 /* SavedGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedGameViewController.swift; sourceTree = "<group>"; };
+		A15BF74A21FCF7E3005F4B74 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A15BF75721FD02A0005F4B74 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A15BF75921FD02AD005F4B74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A15BF75A21FD05C8005F4B74 /* bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridging.h; sourceTree = "<group>"; };
+		A15BF75D21FD0604005F4B74 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		A15BF75F21FD0819005F4B74 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A16571B8220B9FD900FE9FC9 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		A1B80A0221F438C200560711 /* DOOM3LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DOOM3LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A1B80AE021F96DAA00560711 /* DOOM3-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DOOM3-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B80AF121F98E6400560711 /* DOOM3-iOS.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "DOOM3-iOS.xcassets"; sourceTree = "<group>"; };
+		A1B80AF921FA5BEE00560711 /* DOOM3-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DOOM3-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B80B0421FA5BF200560711 /* DOOM3-tvOS.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "DOOM3-tvOS.xcassets"; sourceTree = "<group>"; };
+		A1B80B0621FA5BF200560711 /* DOOM3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DOOM3-Info.plist"; sourceTree = "<group>"; };
+		A1B80B0F21FA5D0500560711 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
+		A1B80B1021FA5D0500560711 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A1B80B1121FA5D0500560711 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		A1B80B1221FA5D0500560711 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A1B80B1321FA5D0500560711 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		A1B80B1421FA5D0500560711 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
+		A1B80B1521FA5D0500560711 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		A1B80B1621FA5D0500560711 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
+		A1B80B1721FA5D0500560711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A1B80B1821FA5D0500560711 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		A1C1204E21FD178100EAD9CB /* dpquake.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dpquake.ttf; sourceTree = "<group>"; };
+		A1C1205621FE821900EAD9CB /* JoyStickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyStickView.swift; sourceTree = "<group>"; };
+		A1C1205F21FE840C00EAD9CB /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
+		A1C1206121FFC92400EAD9CB /* SDL_uikitviewcontroller+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SDL_uikitviewcontroller+Additions.swift"; sourceTree = "<group>"; };
+		A1C1206622026DED00EAD9CB /* DifficultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewController.swift; sourceTree = "<group>"; };
+		A1C125042204F73000EAD9CB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A1C1267C220908DF00EAD9CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FA8B4B96196703B400F8EB7C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		FAE0E9641BAF967F0098DFA4 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		FD779EDD0E26BA1200F39101 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		FD77A0840E26BDB800F39101 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FDB8BFC50E5A0F6A00980157 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1B80AD021F96DAA00560711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B80AD121F96DAA00560711 /* Metal.framework in Frameworks */,
+				A1B80AD221F96DAA00560711 /* libSDL2.a in Frameworks */,
+				A1B80AD321F96DAA00560711 /* AVFoundation.framework in Frameworks */,
+				A1B80AD421F96DAA00560711 /* GameController.framework in Frameworks */,
+				A1B80AD521F96DAA00560711 /* Foundation.framework in Frameworks */,
+				A1B80AD621F96DAA00560711 /* UIKit.framework in Frameworks */,
+				A1B80AD721F96DAA00560711 /* OpenGLES.framework in Frameworks */,
+				A1B80AD821F96DAA00560711 /* QuartzCore.framework in Frameworks */,
+				A1B80AD921F96DAA00560711 /* CoreAudio.framework in Frameworks */,
+				A1B80ADA21F96DAA00560711 /* AudioToolbox.framework in Frameworks */,
+				A1B80ADB21F96DAA00560711 /* CoreGraphics.framework in Frameworks */,
+				A1B80ADC21F96DAA00560711 /* CoreMotion.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B80AF621FA5BEE00560711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B80B1921FA5D0500560711 /* CoreAudio.framework in Frameworks */,
+				A1B80B1A21FA5D0500560711 /* QuartzCore.framework in Frameworks */,
+				A1B80B1B21FA5D0500560711 /* AudioToolbox.framework in Frameworks */,
+				A1B80B1C21FA5D0500560711 /* UIKit.framework in Frameworks */,
+				A1B80B1D21FA5D0500560711 /* AVFoundation.framework in Frameworks */,
+				A1B80B1E21FA5D0500560711 /* Metal.framework in Frameworks */,
+				A1B80B1F21FA5D0500560711 /* CoreGraphics.framework in Frameworks */,
+				A1B80B2021FA5D0500560711 /* GameController.framework in Frameworks */,
+				A1B80B2121FA5D0500560711 /* Foundation.framework in Frameworks */,
+				A1B80B2221FA5D0500560711 /* OpenGLES.framework in Frameworks */,
+				A1B80B0E21FA5C9400560711 /* libSDL2.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1B80AE021F96DAA00560711 /* DOOM3-iOS.app */,
+				A1B80AF921FA5BEE00560711 /* DOOM3-tvOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				A15BF4D421FCDD7A005F4B74 /* DOOM3 */,
+				A15BF74921FCF773005F4B74 /* DOOM3-iOS */,
+				A1C125012204F5F900EAD9CB /* DOOM3-tvOS */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD77A0840E26BDB800F39101 /* AudioToolbox.framework */,
+				A1B80B1121FA5D0500560711 /* AudioToolbox.framework */,
+				A131F33921D52FA700B4BB5D /* AVFoundation.framework */,
+				A1B80B1321FA5D0500560711 /* AVFoundation.framework */,
+				FD779EDD0E26BA1200F39101 /* CoreAudio.framework */,
+				A1B80B0F21FA5D0500560711 /* CoreAudio.framework */,
+				FDB8BFC50E5A0F6A00980157 /* CoreGraphics.framework */,
+				A1B80B1521FA5D0500560711 /* CoreGraphics.framework */,
+				FA8B4B96196703B400F8EB7C /* CoreMotion.framework */,
+				A1B80B1721FA5D0500560711 /* Foundation.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				A1B80B1621FA5D0500560711 /* GameController.framework */,
+				FAE0E9641BAF967F0098DFA4 /* GameController.framework */,
+				A1B80B1421FA5D0500560711 /* Metal.framework */,
+				A13B68A421D54D3B00AA2472 /* Metal.framework */,
+				A1B80B1821FA5D0500560711 /* OpenGLES.framework */,
+				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
+				A1B80B1021FA5D0500560711 /* QuartzCore.framework */,
+				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
+				A131F34321D530B500B4BB5D /* SDL.xcodeproj */,
+				A1B80B1221FA5D0500560711 /* UIKit.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A131F34421D530B500B4BB5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A131F34C21D530B500B4BB5D /* libSDL2.a */,
+				A131F34E21D530B500B4BB5D /* libSDL2.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A15BF4D421FCDD7A005F4B74 /* DOOM3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DOOM3;
+			sourceTree = "<group>";
+		};
+		A15BF74921FCF773005F4B74 /* DOOM3-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A1C1204E21FD178100EAD9CB /* dpquake.ttf */,
+				A1B80AF121F98E6400560711 /* DOOM3-iOS.xcassets */,
+				A1B80A0221F438C200560711 /* DOOM3LaunchScreen.storyboard */,
+				A15BF75921FD02AD005F4B74 /* AppDelegate.h */,
+				A15BF75721FD02A0005F4B74 /* AppDelegate.m */,
+				A15BF75A21FD05C8005F4B74 /* bridging.h */,
+				A1C1205F21FE840C00EAD9CB /* CoreGraphics+Additions.swift */,
+				A1C1206622026DED00EAD9CB /* DifficultyViewController.swift */,
+				A1C1267C220908DF00EAD9CB /* Extensions.swift */,
+				A15BF75F21FD0819005F4B74 /* GameViewController.swift */,
+				A1C1205621FE821900EAD9CB /* JoyStickView.swift */,
+				A15BF74A21FCF7E3005F4B74 /* Main.storyboard */,
+				A15BF75D21FD0604005F4B74 /* MainMenuViewController.swift */,
+				A16571B8220B9FD900FE9FC9 /* OptionsViewController.swift */,
+				8D1107310486CEB800E47090 /* DOOM3-Info.plist */,
+				A1C1206121FFC92400EAD9CB /* SDL_uikitviewcontroller+Additions.swift */,
+				A142F96822138D02006A2A17 /* SavedGameViewController.swift */,
+			);
+			path = "DOOM3-iOS";
+			sourceTree = "<group>";
+		};
+		A1C125012204F5F900EAD9CB /* DOOM3-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				A1B80B0421FA5BF200560711 /* DOOM3-tvOS.xcassets */,
+				A1C125042204F73000EAD9CB /* Main.storyboard */,
+				A1B80B0621FA5BF200560711 /* DOOM3-Info.plist */,
+			);
+			path = "DOOM3-tvOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1B80A4521F96DAA00560711 /* DOOM3-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B80ADD21F96DAA00560711 /* Build configuration list for PBXNativeTarget "DOOM3-iOS" */;
+			buildPhases = (
+				A1B80A4621F96DAA00560711 /* Resources */,
+				A1B80A4D21F96DAA00560711 /* Sources */,
+				A1B80AD021F96DAA00560711 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DOOM3-iOS";
+			productName = "___PROJECTNAME___";
+			productReference = A1B80AE021F96DAA00560711 /* DOOM3-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1B80AF821FA5BEE00560711 /* DOOM3-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B80B0921FA5BF200560711 /* Build configuration list for PBXNativeTarget "DOOM3-tvOS" */;
+			buildPhases = (
+				A1B80AF521FA5BEE00560711 /* Sources */,
+				A1B80AF621FA5BEE00560711 /* Frameworks */,
+				A1B80AF721FA5BEE00560711 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DOOM3-tvOS";
+			productName = "Quake2-SDL-tvOS-gl3";
+			productReference = A1B80AF921FA5BEE00560711 /* DOOM3-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				TargetAttributes = {
+					A1B80A4521F96DAA00560711 = {
+						DevelopmentTeam = 9UY8SFDNQ8;
+						LastSwiftMigration = 1010;
+					};
+					A1B80AF821FA5BEE00560711 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 9UY8SFDNQ8;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DOOM3-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				Base,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A131F34421D530B500B4BB5D /* Products */;
+					ProjectRef = A131F34321D530B500B4BB5D /* SDL.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A1B80A4521F96DAA00560711 /* DOOM3-iOS */,
+				A1B80AF821FA5BEE00560711 /* DOOM3-tvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A131F34C21D530B500B4BB5D /* libSDL2.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDL2.a;
+			remoteRef = A131F34B21D530B500B4BB5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A131F34E21D530B500B4BB5D /* libSDL2.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDL2.a;
+			remoteRef = A131F34D21D530B500B4BB5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1B80A4621F96DAA00560711 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B80A4721F96DAA00560711 /* DOOM3LaunchScreen.storyboard in Resources */,
+				A15BF74B21FCF7E3005F4B74 /* Main.storyboard in Resources */,
+				A1C1205421FD178100EAD9CB /* dpquake.ttf in Resources */,
+				A1B80AF421F98E6500560711 /* DOOM3-iOS.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B80AF721FA5BEE00560711 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C125052204F73000EAD9CB /* Main.storyboard in Resources */,
+				A1C1205521FD178100EAD9CB /* dpquake.ttf in Resources */,
+				A1B80B0521FA5BF200560711 /* DOOM3-tvOS.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1B80A4D21F96DAA00560711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A15BF75E21FD0604005F4B74 /* MainMenuViewController.swift in Sources */,
+				A1C120632200C27B00EAD9CB /* SDL_uikitviewcontroller+Additions.swift in Sources */,
+				A1C1205721FE821900EAD9CB /* JoyStickView.swift in Sources */,
+				A1C1206722026DED00EAD9CB /* DifficultyViewController.swift in Sources */,
+				A1C1206021FE840D00EAD9CB /* CoreGraphics+Additions.swift in Sources */,
+				A15BF76021FD0819005F4B74 /* GameViewController.swift in Sources */,
+				A15BF75821FD02A0005F4B74 /* AppDelegate.m in Sources */,
+				A16571B9220B9FD900FE9FC9 /* OptionsViewController.swift in Sources */,
+				A1C1267D220908DF00EAD9CB /* Extensions.swift in Sources */,
+				A142F96922138D03006A2A17 /* SavedGameViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B80AF521FA5BEE00560711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A142F96A22138D03006A2A17 /* SavedGameViewController.swift in Sources */,
+				A1C1267E220908DF00EAD9CB /* Extensions.swift in Sources */,
+				A1C124FE2204F3D200EAD9CB /* GameViewController.swift in Sources */,
+				A1C124FF2204F3D700EAD9CB /* MainMenuViewController.swift in Sources */,
+				A1C125002204F4C900EAD9CB /* AppDelegate.m in Sources */,
+				A1C1206822026DED00EAD9CB /* DifficultyViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A1B80ADE21F96DAA00560711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 9UY8SFDNQ8;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					BASEQ2,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SDL/**";
+				INFOPLIST_FILE = "DOOM3-iOS/DOOM3-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.doom3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DOOM3-iOS/bridging.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		A1B80ADF21F96DAA00560711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 9UY8SFDNQ8;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					BASEQ2,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SDL/**";
+				INFOPLIST_FILE = "DOOM3-iOS/DOOM3-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.doom3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DOOM3-iOS/bridging.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		A1B80B0A21FA5BF200560711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = doom3icons;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = doom3LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9UY8SFDNQ8;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					BASEQ2,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SDL/**";
+				INFOPLIST_FILE = "DOOM3-tvOS/DOOM3-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.doom3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "DOOM3-iOS/bridging.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Debug;
+		};
+		A1B80B0B21FA5BF200560711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = doom3icons;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = doom3LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9UY8SFDNQ8;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					BASEQ2,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SDL/**";
+				INFOPLIST_FILE = "DOOM3-tvOS/DOOM3-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.doom3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "DOOM3-iOS/bridging.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					SDL2,
+					"YQ2OSTYPE=\\\"Darwin\\\"",
+					"YQ2ARCH=\\\"x86_64\\\"",
+					IOS,
+					GLES_SILENCE_DEPRECATION,
+					USE_GLES3,
+					"OSTYPE=\\\"Darwin\\\"",
+					"ARCH=\\\"x86_64\\\"",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/SDL/**",
+					"$(PROJECT_DIR)/Quake2/client/refresh/gl3/glad/include",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					SDL2,
+					"YQ2OSTYPE=\\\"Darwin\\\"",
+					"YQ2ARCH=\\\"x86_64\\\"",
+					IOS,
+					GLES_SILENCE_DEPRECATION,
+					USE_GLES3,
+					"OSTYPE=\\\"Darwin\\\"",
+					"ARCH=\\\"x86_64\\\"",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/SDL/**",
+					"$(PROJECT_DIR)/Quake2/client/refresh/gl3/glad/include",
+				);
+				OTHER_CFLAGS = "";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1B80ADD21F96DAA00560711 /* Build configuration list for PBXNativeTarget "DOOM3-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B80ADE21F96DAA00560711 /* Debug */,
+				A1B80ADF21F96DAA00560711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1B80B0921FA5BF200560711 /* Build configuration list for PBXNativeTarget "DOOM3-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B80B0A21FA5BF200560711 /* Debug */,
+				A1B80B0B21FA5BF200560711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DOOM3-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
