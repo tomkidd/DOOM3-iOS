@@ -42,7 +42,11 @@ If you have questions concerning this license or the applicable additional terms
 	#endif
 #endif
 
+#ifdef IOS
+#include <SDL_opengles.h>
+#else
 #include <SDL_opengl.h>
+#endif
 
 #if defined( ID_DEDICATED ) && defined( _WIN32 )
 // restore WINGDIAPI

@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		A142F96922138D03006A2A17 /* SavedGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142F96822138D02006A2A17 /* SavedGameViewController.swift */; };
 		A142F96A22138D03006A2A17 /* SavedGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142F96822138D02006A2A17 /* SavedGameViewController.swift */; };
+		A150EBD82222196D001286CF /* base in Resources */ = {isa = PBXBuildFile; fileRef = A150EBD72222196D001286CF /* base */; };
+		A150EBD92222196D001286CF /* base in Resources */ = {isa = PBXBuildFile; fileRef = A150EBD72222196D001286CF /* base */; };
 		A15BF74B21FCF7E3005F4B74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15BF74A21FCF7E3005F4B74 /* Main.storyboard */; };
 		A15BF75821FD02A0005F4B74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75721FD02A0005F4B74 /* AppDelegate.m */; };
 		A15BF75E21FD0604005F4B74 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75D21FD0604005F4B74 /* MainMenuViewController.swift */; };
 		A15BF76021FD0819005F4B74 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75F21FD0819005F4B74 /* GameViewController.swift */; };
 		A16571B9220B9FD900FE9FC9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16571B8220B9FD900FE9FC9 /* OptionsViewController.swift */; };
-		A1B2AF512221FE9400D94577 /* base in Resources */ = {isa = PBXBuildFile; fileRef = A1B2AF502221FE9400D94577 /* base */; };
-		A1B2AF522221FE9400D94577 /* base in Resources */ = {isa = PBXBuildFile; fileRef = A1B2AF502221FE9400D94577 /* base */; };
 		A1B2B2B52222018200D94577 /* renderbump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF582222018100D94577 /* renderbump.cpp */; };
 		A1B2B2B62222018200D94577 /* renderbump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF582222018100D94577 /* renderbump.cpp */; };
 		A1B2B2B72222018200D94577 /* AASBuild_gravity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5A2222018100D94577 /* AASBuild_gravity.cpp */; };
@@ -80,66 +80,8 @@
 		A1B2B2F22222018200D94577 /* roqParam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF872222018100D94577 /* roqParam.cpp */; };
 		A1B2B2F32222018200D94577 /* codec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF882222018100D94577 /* codec.cpp */; };
 		A1B2B2F42222018200D94577 /* codec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF882222018100D94577 /* codec.cpp */; };
-		A1B2B2F52222018200D94577 /* roq.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF892222018100D94577 /* roq.m */; };
-		A1B2B2F62222018200D94577 /* roq.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF892222018100D94577 /* roq.m */; };
-		A1B2B2F72222018200D94577 /* GEModifierStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF8B2222018100D94577 /* GEModifierStack.cpp */; };
-		A1B2B2F82222018200D94577 /* GEModifierStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF8B2222018100D94577 /* GEModifierStack.cpp */; };
-		A1B2B2F92222018200D94577 /* GEItemScriptsDlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF8D2222018100D94577 /* GEItemScriptsDlg.cpp */; };
-		A1B2B2FA2222018200D94577 /* GEItemScriptsDlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF8D2222018100D94577 /* GEItemScriptsDlg.cpp */; };
-		A1B2B2FB2222018200D94577 /* GEApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF8E2222018100D94577 /* GEApp.cpp */; };
-		A1B2B2FC2222018200D94577 /* GEApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF8E2222018100D94577 /* GEApp.cpp */; };
-		A1B2B2FD2222018200D94577 /* GESelectionMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF902222018100D94577 /* GESelectionMgr.cpp */; };
-		A1B2B2FE2222018200D94577 /* GESelectionMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF902222018100D94577 /* GESelectionMgr.cpp */; };
-		A1B2B2FF2222018200D94577 /* GEZOrderModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF922222018100D94577 /* GEZOrderModifier.cpp */; };
-		A1B2B3002222018200D94577 /* GEZOrderModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF922222018100D94577 /* GEZOrderModifier.cpp */; };
-		A1B2B3012222018200D94577 /* GESizeModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF982222018100D94577 /* GESizeModifier.cpp */; };
-		A1B2B3022222018200D94577 /* GESizeModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF982222018100D94577 /* GESizeModifier.cpp */; };
-		A1B2B3032222018200D94577 /* GEMoveModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF992222018100D94577 /* GEMoveModifier.cpp */; };
-		A1B2B3042222018200D94577 /* GEMoveModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF992222018100D94577 /* GEMoveModifier.cpp */; };
-		A1B2B3052222018200D94577 /* GEWorkspaceFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF9C2222018100D94577 /* GEWorkspaceFile.cpp */; };
-		A1B2B3062222018200D94577 /* GEWorkspaceFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF9C2222018100D94577 /* GEWorkspaceFile.cpp */; };
-		A1B2B3072222018200D94577 /* GEModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF9D2222018100D94577 /* GEModifier.cpp */; };
-		A1B2B3082222018200D94577 /* GEModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF9D2222018100D94577 /* GEModifier.cpp */; };
-		A1B2B3092222018200D94577 /* GENavigator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFA02222018100D94577 /* GENavigator.cpp */; };
-		A1B2B30A2222018200D94577 /* GENavigator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFA02222018100D94577 /* GENavigator.cpp */; };
-		A1B2B30B2222018200D94577 /* GEPropertyPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFA32222018100D94577 /* GEPropertyPage.cpp */; };
-		A1B2B30C2222018200D94577 /* GEPropertyPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFA32222018100D94577 /* GEPropertyPage.cpp */; };
-		A1B2B30D2222018200D94577 /* GEModifierGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFA52222018100D94577 /* GEModifierGroup.cpp */; };
-		A1B2B30E2222018200D94577 /* GEModifierGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFA52222018100D94577 /* GEModifierGroup.cpp */; };
-		A1B2B30F2222018200D94577 /* GEHideModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFA72222018100D94577 /* GEHideModifier.cpp */; };
-		A1B2B3102222018200D94577 /* GEHideModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFA72222018100D94577 /* GEHideModifier.cpp */; };
-		A1B2B3112222018200D94577 /* GEOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFA92222018100D94577 /* GEOptions.cpp */; };
-		A1B2B3122222018200D94577 /* GEOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFA92222018100D94577 /* GEOptions.cpp */; };
-		A1B2B3132222018200D94577 /* guied.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFAA2222018100D94577 /* guied.cpp */; };
-		A1B2B3142222018200D94577 /* guied.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFAA2222018100D94577 /* guied.cpp */; };
-		A1B2B3152222018200D94577 /* GEInsertModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFAB2222018100D94577 /* GEInsertModifier.cpp */; };
-		A1B2B3162222018200D94577 /* GEInsertModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFAB2222018100D94577 /* GEInsertModifier.cpp */; };
-		A1B2B3172222018200D94577 /* GEProperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFAD2222018100D94577 /* GEProperties.cpp */; };
-		A1B2B3182222018200D94577 /* GEProperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFAD2222018100D94577 /* GEProperties.cpp */; };
-		A1B2B3192222018200D94577 /* GEOptionsDlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFAF2222018100D94577 /* GEOptionsDlg.cpp */; };
-		A1B2B31A2222018200D94577 /* GEOptionsDlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFAF2222018100D94577 /* GEOptionsDlg.cpp */; };
-		A1B2B31B2222018200D94577 /* GEWindowWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB12222018100D94577 /* GEWindowWrapper.cpp */; };
-		A1B2B31C2222018200D94577 /* GEWindowWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB12222018100D94577 /* GEWindowWrapper.cpp */; };
-		A1B2B31D2222018200D94577 /* GEStatusBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB22222018100D94577 /* GEStatusBar.cpp */; };
-		A1B2B31E2222018200D94577 /* GEStatusBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB22222018100D94577 /* GEStatusBar.cpp */; };
-		A1B2B31F2222018200D94577 /* GEViewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB42222018100D94577 /* GEViewer.cpp */; };
-		A1B2B3202222018200D94577 /* GEViewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB42222018100D94577 /* GEViewer.cpp */; };
-		A1B2B3212222018200D94577 /* GETransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB52222018100D94577 /* GETransformer.cpp */; };
-		A1B2B3222222018200D94577 /* GETransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB52222018100D94577 /* GETransformer.cpp */; };
-		A1B2B3232222018200D94577 /* GEKeyValueModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB62222018100D94577 /* GEKeyValueModifier.cpp */; };
-		A1B2B3242222018200D94577 /* GEKeyValueModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB62222018100D94577 /* GEKeyValueModifier.cpp */; };
-		A1B2B3252222018200D94577 /* GEStateModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB72222018100D94577 /* GEStateModifier.cpp */; };
-		A1B2B3262222018200D94577 /* GEStateModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFB72222018100D94577 /* GEStateModifier.cpp */; };
-		A1B2B3272222018200D94577 /* GEItemPropsDlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFBB2222018100D94577 /* GEItemPropsDlg.cpp */; };
-		A1B2B3282222018200D94577 /* GEItemPropsDlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFBB2222018100D94577 /* GEItemPropsDlg.cpp */; };
 		A1B2B3292222018200D94577 /* GEWindowWrapper_stub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFBC2222018100D94577 /* GEWindowWrapper_stub.cpp */; };
 		A1B2B32A2222018200D94577 /* GEWindowWrapper_stub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFBC2222018100D94577 /* GEWindowWrapper_stub.cpp */; };
-		A1B2B32B2222018200D94577 /* GECheckInDlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFBD2222018100D94577 /* GECheckInDlg.cpp */; };
-		A1B2B32C2222018200D94577 /* GECheckInDlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFBD2222018100D94577 /* GECheckInDlg.cpp */; };
-		A1B2B32D2222018200D94577 /* GEWorkspace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFBE2222018100D94577 /* GEWorkspace.cpp */; };
-		A1B2B32E2222018200D94577 /* GEWorkspace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFBE2222018100D94577 /* GEWorkspace.cpp */; };
-		A1B2B32F2222018200D94577 /* GEDeleteModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFBF2222018100D94577 /* GEDeleteModifier.cpp */; };
-		A1B2B3302222018200D94577 /* GEDeleteModifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFBF2222018100D94577 /* GEDeleteModifier.cpp */; };
 		A1B2B3312222018200D94577 /* CollisionModel_trace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFC22222018100D94577 /* CollisionModel_trace.cpp */; };
 		A1B2B3322222018200D94577 /* CollisionModel_trace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFC22222018100D94577 /* CollisionModel_trace.cpp */; };
 		A1B2B3332222018200D94577 /* CollisionModel_contacts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFC42222018100D94577 /* CollisionModel_contacts.cpp */; };
@@ -202,8 +144,6 @@
 		A1B2B36C2222018200D94577 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFFB2222018100D94577 /* Vector.cpp */; };
 		A1B2B36D2222018200D94577 /* Pluecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFFC2222018100D94577 /* Pluecker.cpp */; };
 		A1B2B36E2222018200D94577 /* Pluecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFFC2222018100D94577 /* Pluecker.cpp */; };
-		A1B2B36F2222018200D94577 /* Complex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFFD2222018100D94577 /* Complex.cpp */; };
-		A1B2B3702222018200D94577 /* Complex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFFD2222018100D94577 /* Complex.cpp */; };
 		A1B2B3712222018200D94577 /* Simd_MMX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFFE2222018100D94577 /* Simd_MMX.cpp */; };
 		A1B2B3722222018200D94577 /* Simd_MMX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AFFE2222018100D94577 /* Simd_MMX.cpp */; };
 		A1B2B3732222018200D94577 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B0012222018100D94577 /* Matrix.cpp */; };
@@ -232,8 +172,6 @@
 		A1B2B38A2222018200D94577 /* HashIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B0242222018100D94577 /* HashIndex.cpp */; };
 		A1B2B38B2222018200D94577 /* TraceModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B0302222018100D94577 /* TraceModel.cpp */; };
 		A1B2B38C2222018200D94577 /* TraceModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B0302222018100D94577 /* TraceModel.cpp */; };
-		A1B2B38D2222018200D94577 /* Surface_Polytope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B0312222018100D94577 /* Surface_Polytope.cpp */; };
-		A1B2B38E2222018200D94577 /* Surface_Polytope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B0312222018100D94577 /* Surface_Polytope.cpp */; };
 		A1B2B38F2222018200D94577 /* Winding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B0342222018100D94577 /* Winding.cpp */; };
 		A1B2B3902222018200D94577 /* Winding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B0342222018100D94577 /* Winding.cpp */; };
 		A1B2B3912222018200D94577 /* Winding2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B0372222018100D94577 /* Winding2D.cpp */; };
@@ -312,8 +250,6 @@
 		A1B2B46C2222018300D94577 /* Game_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B10A2222018100D94577 /* Game_local.cpp */; };
 		A1B2B46D2222018300D94577 /* GameEdit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B10C2222018100D94577 /* GameEdit.cpp */; };
 		A1B2B46E2222018300D94577 /* GameEdit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B10C2222018100D94577 /* GameEdit.cpp */; };
-		A1B2B46F2222018300D94577 /* EndLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B10D2222018100D94577 /* EndLevel.cpp */; };
-		A1B2B4702222018300D94577 /* EndLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B10D2222018100D94577 /* EndLevel.cpp */; };
 		A1B2B4712222018300D94577 /* AAS_routing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1122222018100D94577 /* AAS_routing.cpp */; };
 		A1B2B4722222018300D94577 /* AAS_routing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1122222018100D94577 /* AAS_routing.cpp */; };
 		A1B2B4732222018300D94577 /* AI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1142222018100D94577 /* AI.cpp */; };
@@ -342,8 +278,6 @@
 		A1B2B48A2222018300D94577 /* SysCvar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1292222018100D94577 /* SysCvar.cpp */; };
 		A1B2B48B2222018300D94577 /* DebugGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B12A2222018100D94577 /* DebugGraph.cpp */; };
 		A1B2B48C2222018300D94577 /* DebugGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B12A2222018100D94577 /* DebugGraph.cpp */; };
-		A1B2B48D2222018300D94577 /* Callbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B12D2222018100D94577 /* Callbacks.cpp */; };
-		A1B2B48E2222018300D94577 /* Callbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B12D2222018100D94577 /* Callbacks.cpp */; };
 		A1B2B48F2222018300D94577 /* TypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B12F2222018100D94577 /* TypeInfo.cpp */; };
 		A1B2B4902222018300D94577 /* TypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B12F2222018100D94577 /* TypeInfo.cpp */; };
 		A1B2B4912222018300D94577 /* Class.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1302222018100D94577 /* Class.cpp */; };
@@ -428,8 +362,6 @@
 		A1B2B4E02222018300D94577 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1872222018200D94577 /* ioapi.c */; };
 		A1B2B4E12222018300D94577 /* unzip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1882222018200D94577 /* unzip.cpp */; };
 		A1B2B4E22222018300D94577 /* unzip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1882222018200D94577 /* unzip.cpp */; };
-		A1B2B4E32222018300D94577 /* MiniZip64_info.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1B2B1892222018200D94577 /* MiniZip64_info.txt */; };
-		A1B2B4E42222018300D94577 /* MiniZip64_info.txt in Resources */ = {isa = PBXBuildFile; fileRef = A1B2B1892222018200D94577 /* MiniZip64_info.txt */; };
 		A1B2B4E52222018300D94577 /* DeclEntityDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B18C2222018200D94577 /* DeclEntityDef.cpp */; };
 		A1B2B4E62222018300D94577 /* DeclEntityDef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B18C2222018200D94577 /* DeclEntityDef.cpp */; };
 		A1B2B4E72222018300D94577 /* DeclSkin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B18D2222018200D94577 /* DeclSkin.cpp */; };
@@ -570,8 +502,6 @@
 		A1B2B5722222018300D94577 /* DOOMController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2022222018200D94577 /* DOOMController.mm */; };
 		A1B2B5772222018300D94577 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2052222018200D94577 /* SDLMain.m */; };
 		A1B2B5782222018300D94577 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2052222018200D94577 /* SDLMain.m */; };
-		A1B2B57B2222018300D94577 /* version.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1B2B2072222018200D94577 /* version.plist */; };
-		A1B2B57C2222018300D94577 /* version.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1B2B2072222018200D94577 /* version.plist */; };
 		A1B2B57D2222018300D94577 /* sys_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2082222018200D94577 /* sys_local.cpp */; };
 		A1B2B57E2222018300D94577 /* sys_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2082222018200D94577 /* sys_local.cpp */; };
 		A1B2B57F2222018300D94577 /* glimp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B20A2222018200D94577 /* glimp.cpp */; };
@@ -596,8 +526,6 @@
 		A1B2B6162222018300D94577 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2882222018200D94577 /* Window.cpp */; };
 		A1B2B6172222018300D94577 /* GuiScript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B28A2222018200D94577 /* GuiScript.cpp */; };
 		A1B2B6182222018300D94577 /* GuiScript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B28A2222018200D94577 /* GuiScript.cpp */; };
-		A1B2B6192222018300D94577 /* GameWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B28C2222018200D94577 /* GameWindow.cpp */; };
-		A1B2B61A2222018300D94577 /* GameWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B28C2222018200D94577 /* GameWindow.cpp */; };
 		A1B2B61B2222018300D94577 /* ListGUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2912222018200D94577 /* ListGUI.cpp */; };
 		A1B2B61C2222018300D94577 /* ListGUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2912222018200D94577 /* ListGUI.cpp */; };
 		A1B2B61D2222018300D94577 /* UserInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2922222018200D94577 /* UserInterface.cpp */; };
@@ -706,6 +634,7 @@
 		A131F34321D530B500B4BB5D /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = SDL/SDL.xcodeproj; sourceTree = "<group>"; };
 		A13B68A421D54D3B00AA2472 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		A142F96822138D02006A2A17 /* SavedGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedGameViewController.swift; sourceTree = "<group>"; };
+		A150EBD72222196D001286CF /* base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = base; path = ../../doom3xcode/Debug/base; sourceTree = "<group>"; };
 		A15BF74A21FCF7E3005F4B74 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A15BF75721FD02A0005F4B74 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A15BF75921FD02AD005F4B74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -713,7 +642,6 @@
 		A15BF75D21FD0604005F4B74 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		A15BF75F21FD0819005F4B74 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A16571B8220B9FD900FE9FC9 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
-		A1B2AF502221FE9400D94577 /* base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = base; path = ../../doom3/base; sourceTree = "<group>"; };
 		A1B2AF532222018100D94577 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		A1B2AF562222018100D94577 /* compiler_public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compiler_public.h; sourceTree = "<group>"; };
 		A1B2AF582222018100D94577 /* renderbump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderbump.cpp; sourceTree = "<group>"; };
@@ -1380,7 +1308,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2AF502221FE9400D94577 /* base */,
+				A150EBD72222196D001286CF /* base */,
 				A15BF4D421FCDD7A005F4B74 /* DOOM3 */,
 				A15BF74921FCF773005F4B74 /* DOOM3-iOS */,
 				A1C125012204F5F900EAD9CB /* DOOM3-tvOS */,
@@ -1551,16 +1479,16 @@
 		A1B2AF7F2222018100D94577 /* roqvq */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2AF802222018100D94577 /* roq.h */,
-				A1B2AF812222018100D94577 /* NSBitmapImageRep.cpp */,
-				A1B2AF822222018100D94577 /* roq.cpp */,
-				A1B2AF832222018100D94577 /* gdefs.h */,
-				A1B2AF842222018100D94577 /* codec.h */,
-				A1B2AF852222018100D94577 /* roqParam.h */,
-				A1B2AF862222018100D94577 /* quaddefs.h */,
-				A1B2AF872222018100D94577 /* roqParam.cpp */,
 				A1B2AF882222018100D94577 /* codec.cpp */,
+				A1B2AF842222018100D94577 /* codec.h */,
+				A1B2AF832222018100D94577 /* gdefs.h */,
+				A1B2AF812222018100D94577 /* NSBitmapImageRep.cpp */,
+				A1B2AF862222018100D94577 /* quaddefs.h */,
+				A1B2AF822222018100D94577 /* roq.cpp */,
+				A1B2AF802222018100D94577 /* roq.h */,
 				A1B2AF892222018100D94577 /* roq.m */,
+				A1B2AF872222018100D94577 /* roqParam.cpp */,
+				A1B2AF852222018100D94577 /* roqParam.h */,
 			);
 			path = roqvq;
 			sourceTree = "<group>";
@@ -1568,60 +1496,60 @@
 		A1B2AF8A2222018100D94577 /* guied */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2AF8B2222018100D94577 /* GEModifierStack.cpp */,
-				A1B2AF8C2222018100D94577 /* GEInsertModifier.h */,
-				A1B2AF8D2222018100D94577 /* GEItemScriptsDlg.cpp */,
 				A1B2AF8E2222018100D94577 /* GEApp.cpp */,
-				A1B2AF8F2222018100D94577 /* GESelectionMgr.h */,
-				A1B2AF902222018100D94577 /* GESelectionMgr.cpp */,
-				A1B2AF912222018100D94577 /* GEWindowWrapper.h */,
-				A1B2AF922222018100D94577 /* GEZOrderModifier.cpp */,
-				A1B2AF932222018100D94577 /* GEItemScriptsDlg.h */,
-				A1B2AF942222018100D94577 /* GEZOrderModifier.h */,
-				A1B2AF952222018100D94577 /* GEModifier.h */,
-				A1B2AF962222018100D94577 /* GETransformer.h */,
-				A1B2AF972222018100D94577 /* GEMoveModifier.h */,
-				A1B2AF982222018100D94577 /* GESizeModifier.cpp */,
-				A1B2AF992222018100D94577 /* GEMoveModifier.cpp */,
-				A1B2AF9A2222018100D94577 /* GEHideModifier.h */,
-				A1B2AF9B2222018100D94577 /* GENavigator.h */,
-				A1B2AF9C2222018100D94577 /* GEWorkspaceFile.cpp */,
-				A1B2AF9D2222018100D94577 /* GEModifier.cpp */,
-				A1B2AF9E2222018100D94577 /* GEOptionsDlg.h */,
-				A1B2AF9F2222018100D94577 /* GEKeyValueModifier.h */,
-				A1B2AFA02222018100D94577 /* GENavigator.cpp */,
-				A1B2AFA12222018100D94577 /* GEWorkspace.h */,
-				A1B2AFA22222018100D94577 /* GEPropertyPage.h */,
-				A1B2AFA32222018100D94577 /* GEPropertyPage.cpp */,
-				A1B2AFA42222018100D94577 /* GESizeModifier.h */,
-				A1B2AFA52222018100D94577 /* GEModifierGroup.cpp */,
+				A1B2AFA82222018100D94577 /* GEApp.h */,
+				A1B2AFBD2222018100D94577 /* GECheckInDlg.cpp */,
+				A1B2AFBF2222018100D94577 /* GEDeleteModifier.cpp */,
 				A1B2AFA62222018100D94577 /* GEDeleteModifier.h */,
 				A1B2AFA72222018100D94577 /* GEHideModifier.cpp */,
-				A1B2AFA82222018100D94577 /* GEApp.h */,
-				A1B2AFA92222018100D94577 /* GEOptions.cpp */,
-				A1B2AFAA2222018100D94577 /* guied.cpp */,
+				A1B2AF9A2222018100D94577 /* GEHideModifier.h */,
 				A1B2AFAB2222018100D94577 /* GEInsertModifier.cpp */,
-				A1B2AFAC2222018100D94577 /* GEStatusBar.h */,
-				A1B2AFAD2222018100D94577 /* GEProperties.cpp */,
-				A1B2AFAE2222018100D94577 /* GEItemPropsDlg.h */,
-				A1B2AFAF2222018100D94577 /* GEOptionsDlg.cpp */,
-				A1B2AFB02222018100D94577 /* GEStateModifier.h */,
-				A1B2AFB12222018100D94577 /* GEWindowWrapper.cpp */,
-				A1B2AFB22222018100D94577 /* GEStatusBar.cpp */,
-				A1B2AFB32222018100D94577 /* GEModifierGroup.h */,
-				A1B2AFB42222018100D94577 /* GEViewer.cpp */,
-				A1B2AFB52222018100D94577 /* GETransformer.cpp */,
-				A1B2AFB62222018100D94577 /* GEKeyValueModifier.cpp */,
-				A1B2AFB72222018100D94577 /* GEStateModifier.cpp */,
-				A1B2AFB82222018100D94577 /* GEProperties.h */,
-				A1B2AFB92222018100D94577 /* GEViewer.h */,
-				A1B2AFBA2222018100D94577 /* GEModifierStack.h */,
+				A1B2AF8C2222018100D94577 /* GEInsertModifier.h */,
 				A1B2AFBB2222018100D94577 /* GEItemPropsDlg.cpp */,
-				A1B2AFBC2222018100D94577 /* GEWindowWrapper_stub.cpp */,
-				A1B2AFBD2222018100D94577 /* GECheckInDlg.cpp */,
-				A1B2AFBE2222018100D94577 /* GEWorkspace.cpp */,
-				A1B2AFBF2222018100D94577 /* GEDeleteModifier.cpp */,
+				A1B2AFAE2222018100D94577 /* GEItemPropsDlg.h */,
+				A1B2AF8D2222018100D94577 /* GEItemScriptsDlg.cpp */,
+				A1B2AF932222018100D94577 /* GEItemScriptsDlg.h */,
+				A1B2AFB62222018100D94577 /* GEKeyValueModifier.cpp */,
+				A1B2AF9F2222018100D94577 /* GEKeyValueModifier.h */,
+				A1B2AF9D2222018100D94577 /* GEModifier.cpp */,
+				A1B2AF952222018100D94577 /* GEModifier.h */,
+				A1B2AFA52222018100D94577 /* GEModifierGroup.cpp */,
+				A1B2AFB32222018100D94577 /* GEModifierGroup.h */,
+				A1B2AF8B2222018100D94577 /* GEModifierStack.cpp */,
+				A1B2AFBA2222018100D94577 /* GEModifierStack.h */,
+				A1B2AF992222018100D94577 /* GEMoveModifier.cpp */,
+				A1B2AF972222018100D94577 /* GEMoveModifier.h */,
+				A1B2AFA02222018100D94577 /* GENavigator.cpp */,
+				A1B2AF9B2222018100D94577 /* GENavigator.h */,
+				A1B2AFA92222018100D94577 /* GEOptions.cpp */,
 				A1B2AFC02222018100D94577 /* GEOptions.h */,
+				A1B2AFAF2222018100D94577 /* GEOptionsDlg.cpp */,
+				A1B2AF9E2222018100D94577 /* GEOptionsDlg.h */,
+				A1B2AFAD2222018100D94577 /* GEProperties.cpp */,
+				A1B2AFB82222018100D94577 /* GEProperties.h */,
+				A1B2AFA32222018100D94577 /* GEPropertyPage.cpp */,
+				A1B2AFA22222018100D94577 /* GEPropertyPage.h */,
+				A1B2AF902222018100D94577 /* GESelectionMgr.cpp */,
+				A1B2AF8F2222018100D94577 /* GESelectionMgr.h */,
+				A1B2AF982222018100D94577 /* GESizeModifier.cpp */,
+				A1B2AFA42222018100D94577 /* GESizeModifier.h */,
+				A1B2AFB72222018100D94577 /* GEStateModifier.cpp */,
+				A1B2AFB02222018100D94577 /* GEStateModifier.h */,
+				A1B2AFB22222018100D94577 /* GEStatusBar.cpp */,
+				A1B2AFAC2222018100D94577 /* GEStatusBar.h */,
+				A1B2AFB52222018100D94577 /* GETransformer.cpp */,
+				A1B2AF962222018100D94577 /* GETransformer.h */,
+				A1B2AFB42222018100D94577 /* GEViewer.cpp */,
+				A1B2AFB92222018100D94577 /* GEViewer.h */,
+				A1B2AFBC2222018100D94577 /* GEWindowWrapper_stub.cpp */,
+				A1B2AFB12222018100D94577 /* GEWindowWrapper.cpp */,
+				A1B2AF912222018100D94577 /* GEWindowWrapper.h */,
+				A1B2AFBE2222018100D94577 /* GEWorkspace.cpp */,
+				A1B2AFA12222018100D94577 /* GEWorkspace.h */,
+				A1B2AF9C2222018100D94577 /* GEWorkspaceFile.cpp */,
+				A1B2AF922222018100D94577 /* GEZOrderModifier.cpp */,
+				A1B2AF942222018100D94577 /* GEZOrderModifier.h */,
+				A1B2AFAA2222018100D94577 /* guied.cpp */,
 			);
 			path = guied;
 			sourceTree = "<group>";
@@ -1646,37 +1574,37 @@
 		A1B2AFCC2222018100D94577 /* idlib */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2AFCD2222018100D94577 /* CmdArgs.h */,
-				A1B2AFCE2222018100D94577 /* Base64.h */,
 				A1B2AFCF2222018100D94577 /* Base64.cpp */,
-				A1B2AFD02222018100D94577 /* bv */,
-				A1B2AFD92222018100D94577 /* Parser.h */,
+				A1B2AFCE2222018100D94577 /* Base64.h */,
 				A1B2AFDA2222018100D94577 /* BitMsg.cpp */,
-				A1B2AFDB2222018100D94577 /* Timer.cpp */,
-				A1B2AFDC2222018100D94577 /* Dict.cpp */,
 				A1B2AFDD2222018100D94577 /* BitMsg.h */,
-				A1B2AFDE2222018100D94577 /* Heap.cpp */,
-				A1B2AFDF2222018100D94577 /* Lexer.cpp */,
-				A1B2AFE02222018100D94577 /* Lib.cpp */,
-				A1B2AFE12222018100D94577 /* hashing */,
-				A1B2AFE82222018100D94577 /* math */,
-				A1B2B0152222018100D94577 /* LangDict.h */,
-				A1B2B0162222018100D94577 /* Lib.h */,
-				A1B2B0172222018100D94577 /* Timer.h */,
-				A1B2B0182222018100D94577 /* Dict.h */,
-				A1B2B0192222018100D94577 /* MapFile.cpp */,
+				A1B2AFD02222018100D94577 /* bv */,
 				A1B2B01A2222018100D94577 /* CmdArgs.cpp */,
-				A1B2B01B2222018100D94577 /* Heap.h */,
-				A1B2B01C2222018100D94577 /* Lexer.h */,
-				A1B2B01D2222018100D94577 /* Str.h */,
-				A1B2B01E2222018100D94577 /* Token.h */,
+				A1B2AFCD2222018100D94577 /* CmdArgs.h */,
 				A1B2B01F2222018100D94577 /* containers */,
+				A1B2AFDC2222018100D94577 /* Dict.cpp */,
+				A1B2B0182222018100D94577 /* Dict.h */,
 				A1B2B02F2222018100D94577 /* geometry */,
+				A1B2AFE12222018100D94577 /* hashing */,
+				A1B2AFDE2222018100D94577 /* Heap.cpp */,
+				A1B2B01B2222018100D94577 /* Heap.h */,
 				A1B2B0422222018100D94577 /* LangDict.cpp */,
-				A1B2B0432222018100D94577 /* Parser.cpp */,
-				A1B2B0442222018100D94577 /* Str.cpp */,
+				A1B2B0152222018100D94577 /* LangDict.h */,
+				A1B2AFDF2222018100D94577 /* Lexer.cpp */,
+				A1B2B01C2222018100D94577 /* Lexer.h */,
+				A1B2AFE02222018100D94577 /* Lib.cpp */,
+				A1B2B0162222018100D94577 /* Lib.h */,
+				A1B2B0192222018100D94577 /* MapFile.cpp */,
 				A1B2B0452222018100D94577 /* MapFile.h */,
+				A1B2AFE82222018100D94577 /* math */,
+				A1B2B0432222018100D94577 /* Parser.cpp */,
+				A1B2AFD92222018100D94577 /* Parser.h */,
+				A1B2B0442222018100D94577 /* Str.cpp */,
+				A1B2B01D2222018100D94577 /* Str.h */,
+				A1B2AFDB2222018100D94577 /* Timer.cpp */,
+				A1B2B0172222018100D94577 /* Timer.h */,
 				A1B2B0462222018100D94577 /* Token.cpp */,
+				A1B2B01E2222018100D94577 /* Token.h */,
 			);
 			path = idlib;
 			sourceTree = "<group>";
@@ -1713,49 +1641,49 @@
 			isa = PBXGroup;
 			children = (
 				A1B2AFE92222018100D94577 /* Angles.cpp */,
-				A1B2AFEA2222018100D94577 /* Lcp.cpp */,
 				A1B2AFEB2222018100D94577 /* Angles.h */,
-				A1B2AFEC2222018100D94577 /* Simd_SSE2.h */,
-				A1B2AFED2222018100D94577 /* Ode.cpp */,
-				A1B2AFEE2222018100D94577 /* Simd.cpp */,
-				A1B2AFEF2222018100D94577 /* Polynomial.h */,
-				A1B2AFF02222018100D94577 /* Simd_MMX.h */,
-				A1B2AFF12222018100D94577 /* Simd_Generic.h */,
-				A1B2AFF22222018100D94577 /* Math.cpp */,
-				A1B2AFF32222018100D94577 /* Quat.cpp */,
-				A1B2AFF42222018100D94577 /* Rotation.h */,
-				A1B2AFF52222018100D94577 /* Simd_SSE.cpp */,
-				A1B2AFF62222018100D94577 /* Matrix.h */,
-				A1B2AFF72222018100D94577 /* Plane.h */,
-				A1B2AFF82222018100D94577 /* Ode.h */,
-				A1B2AFF92222018100D94577 /* Interpolate.h */,
-				A1B2AFFA2222018100D94577 /* Curve.h */,
-				A1B2AFFB2222018100D94577 /* Vector.cpp */,
-				A1B2AFFC2222018100D94577 /* Pluecker.cpp */,
 				A1B2AFFD2222018100D94577 /* Complex.cpp */,
-				A1B2AFFE2222018100D94577 /* Simd_MMX.cpp */,
-				A1B2AFFF2222018100D94577 /* Quat.h */,
-				A1B2B0002222018100D94577 /* Simd.h */,
-				A1B2B0012222018100D94577 /* Matrix.cpp */,
-				A1B2B0022222018100D94577 /* Simd_3DNow.h */,
-				A1B2B0032222018100D94577 /* Pluecker.h */,
-				A1B2B0042222018100D94577 /* Simd_SSE.h */,
-				A1B2B0052222018100D94577 /* Math.h */,
-				A1B2B0062222018100D94577 /* Extrapolate.h */,
-				A1B2B0072222018100D94577 /* Simd_3DNow.cpp */,
-				A1B2B0082222018100D94577 /* Vector.h */,
-				A1B2B0092222018100D94577 /* Simd_AltiVec.h */,
-				A1B2B00A2222018100D94577 /* Simd_SSE3.h */,
-				A1B2B00B2222018100D94577 /* Simd_SSE3.cpp */,
-				A1B2B00C2222018100D94577 /* Simd_SSE2.cpp */,
-				A1B2B00D2222018100D94577 /* Lcp.h */,
-				A1B2B00E2222018100D94577 /* Plane.cpp */,
-				A1B2B00F2222018100D94577 /* Simd_AltiVec.cpp */,
 				A1B2B0102222018100D94577 /* Complex.h */,
-				A1B2B0112222018100D94577 /* Simd_Generic.cpp */,
-				A1B2B0122222018100D94577 /* Random.h */,
+				A1B2AFFA2222018100D94577 /* Curve.h */,
+				A1B2B0062222018100D94577 /* Extrapolate.h */,
+				A1B2AFF92222018100D94577 /* Interpolate.h */,
+				A1B2AFEA2222018100D94577 /* Lcp.cpp */,
+				A1B2B00D2222018100D94577 /* Lcp.h */,
+				A1B2AFF22222018100D94577 /* Math.cpp */,
+				A1B2B0052222018100D94577 /* Math.h */,
+				A1B2B0012222018100D94577 /* Matrix.cpp */,
+				A1B2AFF62222018100D94577 /* Matrix.h */,
+				A1B2AFED2222018100D94577 /* Ode.cpp */,
+				A1B2AFF82222018100D94577 /* Ode.h */,
+				A1B2B00E2222018100D94577 /* Plane.cpp */,
+				A1B2AFF72222018100D94577 /* Plane.h */,
+				A1B2AFFC2222018100D94577 /* Pluecker.cpp */,
+				A1B2B0032222018100D94577 /* Pluecker.h */,
 				A1B2B0132222018100D94577 /* Polynomial.cpp */,
+				A1B2AFEF2222018100D94577 /* Polynomial.h */,
+				A1B2AFF32222018100D94577 /* Quat.cpp */,
+				A1B2AFFF2222018100D94577 /* Quat.h */,
+				A1B2B0122222018100D94577 /* Random.h */,
 				A1B2B0142222018100D94577 /* Rotation.cpp */,
+				A1B2AFF42222018100D94577 /* Rotation.h */,
+				A1B2B0072222018100D94577 /* Simd_3DNow.cpp */,
+				A1B2B0022222018100D94577 /* Simd_3DNow.h */,
+				A1B2B00F2222018100D94577 /* Simd_AltiVec.cpp */,
+				A1B2B0092222018100D94577 /* Simd_AltiVec.h */,
+				A1B2B0112222018100D94577 /* Simd_Generic.cpp */,
+				A1B2AFF12222018100D94577 /* Simd_Generic.h */,
+				A1B2AFFE2222018100D94577 /* Simd_MMX.cpp */,
+				A1B2AFF02222018100D94577 /* Simd_MMX.h */,
+				A1B2AFF52222018100D94577 /* Simd_SSE.cpp */,
+				A1B2B0042222018100D94577 /* Simd_SSE.h */,
+				A1B2B00C2222018100D94577 /* Simd_SSE2.cpp */,
+				A1B2AFEC2222018100D94577 /* Simd_SSE2.h */,
+				A1B2B00B2222018100D94577 /* Simd_SSE3.cpp */,
+				A1B2B00A2222018100D94577 /* Simd_SSE3.h */,
+				A1B2AFEE2222018100D94577 /* Simd.cpp */,
+				A1B2B0002222018100D94577 /* Simd.h */,
+				A1B2AFFB2222018100D94577 /* Vector.cpp */,
+				A1B2B0082222018100D94577 /* Vector.h */,
 			);
 			path = math;
 			sourceTree = "<group>";
@@ -1785,24 +1713,24 @@
 		A1B2B02F2222018100D94577 /* geometry */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2B0302222018100D94577 /* TraceModel.cpp */,
-				A1B2B0312222018100D94577 /* Surface_Polytope.cpp */,
-				A1B2B0322222018100D94577 /* Surface_Patch.h */,
-				A1B2B0332222018100D94577 /* Surface.h */,
-				A1B2B0342222018100D94577 /* Winding.cpp */,
-				A1B2B0352222018100D94577 /* JointTransform.h */,
-				A1B2B0362222018100D94577 /* Winding2D.h */,
-				A1B2B0372222018100D94577 /* Winding2D.cpp */,
-				A1B2B0382222018100D94577 /* JointTransform.cpp */,
-				A1B2B0392222018100D94577 /* TraceModel.h */,
+				A1B2B0412222018100D94577 /* DrawVert.cpp */,
 				A1B2B03A2222018100D94577 /* DrawVert.h */,
+				A1B2B0382222018100D94577 /* JointTransform.cpp */,
+				A1B2B0352222018100D94577 /* JointTransform.h */,
 				A1B2B03B2222018100D94577 /* Surface_Patch.cpp */,
-				A1B2B03C2222018100D94577 /* Surface_SweptSpline.cpp */,
+				A1B2B0322222018100D94577 /* Surface_Patch.h */,
+				A1B2B0312222018100D94577 /* Surface_Polytope.cpp */,
 				A1B2B03D2222018100D94577 /* Surface_Polytope.h */,
+				A1B2B03C2222018100D94577 /* Surface_SweptSpline.cpp */,
 				A1B2B03E2222018100D94577 /* Surface_SweptSpline.h */,
 				A1B2B03F2222018100D94577 /* Surface.cpp */,
+				A1B2B0332222018100D94577 /* Surface.h */,
+				A1B2B0302222018100D94577 /* TraceModel.cpp */,
+				A1B2B0392222018100D94577 /* TraceModel.h */,
+				A1B2B0342222018100D94577 /* Winding.cpp */,
 				A1B2B0402222018100D94577 /* Winding.h */,
-				A1B2B0412222018100D94577 /* DrawVert.cpp */,
+				A1B2B0372222018100D94577 /* Winding2D.cpp */,
+				A1B2B0362222018100D94577 /* Winding2D.h */,
 			);
 			path = geometry;
 			sourceTree = "<group>";
@@ -1810,71 +1738,71 @@
 		A1B2B0D82222018100D94577 /* game */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2B0D92222018100D94577 /* Sound.h */,
+				A1B2B0F22222018100D94577 /* Actor.cpp */,
+				A1B2B10E2222018100D94577 /* Actor.h */,
+				A1B2B1602222018200D94577 /* AF.cpp */,
+				A1B2B0FF2222018100D94577 /* AF.h */,
+				A1B2B13A2222018100D94577 /* AFEntity.cpp */,
+				A1B2B0F42222018100D94577 /* AFEntity.h */,
+				A1B2B1112222018100D94577 /* ai */,
 				A1B2B0DA2222018100D94577 /* anim */,
-				A1B2B0E12222018100D94577 /* SmokeParticles.h */,
-				A1B2B0E22222018100D94577 /* Projectile.h */,
-				A1B2B0E32222018100D94577 /* SmokeParticles.cpp */,
-				A1B2B0E42222018100D94577 /* Moveable.cpp */,
-				A1B2B0E52222018100D94577 /* WorldSpawn.cpp */,
-				A1B2B0E62222018100D94577 /* Player.cpp */,
-				A1B2B0E72222018100D94577 /* SecurityCamera.cpp */,
-				A1B2B0E82222018100D94577 /* Fx.h */,
-				A1B2B0E92222018100D94577 /* Mover.h */,
-				A1B2B0EA2222018100D94577 /* Light.h */,
+				A1B2B1092222018100D94577 /* BrittleFracture.cpp */,
+				A1B2B10F2222018100D94577 /* BrittleFracture.h */,
 				A1B2B0EB2222018100D94577 /* Camera.cpp */,
+				A1B2B0F02222018100D94577 /* Camera.h */,
+				A1B2B10D2222018100D94577 /* EndLevel.cpp */,
+				A1B2B1232222018100D94577 /* EndLevel.h */,
 				A1B2B0EC2222018100D94577 /* Entity.cpp */,
+				A1B2B11E2222018100D94577 /* Entity.h */,
+				A1B2B0FC2222018100D94577 /* Fx.cpp */,
+				A1B2B0E82222018100D94577 /* Fx.h */,
+				A1B2B10A2222018100D94577 /* Game_local.cpp */,
+				A1B2B11D2222018100D94577 /* Game_local.h */,
+				A1B2B0FD2222018100D94577 /* Game_network.cpp */,
+				A1B2B1252222018100D94577 /* GameBase.h */,
+				A1B2B10C2222018100D94577 /* GameEdit.cpp */,
+				A1B2B0F62222018100D94577 /* GameEdit.h */,
+				A1B2B1262222018100D94577 /* gamesys */,
+				A1B2B1222222018100D94577 /* IK.cpp */,
+				A1B2B1372222018100D94577 /* IK.h */,
+				A1B2B0F92222018100D94577 /* Item.cpp */,
+				A1B2B0F12222018100D94577 /* Item.h */,
+				A1B2B0F52222018100D94577 /* Light.cpp */,
+				A1B2B0EA2222018100D94577 /* Light.h */,
 				A1B2B0ED2222018100D94577 /* Misc.cpp */,
 				A1B2B0EE2222018100D94577 /* Misc.h */,
-				A1B2B0EF2222018100D94577 /* Trigger.h */,
-				A1B2B0F02222018100D94577 /* Camera.h */,
-				A1B2B0F12222018100D94577 /* Item.h */,
-				A1B2B0F22222018100D94577 /* Actor.cpp */,
-				A1B2B0F32222018100D94577 /* MultiplayerGame.h */,
-				A1B2B0F42222018100D94577 /* AFEntity.h */,
-				A1B2B0F52222018100D94577 /* Light.cpp */,
-				A1B2B0F62222018100D94577 /* GameEdit.h */,
-				A1B2B0F72222018100D94577 /* Weapon.cpp */,
-				A1B2B0F82222018100D94577 /* Player.h */,
-				A1B2B0F92222018100D94577 /* Item.cpp */,
-				A1B2B0FA2222018100D94577 /* Pvs.cpp */,
-				A1B2B0FB2222018100D94577 /* PlayerView.cpp */,
-				A1B2B0FC2222018100D94577 /* Fx.cpp */,
-				A1B2B0FD2222018100D94577 /* Game_network.cpp */,
-				A1B2B0FE2222018100D94577 /* Projectile.cpp */,
-				A1B2B0FF2222018100D94577 /* AF.h */,
-				A1B2B1002222018100D94577 /* script */,
-				A1B2B1092222018100D94577 /* BrittleFracture.cpp */,
-				A1B2B10A2222018100D94577 /* Game_local.cpp */,
-				A1B2B10B2222018100D94577 /* Weapon.h */,
-				A1B2B10C2222018100D94577 /* GameEdit.cpp */,
-				A1B2B10D2222018100D94577 /* EndLevel.cpp */,
-				A1B2B10E2222018100D94577 /* Actor.h */,
-				A1B2B10F2222018100D94577 /* BrittleFracture.h */,
+				A1B2B0E42222018100D94577 /* Moveable.cpp */,
 				A1B2B1102222018100D94577 /* Moveable.h */,
-				A1B2B1112222018100D94577 /* ai */,
-				A1B2B11D2222018100D94577 /* Game_local.h */,
-				A1B2B11E2222018100D94577 /* Entity.h */,
+				A1B2B1612222018200D94577 /* Mover.cpp */,
+				A1B2B0E92222018100D94577 /* Mover.h */,
+				A1B2B1622222018200D94577 /* MultiplayerGame.cpp */,
+				A1B2B0F32222018100D94577 /* MultiplayerGame.h */,
+				A1B2B13C2222018100D94577 /* physics */,
+				A1B2B0E62222018100D94577 /* Player.cpp */,
+				A1B2B0F82222018100D94577 /* Player.h */,
+				A1B2B15F2222018200D94577 /* PlayerIcon.cpp */,
+				A1B2B1632222018200D94577 /* PlayerIcon.h */,
+				A1B2B0FB2222018100D94577 /* PlayerView.cpp */,
+				A1B2B13B2222018100D94577 /* PlayerView.h */,
+				A1B2B0FE2222018100D94577 /* Projectile.cpp */,
+				A1B2B0E22222018100D94577 /* Projectile.h */,
+				A1B2B0FA2222018100D94577 /* Pvs.cpp */,
+				A1B2B1392222018100D94577 /* Pvs.h */,
+				A1B2B1002222018100D94577 /* script */,
+				A1B2B0E72222018100D94577 /* SecurityCamera.cpp */,
+				A1B2B1642222018200D94577 /* SecurityCamera.h */,
+				A1B2B0E32222018100D94577 /* SmokeParticles.cpp */,
+				A1B2B0E12222018100D94577 /* SmokeParticles.h */,
+				A1B2B1212222018100D94577 /* Sound.cpp */,
+				A1B2B0D92222018100D94577 /* Sound.h */,
+				A1B2B1242222018100D94577 /* Target.cpp */,
 				A1B2B11F2222018100D94577 /* Target.h */,
 				A1B2B1202222018100D94577 /* Trigger.cpp */,
-				A1B2B1212222018100D94577 /* Sound.cpp */,
-				A1B2B1222222018100D94577 /* IK.cpp */,
-				A1B2B1232222018100D94577 /* EndLevel.h */,
-				A1B2B1242222018100D94577 /* Target.cpp */,
-				A1B2B1252222018100D94577 /* GameBase.h */,
-				A1B2B1262222018100D94577 /* gamesys */,
-				A1B2B1372222018100D94577 /* IK.h */,
+				A1B2B0EF2222018100D94577 /* Trigger.h */,
+				A1B2B0F72222018100D94577 /* Weapon.cpp */,
+				A1B2B10B2222018100D94577 /* Weapon.h */,
+				A1B2B0E52222018100D94577 /* WorldSpawn.cpp */,
 				A1B2B1382222018100D94577 /* WorldSpawn.h */,
-				A1B2B1392222018100D94577 /* Pvs.h */,
-				A1B2B13A2222018100D94577 /* AFEntity.cpp */,
-				A1B2B13B2222018100D94577 /* PlayerView.h */,
-				A1B2B13C2222018100D94577 /* physics */,
-				A1B2B15F2222018200D94577 /* PlayerIcon.cpp */,
-				A1B2B1602222018200D94577 /* AF.cpp */,
-				A1B2B1612222018200D94577 /* Mover.cpp */,
-				A1B2B1622222018200D94577 /* MultiplayerGame.cpp */,
-				A1B2B1632222018200D94577 /* PlayerIcon.h */,
-				A1B2B1642222018200D94577 /* SecurityCamera.h */,
 			);
 			path = game;
 			sourceTree = "<group>";
@@ -1928,22 +1856,22 @@
 		A1B2B1262222018100D94577 /* gamesys */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2B1272222018100D94577 /* DebugGraph.h */,
-				A1B2B1282222018100D94577 /* Event.h */,
-				A1B2B1292222018100D94577 /* SysCvar.cpp */,
-				A1B2B12A2222018100D94577 /* DebugGraph.cpp */,
-				A1B2B12B2222018100D94577 /* SaveGame.h */,
-				A1B2B12C2222018100D94577 /* NoGameTypeInfo.h */,
 				A1B2B12D2222018100D94577 /* Callbacks.cpp */,
-				A1B2B12E2222018100D94577 /* Class.h */,
-				A1B2B12F2222018100D94577 /* TypeInfo.cpp */,
 				A1B2B1302222018100D94577 /* Class.cpp */,
+				A1B2B12E2222018100D94577 /* Class.h */,
+				A1B2B12A2222018100D94577 /* DebugGraph.cpp */,
+				A1B2B1272222018100D94577 /* DebugGraph.h */,
 				A1B2B1312222018100D94577 /* Event.cpp */,
+				A1B2B1282222018100D94577 /* Event.h */,
+				A1B2B12C2222018100D94577 /* NoGameTypeInfo.h */,
 				A1B2B1322222018100D94577 /* SaveGame.cpp */,
-				A1B2B1332222018100D94577 /* SysCvar.h */,
+				A1B2B12B2222018100D94577 /* SaveGame.h */,
 				A1B2B1342222018100D94577 /* SysCmds.cpp */,
-				A1B2B1352222018100D94577 /* TypeInfo.h */,
 				A1B2B1362222018100D94577 /* SysCmds.h */,
+				A1B2B1292222018100D94577 /* SysCvar.cpp */,
+				A1B2B1332222018100D94577 /* SysCvar.h */,
+				A1B2B12F2222018100D94577 /* TypeInfo.cpp */,
+				A1B2B1352222018100D94577 /* TypeInfo.h */,
 			);
 			path = gamesys;
 			sourceTree = "<group>";
@@ -1992,59 +1920,59 @@
 		A1B2B1652222018200D94577 /* framework */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2B1662222018200D94577 /* FileSystem.h */,
-				A1B2B1672222018200D94577 /* DemoFile.cpp */,
-				A1B2B1682222018200D94577 /* Console.h */,
-				A1B2B1692222018200D94577 /* Common.cpp */,
-				A1B2B16A2222018200D94577 /* DeclTable.h */,
-				A1B2B16B2222018200D94577 /* UsercmdGen.h */,
+				A1B2B1792222018200D94577 /* async */,
 				A1B2B16C2222018200D94577 /* BuildDefines.h */,
+				A1B2B1902222018200D94577 /* BuildVersion.h */,
+				A1B2B1A72222018200D94577 /* CmdSystem.cpp */,
+				A1B2B1782222018200D94577 /* CmdSystem.h */,
+				A1B2B1692222018200D94577 /* Common.cpp */,
+				A1B2B19B2222018200D94577 /* Common.h */,
+				A1B2B1912222018200D94577 /* Compressor.cpp */,
+				A1B2B1A82222018200D94577 /* Compressor.h */,
+				A1B2B1702222018200D94577 /* Console.cpp */,
+				A1B2B1682222018200D94577 /* Console.h */,
+				A1B2B1AA2222018200D94577 /* CVarSystem.cpp */,
+				A1B2B1742222018200D94577 /* CVarSystem.h */,
+				A1B2B1712222018200D94577 /* DeclAF.cpp */,
+				A1B2B1922222018200D94577 /* DeclAF.h */,
+				A1B2B18C2222018200D94577 /* DeclEntityDef.cpp */,
+				A1B2B1722222018200D94577 /* DeclEntityDef.h */,
+				A1B2B1A92222018200D94577 /* DeclFX.cpp */,
+				A1B2B1A32222018200D94577 /* DeclFX.h */,
 				A1B2B16D2222018200D94577 /* DeclManager.cpp */,
+				A1B2B1732222018200D94577 /* DeclManager.h */,
+				A1B2B19D2222018200D94577 /* DeclParticle.cpp */,
+				A1B2B19F2222018200D94577 /* DeclParticle.h */,
+				A1B2B19C2222018200D94577 /* DeclPDA.cpp */,
+				A1B2B18F2222018200D94577 /* DeclPDA.h */,
+				A1B2B18D2222018200D94577 /* DeclSkin.cpp */,
 				A1B2B16E2222018200D94577 /* DeclSkin.h */,
 				A1B2B16F2222018200D94577 /* DeclTable.cpp */,
-				A1B2B1702222018200D94577 /* Console.cpp */,
-				A1B2B1712222018200D94577 /* DeclAF.cpp */,
-				A1B2B1722222018200D94577 /* DeclEntityDef.h */,
-				A1B2B1732222018200D94577 /* DeclManager.h */,
-				A1B2B1742222018200D94577 /* CVarSystem.h */,
-				A1B2B1752222018200D94577 /* File.h */,
-				A1B2B1762222018200D94577 /* UsercmdGen.cpp */,
-				A1B2B1772222018200D94577 /* Session_local.h */,
-				A1B2B1782222018200D94577 /* CmdSystem.h */,
-				A1B2B1792222018200D94577 /* async */,
-				A1B2B1862222018200D94577 /* minizip */,
-				A1B2B18C2222018200D94577 /* DeclEntityDef.cpp */,
-				A1B2B18D2222018200D94577 /* DeclSkin.cpp */,
-				A1B2B18E2222018200D94577 /* KeyInput.h */,
-				A1B2B18F2222018200D94577 /* DeclPDA.h */,
-				A1B2B1902222018200D94577 /* BuildVersion.h */,
-				A1B2B1912222018200D94577 /* Compressor.cpp */,
-				A1B2B1922222018200D94577 /* DeclAF.h */,
-				A1B2B1932222018200D94577 /* EditField.cpp */,
-				A1B2B1942222018200D94577 /* Session.h */,
-				A1B2B1952222018200D94577 /* Session_menu.cpp */,
-				A1B2B1962222018200D94577 /* Session.cpp */,
-				A1B2B1972222018200D94577 /* KeyInput.cpp */,
-				A1B2B1982222018200D94577 /* Game.h */,
-				A1B2B1992222018200D94577 /* FileSystem.cpp */,
-				A1B2B19A2222018200D94577 /* File.cpp */,
-				A1B2B19B2222018200D94577 /* Common.h */,
-				A1B2B19C2222018200D94577 /* DeclPDA.cpp */,
-				A1B2B19D2222018200D94577 /* DeclParticle.cpp */,
-				A1B2B19E2222018200D94577 /* DemoFile.h */,
-				A1B2B19F2222018200D94577 /* DeclParticle.h */,
-				A1B2B1A02222018200D94577 /* Unzip.h */,
-				A1B2B1A12222018200D94577 /* Licensee.h */,
-				A1B2B1A22222018200D94577 /* GameCallbacks_local.h */,
-				A1B2B1A32222018200D94577 /* DeclFX.h */,
+				A1B2B16A2222018200D94577 /* DeclTable.h */,
 				A1B2B1A42222018200D94577 /* DemoChecksum.h */,
+				A1B2B1672222018200D94577 /* DemoFile.cpp */,
+				A1B2B19E2222018200D94577 /* DemoFile.h */,
+				A1B2B1932222018200D94577 /* EditField.cpp */,
 				A1B2B1A52222018200D94577 /* EditField.h */,
 				A1B2B1A62222018200D94577 /* EventLoop.cpp */,
-				A1B2B1A72222018200D94577 /* CmdSystem.cpp */,
-				A1B2B1A82222018200D94577 /* Compressor.h */,
-				A1B2B1A92222018200D94577 /* DeclFX.cpp */,
-				A1B2B1AA2222018200D94577 /* CVarSystem.cpp */,
 				A1B2B1AB2222018200D94577 /* EventLoop.h */,
+				A1B2B19A2222018200D94577 /* File.cpp */,
+				A1B2B1752222018200D94577 /* File.h */,
+				A1B2B1992222018200D94577 /* FileSystem.cpp */,
+				A1B2B1662222018200D94577 /* FileSystem.h */,
+				A1B2B1982222018200D94577 /* Game.h */,
+				A1B2B1A22222018200D94577 /* GameCallbacks_local.h */,
+				A1B2B1972222018200D94577 /* KeyInput.cpp */,
+				A1B2B18E2222018200D94577 /* KeyInput.h */,
+				A1B2B1A12222018200D94577 /* Licensee.h */,
+				A1B2B1862222018200D94577 /* minizip */,
+				A1B2B1772222018200D94577 /* Session_local.h */,
+				A1B2B1952222018200D94577 /* Session_menu.cpp */,
+				A1B2B1962222018200D94577 /* Session.cpp */,
+				A1B2B1942222018200D94577 /* Session.h */,
+				A1B2B1A02222018200D94577 /* Unzip.h */,
+				A1B2B1762222018200D94577 /* UsercmdGen.cpp */,
+				A1B2B16B2222018200D94577 /* UsercmdGen.h */,
 			);
 			path = framework;
 			sourceTree = "<group>";
@@ -2052,18 +1980,18 @@
 		A1B2B1792222018200D94577 /* async */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2B17A2222018200D94577 /* NetworkSystem.h */,
 				A1B2B17B2222018200D94577 /* AsyncClient.cpp */,
-				A1B2B17C2222018200D94577 /* AsyncNetwork.h */,
-				A1B2B17D2222018200D94577 /* AsyncServer.h */,
-				A1B2B17E2222018200D94577 /* ServerScan.cpp */,
-				A1B2B17F2222018200D94577 /* MsgChannel.cpp */,
 				A1B2B1802222018200D94577 /* AsyncClient.h */,
-				A1B2B1812222018200D94577 /* MsgChannel.h */,
-				A1B2B1822222018200D94577 /* ServerScan.h */,
-				A1B2B1832222018200D94577 /* AsyncServer.cpp */,
-				A1B2B1842222018200D94577 /* NetworkSystem.cpp */,
 				A1B2B1852222018200D94577 /* AsyncNetwork.cpp */,
+				A1B2B17C2222018200D94577 /* AsyncNetwork.h */,
+				A1B2B1832222018200D94577 /* AsyncServer.cpp */,
+				A1B2B17D2222018200D94577 /* AsyncServer.h */,
+				A1B2B17F2222018200D94577 /* MsgChannel.cpp */,
+				A1B2B1812222018200D94577 /* MsgChannel.h */,
+				A1B2B1842222018200D94577 /* NetworkSystem.cpp */,
+				A1B2B17A2222018200D94577 /* NetworkSystem.h */,
+				A1B2B17E2222018200D94577 /* ServerScan.cpp */,
+				A1B2B1822222018200D94577 /* ServerScan.h */,
 			);
 			path = async;
 			sourceTree = "<group>";
@@ -2216,50 +2144,50 @@
 		A1B2B27C2222018200D94577 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2B27D2222018200D94577 /* ListWindow.cpp */,
-				A1B2B27E2222018200D94577 /* ListGUILocal.h */,
-				A1B2B27F2222018200D94577 /* SimpleWindow.cpp */,
-				A1B2B2802222018200D94577 /* GameBustOutWindow.h */,
-				A1B2B2812222018200D94577 /* FieldWindow.h */,
-				A1B2B2822222018200D94577 /* RenderWindow.h */,
-				A1B2B2832222018200D94577 /* ListWindow.h */,
-				A1B2B2842222018200D94577 /* RegExp.cpp */,
-				A1B2B2852222018200D94577 /* UserInterface.h */,
-				A1B2B2862222018200D94577 /* DeviceContext.cpp */,
-				A1B2B2872222018200D94577 /* Winvar.cpp */,
-				A1B2B2882222018200D94577 /* Window.cpp */,
-				A1B2B2892222018200D94577 /* SimpleWindow.h */,
-				A1B2B28A2222018200D94577 /* GuiScript.cpp */,
-				A1B2B28B2222018200D94577 /* EditWindow.h */,
-				A1B2B28C2222018200D94577 /* GameWindow.cpp */,
-				A1B2B28D2222018200D94577 /* Window.h */,
-				A1B2B28E2222018200D94577 /* SliderWindow.h */,
-				A1B2B28F2222018200D94577 /* MarkerWindow.h */,
-				A1B2B2902222018200D94577 /* DeviceContext.h */,
-				A1B2B2912222018200D94577 /* ListGUI.cpp */,
-				A1B2B2922222018200D94577 /* UserInterface.cpp */,
-				A1B2B2932222018200D94577 /* GuiScript.h */,
-				A1B2B2942222018200D94577 /* RegExp_old.h */,
-				A1B2B2952222018200D94577 /* GameSSDWindow.cpp */,
-				A1B2B2962222018200D94577 /* RenderWindow.cpp */,
-				A1B2B2972222018200D94577 /* MarkerWindow.cpp */,
-				A1B2B2982222018200D94577 /* ChoiceWindow.h */,
-				A1B2B2992222018200D94577 /* ChoiceWindow.cpp */,
-				A1B2B29A2222018200D94577 /* GameBearShootWindow.h */,
 				A1B2B29B2222018200D94577 /* BindWindow.cpp */,
-				A1B2B29C2222018200D94577 /* EditWindow.cpp */,
 				A1B2B29D2222018200D94577 /* BindWindow.h */,
-				A1B2B29E2222018200D94577 /* UserInterfaceLocal.h */,
-				A1B2B29F2222018200D94577 /* GameBustOutWindow.cpp */,
-				A1B2B2A02222018200D94577 /* ListGUI.h */,
-				A1B2B2A12222018200D94577 /* Rectangle.h */,
-				A1B2B2A22222018200D94577 /* GameBearShootWindow.cpp */,
+				A1B2B2992222018200D94577 /* ChoiceWindow.cpp */,
+				A1B2B2982222018200D94577 /* ChoiceWindow.h */,
+				A1B2B2862222018200D94577 /* DeviceContext.cpp */,
+				A1B2B2902222018200D94577 /* DeviceContext.h */,
+				A1B2B29C2222018200D94577 /* EditWindow.cpp */,
+				A1B2B28B2222018200D94577 /* EditWindow.h */,
 				A1B2B2A32222018200D94577 /* FieldWindow.cpp */,
-				A1B2B2A42222018200D94577 /* Winvar.h */,
-				A1B2B2A52222018200D94577 /* RegExp.h */,
-				A1B2B2A62222018200D94577 /* SliderWindow.cpp */,
+				A1B2B2812222018200D94577 /* FieldWindow.h */,
+				A1B2B2A22222018200D94577 /* GameBearShootWindow.cpp */,
+				A1B2B29A2222018200D94577 /* GameBearShootWindow.h */,
+				A1B2B29F2222018200D94577 /* GameBustOutWindow.cpp */,
+				A1B2B2802222018200D94577 /* GameBustOutWindow.h */,
+				A1B2B2952222018200D94577 /* GameSSDWindow.cpp */,
 				A1B2B2A72222018200D94577 /* GameSSDWindow.h */,
+				A1B2B28C2222018200D94577 /* GameWindow.cpp */,
 				A1B2B2A82222018200D94577 /* GameWindow.h */,
+				A1B2B28A2222018200D94577 /* GuiScript.cpp */,
+				A1B2B2932222018200D94577 /* GuiScript.h */,
+				A1B2B2912222018200D94577 /* ListGUI.cpp */,
+				A1B2B2A02222018200D94577 /* ListGUI.h */,
+				A1B2B27E2222018200D94577 /* ListGUILocal.h */,
+				A1B2B27D2222018200D94577 /* ListWindow.cpp */,
+				A1B2B2832222018200D94577 /* ListWindow.h */,
+				A1B2B2972222018200D94577 /* MarkerWindow.cpp */,
+				A1B2B28F2222018200D94577 /* MarkerWindow.h */,
+				A1B2B2A12222018200D94577 /* Rectangle.h */,
+				A1B2B2942222018200D94577 /* RegExp_old.h */,
+				A1B2B2842222018200D94577 /* RegExp.cpp */,
+				A1B2B2A52222018200D94577 /* RegExp.h */,
+				A1B2B2962222018200D94577 /* RenderWindow.cpp */,
+				A1B2B2822222018200D94577 /* RenderWindow.h */,
+				A1B2B27F2222018200D94577 /* SimpleWindow.cpp */,
+				A1B2B2892222018200D94577 /* SimpleWindow.h */,
+				A1B2B2A62222018200D94577 /* SliderWindow.cpp */,
+				A1B2B28E2222018200D94577 /* SliderWindow.h */,
+				A1B2B2922222018200D94577 /* UserInterface.cpp */,
+				A1B2B2852222018200D94577 /* UserInterface.h */,
+				A1B2B29E2222018200D94577 /* UserInterfaceLocal.h */,
+				A1B2B2882222018200D94577 /* Window.cpp */,
+				A1B2B28D2222018200D94577 /* Window.h */,
+				A1B2B2872222018200D94577 /* Winvar.cpp */,
+				A1B2B2A42222018200D94577 /* Winvar.h */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -2399,10 +2327,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1B80A4721F96DAA00560711 /* DOOM3LaunchScreen.storyboard in Resources */,
-				A1B2B4E32222018300D94577 /* MiniZip64_info.txt in Resources */,
-				A1B2AF512221FE9400D94577 /* base in Resources */,
+				A150EBD82222196D001286CF /* base in Resources */,
 				A15BF74B21FCF7E3005F4B74 /* Main.storyboard in Resources */,
-				A1B2B57B2222018300D94577 /* version.plist in Resources */,
 				A1C1205421FD178100EAD9CB /* dpquake.ttf in Resources */,
 				A1B80AF421F98E6500560711 /* DOOM3-iOS.xcassets in Resources */,
 			);
@@ -2415,9 +2341,7 @@
 				A1C125052204F73000EAD9CB /* Main.storyboard in Resources */,
 				A1C1205521FD178100EAD9CB /* dpquake.ttf in Resources */,
 				A1B80B0521FA5BF200560711 /* DOOM3-tvOS.xcassets in Resources */,
-				A1B2B4E42222018300D94577 /* MiniZip64_info.txt in Resources */,
-				A1B2AF522221FE9400D94577 /* base in Resources */,
-				A1B2B57C2222018300D94577 /* version.plist in Resources */,
+				A150EBD92222196D001286CF /* base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2430,7 +2354,6 @@
 			files = (
 				A1B2B3A12222018200D94577 /* Str.cpp in Sources */,
 				A1B2B3A32222018200D94577 /* Token.cpp in Sources */,
-				A1B2B2F92222018200D94577 /* GEItemScriptsDlg.cpp in Sources */,
 				A1B2B4EF2222018300D94577 /* Session.cpp in Sources */,
 				A1B2B49B2222018300D94577 /* Physics_Base.cpp in Sources */,
 				A1B2B3432222018200D94577 /* Box.cpp in Sources */,
@@ -2451,21 +2374,18 @@
 				A1B2B39B2222018200D94577 /* DrawVert.cpp in Sources */,
 				A1B2B5412222018300D94577 /* RenderWorld.cpp in Sources */,
 				A1B2B4DD2222018300D94577 /* AsyncNetwork.cpp in Sources */,
-				A1B2B3232222018200D94577 /* GEKeyValueModifier.cpp in Sources */,
 				A1B2B5692222018300D94577 /* posix_main.cpp in Sources */,
 				A1B2B4592222018300D94577 /* PlayerView.cpp in Sources */,
 				A1B2B5112222018300D94577 /* tr_trisurf.cpp in Sources */,
 				A1B2B2F12222018200D94577 /* roqParam.cpp in Sources */,
 				A1B2B4E12222018300D94577 /* unzip.cpp in Sources */,
 				A1B2B5492222018300D94577 /* tr_main.cpp in Sources */,
-				A1B2B2FD2222018200D94577 /* GESelectionMgr.cpp in Sources */,
 				A1B2B5212222018300D94577 /* Image_load.cpp in Sources */,
 				A1B2B52D2222018300D94577 /* tr_guisurf.cpp in Sources */,
 				A1B2B5452222018300D94577 /* Model_lwo.cpp in Sources */,
 				A1B2B37F2222018200D94577 /* Simd_Generic.cpp in Sources */,
 				A1B2B3592222018200D94577 /* MD5.cpp in Sources */,
 				A1B2B4692222018300D94577 /* BrittleFracture.cpp in Sources */,
-				A1B2B3172222018200D94577 /* GEProperties.cpp in Sources */,
 				A1B2B35B2222018200D94577 /* CRC32.cpp in Sources */,
 				A1B2B5632222018300D94577 /* MegaTexture.cpp in Sources */,
 				A1B2B2BB2222018200D94577 /* AASFile_sample.cpp in Sources */,
@@ -2473,14 +2393,12 @@
 				A1C120632200C27B00EAD9CB /* SDL_uikitviewcontroller+Additions.swift in Sources */,
 				A1B2B3492222018200D94577 /* Bounds.cpp in Sources */,
 				A1B2B3412222018200D94577 /* Base64.cpp in Sources */,
-				A1B2B32D2222018200D94577 /* GEWorkspace.cpp in Sources */,
 				A1B2B4972222018300D94577 /* SysCmds.cpp in Sources */,
 				A1B2B4DF2222018300D94577 /* ioapi.c in Sources */,
 				A1B2B4D12222018300D94577 /* UsercmdGen.cpp in Sources */,
 				A1B2B38F2222018200D94577 /* Winding.cpp in Sources */,
 				A1B2B2F32222018200D94577 /* codec.cpp in Sources */,
 				A1B2B6412222018300D94577 /* snd_world.cpp in Sources */,
-				A1B2B30D2222018200D94577 /* GEModifierGroup.cpp in Sources */,
 				A1B2B4892222018300D94577 /* SysCvar.cpp in Sources */,
 				A1B2B4D92222018300D94577 /* AsyncServer.cpp in Sources */,
 				A1B2B43D2222018300D94577 /* Anim_Import.cpp in Sources */,
@@ -2488,14 +2406,12 @@
 				A1B2B6172222018300D94577 /* GuiScript.cpp in Sources */,
 				A1B2B60B2222018300D94577 /* ListWindow.cpp in Sources */,
 				A1B2B2BD2222018200D94577 /* AASFileManager.cpp in Sources */,
-				A1B2B3152222018200D94577 /* GEInsertModifier.cpp in Sources */,
 				A1B2B3772222018200D94577 /* Simd_SSE3.cpp in Sources */,
 				A1B2B4DB2222018300D94577 /* NetworkSystem.cpp in Sources */,
 				A1B2B3392222018200D94577 /* CollisionModel_contents.cpp in Sources */,
 				A1B2B38B2222018200D94577 /* TraceModel.cpp in Sources */,
 				A1B2B2D92222018200D94577 /* portals.cpp in Sources */,
 				A1B2B45F2222018300D94577 /* Projectile.cpp in Sources */,
-				A1B2B2FB2222018200D94577 /* GEApp.cpp in Sources */,
 				A1B2B3712222018200D94577 /* Simd_MMX.cpp in Sources */,
 				A1B2B5372222018300D94577 /* RenderSystem.cpp in Sources */,
 				A1B2B44D2222018300D94577 /* Misc.cpp in Sources */,
@@ -2504,7 +2420,6 @@
 				A1B2B4492222018300D94577 /* Camera.cpp in Sources */,
 				A1B2B4EB2222018300D94577 /* EditField.cpp in Sources */,
 				A1B2B5672222018300D94577 /* posix_net.cpp in Sources */,
-				A1B2B3192222018200D94577 /* GEOptionsDlg.cpp in Sources */,
 				A1B2B4BF2222018300D94577 /* AF.cpp in Sources */,
 				A1C1205721FE821900EAD9CB /* JoyStickView.swift in Sources */,
 				A1B2B55D2222018300D94577 /* tr_rendertools.cpp in Sources */,
@@ -2518,26 +2433,20 @@
 				A1B2B34D2222018200D94577 /* Timer.cpp in Sources */,
 				A1B2B6152222018300D94577 /* Window.cpp in Sources */,
 				A1B2B63B2222018300D94577 /* snd_cache.cpp in Sources */,
-				A1B2B30F2222018200D94577 /* GEHideModifier.cpp in Sources */,
 				A1B2B61D2222018300D94577 /* UserInterface.cpp in Sources */,
-				A1B2B3272222018200D94577 /* GEItemPropsDlg.cpp in Sources */,
 				A1B2B34B2222018200D94577 /* BitMsg.cpp in Sources */,
 				A1B2B5172222018300D94577 /* tr_subview.cpp in Sources */,
 				A1B2B4472222018300D94577 /* SecurityCamera.cpp in Sources */,
 				A1B2B2BF2222018200D94577 /* AASBuild_file.cpp in Sources */,
 				A1B2B4392222018300D94577 /* Anim.cpp in Sources */,
-				A1B2B3132222018200D94577 /* guied.cpp in Sources */,
 				A1B2B6112222018300D94577 /* DeviceContext.cpp in Sources */,
 				A1B2B3992222018200D94577 /* Surface.cpp in Sources */,
 				A1B2B4C72222018300D94577 /* Common.cpp in Sources */,
 				A1B2B4BB2222018300D94577 /* Physics_RigidBody.cpp in Sources */,
 				A1B2B5532222018300D94577 /* tr_trace.cpp in Sources */,
 				A1B2B3352222018200D94577 /* CollisionModel_translate.cpp in Sources */,
-				A1B2B3052222018200D94577 /* GEWorkspaceFile.cpp in Sources */,
 				A1B2B4952222018300D94577 /* SaveGame.cpp in Sources */,
-				A1B2B46F2222018300D94577 /* EndLevel.cpp in Sources */,
 				A1B2B6292222018300D94577 /* EditWindow.cpp in Sources */,
-				A1B2B31D2222018200D94577 /* GEStatusBar.cpp in Sources */,
 				A1B2B5572222018300D94577 /* Material.cpp in Sources */,
 				A1B2B4452222018300D94577 /* Player.cpp in Sources */,
 				A1B2B3452222018200D94577 /* Frustum.cpp in Sources */,
@@ -2558,21 +2467,17 @@
 				A15BF76021FD0819005F4B74 /* GameViewController.swift in Sources */,
 				A1B2B3672222018200D94577 /* Quat.cpp in Sources */,
 				A1B2B5292222018300D94577 /* RenderSystem_init.cpp in Sources */,
-				A1B2B3112222018200D94577 /* GEOptions.cpp in Sources */,
 				A1B2B6332222018300D94577 /* snd_wavefile.cpp in Sources */,
 				A1B2B2E32222018200D94577 /* map.cpp in Sources */,
-				A1B2B3072222018200D94577 /* GEModifier.cpp in Sources */,
 				A1B2B4AF2222018300D94577 /* Clip.cpp in Sources */,
 				A1B2B62B2222018300D94577 /* GameBustOutWindow.cpp in Sources */,
 				A1B2B5612222018300D94577 /* ModelManager.cpp in Sources */,
 				A1B2B4912222018300D94577 /* Class.cpp in Sources */,
 				A1B2B43F2222018300D94577 /* SmokeParticles.cpp in Sources */,
 				A1B2B5652222018300D94577 /* tr_lightrun.cpp in Sources */,
-				A1B2B6192222018300D94577 /* GameWindow.cpp in Sources */,
 				A1B2B44B2222018300D94577 /* Entity.cpp in Sources */,
 				A1B2B2CB2222018200D94577 /* Brush.cpp in Sources */,
 				A1B2B45B2222018300D94577 /* Fx.cpp in Sources */,
-				A1B2B2FF2222018200D94577 /* GEZOrderModifier.cpp in Sources */,
 				A1B2B2D72222018200D94577 /* ubrush.cpp in Sources */,
 				A1B2B3952222018200D94577 /* Surface_Patch.cpp in Sources */,
 				A1B2B33D2222018200D94577 /* CollisionModel_files.cpp in Sources */,
@@ -2592,7 +2497,6 @@
 				A1B2B55F2222018300D94577 /* Model_ma.cpp in Sources */,
 				A1B2B3972222018200D94577 /* Surface_SweptSpline.cpp in Sources */,
 				A1B2B54F2222018300D94577 /* tr_backend.cpp in Sources */,
-				A1B2B3032222018200D94577 /* GEMoveModifier.cpp in Sources */,
 				A1B2B4632222018300D94577 /* Script_Interpreter.cpp in Sources */,
 				A1B2B4D52222018300D94577 /* ServerScan.cpp in Sources */,
 				A1B2B63F2222018300D94577 /* snd_decoder.cpp in Sources */,
@@ -2606,13 +2510,10 @@
 				A1B2B3532222018200D94577 /* Lexer.cpp in Sources */,
 				A1B2B3692222018200D94577 /* Simd_SSE.cpp in Sources */,
 				A1B2B2E52222018200D94577 /* leakfile.cpp in Sources */,
-				A1B2B48D2222018300D94577 /* Callbacks.cpp in Sources */,
 				A1B2B6272222018300D94577 /* BindWindow.cpp in Sources */,
 				A1B2B47B2222018300D94577 /* AI_Vagary.cpp in Sources */,
 				A1B2B3892222018200D94577 /* HashIndex.cpp in Sources */,
-				A1B2B32F2222018200D94577 /* GEDeleteModifier.cpp in Sources */,
 				A1B2B4CD2222018300D94577 /* Console.cpp in Sources */,
-				A1B2B2F72222018200D94577 /* GEModifierStack.cpp in Sources */,
 				A1B2B3792222018200D94577 /* Simd_SSE2.cpp in Sources */,
 				A1B2B4C12222018300D94577 /* Mover.cpp in Sources */,
 				A15BF75821FD02A0005F4B74 /* AppDelegate.m in Sources */,
@@ -2636,13 +2537,11 @@
 				A1B2B4BD2222018300D94577 /* PlayerIcon.cpp in Sources */,
 				A1B2B4712222018300D94577 /* AAS_routing.cpp in Sources */,
 				A1B2B4992222018300D94577 /* AFEntity.cpp in Sources */,
-				A1B2B36F2222018200D94577 /* Complex.cpp in Sources */,
 				A1B2B2E12222018200D94577 /* output.cpp in Sources */,
 				A1B2B6092222018300D94577 /* threads.cpp in Sources */,
 				A1B2B5052222018300D94577 /* tr_font.cpp in Sources */,
 				A1B2B4552222018300D94577 /* Item.cpp in Sources */,
 				A1B2B4852222018300D94577 /* IK.cpp in Sources */,
-				A1B2B3252222018200D94577 /* GEStateModifier.cpp in Sources */,
 				A1B2B5232222018300D94577 /* VertexCache.cpp in Sources */,
 				A1B2B4A32222018300D94577 /* Force_Spring.cpp in Sources */,
 				A1B2B5332222018300D94577 /* RenderWorld_portals.cpp in Sources */,
@@ -2657,15 +2556,12 @@
 				A1B2B4B92222018300D94577 /* Force.cpp in Sources */,
 				A1B2B5032222018300D94577 /* draw_arb2.cpp in Sources */,
 				A1C1267D220908DF00EAD9CB /* Extensions.swift in Sources */,
-				A1B2B3092222018200D94577 /* GENavigator.cpp in Sources */,
 				A1B2B2C12222018200D94577 /* AASFile.cpp in Sources */,
-				A1B2B31B2222018200D94577 /* GEWindowWrapper.cpp in Sources */,
 				A1B2B6232222018300D94577 /* MarkerWindow.cpp in Sources */,
 				A1B2B47F2222018300D94577 /* AAS_debug.cpp in Sources */,
 				A1B2B4D32222018300D94577 /* AsyncClient.cpp in Sources */,
 				A1B2B2B52222018200D94577 /* renderbump.cpp in Sources */,
 				A1B2B3512222018200D94577 /* Heap.cpp in Sources */,
-				A1B2B30B2222018200D94577 /* GEPropertyPage.cpp in Sources */,
 				A1B2B3572222018200D94577 /* MD4.cpp in Sources */,
 				A1B2B4CB2222018300D94577 /* DeclTable.cpp in Sources */,
 				A1B2B5252222018300D94577 /* Model_liquid.cpp in Sources */,
@@ -2679,7 +2575,6 @@
 				A1B2B4872222018300D94577 /* Target.cpp in Sources */,
 				A1B2B4B32222018300D94577 /* Physics_Static.cpp in Sources */,
 				A1B2B4612222018300D94577 /* Script_Compiler.cpp in Sources */,
-				A1B2B38D2222018200D94577 /* Surface_Polytope.cpp in Sources */,
 				A1B2B4FF2222018300D94577 /* DeclFX.cpp in Sources */,
 				A1B2B2EF2222018200D94577 /* roq.cpp in Sources */,
 				A1B2B39F2222018200D94577 /* Parser.cpp in Sources */,
@@ -2707,11 +2602,9 @@
 				A1B2B4A72222018300D94577 /* Force_Field.cpp in Sources */,
 				A1B2B61B2222018300D94577 /* ListGUI.cpp in Sources */,
 				A1B2B50D2222018300D94577 /* tr_stencilshadow.cpp in Sources */,
-				A1B2B3212222018200D94577 /* GETransformer.cpp in Sources */,
 				A1B2B4AD2222018300D94577 /* Physics.cpp in Sources */,
 				A1B2B5352222018300D94577 /* Model_ase.cpp in Sources */,
 				A1B2B3552222018200D94577 /* Lib.cpp in Sources */,
-				A1B2B3012222018200D94577 /* GESizeModifier.cpp in Sources */,
 				A1B2B3612222018200D94577 /* Ode.cpp in Sources */,
 				A1B2B6352222018300D94577 /* snd_efxfile.cpp in Sources */,
 				A1B2B35F2222018200D94577 /* Lcp.cpp in Sources */,
@@ -2725,12 +2618,10 @@
 				A1B2B3312222018200D94577 /* CollisionModel_trace.cpp in Sources */,
 				A1B2B43B2222018300D94577 /* Anim_Blend.cpp in Sources */,
 				A1B2B5392222018300D94577 /* Model_beam.cpp in Sources */,
-				A1B2B31F2222018200D94577 /* GEViewer.cpp in Sources */,
 				A1B2B4F72222018300D94577 /* DeclPDA.cpp in Sources */,
 				A1B2B2B72222018200D94577 /* AASBuild_gravity.cpp in Sources */,
 				A1B2B6212222018300D94577 /* RenderWindow.cpp in Sources */,
 				A1B2B4572222018300D94577 /* Pvs.cpp in Sources */,
-				A1B2B2F52222018200D94577 /* roq.m in Sources */,
 				A1B2B4672222018300D94577 /* Script_Thread.cpp in Sources */,
 				A1B2B4A12222018300D94577 /* Physics_Player.cpp in Sources */,
 				A1B2B50F2222018300D94577 /* RenderWorld_demo.cpp in Sources */,
@@ -2746,7 +2637,6 @@
 				A1B2B48B2222018300D94577 /* DebugGraph.cpp in Sources */,
 				A1B2B46D2222018300D94577 /* GameEdit.cpp in Sources */,
 				A1B2B3752222018200D94577 /* Simd_3DNow.cpp in Sources */,
-				A1B2B32B2222018200D94577 /* GECheckInDlg.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2754,7 +2644,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1B2B61A2222018300D94577 /* GameWindow.cpp in Sources */,
 				A1B2B6422222018300D94577 /* snd_world.cpp in Sources */,
 				A1B2B5502222018300D94577 /* tr_backend.cpp in Sources */,
 				A1B2B2EE2222018200D94577 /* NSBitmapImageRep.cpp in Sources */,
@@ -2764,7 +2653,6 @@
 				A1B2B4C02222018300D94577 /* AF.cpp in Sources */,
 				A1B2B4882222018300D94577 /* Target.cpp in Sources */,
 				A1B2B46A2222018300D94577 /* BrittleFracture.cpp in Sources */,
-				A1B2B30C2222018200D94577 /* GEPropertyPage.cpp in Sources */,
 				A1B2B48C2222018300D94577 /* DebugGraph.cpp in Sources */,
 				A1B2B4D22222018300D94577 /* UsercmdGen.cpp in Sources */,
 				A1B2B3542222018200D94577 /* Lexer.cpp in Sources */,
@@ -2797,7 +2685,6 @@
 				A1B2B4822222018300D94577 /* Trigger.cpp in Sources */,
 				A1B2B4662222018300D94577 /* Script_Program.cpp in Sources */,
 				A1B2B4482222018300D94577 /* SecurityCamera.cpp in Sources */,
-				A1B2B3282222018200D94577 /* GEItemPropsDlg.cpp in Sources */,
 				A1B2B6102222018300D94577 /* RegExp.cpp in Sources */,
 				A1B2B6182222018300D94577 /* GuiScript.cpp in Sources */,
 				A1B2B63A2222018300D94577 /* snd_system.cpp in Sources */,
@@ -2824,14 +2711,10 @@
 				A1B2B52A2222018300D94577 /* RenderSystem_init.cpp in Sources */,
 				A1B2B5802222018300D94577 /* glimp.cpp in Sources */,
 				A1B2B4A02222018300D94577 /* Physics_Parametric.cpp in Sources */,
-				A1B2B3002222018200D94577 /* GEZOrderModifier.cpp in Sources */,
 				A1B2B3902222018200D94577 /* Winding.cpp in Sources */,
 				A1B2B5702222018300D94577 /* macosx_misc.mm in Sources */,
-				A1B2B32C2222018200D94577 /* GECheckInDlg.cpp in Sources */,
-				A1B2B3142222018200D94577 /* guied.cpp in Sources */,
 				A1B2B5722222018300D94577 /* DOOMController.mm in Sources */,
 				A1B2B4F22222018300D94577 /* KeyInput.cpp in Sources */,
-				A1B2B3122222018200D94577 /* GEOptions.cpp in Sources */,
 				A1B2B49E2222018300D94577 /* Physics_AF.cpp in Sources */,
 				A1B2B4F62222018300D94577 /* File.cpp in Sources */,
 				A1B2B4DE2222018300D94577 /* AsyncNetwork.cpp in Sources */,
@@ -2842,7 +2725,6 @@
 				A1B2B5622222018300D94577 /* ModelManager.cpp in Sources */,
 				A1B2B3482222018200D94577 /* Sphere.cpp in Sources */,
 				A1B2B5322222018300D94577 /* Image_process.cpp in Sources */,
-				A1B2B3202222018200D94577 /* GEViewer.cpp in Sources */,
 				A1B2B2E02222018200D94577 /* facebsp.cpp in Sources */,
 				A1B2B3322222018200D94577 /* CollisionModel_trace.cpp in Sources */,
 				A1B2B33C2222018200D94577 /* CollisionModel_load.cpp in Sources */,
@@ -2852,10 +2734,8 @@
 				A1B2B3742222018200D94577 /* Matrix.cpp in Sources */,
 				A1B2B44C2222018300D94577 /* Entity.cpp in Sources */,
 				A1B2B2C62222018200D94577 /* AASCluster.cpp in Sources */,
-				A1B2B3182222018200D94577 /* GEProperties.cpp in Sources */,
 				A1B2B3762222018200D94577 /* Simd_3DNow.cpp in Sources */,
 				A1B2B5602222018300D94577 /* Model_ma.cpp in Sources */,
-				A1B2B38E2222018200D94577 /* Surface_Polytope.cpp in Sources */,
 				A1B2B5142222018300D94577 /* tr_deform.cpp in Sources */,
 				A1B2B6222222018300D94577 /* RenderWindow.cpp in Sources */,
 				A1B2B5562222018300D94577 /* tr_light.cpp in Sources */,
@@ -2863,12 +2743,10 @@
 				A1B2B62A2222018300D94577 /* EditWindow.cpp in Sources */,
 				A1B2B4FA2222018300D94577 /* DeclParticle.cpp in Sources */,
 				A1B2B5482222018300D94577 /* Image_files.cpp in Sources */,
-				A1B2B3702222018200D94577 /* Complex.cpp in Sources */,
 				A1B2B5082222018300D94577 /* tr_turboshadow.cpp in Sources */,
 				A1B2B5002222018300D94577 /* DeclFX.cpp in Sources */,
 				A1B2B4802222018300D94577 /* AAS_debug.cpp in Sources */,
 				A1B2B44A2222018300D94577 /* Camera.cpp in Sources */,
-				A1B2B3302222018200D94577 /* GEDeleteModifier.cpp in Sources */,
 				A1B2B54A2222018300D94577 /* tr_main.cpp in Sources */,
 				A1B2B3A22222018200D94577 /* Str.cpp in Sources */,
 				A1B2B4CA2222018300D94577 /* DeclManager.cpp in Sources */,
@@ -2876,14 +2754,11 @@
 				A1B2B43E2222018300D94577 /* Anim_Import.cpp in Sources */,
 				A1B2B4502222018300D94577 /* Actor.cpp in Sources */,
 				A1B2B38C2222018200D94577 /* TraceModel.cpp in Sources */,
-				A1B2B3022222018200D94577 /* GESizeModifier.cpp in Sources */,
 				A1B2B3442222018200D94577 /* Box.cpp in Sources */,
-				A1B2B30A2222018200D94577 /* GENavigator.cpp in Sources */,
 				A1B2B4AC2222018300D94577 /* Physics_Actor.cpp in Sources */,
 				A1B2B3342222018200D94577 /* CollisionModel_contacts.cpp in Sources */,
 				A1B2B5422222018300D94577 /* RenderWorld.cpp in Sources */,
 				A1B2B33E2222018200D94577 /* CollisionModel_files.cpp in Sources */,
-				A1B2B3262222018200D94577 /* GEStateModifier.cpp in Sources */,
 				A1B2B3382222018200D94577 /* CollisionModel_rotate.cpp in Sources */,
 				A1B2B5222222018300D94577 /* Image_load.cpp in Sources */,
 				A1B2B4422222018300D94577 /* Moveable.cpp in Sources */,
@@ -2897,7 +2772,6 @@
 				A1B2B34A2222018200D94577 /* Bounds.cpp in Sources */,
 				A1B2B4762222018300D94577 /* AAS_pathing.cpp in Sources */,
 				A1B2B2DE2222018200D94577 /* tritjunction.cpp in Sources */,
-				A1B2B30E2222018200D94577 /* GEModifierGroup.cpp in Sources */,
 				A1C1267E220908DF00EAD9CB /* Extensions.swift in Sources */,
 				A1B2B5682222018300D94577 /* posix_net.cpp in Sources */,
 				A1C124FE2204F3D200EAD9CB /* GameViewController.swift in Sources */,
@@ -2915,19 +2789,14 @@
 				A1B2B3A02222018200D94577 /* Parser.cpp in Sources */,
 				A1B2B3662222018200D94577 /* Math.cpp in Sources */,
 				A1B2B4D62222018300D94577 /* ServerScan.cpp in Sources */,
-				A1B2B32E2222018200D94577 /* GEWorkspace.cpp in Sources */,
 				A1B2B3642222018200D94577 /* Simd.cpp in Sources */,
 				A1B2B3822222018200D94577 /* Polynomial.cpp in Sources */,
 				A1B2B50A2222018300D94577 /* Cinematic.cpp in Sources */,
 				A1B2B3422222018200D94577 /* Base64.cpp in Sources */,
 				A1B2B2B62222018200D94577 /* renderbump.cpp in Sources */,
-				A1B2B31A2222018200D94577 /* GEOptionsDlg.cpp in Sources */,
-				A1B2B31E2222018200D94577 /* GEStatusBar.cpp in Sources */,
 				A1B2B3622222018200D94577 /* Ode.cpp in Sources */,
-				A1B2B31C2222018200D94577 /* GEWindowWrapper.cpp in Sources */,
 				A1B2B6122222018300D94577 /* DeviceContext.cpp in Sources */,
 				A1B2B2E42222018200D94577 /* map.cpp in Sources */,
-				A1B2B2F82222018200D94577 /* GEModifierStack.cpp in Sources */,
 				A1B2B60C2222018300D94577 /* ListWindow.cpp in Sources */,
 				A1B2B4862222018300D94577 /* IK.cpp in Sources */,
 				A1B2B4CE2222018300D94577 /* Console.cpp in Sources */,
@@ -2942,8 +2811,6 @@
 				A1B2B3842222018200D94577 /* Rotation.cpp in Sources */,
 				A1B2B55A2222018300D94577 /* ModelDecal.cpp in Sources */,
 				A1B2B4BE2222018300D94577 /* PlayerIcon.cpp in Sources */,
-				A1B2B3082222018200D94577 /* GEModifier.cpp in Sources */,
-				A1B2B48E2222018300D94577 /* Callbacks.cpp in Sources */,
 				A1B2B2F22222018200D94577 /* roqParam.cpp in Sources */,
 				A1B2B4F82222018300D94577 /* DeclPDA.cpp in Sources */,
 				A1B2B5022222018300D94577 /* CVarSystem.cpp in Sources */,
@@ -2951,7 +2818,6 @@
 				A1B2B5282222018300D94577 /* tr_render.cpp in Sources */,
 				A1B2B36E2222018200D94577 /* Pluecker.cpp in Sources */,
 				A1B2B4682222018300D94577 /* Script_Thread.cpp in Sources */,
-				A1B2B2F62222018200D94577 /* roq.m in Sources */,
 				A1B2B2BC2222018200D94577 /* AASFile_sample.cpp in Sources */,
 				A1B2B5362222018300D94577 /* Model_ase.cpp in Sources */,
 				A1B2B39C2222018200D94577 /* DrawVert.cpp in Sources */,
@@ -2969,7 +2835,6 @@
 				A1B2B3A42222018200D94577 /* Token.cpp in Sources */,
 				A1B2B3722222018200D94577 /* Simd_MMX.cpp in Sources */,
 				A1B2B4D82222018300D94577 /* MsgChannel.cpp in Sources */,
-				A1B2B2FC2222018200D94577 /* GEApp.cpp in Sources */,
 				A1B2B2EA2222018200D94577 /* usurface.cpp in Sources */,
 				A1B2B63C2222018300D94577 /* snd_cache.cpp in Sources */,
 				A1B2B4A82222018300D94577 /* Force_Field.cpp in Sources */,
@@ -2979,18 +2844,14 @@
 				A1B2B2EC2222018200D94577 /* tritools.cpp in Sources */,
 				A1B2B6382222018300D94577 /* snd_emitter.cpp in Sources */,
 				A1C124FF2204F3D700EAD9CB /* MainMenuViewController.swift in Sources */,
-				A1B2B3042222018200D94577 /* GEMoveModifier.cpp in Sources */,
 				A1B2B34C2222018200D94577 /* BitMsg.cpp in Sources */,
 				A1B2B60A2222018300D94577 /* threads.cpp in Sources */,
-				A1B2B2FE2222018200D94577 /* GESelectionMgr.cpp in Sources */,
 				A1B2B5262222018300D94577 /* Model_liquid.cpp in Sources */,
 				A1C125002204F4C900EAD9CB /* AppDelegate.m in Sources */,
 				A1B2B52C2222018300D94577 /* RenderWorld_load.cpp in Sources */,
 				A1B2B5162222018300D94577 /* draw_common.cpp in Sources */,
 				A1B2B4E82222018300D94577 /* DeclSkin.cpp in Sources */,
-				A1B2B3162222018200D94577 /* GEInsertModifier.cpp in Sources */,
 				A1B2B4FC2222018300D94577 /* EventLoop.cpp in Sources */,
-				A1B2B3102222018200D94577 /* GEHideModifier.cpp in Sources */,
 				A1B2B4522222018300D94577 /* Light.cpp in Sources */,
 				A1B2B61E2222018300D94577 /* UserInterface.cpp in Sources */,
 				A1B2B34E2222018200D94577 /* Timer.cpp in Sources */,
@@ -3006,22 +2867,18 @@
 				A1B2B3882222018200D94577 /* CmdArgs.cpp in Sources */,
 				A1B2B3962222018200D94577 /* Surface_Patch.cpp in Sources */,
 				A1B2B3782222018200D94577 /* Simd_SSE3.cpp in Sources */,
-				A1B2B4702222018300D94577 /* EndLevel.cpp in Sources */,
 				A1B2B5042222018300D94577 /* draw_arb2.cpp in Sources */,
 				A1B2B2DC2222018200D94577 /* gldraw.cpp in Sources */,
 				A1B2B54C2222018300D94577 /* Model.cpp in Sources */,
 				A1B2B55C2222018300D94577 /* RenderEntity.cpp in Sources */,
 				A1B2B3982222018200D94577 /* Surface_SweptSpline.cpp in Sources */,
-				A1B2B3222222018200D94577 /* GETransformer.cpp in Sources */,
 				A1B2B5182222018300D94577 /* tr_subview.cpp in Sources */,
 				A1B2B47A2222018300D94577 /* AAS.cpp in Sources */,
 				A1B2B2CA2222018200D94577 /* AASBuild_merge.cpp in Sources */,
 				A1B2B3682222018200D94577 /* Quat.cpp in Sources */,
-				A1B2B2FA2222018200D94577 /* GEItemScriptsDlg.cpp in Sources */,
 				A1B2B4B22222018300D94577 /* Force_Constant.cpp in Sources */,
 				A1B2B5582222018300D94577 /* Material.cpp in Sources */,
 				A1B2B49C2222018300D94577 /* Physics_Base.cpp in Sources */,
-				A1B2B3062222018200D94577 /* GEWorkspaceFile.cpp in Sources */,
 				A1B2B39E2222018200D94577 /* LangDict.cpp in Sources */,
 				A1B2B4542222018300D94577 /* Weapon.cpp in Sources */,
 				A1C1206822026DED00EAD9CB /* DifficultyViewController.swift in Sources */,
@@ -3035,7 +2892,6 @@
 				A1B2B3802222018200D94577 /* Simd_Generic.cpp in Sources */,
 				A1B2B4462222018300D94577 /* Player.cpp in Sources */,
 				A1B2B55E2222018300D94577 /* tr_rendertools.cpp in Sources */,
-				A1B2B3242222018200D94577 /* GEKeyValueModifier.cpp in Sources */,
 				A1B2B4582222018300D94577 /* Pvs.cpp in Sources */,
 				A1B2B4942222018300D94577 /* Event.cpp in Sources */,
 				A1B2B38A2222018200D94577 /* HashIndex.cpp in Sources */,
@@ -3102,14 +2958,28 @@
 				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					BASEQ2,
+					__DOOM_DLL__,
+					"'MACOS_X=1'",
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SDL/**";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DOOM3-iOS/DOOM3-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_CFLAGS = (
+					"-D_DEBUG",
+					"-pipe",
+					"-Wall",
+					"-fno-strict-aliasing",
+					"'-fvisibility=hidden'",
+					"-Wno-sign-compare",
+					"-Wno-switch",
+					"-Wno-format-security",
+					"-Woverloaded-virtual",
+					"-arch",
+					x86_64,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.doom3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DOOM3-iOS/bridging.h";
@@ -3145,15 +3015,31 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					BASEQ2,
+					__DOOM_DLL__,
+					"'MACOS_X=1'",
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SDL/**";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DOOM3-iOS/DOOM3-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_CFLAGS = (
+					"-fno-unsafe-math-optimizations",
+					"-fno-math-errno",
+					"-fno-trapping-math",
+					"-fomit-frame-pointer",
+					"-pipe",
+					"-Wall",
+					"-fno-strict-aliasing",
+					"'-fvisibility=hidden'",
+					"-Wno-sign-compare",
+					"-Wno-switch",
+					"-Wno-format-security",
+					"-Woverloaded-virtual",
+					"-arch",
+					x86_64,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.doom3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DOOM3-iOS/bridging.h";
@@ -3194,7 +3080,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SDL/**";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DOOM3-tvOS/DOOM3-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -3240,7 +3126,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SDL/**";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DOOM3-tvOS/DOOM3-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -3260,49 +3146,42 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = NO;
+				CLANG_WARN_BOOL_CONVERSION = NO;
+				CLANG_WARN_COMMA = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN_EMPTY_BODY = NO;
+				CLANG_WARN_ENUM_CONVERSION = NO;
+				CLANG_WARN_INFINITE_RECURSION = NO;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = NO;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
+				CLANG_WARN_SUSPICIOUS_MOVE = NO;
+				CLANG_WARN_UNREACHABLE_CODE = NO;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					SDL2,
-					"YQ2OSTYPE=\\\"Darwin\\\"",
-					"YQ2ARCH=\\\"x86_64\\\"",
 					IOS,
-					GLES_SILENCE_DEPRECATION,
-					USE_GLES3,
-					"OSTYPE=\\\"Darwin\\\"",
-					"ARCH=\\\"x86_64\\\"",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/SDL/**",
-					"$(PROJECT_DIR)/Quake2/client/refresh/gl3/glad/include",
+					"$(PROJECT_DIR)/DOOM3",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
@@ -3315,47 +3194,40 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = NO;
+				CLANG_WARN_BOOL_CONVERSION = NO;
+				CLANG_WARN_COMMA = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN_EMPTY_BODY = NO;
+				CLANG_WARN_ENUM_CONVERSION = NO;
+				CLANG_WARN_INFINITE_RECURSION = NO;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = NO;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
+				CLANG_WARN_SUSPICIOUS_MOVE = NO;
+				CLANG_WARN_UNREACHABLE_CODE = NO;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = c99;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					SDL2,
-					"YQ2OSTYPE=\\\"Darwin\\\"",
-					"YQ2ARCH=\\\"x86_64\\\"",
 					IOS,
-					GLES_SILENCE_DEPRECATION,
-					USE_GLES3,
-					"OSTYPE=\\\"Darwin\\\"",
-					"ARCH=\\\"x86_64\\\"",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/SDL/**",
-					"$(PROJECT_DIR)/Quake2/client/refresh/gl3/glad/include",
+					"$(PROJECT_DIR)/DOOM3",
 				);
 				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
