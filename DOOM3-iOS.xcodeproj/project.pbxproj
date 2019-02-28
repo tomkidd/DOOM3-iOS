@@ -16,6 +16,8 @@
 		A15BF75E21FD0604005F4B74 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75D21FD0604005F4B74 /* MainMenuViewController.swift */; };
 		A15BF76021FD0819005F4B74 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75F21FD0819005F4B74 /* GameViewController.swift */; };
 		A16571B9220B9FD900FE9FC9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16571B8220B9FD900FE9FC9 /* OptionsViewController.swift */; };
+		A18E826B2227583300822BAB /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E81F82227565500822BAB /* libjpeg.a */; };
+		A18E827522275A4800822BAB /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E827422275A4700822BAB /* OpenAL.framework */; };
 		A1B2B2B52222018200D94577 /* renderbump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF582222018100D94577 /* renderbump.cpp */; };
 		A1B2B2B62222018200D94577 /* renderbump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF582222018100D94577 /* renderbump.cpp */; };
 		A1B2B2B72222018200D94577 /* AASBuild_gravity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5A2222018100D94577 /* AASBuild_gravity.cpp */; };
@@ -622,6 +624,13 @@
 			remoteGlobalIDString = FAB598141BB5C1B100BE72C5;
 			remoteInfo = "libSDL-tvOS";
 		};
+		A18E81F72227565500822BAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A18E81F32227565400822BAB /* jpeg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A18E81E72227565400822BAB;
+			remoteInfo = jpeg;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -642,6 +651,8 @@
 		A15BF75D21FD0604005F4B74 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		A15BF75F21FD0819005F4B74 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A16571B8220B9FD900FE9FC9 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		A18E81F32227565400822BAB /* jpeg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = jpeg.xcodeproj; path = jpeg/jpeg/jpeg.xcodeproj; sourceTree = "<group>"; };
+		A18E827422275A4700822BAB /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		A1B2AF532222018100D94577 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		A1B2AF562222018100D94577 /* compiler_public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compiler_public.h; sourceTree = "<group>"; };
 		A1B2AF582222018100D94577 /* renderbump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderbump.cpp; sourceTree = "<group>"; };
@@ -1260,6 +1271,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A18E827522275A4800822BAB /* OpenAL.framework in Frameworks */,
+				A18E826B2227583300822BAB /* libjpeg.a in Frameworks */,
 				A1B80AD121F96DAA00560711 /* Metal.framework in Frameworks */,
 				A1B80AD221F96DAA00560711 /* libSDL2.a in Frameworks */,
 				A1B80AD321F96DAA00560711 /* AVFoundation.framework in Frameworks */,
@@ -1321,6 +1334,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A18E827422275A4700822BAB /* OpenAL.framework */,
+				A18E81F32227565400822BAB /* jpeg.xcodeproj */,
 				FD77A0840E26BDB800F39101 /* AudioToolbox.framework */,
 				A1B80B1121FA5D0500560711 /* AudioToolbox.framework */,
 				A131F33921D52FA700B4BB5D /* AVFoundation.framework */,
@@ -1395,6 +1410,14 @@
 				A142F96822138D02006A2A17 /* SavedGameViewController.swift */,
 			);
 			path = "DOOM3-iOS";
+			sourceTree = "<group>";
+		};
+		A18E81F42227565400822BAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A18E81F82227565500822BAB /* libjpeg.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A1B2AF542222018100D94577 /* tools */ = {
@@ -1879,40 +1902,40 @@
 		A1B2B13C2222018100D94577 /* physics */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2B13D2222018100D94577 /* Physics_Base.cpp */,
-				A1B2B13E2222018100D94577 /* Physics_AF.cpp */,
-				A1B2B13F2222018100D94577 /* Physics_Parametric.cpp */,
-				A1B2B1402222018100D94577 /* Physics_Player.cpp */,
-				A1B2B1412222018100D94577 /* Force_Spring.cpp */,
-				A1B2B1422222018100D94577 /* Physics_Player.h */,
-				A1B2B1432222018100D94577 /* Physics_Base.h */,
-				A1B2B1442222018100D94577 /* Physics_AF.h */,
-				A1B2B1452222018100D94577 /* Physics_Monster.cpp */,
-				A1B2B1462222018100D94577 /* Force_Field.h */,
+				A1B2B1522222018200D94577 /* Clip.cpp */,
+				A1B2B14E2222018200D94577 /* Clip.h */,
+				A1B2B1532222018200D94577 /* Force_Constant.cpp */,
+				A1B2B1572222018200D94577 /* Force_Constant.h */,
+				A1B2B15C2222018200D94577 /* Force_Drag.cpp */,
 				A1B2B1472222018100D94577 /* Force_Drag.h */,
 				A1B2B1482222018100D94577 /* Force_Field.cpp */,
-				A1B2B1492222018100D94577 /* Physics_StaticMulti.h */,
-				A1B2B14A2222018200D94577 /* Push.cpp */,
-				A1B2B14B2222018200D94577 /* Physics_Actor.h */,
-				A1B2B14C2222018200D94577 /* Physics_RigidBody.h */,
-				A1B2B14D2222018200D94577 /* Physics_Actor.cpp */,
-				A1B2B14E2222018200D94577 /* Clip.h */,
-				A1B2B14F2222018200D94577 /* Physics_Parametric.h */,
-				A1B2B1502222018200D94577 /* Physics.cpp */,
+				A1B2B1462222018100D94577 /* Force_Field.h */,
+				A1B2B1412222018100D94577 /* Force_Spring.cpp */,
 				A1B2B1512222018200D94577 /* Force_Spring.h */,
-				A1B2B1522222018200D94577 /* Clip.cpp */,
-				A1B2B1532222018200D94577 /* Force_Constant.cpp */,
-				A1B2B1542222018200D94577 /* Force.h */,
-				A1B2B1552222018200D94577 /* Push.h */,
-				A1B2B1562222018200D94577 /* Physics_Static.cpp */,
-				A1B2B1572222018200D94577 /* Force_Constant.h */,
-				A1B2B1582222018200D94577 /* Physics_Monster.h */,
-				A1B2B1592222018200D94577 /* Physics_Static.h */,
-				A1B2B15A2222018200D94577 /* Physics.h */,
-				A1B2B15B2222018200D94577 /* Physics_StaticMulti.cpp */,
-				A1B2B15C2222018200D94577 /* Force_Drag.cpp */,
 				A1B2B15D2222018200D94577 /* Force.cpp */,
+				A1B2B1542222018200D94577 /* Force.h */,
+				A1B2B14D2222018200D94577 /* Physics_Actor.cpp */,
+				A1B2B14B2222018200D94577 /* Physics_Actor.h */,
+				A1B2B13E2222018100D94577 /* Physics_AF.cpp */,
+				A1B2B1442222018100D94577 /* Physics_AF.h */,
+				A1B2B13D2222018100D94577 /* Physics_Base.cpp */,
+				A1B2B1432222018100D94577 /* Physics_Base.h */,
+				A1B2B1452222018100D94577 /* Physics_Monster.cpp */,
+				A1B2B1582222018200D94577 /* Physics_Monster.h */,
+				A1B2B13F2222018100D94577 /* Physics_Parametric.cpp */,
+				A1B2B14F2222018200D94577 /* Physics_Parametric.h */,
+				A1B2B1402222018100D94577 /* Physics_Player.cpp */,
+				A1B2B1422222018100D94577 /* Physics_Player.h */,
 				A1B2B15E2222018200D94577 /* Physics_RigidBody.cpp */,
+				A1B2B14C2222018200D94577 /* Physics_RigidBody.h */,
+				A1B2B1562222018200D94577 /* Physics_Static.cpp */,
+				A1B2B1592222018200D94577 /* Physics_Static.h */,
+				A1B2B15B2222018200D94577 /* Physics_StaticMulti.cpp */,
+				A1B2B1492222018100D94577 /* Physics_StaticMulti.h */,
+				A1B2B1502222018200D94577 /* Physics.cpp */,
+				A1B2B15A2222018200D94577 /* Physics.h */,
+				A1B2B14A2222018200D94577 /* Push.cpp */,
+				A1B2B1552222018200D94577 /* Push.h */,
 			);
 			path = physics;
 			sourceTree = "<group>";
@@ -2011,79 +2034,79 @@
 		A1B2B1AC2222018200D94577 /* renderer */ = {
 			isa = PBXGroup;
 			children = (
-				A1B2B1AD2222018200D94577 /* draw_arb2.cpp */,
-				A1B2B1AE2222018200D94577 /* MegaTexture.h */,
-				A1B2B1AF2222018200D94577 /* tr_font.cpp */,
-				A1B2B1B02222018200D94577 /* tr_turboshadow.cpp */,
 				A1B2B1B12222018200D94577 /* Cinematic.cpp */,
-				A1B2B1B22222018200D94577 /* tr_polytope.cpp */,
-				A1B2B1B32222018200D94577 /* tr_stencilshadow.cpp */,
-				A1B2B1B42222018200D94577 /* qgl.h */,
-				A1B2B1B52222018200D94577 /* RenderWorld_demo.cpp */,
-				A1B2B1B62222018200D94577 /* tr_trisurf.cpp */,
-				A1B2B1B72222018200D94577 /* GuiModel.h */,
-				A1B2B1B82222018200D94577 /* Model_lwo.h */,
-				A1B2B1B92222018200D94577 /* tr_deform.cpp */,
+				A1B2B1E42222018200D94577 /* Cinematic.h */,
+				A1B2B1AD2222018200D94577 /* draw_arb2.cpp */,
 				A1B2B1BA2222018200D94577 /* draw_common.cpp */,
-				A1B2B1BB2222018200D94577 /* tr_subview.cpp */,
-				A1B2B1BC2222018200D94577 /* Image_program.cpp */,
-				A1B2B1BD2222018200D94577 /* Interaction.cpp */,
-				A1B2B1BE2222018200D94577 /* Model_ma.h */,
-				A1B2B1BF2222018200D94577 /* RenderWorld.h */,
-				A1B2B1C02222018200D94577 /* Interaction.h */,
-				A1B2B1C12222018200D94577 /* Model_md3.cpp */,
+				A1B2B1DA2222018200D94577 /* GuiModel.cpp */,
+				A1B2B1B72222018200D94577 /* GuiModel.h */,
+				A1B2B1DD2222018200D94577 /* Image_files.cpp */,
 				A1B2B1C22222018200D94577 /* Image_init.cpp */,
 				A1B2B1C32222018200D94577 /* Image_load.cpp */,
+				A1B2B1CE2222018200D94577 /* Image_process.cpp */,
+				A1B2B1BC2222018200D94577 /* Image_program.cpp */,
+				A1B2B1F12222018200D94577 /* Image.h */,
+				A1B2B1BD2222018200D94577 /* Interaction.cpp */,
+				A1B2B1C02222018200D94577 /* Interaction.h */,
+				A1B2B1EC2222018200D94577 /* Material.cpp */,
+				A1B2B1C92222018200D94577 /* Material.h */,
+				A1B2B1F42222018200D94577 /* MegaTexture.cpp */,
+				A1B2B1AE2222018200D94577 /* MegaTexture.h */,
+				A1B2B1D02222018200D94577 /* Model_ase.cpp */,
+				A1B2B1EB2222018200D94577 /* Model_ase.h */,
+				A1B2B1D22222018200D94577 /* Model_beam.cpp */,
+				A1B2B1C62222018200D94577 /* Model_liquid.cpp */,
+				A1B2B1DE2222018200D94577 /* Model_local.h */,
+				A1B2B1DB2222018200D94577 /* Model_lwo.cpp */,
+				A1B2B1B82222018200D94577 /* Model_lwo.h */,
+				A1B2B1F22222018200D94577 /* Model_ma.cpp */,
+				A1B2B1BE2222018200D94577 /* Model_ma.h */,
+				A1B2B1C12222018200D94577 /* Model_md3.cpp */,
+				A1B2B1F02222018200D94577 /* Model_md3.h */,
+				A1B2B1CD2222018200D94577 /* Model_md5.cpp */,
+				A1B2B1E52222018200D94577 /* Model_prt.cpp */,
+				A1B2B1E72222018200D94577 /* Model_sprite.cpp */,
+				A1B2B1E12222018200D94577 /* Model.cpp */,
+				A1B2B1E02222018200D94577 /* Model.h */,
+				A1B2B1ED2222018200D94577 /* ModelDecal.cpp */,
+				A1B2B1D42222018200D94577 /* ModelDecal.h */,
+				A1B2B1F32222018200D94577 /* ModelManager.cpp */,
+				A1B2B1E32222018200D94577 /* ModelManager.h */,
+				A1B2B1D82222018200D94577 /* ModelOverlay.cpp */,
+				A1B2B1DC2222018200D94577 /* ModelOverlay.h */,
+				A1B2B1D52222018200D94577 /* qgl_proc.h */,
+				A1B2B1B42222018200D94577 /* qgl.h */,
+				A1B2B1EE2222018200D94577 /* RenderEntity.cpp */,
+				A1B2B1CA2222018200D94577 /* RenderSystem_init.cpp */,
+				A1B2B1D12222018200D94577 /* RenderSystem.cpp */,
+				A1B2B1D32222018200D94577 /* RenderSystem.h */,
+				A1B2B1B52222018200D94577 /* RenderWorld_demo.cpp */,
+				A1B2B1CB2222018200D94577 /* RenderWorld_load.cpp */,
+				A1B2B1E22222018200D94577 /* RenderWorld_local.h */,
+				A1B2B1CF2222018200D94577 /* RenderWorld_portals.cpp */,
+				A1B2B1D92222018200D94577 /* RenderWorld.cpp */,
+				A1B2B1BF2222018200D94577 /* RenderWorld.h */,
+				A1B2B1C82222018200D94577 /* simplex.h */,
+				A1B2B1E62222018200D94577 /* tr_backend.cpp */,
+				A1B2B1B92222018200D94577 /* tr_deform.cpp */,
+				A1B2B1AF2222018200D94577 /* tr_font.cpp */,
+				A1B2B1CC2222018200D94577 /* tr_guisurf.cpp */,
+				A1B2B1EA2222018200D94577 /* tr_light.cpp */,
+				A1B2B1F52222018200D94577 /* tr_lightrun.cpp */,
+				A1B2B1E82222018200D94577 /* tr_local.h */,
+				A1B2B1DF2222018200D94577 /* tr_main.cpp */,
+				A1B2B1D62222018200D94577 /* tr_orderIndexes.cpp */,
+				A1B2B1B22222018200D94577 /* tr_polytope.cpp */,
+				A1B2B1C72222018200D94577 /* tr_render.cpp */,
+				A1B2B1EF2222018200D94577 /* tr_rendertools.cpp */,
+				A1B2B1D72222018200D94577 /* tr_shadowbounds.cpp */,
+				A1B2B1B32222018200D94577 /* tr_stencilshadow.cpp */,
+				A1B2B1BB2222018200D94577 /* tr_subview.cpp */,
+				A1B2B1E92222018200D94577 /* tr_trace.cpp */,
+				A1B2B1B62222018200D94577 /* tr_trisurf.cpp */,
+				A1B2B1B02222018200D94577 /* tr_turboshadow.cpp */,
 				A1B2B1C42222018200D94577 /* VertexCache.cpp */,
 				A1B2B1C52222018200D94577 /* VertexCache.h */,
-				A1B2B1C62222018200D94577 /* Model_liquid.cpp */,
-				A1B2B1C72222018200D94577 /* tr_render.cpp */,
-				A1B2B1C82222018200D94577 /* simplex.h */,
-				A1B2B1C92222018200D94577 /* Material.h */,
-				A1B2B1CA2222018200D94577 /* RenderSystem_init.cpp */,
-				A1B2B1CB2222018200D94577 /* RenderWorld_load.cpp */,
-				A1B2B1CC2222018200D94577 /* tr_guisurf.cpp */,
-				A1B2B1CD2222018200D94577 /* Model_md5.cpp */,
-				A1B2B1CE2222018200D94577 /* Image_process.cpp */,
-				A1B2B1CF2222018200D94577 /* RenderWorld_portals.cpp */,
-				A1B2B1D02222018200D94577 /* Model_ase.cpp */,
-				A1B2B1D12222018200D94577 /* RenderSystem.cpp */,
-				A1B2B1D22222018200D94577 /* Model_beam.cpp */,
-				A1B2B1D32222018200D94577 /* RenderSystem.h */,
-				A1B2B1D42222018200D94577 /* ModelDecal.h */,
-				A1B2B1D52222018200D94577 /* qgl_proc.h */,
-				A1B2B1D62222018200D94577 /* tr_orderIndexes.cpp */,
-				A1B2B1D72222018200D94577 /* tr_shadowbounds.cpp */,
-				A1B2B1D82222018200D94577 /* ModelOverlay.cpp */,
-				A1B2B1D92222018200D94577 /* RenderWorld.cpp */,
-				A1B2B1DA2222018200D94577 /* GuiModel.cpp */,
-				A1B2B1DB2222018200D94577 /* Model_lwo.cpp */,
-				A1B2B1DC2222018200D94577 /* ModelOverlay.h */,
-				A1B2B1DD2222018200D94577 /* Image_files.cpp */,
-				A1B2B1DE2222018200D94577 /* Model_local.h */,
-				A1B2B1DF2222018200D94577 /* tr_main.cpp */,
-				A1B2B1E02222018200D94577 /* Model.h */,
-				A1B2B1E12222018200D94577 /* Model.cpp */,
-				A1B2B1E22222018200D94577 /* RenderWorld_local.h */,
-				A1B2B1E32222018200D94577 /* ModelManager.h */,
-				A1B2B1E42222018200D94577 /* Cinematic.h */,
-				A1B2B1E52222018200D94577 /* Model_prt.cpp */,
-				A1B2B1E62222018200D94577 /* tr_backend.cpp */,
-				A1B2B1E72222018200D94577 /* Model_sprite.cpp */,
-				A1B2B1E82222018200D94577 /* tr_local.h */,
-				A1B2B1E92222018200D94577 /* tr_trace.cpp */,
-				A1B2B1EA2222018200D94577 /* tr_light.cpp */,
-				A1B2B1EB2222018200D94577 /* Model_ase.h */,
-				A1B2B1EC2222018200D94577 /* Material.cpp */,
-				A1B2B1ED2222018200D94577 /* ModelDecal.cpp */,
-				A1B2B1EE2222018200D94577 /* RenderEntity.cpp */,
-				A1B2B1EF2222018200D94577 /* tr_rendertools.cpp */,
-				A1B2B1F02222018200D94577 /* Model_md3.h */,
-				A1B2B1F12222018200D94577 /* Image.h */,
-				A1B2B1F22222018200D94577 /* Model_ma.cpp */,
-				A1B2B1F32222018200D94577 /* ModelManager.cpp */,
-				A1B2B1F42222018200D94577 /* MegaTexture.cpp */,
-				A1B2B1F52222018200D94577 /* tr_lightrun.cpp */,
 			);
 			path = renderer;
 			sourceTree = "<group>";
@@ -2292,6 +2315,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = A18E81F42227565400822BAB /* Products */;
+					ProjectRef = A18E81F32227565400822BAB /* jpeg.xcodeproj */;
+				},
+				{
 					ProductGroup = A131F34421D530B500B4BB5D /* Products */;
 					ProjectRef = A131F34321D530B500B4BB5D /* SDL.xcodeproj */;
 				},
@@ -2317,6 +2344,13 @@
 			fileType = archive.ar;
 			path = libSDL2.a;
 			remoteRef = A131F34D21D530B500B4BB5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A18E81F82227565500822BAB /* libjpeg.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjpeg.a;
+			remoteRef = A18E81F72227565500822BAB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -2934,23 +2968,24 @@
 		A1B80ADE21F96DAA00560711 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 9UY8SFDNQ8;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2961,8 +2996,8 @@
 					__DOOM_DLL__,
 					"'MACOS_X=1'",
 				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DOOM3-iOS/DOOM3-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2980,6 +3015,13 @@
 					"-arch",
 					x86_64,
 				);
+				OTHER_LDFLAGS = (
+					"-arch",
+					x86_64,
+					"-mmacosx-version-min=10.9",
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.doom3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DOOM3-iOS/bridging.h";
@@ -2993,24 +3035,24 @@
 		A1B80ADF21F96DAA00560711 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = 9UY8SFDNQ8;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
@@ -3018,8 +3060,8 @@
 					__DOOM_DLL__,
 					"'MACOS_X=1'",
 				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DOOM3-iOS/DOOM3-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3039,6 +3081,13 @@
 					"-Woverloaded-virtual",
 					"-arch",
 					x86_64,
+				);
+				OTHER_LDFLAGS = (
+					"-arch",
+					x86_64,
+					"-mmacosx-version-min=10.9",
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.doom3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3158,6 +3207,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = NO;
+				CLANG_WARN_PRAGMA_PACK = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = NO;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = NO;
@@ -3167,10 +3217,12 @@
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					base_EXPORTS,
+					GAME_DLL,
 					IOS,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
@@ -3182,6 +3234,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/SDL/**",
 					"$(PROJECT_DIR)/DOOM3",
+					"$(PROJECT_DIR)/DOOM3/game",
+					"$(PROJECT_DIR)/jpeg/jpeg/jpeg/",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
@@ -3206,6 +3260,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = NO;
+				CLANG_WARN_PRAGMA_PACK = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = NO;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = NO;
@@ -3214,9 +3269,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
+					base_EXPORTS,
+					GAME_DLL,
 					IOS,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
@@ -3228,6 +3285,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/SDL/**",
 					"$(PROJECT_DIR)/DOOM3",
+					"$(PROJECT_DIR)/DOOM3/game",
+					"$(PROJECT_DIR)/jpeg/jpeg/jpeg/",
 				);
 				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;

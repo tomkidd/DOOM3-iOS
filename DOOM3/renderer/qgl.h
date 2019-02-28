@@ -44,6 +44,7 @@ If you have questions concerning this license or the applicable additional terms
 
 #ifdef IOS
 #include <SDL_opengles.h>
+#define GLdouble double
 #else
 #include <SDL_opengl.h>
 #endif
