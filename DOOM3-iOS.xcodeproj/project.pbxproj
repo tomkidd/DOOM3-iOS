@@ -23,6 +23,49 @@
 		A18E838A2228BD1000822BAB /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E82D42228B77C00822BAB /* libogg.a */; };
 		A18E838B2228BD1000822BAB /* libvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E82FA2228B96D00822BAB /* libvorbis.a */; };
 		A18E838C2228BD1000822BAB /* libvorbisfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E83892228BD1000822BAB /* libvorbisfile.a */; };
+		A18E839B2228DA1A00822BAB /* libcurl_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E83912228DA1A00822BAB /* libcurl_iOS.a */; };
+		A18E839F2228DB3E00822BAB /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E839C2228DB3D00822BAB /* libcrypto.a */; };
+		A18E83A02228DB3E00822BAB /* libnghttp2_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E839D2228DB3E00822BAB /* libnghttp2_iOS.a */; };
+		A18E83A12228DB3E00822BAB /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E839E2228DB3E00822BAB /* libssl.a */; };
+		A18E83A32228DC3000822BAB /* reflectionCubeShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828922282ECA00822BAB /* reflectionCubeShaderVP.cpp */; };
+		A18E83A52228DD2D00822BAB /* blendLightShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828522282ECA00822BAB /* blendLightShaderVP.cpp */; };
+		A18E83A62228DD3700822BAB /* cubeMapShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828122282ECA00822BAB /* cubeMapShaderFP.cpp */; };
+		A18E83A72228DD3700822BAB /* diffuseCubeShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828C22282ECA00822BAB /* diffuseCubeShaderVP.cpp */; };
+		A18E83A82228DD3700822BAB /* diffuseMapShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828422282ECA00822BAB /* diffuseMapShaderFP.cpp */; };
+		A18E83A92228DD3700822BAB /* diffuseMapShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827D22282ECA00822BAB /* diffuseMapShaderVP.cpp */; };
+		A18E83AA2228DD3700822BAB /* fogShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828222282ECA00822BAB /* fogShaderFP.cpp */; };
+		A18E83AB2228DD3700822BAB /* fogShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828B22282ECA00822BAB /* fogShaderVP.cpp */; };
+		A18E83AC2228DD3700822BAB /* interactionPhongShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828022282ECA00822BAB /* interactionPhongShaderFP.cpp */; };
+		A18E83AD2228DD3700822BAB /* interactionPhongShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828A22282ECA00822BAB /* interactionPhongShaderVP.cpp */; };
+		A18E83AE2228DD3700822BAB /* interactionShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828E22282ECA00822BAB /* interactionShaderFP.cpp */; };
+		A18E83AF2228DD3700822BAB /* interactionShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827E22282ECA00822BAB /* interactionShaderVP.cpp */; };
+		A18E83B02228DD3700822BAB /* skyboxCubeShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828722282ECA00822BAB /* skyboxCubeShaderVP.cpp */; };
+		A18E83B12228DD3700822BAB /* stencilShadowShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828822282ECA00822BAB /* stencilShadowShaderFP.cpp */; };
+		A18E83B22228DD3700822BAB /* stencilShadowShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827B22282ECA00822BAB /* stencilShadowShaderVP.cpp */; };
+		A18E83B32228DD3700822BAB /* zfillClipShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827C22282ECA00822BAB /* zfillClipShaderFP.cpp */; };
+		A18E83B42228DD3700822BAB /* zfillClipShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828322282ECA00822BAB /* zfillClipShaderVP.cpp */; };
+		A18E83B52228DD3700822BAB /* zfillShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828D22282ECA00822BAB /* zfillShaderFP.cpp */; };
+		A18E83B62228DD3700822BAB /* zfillShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827F22282ECA00822BAB /* zfillShaderVP.cpp */; };
+		A18E83B72228DD3800822BAB /* cubeMapShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828122282ECA00822BAB /* cubeMapShaderFP.cpp */; };
+		A18E83B82228DD3800822BAB /* diffuseCubeShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828C22282ECA00822BAB /* diffuseCubeShaderVP.cpp */; };
+		A18E83B92228DD3800822BAB /* diffuseMapShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828422282ECA00822BAB /* diffuseMapShaderFP.cpp */; };
+		A18E83BA2228DD3800822BAB /* diffuseMapShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827D22282ECA00822BAB /* diffuseMapShaderVP.cpp */; };
+		A18E83BB2228DD3800822BAB /* fogShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828222282ECA00822BAB /* fogShaderFP.cpp */; };
+		A18E83BC2228DD3800822BAB /* fogShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828B22282ECA00822BAB /* fogShaderVP.cpp */; };
+		A18E83BD2228DD3800822BAB /* interactionPhongShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828022282ECA00822BAB /* interactionPhongShaderFP.cpp */; };
+		A18E83BE2228DD3800822BAB /* interactionPhongShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828A22282ECA00822BAB /* interactionPhongShaderVP.cpp */; };
+		A18E83BF2228DD3800822BAB /* interactionShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828E22282ECA00822BAB /* interactionShaderFP.cpp */; };
+		A18E83C02228DD3800822BAB /* interactionShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827E22282ECA00822BAB /* interactionShaderVP.cpp */; };
+		A18E83C12228DD3800822BAB /* skyboxCubeShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828722282ECA00822BAB /* skyboxCubeShaderVP.cpp */; };
+		A18E83C22228DD3800822BAB /* stencilShadowShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828822282ECA00822BAB /* stencilShadowShaderFP.cpp */; };
+		A18E83C32228DD3800822BAB /* stencilShadowShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827B22282ECA00822BAB /* stencilShadowShaderVP.cpp */; };
+		A18E83C42228DD3800822BAB /* zfillClipShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827C22282ECA00822BAB /* zfillClipShaderFP.cpp */; };
+		A18E83C52228DD3800822BAB /* zfillClipShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828322282ECA00822BAB /* zfillClipShaderVP.cpp */; };
+		A18E83C62228DD3800822BAB /* zfillShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828D22282ECA00822BAB /* zfillShaderFP.cpp */; };
+		A18E83C72228DD3800822BAB /* zfillShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827F22282ECA00822BAB /* zfillShaderVP.cpp */; };
+		A18E83C82228DD3B00822BAB /* reflectionCubeShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828922282ECA00822BAB /* reflectionCubeShaderVP.cpp */; };
+		A18E83C92228DD3E00822BAB /* blendLightShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828522282ECA00822BAB /* blendLightShaderVP.cpp */; };
+		A18E83CB2228DE4500822BAB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E83CA2228DE4500822BAB /* libz.tbd */; };
 		A1B2B2B72222018200D94577 /* AASBuild_gravity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5A2222018100D94577 /* AASBuild_gravity.cpp */; };
 		A1B2B2B82222018200D94577 /* AASBuild_gravity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5A2222018100D94577 /* AASBuild_gravity.cpp */; };
 		A1B2B2B92222018200D94577 /* AASBuild_ledge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5D2222018100D94577 /* AASBuild_ledge.cpp */; };
@@ -662,6 +705,11 @@
 		A18E828E22282ECA00822BAB /* interactionShaderFP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = interactionShaderFP.cpp; sourceTree = "<group>"; };
 		A18E82CE2228B77B00822BAB /* ogg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogg.xcodeproj; path = ogg/ogg.xcodeproj; sourceTree = "<group>"; };
 		A18E82F52228B96C00822BAB /* vorbis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = vorbis.xcodeproj; path = vorbis/vorbis.xcodeproj; sourceTree = "<group>"; };
+		A18E83912228DA1A00822BAB /* libcurl_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl_iOS.a; path = curl/ios/libcurl_iOS.a; sourceTree = "<group>"; };
+		A18E839C2228DB3D00822BAB /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = curl/ios/libcrypto.a; sourceTree = "<group>"; };
+		A18E839D2228DB3E00822BAB /* libnghttp2_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libnghttp2_iOS.a; path = curl/ios/libnghttp2_iOS.a; sourceTree = "<group>"; };
+		A18E839E2228DB3E00822BAB /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = curl/ios/libssl.a; sourceTree = "<group>"; };
+		A18E83CA2228DE4500822BAB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A1B2AF532222018100D94577 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		A1B2AF562222018100D94577 /* compiler_public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compiler_public.h; sourceTree = "<group>"; };
 		A1B2AF582222018100D94577 /* renderbump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderbump.cpp; sourceTree = "<group>"; };
@@ -1280,6 +1328,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A18E83CB2228DE4500822BAB /* libz.tbd in Frameworks */,
+				A18E839F2228DB3E00822BAB /* libcrypto.a in Frameworks */,
+				A18E83A02228DB3E00822BAB /* libnghttp2_iOS.a in Frameworks */,
+				A18E83A12228DB3E00822BAB /* libssl.a in Frameworks */,
+				A18E839B2228DA1A00822BAB /* libcurl_iOS.a in Frameworks */,
 				A18E838A2228BD1000822BAB /* libogg.a in Frameworks */,
 				A18E838B2228BD1000822BAB /* libvorbis.a in Frameworks */,
 				A18E838C2228BD1000822BAB /* libvorbisfile.a in Frameworks */,
@@ -1346,6 +1399,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A18E83CA2228DE4500822BAB /* libz.tbd */,
+				A18E839C2228DB3D00822BAB /* libcrypto.a */,
+				A18E839D2228DB3E00822BAB /* libnghttp2_iOS.a */,
+				A18E839E2228DB3E00822BAB /* libssl.a */,
+				A18E83912228DA1A00822BAB /* libcurl_iOS.a */,
 				A18E82F52228B96C00822BAB /* vorbis.xcodeproj */,
 				A18E82CE2228B77B00822BAB /* ogg.xcodeproj */,
 				A18E827422275A4700822BAB /* OpenAL.framework */,
@@ -2477,6 +2535,7 @@
 			files = (
 				A1B2B3A12222018200D94577 /* Str.cpp in Sources */,
 				A1B2B3A32222018200D94577 /* Token.cpp in Sources */,
+				A18E83AE2228DD3700822BAB /* interactionShaderFP.cpp in Sources */,
 				A1B2B4EF2222018300D94577 /* Session.cpp in Sources */,
 				A1B2B49B2222018300D94577 /* Physics_Base.cpp in Sources */,
 				A1B2B3432222018200D94577 /* Box.cpp in Sources */,
@@ -2487,8 +2546,10 @@
 				A15BF75E21FD0604005F4B74 /* MainMenuViewController.swift in Sources */,
 				A1B2B52B2222018300D94577 /* RenderWorld_load.cpp in Sources */,
 				A1B2B6252222018300D94577 /* ChoiceWindow.cpp in Sources */,
+				A18E83B22228DD3700822BAB /* stencilShadowShaderVP.cpp in Sources */,
 				A1B2B2C92222018200D94577 /* AASBuild_merge.cpp in Sources */,
 				A1B2B5152222018300D94577 /* draw_common.cpp in Sources */,
+				A18E83A82228DD3700822BAB /* diffuseMapShaderFP.cpp in Sources */,
 				A1B2B4412222018300D94577 /* Moveable.cpp in Sources */,
 				A1B2B33B2222018200D94577 /* CollisionModel_load.cpp in Sources */,
 				A1B2B3912222018200D94577 /* Winding2D.cpp in Sources */,
@@ -2505,6 +2566,7 @@
 				A1B2B5492222018300D94577 /* tr_main.cpp in Sources */,
 				A1B2B5212222018300D94577 /* Image_load.cpp in Sources */,
 				A1B2B52D2222018300D94577 /* tr_guisurf.cpp in Sources */,
+				A18E83B62228DD3700822BAB /* zfillShaderVP.cpp in Sources */,
 				A1B2B5452222018300D94577 /* Model_lwo.cpp in Sources */,
 				A1B2B37F2222018200D94577 /* Simd_Generic.cpp in Sources */,
 				A1B2B3592222018200D94577 /* MD5.cpp in Sources */,
@@ -2536,6 +2598,7 @@
 				A1B2B3712222018200D94577 /* Simd_MMX.cpp in Sources */,
 				A1B2B5372222018300D94577 /* RenderSystem.cpp in Sources */,
 				A1B2B44D2222018300D94577 /* Misc.cpp in Sources */,
+				A18E83A52228DD2D00822BAB /* blendLightShaderVP.cpp in Sources */,
 				A1B2B4D72222018300D94577 /* MsgChannel.cpp in Sources */,
 				A1B2B49D2222018300D94577 /* Physics_AF.cpp in Sources */,
 				A1B2B4492222018300D94577 /* Camera.cpp in Sources */,
@@ -2583,17 +2646,23 @@
 				A1B2B3932222018200D94577 /* JointTransform.cpp in Sources */,
 				A1B2B6312222018300D94577 /* SliderWindow.cpp in Sources */,
 				A15BF76021FD0819005F4B74 /* GameViewController.swift in Sources */,
+				A18E83B12228DD3700822BAB /* stencilShadowShaderFP.cpp in Sources */,
 				A1B2B3672222018200D94577 /* Quat.cpp in Sources */,
 				A1B2B5292222018300D94577 /* RenderSystem_init.cpp in Sources */,
 				A1B2B6332222018300D94577 /* snd_wavefile.cpp in Sources */,
+				A18E83B42228DD3700822BAB /* zfillClipShaderVP.cpp in Sources */,
 				A1B2B4AF2222018300D94577 /* Clip.cpp in Sources */,
+				A18E83AD2228DD3700822BAB /* interactionPhongShaderVP.cpp in Sources */,
 				A1B2B62B2222018300D94577 /* GameBustOutWindow.cpp in Sources */,
+				A18E83A62228DD3700822BAB /* cubeMapShaderFP.cpp in Sources */,
 				A1B2B5612222018300D94577 /* ModelManager.cpp in Sources */,
 				A1B2B4912222018300D94577 /* Class.cpp in Sources */,
 				A1B2B43F2222018300D94577 /* SmokeParticles.cpp in Sources */,
 				A1B2B5652222018300D94577 /* tr_lightrun.cpp in Sources */,
 				A1B2B44B2222018300D94577 /* Entity.cpp in Sources */,
+				A18E83AC2228DD3700822BAB /* interactionPhongShaderFP.cpp in Sources */,
 				A1B2B2CB2222018200D94577 /* Brush.cpp in Sources */,
+				A18E83B52228DD3700822BAB /* zfillShaderFP.cpp in Sources */,
 				A1B2B45B2222018300D94577 /* Fx.cpp in Sources */,
 				A1B2B3952222018200D94577 /* Surface_Patch.cpp in Sources */,
 				A1B2B33D2222018200D94577 /* CollisionModel_files.cpp in Sources */,
@@ -2621,10 +2690,12 @@
 				A1B2B4B52222018300D94577 /* Physics_StaticMulti.cpp in Sources */,
 				A1B2B5592222018300D94577 /* ModelDecal.cpp in Sources */,
 				A1B2B2CF2222018200D94577 /* AASReach.cpp in Sources */,
+				A18E83B32228DD3700822BAB /* zfillClipShaderFP.cpp in Sources */,
 				A1B2B3532222018200D94577 /* Lexer.cpp in Sources */,
 				A1B2B3692222018200D94577 /* Simd_SSE.cpp in Sources */,
 				A1B2B6272222018300D94577 /* BindWindow.cpp in Sources */,
 				A1B2B47B2222018300D94577 /* AI_Vagary.cpp in Sources */,
+				A18E83AA2228DD3700822BAB /* fogShaderFP.cpp in Sources */,
 				A1B2B3892222018200D94577 /* HashIndex.cpp in Sources */,
 				A1B2B4CD2222018300D94577 /* Console.cpp in Sources */,
 				A1B2B3792222018200D94577 /* Simd_SSE2.cpp in Sources */,
@@ -2633,6 +2704,7 @@
 				A1B2B62F2222018300D94577 /* FieldWindow.cpp in Sources */,
 				A1B2B3812222018200D94577 /* Polynomial.cpp in Sources */,
 				A1B2B2C32222018200D94577 /* AASFile_optimize.cpp in Sources */,
+				A18E83AF2228DD3700822BAB /* interactionShaderVP.cpp in Sources */,
 				A1B2B53D2222018300D94577 /* tr_shadowbounds.cpp in Sources */,
 				A1B2B60F2222018300D94577 /* RegExp.cpp in Sources */,
 				A1B2B4CF2222018300D94577 /* DeclAF.cpp in Sources */,
@@ -2672,6 +2744,7 @@
 				A1B2B3512222018200D94577 /* Heap.cpp in Sources */,
 				A1B2B3572222018200D94577 /* MD4.cpp in Sources */,
 				A1B2B4CB2222018300D94577 /* DeclTable.cpp in Sources */,
+				A18E83A32228DC3000822BAB /* reflectionCubeShaderVP.cpp in Sources */,
 				A1B2B5252222018300D94577 /* Model_liquid.cpp in Sources */,
 				A142F96922138D03006A2A17 /* SavedGameViewController.swift in Sources */,
 				A1B2B5132222018300D94577 /* tr_deform.cpp in Sources */,
@@ -2703,12 +2776,14 @@
 				A1B2B53F2222018300D94577 /* ModelOverlay.cpp in Sources */,
 				A1B2B3872222018200D94577 /* CmdArgs.cpp in Sources */,
 				A1B2B57F2222018300D94577 /* glimp.cpp in Sources */,
+				A18E83B02228DD3700822BAB /* skyboxCubeShaderVP.cpp in Sources */,
 				A1B2B34F2222018200D94577 /* Dict.cpp in Sources */,
 				A1B2B5312222018300D94577 /* Image_process.cpp in Sources */,
 				A1B2B4A72222018300D94577 /* Force_Field.cpp in Sources */,
 				A1B2B61B2222018300D94577 /* ListGUI.cpp in Sources */,
 				A1B2B50D2222018300D94577 /* tr_stencilshadow.cpp in Sources */,
 				A1B2B4AD2222018300D94577 /* Physics.cpp in Sources */,
+				A18E83AB2228DD3700822BAB /* fogShaderVP.cpp in Sources */,
 				A1B2B5352222018300D94577 /* Model_ase.cpp in Sources */,
 				A1B2B3552222018200D94577 /* Lib.cpp in Sources */,
 				A1B2B3612222018200D94577 /* Ode.cpp in Sources */,
@@ -2719,6 +2794,7 @@
 				A1B2B5092222018300D94577 /* Cinematic.cpp in Sources */,
 				A1B2B5012222018300D94577 /* CVarSystem.cpp in Sources */,
 				A1B2B4B72222018300D94577 /* Force_Drag.cpp in Sources */,
+				A18E83A92228DD3700822BAB /* diffuseMapShaderVP.cpp in Sources */,
 				A1B2B3732222018200D94577 /* Matrix.cpp in Sources */,
 				A1B2B4C92222018300D94577 /* DeclManager.cpp in Sources */,
 				A1B2B3312222018200D94577 /* CollisionModel_trace.cpp in Sources */,
@@ -2736,6 +2812,7 @@
 				A1B2B50B2222018300D94577 /* tr_polytope.cpp in Sources */,
 				A1B2B37D2222018200D94577 /* Simd_AltiVec.cpp in Sources */,
 				A1B2B4832222018300D94577 /* Sound.cpp in Sources */,
+				A18E83A72228DD3700822BAB /* diffuseCubeShaderVP.cpp in Sources */,
 				A1B2B6052222018300D94577 /* events.cpp in Sources */,
 				A1B2B5272222018300D94577 /* tr_render.cpp in Sources */,
 				A1B2B48B2222018300D94577 /* DebugGraph.cpp in Sources */,
@@ -2748,6 +2825,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A18E83C72228DD3800822BAB /* zfillShaderVP.cpp in Sources */,
 				A1B2B6422222018300D94577 /* snd_world.cpp in Sources */,
 				A1B2B5502222018300D94577 /* tr_backend.cpp in Sources */,
 				A1B2B2EE2222018200D94577 /* NSBitmapImageRep.cpp in Sources */,
@@ -2773,9 +2851,11 @@
 				A1B2B4DC2222018300D94577 /* NetworkSystem.cpp in Sources */,
 				A1B2B3582222018200D94577 /* MD4.cpp in Sources */,
 				A1B2B61C2222018300D94577 /* ListGUI.cpp in Sources */,
+				A18E83C82228DD3B00822BAB /* reflectionCubeShaderVP.cpp in Sources */,
 				A1B2B45E2222018300D94577 /* Game_network.cpp in Sources */,
 				A1B2B4742222018300D94577 /* AI.cpp in Sources */,
 				A1B2B2C22222018200D94577 /* AASFile.cpp in Sources */,
+				A18E83C42228DD3800822BAB /* zfillClipShaderFP.cpp in Sources */,
 				A1B2B62E2222018300D94577 /* GameBearShootWindow.cpp in Sources */,
 				A142F96A22138D03006A2A17 /* SavedGameViewController.swift in Sources */,
 				A1B2B2C82222018200D94577 /* AASBuild.cpp in Sources */,
@@ -2790,9 +2870,11 @@
 				A1B2B4482222018300D94577 /* SecurityCamera.cpp in Sources */,
 				A1B2B6102222018300D94577 /* RegExp.cpp in Sources */,
 				A1B2B6182222018300D94577 /* GuiScript.cpp in Sources */,
+				A18E83B82228DD3800822BAB /* diffuseCubeShaderVP.cpp in Sources */,
 				A1B2B63A2222018300D94577 /* snd_system.cpp in Sources */,
 				A1B2B3462222018200D94577 /* Frustum.cpp in Sources */,
 				A1B2B47C2222018300D94577 /* AI_Vagary.cpp in Sources */,
+				A18E83B72228DD3800822BAB /* cubeMapShaderFP.cpp in Sources */,
 				A1B2B4DA2222018300D94577 /* AsyncServer.cpp in Sources */,
 				A1B2B5302222018300D94577 /* Model_md5.cpp in Sources */,
 				A1B2B56A2222018300D94577 /* posix_main.cpp in Sources */,
@@ -2830,7 +2912,9 @@
 				A1B2B32A2222018200D94577 /* GEWindowWrapper_stub.cpp in Sources */,
 				A1B2B4BA2222018300D94577 /* Force.cpp in Sources */,
 				A1B2B2BA2222018200D94577 /* AASBuild_ledge.cpp in Sources */,
+				A18E83C92228DD3E00822BAB /* blendLightShaderVP.cpp in Sources */,
 				A1B2B3742222018200D94577 /* Matrix.cpp in Sources */,
+				A18E83C02228DD3800822BAB /* interactionShaderVP.cpp in Sources */,
 				A1B2B44C2222018300D94577 /* Entity.cpp in Sources */,
 				A1B2B2C62222018200D94577 /* AASCluster.cpp in Sources */,
 				A1B2B3762222018200D94577 /* Simd_3DNow.cpp in Sources */,
@@ -2848,6 +2932,7 @@
 				A1B2B44A2222018300D94577 /* Camera.cpp in Sources */,
 				A1B2B54A2222018300D94577 /* tr_main.cpp in Sources */,
 				A1B2B3A22222018200D94577 /* Str.cpp in Sources */,
+				A18E83C62228DD3800822BAB /* zfillShaderFP.cpp in Sources */,
 				A1B2B4CA2222018300D94577 /* DeclManager.cpp in Sources */,
 				A1B2B6082222018300D94577 /* cpu.cpp in Sources */,
 				A1B2B43E2222018300D94577 /* Anim_Import.cpp in Sources */,
@@ -2859,11 +2944,13 @@
 				A1B2B5422222018300D94577 /* RenderWorld.cpp in Sources */,
 				A1B2B33E2222018200D94577 /* CollisionModel_files.cpp in Sources */,
 				A1B2B3382222018200D94577 /* CollisionModel_rotate.cpp in Sources */,
+				A18E83BC2228DD3800822BAB /* fogShaderVP.cpp in Sources */,
 				A1B2B5222222018300D94577 /* Image_load.cpp in Sources */,
 				A1B2B4422222018300D94577 /* Moveable.cpp in Sources */,
 				A1B2B5242222018300D94577 /* VertexCache.cpp in Sources */,
 				A1B2B4B42222018300D94577 /* Physics_Static.cpp in Sources */,
 				A1B2B5642222018300D94577 /* MegaTexture.cpp in Sources */,
+				A18E83C32228DD3800822BAB /* stencilShadowShaderVP.cpp in Sources */,
 				A1B2B35C2222018200D94577 /* CRC32.cpp in Sources */,
 				A1B2B6262222018300D94577 /* ChoiceWindow.cpp in Sources */,
 				A1B2B46E2222018300D94577 /* GameEdit.cpp in Sources */,
@@ -2907,6 +2994,8 @@
 				A1B2B4F82222018300D94577 /* DeclPDA.cpp in Sources */,
 				A1B2B5022222018300D94577 /* CVarSystem.cpp in Sources */,
 				A1B2B36C2222018200D94577 /* Vector.cpp in Sources */,
+				A18E83C52228DD3800822BAB /* zfillClipShaderVP.cpp in Sources */,
+				A18E83BF2228DD3800822BAB /* interactionShaderFP.cpp in Sources */,
 				A1B2B5282222018300D94577 /* tr_render.cpp in Sources */,
 				A1B2B36E2222018200D94577 /* Pluecker.cpp in Sources */,
 				A1B2B4682222018300D94577 /* Script_Thread.cpp in Sources */,
@@ -2930,6 +3019,7 @@
 				A1B2B4A82222018300D94577 /* Force_Field.cpp in Sources */,
 				A1B2B4AE2222018300D94577 /* Physics.cpp in Sources */,
 				A1B2B36A2222018200D94577 /* Simd_SSE.cpp in Sources */,
+				A18E83C22228DD3800822BAB /* stencilShadowShaderFP.cpp in Sources */,
 				A1B2B4EA2222018300D94577 /* Compressor.cpp in Sources */,
 				A1B2B6382222018300D94577 /* snd_emitter.cpp in Sources */,
 				A1C124FF2204F3D700EAD9CB /* MainMenuViewController.swift in Sources */,
@@ -2937,6 +3027,7 @@
 				A1B2B60A2222018300D94577 /* threads.cpp in Sources */,
 				A1B2B5262222018300D94577 /* Model_liquid.cpp in Sources */,
 				A1C125002204F4C900EAD9CB /* AppDelegate.m in Sources */,
+				A18E83BE2228DD3800822BAB /* interactionPhongShaderVP.cpp in Sources */,
 				A1B2B52C2222018300D94577 /* RenderWorld_load.cpp in Sources */,
 				A1B2B5162222018300D94577 /* draw_common.cpp in Sources */,
 				A1B2B4E82222018300D94577 /* DeclSkin.cpp in Sources */,
@@ -2965,15 +3056,18 @@
 				A1B2B3682222018200D94577 /* Quat.cpp in Sources */,
 				A1B2B4B22222018300D94577 /* Force_Constant.cpp in Sources */,
 				A1B2B5582222018300D94577 /* Material.cpp in Sources */,
+				A18E83BB2228DD3800822BAB /* fogShaderFP.cpp in Sources */,
 				A1B2B49C2222018300D94577 /* Physics_Base.cpp in Sources */,
 				A1B2B39E2222018200D94577 /* LangDict.cpp in Sources */,
 				A1B2B4542222018300D94577 /* Weapon.cpp in Sources */,
 				A1C1206822026DED00EAD9CB /* DifficultyViewController.swift in Sources */,
 				A18E827922282AE400822BAB /* draw_gles2.cpp in Sources */,
+				A18E83BA2228DD3800822BAB /* diffuseMapShaderVP.cpp in Sources */,
 				A1B2B5462222018300D94577 /* Model_lwo.cpp in Sources */,
 				A1B2B2F02222018200D94577 /* roq.cpp in Sources */,
 				A1B2B4F02222018300D94577 /* Session.cpp in Sources */,
 				A1B2B2BE2222018200D94577 /* AASFileManager.cpp in Sources */,
+				A18E83B92228DD3800822BAB /* diffuseMapShaderFP.cpp in Sources */,
 				A1B2B5442222018300D94577 /* GuiModel.cpp in Sources */,
 				A1B2B4642222018300D94577 /* Script_Interpreter.cpp in Sources */,
 				A1B2B3802222018200D94577 /* Simd_Generic.cpp in Sources */,
@@ -3000,11 +3094,13 @@
 				A1B2B4782222018300D94577 /* AI_pathing.cpp in Sources */,
 				A1B2B4402222018300D94577 /* SmokeParticles.cpp in Sources */,
 				A1B2B6362222018300D94577 /* snd_efxfile.cpp in Sources */,
+				A18E83C12228DD3800822BAB /* skyboxCubeShaderVP.cpp in Sources */,
 				A1B2B50C2222018300D94577 /* tr_polytope.cpp in Sources */,
 				A1B2B6162222018300D94577 /* Window.cpp in Sources */,
 				A1B2B4842222018300D94577 /* Sound.cpp in Sources */,
 				A1B2B4BC2222018300D94577 /* Physics_RigidBody.cpp in Sources */,
 				A1B2B44E2222018300D94577 /* Misc.cpp in Sources */,
+				A18E83BD2228DD3800822BAB /* interactionPhongShaderFP.cpp in Sources */,
 				A1B2B4A62222018300D94577 /* Physics_Monster.cpp in Sources */,
 				A1B2B3602222018200D94577 /* Lcp.cpp in Sources */,
 				A1B2B5402222018300D94577 /* ModelOverlay.cpp in Sources */,
@@ -3045,14 +3141,16 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					__DOOM_DLL__,
-					"'MACOS_X=1'",
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DOOM3-iOS/DOOM3-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/curl/ios",
+				);
 				OTHER_CFLAGS = (
 					"-D_DEBUG",
 					"-pipe",
@@ -3067,9 +3165,6 @@
 					x86_64,
 				);
 				OTHER_LDFLAGS = (
-					"-arch",
-					x86_64,
-					"-mmacosx-version-min=10.9",
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
 				);
@@ -3107,16 +3202,16 @@
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					__DOOM_DLL__,
-					"'MACOS_X=1'",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = __DOOM_DLL__;
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DOOM3-iOS/DOOM3-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/curl/ios",
+				);
 				OTHER_CFLAGS = (
 					"-fno-unsafe-math-optimizations",
 					"-fno-math-errno",
@@ -3134,9 +3229,6 @@
 					x86_64,
 				);
 				OTHER_LDFLAGS = (
-					"-arch",
-					x86_64,
-					"-mmacosx-version-min=10.9",
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
 				);
@@ -3289,6 +3381,7 @@
 					"$(PROJECT_DIR)/jpeg/jpeg/jpeg/",
 					"$(PROJECT_DIR)/ogg/",
 					"$(PROJECT_DIR)/vorbis/",
+					"$(PROJECT_DIR)/curl/",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
@@ -3342,6 +3435,7 @@
 					"$(PROJECT_DIR)/jpeg/jpeg/jpeg/",
 					"$(PROJECT_DIR)/ogg/",
 					"$(PROJECT_DIR)/vorbis/",
+					"$(PROJECT_DIR)/curl/",
 				);
 				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;

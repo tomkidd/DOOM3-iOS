@@ -17,8 +17,7 @@
 
 #include "glsl_shaders.h"
 
-const char * const interactionShaderFP = R"(
-#version 100
+const char * const interactionShaderFP = MULTILINE_STRING(#version 100
 precision mediump float;
   
 // In
@@ -67,4 +66,4 @@ void main(void)
   
   gl_FragColor = vec4(color, 1.0) * var_Color;
 }
-)";
+);

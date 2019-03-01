@@ -17,8 +17,7 @@
 
 #include "glsl_shaders.h"
 
-const char * const reflectionCubeShaderVP = R"(
-#version 100
+const char * const reflectionCubeShaderVP = MULTILINE_STRING(#version 100
 precision mediump float;
   
 // In
@@ -53,4 +52,4 @@ void main(void)
     
   gl_Position = u_modelViewProjectionMatrix * attr_Vertex;
 }
-)";
+);

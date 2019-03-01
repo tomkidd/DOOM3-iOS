@@ -18,6 +18,8 @@
 #ifndef D3WASM_GLSL_SHADERS_H
 #define D3WASM_GLSL_SHADERS_H
 
+#define MULTILINE_STRING(...) #__VA_ARGS__
+
 // Main Light Interaction
   // gouraud
 extern const char* const interactionShaderVP;

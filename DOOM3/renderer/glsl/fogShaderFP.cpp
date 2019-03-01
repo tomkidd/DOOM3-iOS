@@ -17,8 +17,7 @@
 
 #include "glsl_shaders.h"
 
-const char * const fogShaderFP = R"(
-#version 100
+const char * const fogShaderFP = MULTILINE_STRING(#version 100
 precision mediump float;
   
 // In
@@ -37,4 +36,4 @@ void main(void)
 {
   gl_FragColor = texture2D( u_fragmentMap0, var_TexFog ) * texture2D( u_fragmentMap1, var_TexFogEnter ) * vec4(u_fogColor.rgb, 1.0);
 }
-)";
+);

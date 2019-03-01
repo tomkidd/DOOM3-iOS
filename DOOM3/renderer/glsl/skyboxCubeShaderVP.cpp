@@ -17,8 +17,7 @@
 
 #include "glsl_shaders.h"
 
-const char * const skyboxCubeShaderVP = R"(
-#version 100
+const char * const skyboxCubeShaderVP = MULTILINE_STRING(#version 100
 precision mediump float;
   
 // In
@@ -49,4 +48,4 @@ void main(void)
     
   gl_Position = u_modelViewProjectionMatrix * attr_Vertex;
 }
-)";
+);

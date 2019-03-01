@@ -17,8 +17,7 @@
 
 #include "glsl_shaders.h"
 
-const char * const zfillShaderFP = R"(
-#version 100
+const char * const zfillShaderFP = MULTILINE_STRING(#version 100
 precision mediump float;
         
 // In
@@ -43,4 +42,4 @@ void main(void)
         
   gl_FragColor = u_glColor;
 }
-)";
+);
