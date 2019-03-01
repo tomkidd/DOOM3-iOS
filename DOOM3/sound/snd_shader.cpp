@@ -171,7 +171,7 @@ bool idSoundShader::ParseShader( idLexer &src ) {
 	numLeadins = 0;
 
 	int	maxSamples = idSoundSystemLocal::s_maxSoundsPerShader.GetInteger();
-	if ( com_makingBuild.GetBool() || maxSamples <= 0 || maxSamples > SOUND_MAX_LIST_WAVS ) {
+	if ( maxSamples <= 0 || maxSamples > SOUND_MAX_LIST_WAVS ) {
 		maxSamples = SOUND_MAX_LIST_WAVS;
 	}
 

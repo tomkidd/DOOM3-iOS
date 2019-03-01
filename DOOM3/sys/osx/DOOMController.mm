@@ -31,7 +31,8 @@ If you have questions concerning this license or the applicable additional terms
 #include <unistd.h>
 #include <fenv.h>
 #include <mach/thread_status.h>
-#include <AppKit/AppKit.h>
+//#include <AppKit/AppKit.h>
+#include <UIKit/UIKit.h>
 
 #include <SDL_main.h>
 
@@ -88,13 +89,18 @@ returns in megabytes
 int Sys_GetSystemRam( void ) {
 	SInt32 ramSize;
 
+#ifdef IOS
+    return 1024;
+#else
 	if ( Gestalt( gestaltPhysicalRAMSize, &ramSize ) == noErr ) {
 		return ramSize / (1024*1024);
 	}
 	else
 		return 1024;
+#endif
 }
 
+#ifndef IOS
 bool OSX_GetCPUIdentification( int& cpuId, bool& oldArchitecture )
 {
 	SInt32 cpu;
@@ -199,3 +205,5 @@ int SDL_main( int argc, char *argv[] ) {
 
 	[pool release];
 }
+
+#endif

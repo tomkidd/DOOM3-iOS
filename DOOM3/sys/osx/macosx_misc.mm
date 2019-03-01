@@ -27,7 +27,8 @@ If you have questions concerning this license or the applicable additional terms
 */
 
 #define GL_GLEXT_LEGACY // AppKit.h include pulls in gl.h already
-#import <AppKit/AppKit.h>
+//#import <AppKit/AppKit.h>
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
 #include "sys/platform.h"
@@ -49,7 +50,7 @@ void idSysLocal::OpenURL( const char *url, bool doexit ) {
 	common->Printf("Open URL: %s\n", url);
 
 
-	[[ NSWorkspace sharedWorkspace] openURL: [ NSURL URLWithString:
+	[[ UIApplication sharedApplication] openURL: [ NSURL URLWithString:
 		[ NSString stringWithCString: url ] ] ];
 
 	if ( doexit ) {

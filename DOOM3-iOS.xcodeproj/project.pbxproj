@@ -66,6 +66,10 @@
 		A18E83C82228DD3B00822BAB /* reflectionCubeShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828922282ECA00822BAB /* reflectionCubeShaderVP.cpp */; };
 		A18E83C92228DD3E00822BAB /* blendLightShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828522282ECA00822BAB /* blendLightShaderVP.cpp */; };
 		A18E83CB2228DE4500822BAB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E83CA2228DE4500822BAB /* libz.tbd */; };
+		A18E83CC2228E82300822BAB /* macosx_misc.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2012222018200D94577 /* macosx_misc.mm */; };
+		A18E83CD2228E82400822BAB /* macosx_misc.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2012222018200D94577 /* macosx_misc.mm */; };
+		A18E83CF2228E9E600822BAB /* DOOMController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2022222018200D94577 /* DOOMController.mm */; };
+		A18E83D02228E9E600822BAB /* DOOMController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2022222018200D94577 /* DOOMController.mm */; };
 		A1B2B2B72222018200D94577 /* AASBuild_gravity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5A2222018100D94577 /* AASBuild_gravity.cpp */; };
 		A1B2B2B82222018200D94577 /* AASBuild_gravity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5A2222018100D94577 /* AASBuild_gravity.cpp */; };
 		A1B2B2B92222018200D94577 /* AASBuild_ledge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5D2222018100D94577 /* AASBuild_ledge.cpp */; };
@@ -2674,6 +2678,7 @@
 				A1B2B6392222018300D94577 /* snd_system.cpp in Sources */,
 				A1B2B4F32222018300D94577 /* FileSystem.cpp in Sources */,
 				A1B2B4C52222018300D94577 /* DemoFile.cpp in Sources */,
+				A18E83CF2228E9E600822BAB /* DOOMController.mm in Sources */,
 				A1B2B51D2222018300D94577 /* Model_md3.cpp in Sources */,
 				A1B2B4E52222018300D94577 /* DeclEntityDef.cpp in Sources */,
 				A1B2B4AB2222018300D94577 /* Physics_Actor.cpp in Sources */,
@@ -2727,6 +2732,7 @@
 				A1B2B4552222018300D94577 /* Item.cpp in Sources */,
 				A1B2B4852222018300D94577 /* IK.cpp in Sources */,
 				A1B2B5232222018300D94577 /* VertexCache.cpp in Sources */,
+				A18E83CC2228E82300822BAB /* macosx_misc.mm in Sources */,
 				A1B2B4A32222018300D94577 /* Force_Spring.cpp in Sources */,
 				A1B2B5332222018300D94577 /* RenderWorld_portals.cpp in Sources */,
 				A1B2B4812222018300D94577 /* Trigger.cpp in Sources */,
@@ -3051,6 +3057,7 @@
 				A1B2B55C2222018300D94577 /* RenderEntity.cpp in Sources */,
 				A1B2B3982222018200D94577 /* Surface_SweptSpline.cpp in Sources */,
 				A1B2B5182222018300D94577 /* tr_subview.cpp in Sources */,
+				A18E83CD2228E82400822BAB /* macosx_misc.mm in Sources */,
 				A1B2B47A2222018300D94577 /* AAS.cpp in Sources */,
 				A1B2B2CA2222018200D94577 /* AASBuild_merge.cpp in Sources */,
 				A1B2B3682222018200D94577 /* Quat.cpp in Sources */,
@@ -3094,6 +3101,7 @@
 				A1B2B4782222018300D94577 /* AI_pathing.cpp in Sources */,
 				A1B2B4402222018300D94577 /* SmokeParticles.cpp in Sources */,
 				A1B2B6362222018300D94577 /* snd_efxfile.cpp in Sources */,
+				A18E83D02228E9E600822BAB /* DOOMController.mm in Sources */,
 				A18E83C12228DD3800822BAB /* skyboxCubeShaderVP.cpp in Sources */,
 				A1B2B50C2222018300D94577 /* tr_polytope.cpp in Sources */,
 				A1B2B6162222018300D94577 /* Window.cpp in Sources */,
