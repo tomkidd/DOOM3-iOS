@@ -219,7 +219,6 @@ public:
 	bool					AreasAreConnected( int areaNum1, int areaNum2, portalConnection_t connection );
 	void					FloodConnectedAreas( portalArea_t *area, int portalAttributeIndex );
 	idScreenRect &			GetAreaScreenRect( int areaNum ) const { return areaScreenRect[areaNum]; }
-	void					ShowPortals();
 
 	//--------------------------
 	// RenderWorld_demo.cpp

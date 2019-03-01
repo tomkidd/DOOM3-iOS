@@ -43,11 +43,16 @@ idSoundEffect::idSoundEffect() :
 }
 
 idSoundEffect::~idSoundEffect() {
+#ifndef IOS
 	if (soundSystemLocal.alIsEffect(effect))
 	    soundSystemLocal.alDeleteEffects(1, &effect);
+#endif
 }
 
 bool idSoundEffect::alloc() {
+#ifdef IOS
+	return false;
+#else
 	alGetError();
 
 	ALenum e;
@@ -67,6 +72,7 @@ bool idSoundEffect::alloc() {
 	}
 
 	return true;
+#endif
 }
 
 /*
@@ -156,6 +162,9 @@ idEFXFile::ReadEffect
 	} while (false)
 
 bool idEFXFile::ReadEffect( idLexer &src, idSoundEffect *effect ) {
+#ifdef IOS
+	return false;
+#else
 	idToken name, token;
 
 	if ( !src.ReadToken( &token ) )
@@ -256,6 +265,7 @@ bool idEFXFile::ReadEffect( idLexer &src, idSoundEffect *effect ) {
 	} while ( 1 );
 
 	return true;
+#endif
 }
 
 /*
