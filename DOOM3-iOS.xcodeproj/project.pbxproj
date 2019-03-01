@@ -601,6 +601,13 @@
 			remoteGlobalIDString = A18E81E72227565400822BAB;
 			remoteInfo = jpeg;
 		};
+		A18E82D32228B77C00822BAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A18E82CE2228B77B00822BAB /* ogg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A18E82C22228B77B00822BAB;
+			remoteInfo = ogg;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -644,6 +651,7 @@
 		A18E828C22282ECA00822BAB /* diffuseCubeShaderVP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = diffuseCubeShaderVP.cpp; sourceTree = "<group>"; };
 		A18E828D22282ECA00822BAB /* zfillShaderFP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zfillShaderFP.cpp; sourceTree = "<group>"; };
 		A18E828E22282ECA00822BAB /* interactionShaderFP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = interactionShaderFP.cpp; sourceTree = "<group>"; };
+		A18E82CE2228B77B00822BAB /* ogg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogg.xcodeproj; path = ogg/ogg.xcodeproj; sourceTree = "<group>"; };
 		A1B2AF532222018100D94577 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		A1B2AF562222018100D94577 /* compiler_public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compiler_public.h; sourceTree = "<group>"; };
 		A1B2AF582222018100D94577 /* renderbump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderbump.cpp; sourceTree = "<group>"; };
@@ -1325,6 +1333,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A18E82CE2228B77B00822BAB /* ogg.xcodeproj */,
 				A18E827422275A4700822BAB /* OpenAL.framework */,
 				A18E81F32227565400822BAB /* jpeg.xcodeproj */,
 				FD77A0840E26BDB800F39101 /* AudioToolbox.framework */,
@@ -1436,6 +1445,14 @@
 				A18E827F22282ECA00822BAB /* zfillShaderVP.cpp */,
 			);
 			path = glsl;
+			sourceTree = "<group>";
+		};
+		A18E82CF2228B77B00822BAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A18E82D42228B77C00822BAB /* libogg.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A1B2AF542222018100D94577 /* tools */ = {
@@ -2339,6 +2356,10 @@
 					ProjectRef = A18E81F32227565400822BAB /* jpeg.xcodeproj */;
 				},
 				{
+					ProductGroup = A18E82CF2228B77B00822BAB /* Products */;
+					ProjectRef = A18E82CE2228B77B00822BAB /* ogg.xcodeproj */;
+				},
+				{
 					ProductGroup = A131F34421D530B500B4BB5D /* Products */;
 					ProjectRef = A131F34321D530B500B4BB5D /* SDL.xcodeproj */;
 				},
@@ -2371,6 +2392,13 @@
 			fileType = archive.ar;
 			path = libjpeg.a;
 			remoteRef = A18E81F72227565500822BAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A18E82D42228B77C00822BAB /* libogg.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libogg.a;
+			remoteRef = A18E82D32228B77C00822BAB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
