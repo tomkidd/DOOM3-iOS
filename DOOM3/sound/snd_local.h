@@ -36,9 +36,15 @@ If you have questions concerning this license or the applicable additional terms
 #define AL_LIBTYPE_STATIC
 #endif
 
+#ifdef IOS
+#include <OpenAL/OpenAL.h>
+#include <OpenAL/alc.h>
+#include <OpenAL/al.h>
+#else
 #include <AL/al.h>
 #include <AL/alc.h>
 #include <AL/alext.h>
+#endif
 
 #include "framework/UsercmdGen.h"
 #include "sound/efxlib.h"
@@ -724,6 +730,7 @@ public:
 	ALsizei					openalSourceCount;
 	openalSource_t			openalSources[256];
 
+#ifndef IOS
 	LPALGENEFFECTS			alGenEffects;
 	LPALDELETEEFFECTS		alDeleteEffects;
 	LPALISEFFECT			alIsEffect;
@@ -746,6 +753,7 @@ public:
 	static bool				useEFXReverb;
 							// mark available during initialization, or through an explicit test
 	static int				EFXAvailable;
+#endif
 
 	static idCVar			s_noSound;
 	static idCVar			s_device;

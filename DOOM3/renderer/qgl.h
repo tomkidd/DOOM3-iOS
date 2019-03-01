@@ -32,89 +32,23 @@ If you have questions concerning this license or the applicable additional terms
 #ifndef __QGL_H__
 #define __QGL_H__
 
-#if defined( ID_DEDICATED ) && defined( _WIN32 )
-// to allow stubbing gl on windows, define WINGDIAPI to nothing - it would otherwise be
-// extended to __declspec(dllimport) on MSVC (our stub is no dll.)
-	#ifdef WINGDIAPI
-		#pragma push_macro("WINGDIAPI")
-		#undef WINGDIAPI
-		#define WINGDIAPI
-	#endif
-#endif
-
-#ifdef IOS
-#include <SDL_opengles.h>
-#define GLdouble double
-#else
-#include <SDL_opengl.h>
-#endif
-
-#if defined( ID_DEDICATED ) && defined( _WIN32 )
-// restore WINGDIAPI
-	#ifdef WINGDIAPI
-		#pragma pop_macro("WINGDIAPI")
-	#endif
-#endif
+#include <GLES2/gl2.h>
+#include <GLES2/gl2ext.h>
 
 typedef void (*GLExtension_t)(void);
 
 #ifdef __cplusplus
-	extern "C" {
+extern "C" {
 #endif
 
 GLExtension_t GLimp_ExtensionPointer( const char *name );
 
 #ifdef __cplusplus
-	}
+}
 #endif
 
 // declare qgl functions
-#define QGLPROC(name, rettype, args) extern rettype (APIENTRYP q##name) args;
+#define QGLPROC(name, rettype, args) extern rettype (GL_APIENTRYP q##name) args;
 #include "renderer/qgl_proc.h"
-
-// multitexture
-extern	void ( APIENTRY * qglMultiTexCoord2fARB )( GLenum texture, GLfloat s, GLfloat t );
-extern	void ( APIENTRY * qglMultiTexCoord2fvARB )( GLenum texture, GLfloat *st );
-extern	void ( APIENTRY * qglActiveTextureARB )( GLenum texture );
-extern	void ( APIENTRY * qglClientActiveTextureARB )( GLenum texture );
-
-// ARB_vertex_buffer_object
-extern PFNGLBINDBUFFERARBPROC qglBindBufferARB;
-extern PFNGLDELETEBUFFERSARBPROC qglDeleteBuffersARB;
-extern PFNGLGENBUFFERSARBPROC qglGenBuffersARB;
-extern PFNGLISBUFFERARBPROC qglIsBufferARB;
-extern PFNGLBUFFERDATAARBPROC qglBufferDataARB;
-extern PFNGLBUFFERSUBDATAARBPROC qglBufferSubDataARB;
-extern PFNGLGETBUFFERSUBDATAARBPROC qglGetBufferSubDataARB;
-extern PFNGLMAPBUFFERARBPROC qglMapBufferARB;
-extern PFNGLUNMAPBUFFERARBPROC qglUnmapBufferARB;
-extern PFNGLGETBUFFERPARAMETERIVARBPROC qglGetBufferParameterivARB;
-extern PFNGLGETBUFFERPOINTERVARBPROC qglGetBufferPointervARB;
-
-// 3D textures
-extern void ( APIENTRY *qglTexImage3D)(GLenum, GLint, GLint, GLsizei, GLsizei, GLsizei, GLint, GLenum, GLenum, const GLvoid *);
-
-// shared texture palette
-extern	void ( APIENTRY *qglColorTableEXT)( int, int, int, int, int, const void * );
-
-// EXT_stencil_two_side
-extern	PFNGLACTIVESTENCILFACEEXTPROC	qglActiveStencilFaceEXT;
-
-// ARB_texture_compression
-extern	PFNGLCOMPRESSEDTEXIMAGE2DARBPROC	qglCompressedTexImage2DARB;
-extern	PFNGLGETCOMPRESSEDTEXIMAGEARBPROC	qglGetCompressedTexImageARB;
-
-// ARB_vertex_program / ARB_fragment_program
-extern PFNGLVERTEXATTRIBPOINTERARBPROC		qglVertexAttribPointerARB;
-extern PFNGLENABLEVERTEXATTRIBARRAYARBPROC	qglEnableVertexAttribArrayARB;
-extern PFNGLDISABLEVERTEXATTRIBARRAYARBPROC	qglDisableVertexAttribArrayARB;
-extern PFNGLPROGRAMSTRINGARBPROC			qglProgramStringARB;
-extern PFNGLBINDPROGRAMARBPROC				qglBindProgramARB;
-extern PFNGLGENPROGRAMSARBPROC				qglGenProgramsARB;
-extern PFNGLPROGRAMENVPARAMETER4FVARBPROC	qglProgramEnvParameter4fvARB;
-extern PFNGLPROGRAMLOCALPARAMETER4FVARBPROC	qglProgramLocalParameter4fvARB;
-
-// GL_EXT_depth_bounds_test
-extern PFNGLDEPTHBOUNDSEXTPROC              qglDepthBoundsEXT;
 
 #endif

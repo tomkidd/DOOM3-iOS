@@ -1117,39 +1117,23 @@ void idInteraction::AddActiveInteraction( void ) {
 				if ( !R_CullLocalBox( lightTris->bounds, vEntity->modelMatrix, 5, tr.viewDef->frustum ) ) {
 
 					// make sure the original surface has its ambient cache created
-					srfTriangles_t *tri = sint->ambientTris;
-					if ( !tri->ambientCache ) {
-						if ( !R_CreateAmbientCache( tri, sint->shader->ReceivesLighting() ) ) {
-							// skip if we were out of vertex memory
-							continue;
-						}
+					if ( !R_CreateAmbientCache( sint->ambientTris, sint->shader->ReceivesLighting() ) ) {
+					  // skip if we were out of vertex memory
+						continue;
 					}
-
 					// reference the original surface's ambient cache
-					lightTris->ambientCache = tri->ambientCache;
+					// GAB NOTE: we are in cache "reuse" mode
+					lightTris->ambientCache = sint->ambientTris->ambientCache;
 
-					// touch the ambient surface so it won't get purged
-					vertexCache.Touch( lightTris->ambientCache );
+					// Even if we reuse the original surface ambient cache, we nevertheless need to compute a local index cache
+          if ( !R_CreateIndexCache( lightTris ) ) {
+            // skip if we were out of vertex memory
+            continue;
+          }
 
-					// regenerate the lighting cache (for non-vertex program cards) if it has been purged
-					if ( !lightTris->lightingCache ) {
-						if ( !R_CreateLightingCache( entityDef, lightDef, lightTris ) ) {
-							// skip if we are out of vertex memory
-							continue;
-						}
-					}
-					// touch the light surface so it won't get purged
-					// (vertex program cards won't have a light cache at all)
-					if ( lightTris->lightingCache ) {
-						vertexCache.Touch( lightTris->lightingCache );
-					}
-
-					if ( !lightTris->indexCache && r_useIndexBuffers.GetBool() ) {
-						vertexCache.Alloc( lightTris->indexes, lightTris->numIndexes * sizeof( lightTris->indexes[0] ), &lightTris->indexCache, true );
-					}
-					if ( lightTris->indexCache ) {
-						vertexCache.Touch( lightTris->indexCache );
-					}
+          // touch the ambient surface so it won't get purged
+          vertexCache.Touch( lightTris->ambientCache );
+          vertexCache.Touch( lightTris->indexCache );
 
 					// add the surface to the light list
 
@@ -1199,37 +1183,40 @@ void idInteraction::AddActiveInteraction( void ) {
 				}
 			}
 
-			// copy the shadow vertexes to the vertex cache if they have been purged
+			// If the tri have shadowVertexes (eg. precomputed shadows)
+      if ( shadowTris->shadowVertexes ) {
+        // Create its shadow cache
+        if (!R_CreatePrivateShadowCache( shadowTris )) {
+          // skip if we were out of vertex memory
+          continue;
+        }
+        // And its index cache
+        if (!R_CreateIndexCache( shadowTris ) ) {
+          // skip if we were out of vertex memory
+          continue;
+        }
+      }
+      // Otherwise this is dynamic shadows
+      else {
+        // Make sure the original surface has its shadow cache created
+        if (!R_CreateVertexProgramShadowCache( sint->ambientTris )) {
+          // skip if we were out of vertex memory
+          continue;
+        }
+        // reference the original surface's shadow cache
+        // GAB NOTE: we are in cache "reuse" mode
+        shadowTris->shadowCache = sint->ambientTris->shadowCache;
 
-			// if we are using shared shadowVertexes and letting a vertex program fix them up,
-			// get the shadowCache from the parent ambient surface
-			if ( !shadowTris->shadowVertexes ) {
-				// the data may have been purged, so get the latest from the "home position"
-				shadowTris->shadowCache = sint->ambientTris->shadowCache;
-			}
+        // Even if we reuse the original surface shadow cache, we nevertheless need to compute a local index cache
+        if ( !R_CreateIndexCache( shadowTris ) ) {
+          // skip if we were out of vertex memory
+          continue;
+        }
+      }
 
-			// if we have been purged, re-upload the shadowVertexes
-			if ( !shadowTris->shadowCache ) {
-				if ( shadowTris->shadowVertexes ) {
-					// each interaction has unique vertexes
-					R_CreatePrivateShadowCache( shadowTris );
-				} else {
-					R_CreateVertexProgramShadowCache( sint->ambientTris );
-					shadowTris->shadowCache = sint->ambientTris->shadowCache;
-				}
-				// if we are out of vertex cache space, skip the interaction
-				if ( !shadowTris->shadowCache ) {
-					continue;
-				}
-			}
-
-			// touch the shadow surface so it won't get purged
+			// In the end, touch the shadow surface so it won't get purged
 			vertexCache.Touch( shadowTris->shadowCache );
-
-			if ( !shadowTris->indexCache && r_useIndexBuffers.GetBool() ) {
-				vertexCache.Alloc( shadowTris->indexes, shadowTris->numIndexes * sizeof( shadowTris->indexes[0] ), &shadowTris->indexCache, true );
-				vertexCache.Touch( shadowTris->indexCache );
-			}
+      vertexCache.Touch( shadowTris->indexCache );
 
 			// see if we can avoid using the shadow volume caps
 			bool inside = R_PotentiallyInsideInfiniteShadow( sint->ambientTris, localViewOrigin, localLightOrigin );

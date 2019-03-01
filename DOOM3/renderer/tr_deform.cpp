@@ -58,11 +58,10 @@ static void R_FinishDeform( drawSurf_t *drawSurf, srfTriangles_t *newTri, idDraw
 		newTri->verts = NULL;
 	}
 
-	newTri->ambientCache = vertexCache.AllocFrameTemp( ac, newTri->numVerts * sizeof( idDrawVert ) );
-	// if we are out of vertex cache, leave it the way it is
-	if ( newTri->ambientCache ) {
-		drawSurf->geo = newTri;
-	}
+	newTri->ambientCache = vertexCache.AllocFrameTemp( ac, newTri->numVerts * sizeof( idDrawVert ), false );
+	newTri->indexCache = vertexCache.AllocFrameTemp( newTri->indexes, newTri->numIndexes * sizeof( glIndex_t ), true );
+
+	drawSurf->geo = newTri;
 }
 
 /*
@@ -1211,11 +1210,11 @@ static void R_ParticleDeform( drawSurf_t *surf, bool useArea ) {
 					indexes += 6;
 				}
 				tri->numIndexes = indexes;
-				tri->ambientCache = vertexCache.AllocFrameTemp( tri->verts, tri->numVerts * sizeof( idDrawVert ) );
-				if ( tri->ambientCache ) {
-					// add the drawsurf
-					R_AddDrawSurf( tri, surf->space, renderEntity, stage->material, surf->scissorRect );
-				}
+				tri->ambientCache = vertexCache.AllocFrameTemp( tri->verts, tri->numVerts * sizeof( idDrawVert ), false );
+				tri->indexCache = vertexCache.AllocFrameTemp( tri->indexes, tri->numIndexes * sizeof( glIndex_t ), true );
+
+				// add the drawsurf
+				R_AddDrawSurf( tri, surf->space, renderEntity, stage->material, surf->scissorRect );
 			}
 		}
 	}

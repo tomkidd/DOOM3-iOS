@@ -74,11 +74,6 @@ typedef struct dominantTri_s {
 	float						normalizationScale[3];
 } dominantTri_t;
 
-typedef struct lightingCache_s {
-	idVec3						localLightVector;		// this is the statically computed vector to the light
-														// in texture space for cards without vertex programs
-} lightingCache_t;
-
 typedef struct shadowCache_s {
 	idVec4						xyz;					// we use homogenous coordinate tricks
 } shadowCache_t;
@@ -128,7 +123,8 @@ typedef struct srfTriangles_s {
 														// turboShadows will have SHADOW_CAP_INFINITE
 
 	shadowCache_t *				shadowVertexes;			// these will be copied to shadowCache when it is going to be drawn.
-														// these are NULL when vertex programs are available
+														                // these are NULL when vertex programs are available, or if it is precomputed shadow
+
 
 	struct srfTriangles_s *		ambientSurface;			// for light interactions, point back at the original surface that generated
 														// the interaction, which we will get the ambientCache from
@@ -138,7 +134,6 @@ typedef struct srfTriangles_s {
 	// data in vertex object space, not directly readable by the CPU
 	struct vertCache_s *		indexCache;				// int
 	struct vertCache_s *		ambientCache;			// idDrawVert
-	struct vertCache_s *		lightingCache;			// lightingCache_t
 	struct vertCache_s *		shadowCache;			// shadowCache_t
 } srfTriangles_t;
 

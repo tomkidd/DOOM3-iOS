@@ -68,17 +68,14 @@ idCVar idSoundSystemLocal::s_reverbTime( "s_reverbTime", "1000", CVAR_SOUND | CV
 idCVar idSoundSystemLocal::s_reverbFeedback( "s_reverbFeedback", "0.333", CVAR_SOUND | CVAR_FLOAT, "" );
 idCVar idSoundSystemLocal::s_enviroSuitVolumeScale( "s_enviroSuitVolumeScale", "0.9", CVAR_SOUND | CVAR_FLOAT, "" );
 idCVar idSoundSystemLocal::s_skipHelltimeFX( "s_skipHelltimeFX", "0", CVAR_SOUND | CVAR_BOOL, "" );
-
-#if !defined(ID_DEDICATED)
-idCVar idSoundSystemLocal::s_useEAXReverb( "s_useEAXReverb", "1", CVAR_SOUND | CVAR_BOOL | CVAR_ARCHIVE, "use EFX reverb" );
 idCVar idSoundSystemLocal::s_decompressionLimit( "s_decompressionLimit", "6", CVAR_SOUND | CVAR_INTEGER | CVAR_ARCHIVE, "specifies maximum uncompressed sample length in seconds" );
-#else
+#ifdef IOS
 idCVar idSoundSystemLocal::s_useEAXReverb( "s_useEAXReverb", "0", CVAR_SOUND | CVAR_BOOL | CVAR_ROM, "EFX not available in this build" );
-idCVar idSoundSystemLocal::s_decompressionLimit( "s_decompressionLimit", "6", CVAR_SOUND | CVAR_INTEGER | CVAR_ROM, "specifies maximum uncompressed sample length in seconds" );
-#endif
-
+#else
+idCVar idSoundSystemLocal::s_useEAXReverb( "s_useEAXReverb", "1", CVAR_SOUND | CVAR_BOOL | CVAR_ARCHIVE, "use EFX reverb" );
 bool idSoundSystemLocal::useEFXReverb = false;
 int idSoundSystemLocal::EFXAvailable = -1;
+#endif
 
 idSoundSystemLocal	soundSystemLocal;
 idSoundSystem	*soundSystem  = &soundSystemLocal;
@@ -251,7 +248,7 @@ TestSound_f
   this is called from the main thread
 ===============
 */
-void TestSound_f( const idCmdArgs &args ) {
+/*void TestSound_f( const idCmdArgs &args ) {
 	if ( args.Argc() != 2 ) {
 		common->Printf( "Usage: testSound <file>\n" );
 		return;
@@ -259,7 +256,7 @@ void TestSound_f( const idCmdArgs &args ) {
 	if ( soundSystemLocal.currentSoundWorld ) {
 		soundSystemLocal.currentSoundWorld->PlayShaderDirectly( args.Argv( 1 ) );
 	}
-}
+}*/
 
 /*
 ===============
@@ -364,6 +361,9 @@ void idSoundSystemLocal::Init() {
 	common->Printf( "OpenAL renderer: %s\n", alGetString(AL_RENDERER));
 	common->Printf( "OpenAL version: %s\n", alGetString(AL_VERSION));
 
+#ifdef IOS
+	common->Printf( "OpenAL: EFX extension not found\n" );
+#else
 	// try to obtain EFX extensions
 	if (alcIsExtensionPresent(openalDevice, "ALC_EXT_EFX")) {
 		common->Printf( "OpenAL: found EFX extension\n" );
@@ -405,6 +405,7 @@ void idSoundSystemLocal::Init() {
 		alIsAuxiliaryEffectSlot = NULL;
 		alAuxiliaryEffectSloti = NULL;
 	}
+#endif
 
 	ALuint handle;
 	openalSourceCount = 0;
@@ -435,13 +436,15 @@ void idSoundSystemLocal::Init() {
 	// adjust source count to allow for at least eight stereo sounds to play
 	openalSourceCount -= 8;
 
+#ifndef IOS
 	useEFXReverb = idSoundSystemLocal::s_useEAXReverb.GetBool();
 	efxloaded = false;
+#endif
 
 	cmdSystem->AddCommand( "listSounds", ListSounds_f, CMD_FL_SOUND, "lists all sounds" );
 	cmdSystem->AddCommand( "listSoundDecoders", ListSoundDecoders_f, CMD_FL_SOUND, "list active sound decoders" );
 	cmdSystem->AddCommand( "reloadSounds", SoundReloadSounds_f, CMD_FL_SOUND|CMD_FL_CHEAT, "reloads all sounds" );
-	cmdSystem->AddCommand( "testSound", TestSound_f, CMD_FL_SOUND | CMD_FL_CHEAT, "tests a sound", idCmdSystem::ArgCompletion_SoundName );
+	//cmdSystem->AddCommand( "testSound", TestSound_f, CMD_FL_SOUND | CMD_FL_CHEAT, "tests a sound", idCmdSystem::ArgCompletion_SoundName );
 	cmdSystem->AddCommand( "s_restart", SoundSystemRestart_f, CMD_FL_SOUND, "restarts the sound system" );
 }
 
@@ -453,10 +456,12 @@ idSoundSystemLocal::Shutdown
 void idSoundSystemLocal::Shutdown() {
 	ShutdownHW();
 
+#ifndef IOS
 	// EFX or not, the list needs to be cleared
 	EFXDatabase.Clear();
 
 	efxloaded = false;
+#endif
 
 	// adjust source count back up to allow for freeing of all resources
 	openalSourceCount += 8;
@@ -1016,10 +1021,12 @@ void idSoundSystemLocal::BeginLevelLoad() {
 	}
 	soundCache->BeginLevelLoad();
 
+#ifndef IOS
 	if ( efxloaded ) {
 		EFXDatabase.Clear();
 		efxloaded = false;
 	}
+#endif
 }
 
 /*
@@ -1033,6 +1040,9 @@ void idSoundSystemLocal::EndLevelLoad( const char *mapstring ) {
 	}
 	soundCache->EndLevelLoad();
 
+#ifdef IOS
+	return;
+#else
 	if (!useEFXReverb)
 		return;
 
@@ -1050,6 +1060,7 @@ void idSoundSystemLocal::EndLevelLoad( const char *mapstring ) {
 	} else {
 		common->Printf("sound: missing %s\n", efxname.c_str() );
 	}
+#endif
 }
 
 /*
@@ -1325,8 +1336,8 @@ idSoundSystemLocal::IsEFXAvailable
 ===============
 */
 int idSoundSystemLocal::IsEFXAvailable( void ) {
-#if defined(ID_DEDICATED)
-	return -1;
+#ifdef IOS
+  return -1;
 #else
 	return EFXAvailable;
 #endif

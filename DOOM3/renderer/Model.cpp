@@ -2136,9 +2136,16 @@ void idRenderModelStatic::FreeVertexCache( void ) {
 		if ( !tri ) {
 			continue;
 		}
+
+		// Free the vertex caches
+		// NB: these are always private, so we can free them without worrying
 		if ( tri->ambientCache ) {
 			vertexCache.Free( tri->ambientCache );
 			tri->ambientCache = NULL;
+		}
+		if ( tri->indexCache ) {
+			vertexCache.Free( tri->indexCache );
+			tri->indexCache = NULL;
 		}
 		// static shadows may be present
 		if ( tri->shadowCache ) {

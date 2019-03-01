@@ -35,6 +35,10 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "framework/GameCallbacks_local.h"
 
+#ifdef __EMSCRIPTEN__
+#include "emscripten.h"
+#endif
+
 const char *imageFilter[] = {
 	"GL_LINEAR_MIPMAP_NEAREST",
 	"GL_LINEAR_MIPMAP_LINEAR",
@@ -47,31 +51,34 @@ const char *imageFilter[] = {
 
 idCVar idImageManager::image_filter( "image_filter", imageFilter[1], CVAR_RENDERER | CVAR_ARCHIVE, "changes texture filtering on mipmapped images", imageFilter, idCmdSystem::ArgCompletion_String<imageFilter> );
 idCVar idImageManager::image_anisotropy( "image_anisotropy", "1", CVAR_RENDERER | CVAR_ARCHIVE, "set the maximum texture anisotropy if available" );
-idCVar idImageManager::image_lodbias( "image_lodbias", "0", CVAR_RENDERER | CVAR_ARCHIVE, "change lod bias on mipmapped images" );
+idCVar idImageManager::image_colorMipLevels( "image_colorMipLevels", "0", CVAR_RENDERER | CVAR_BOOL, "development aid to see texture mip usage" );
+idCVar idImageManager::image_preload( "image_preload", "1", CVAR_RENDERER | CVAR_BOOL | CVAR_ARCHIVE, "if 0, dynamically load all images" );
+idCVar idImageManager::image_showBackgroundLoads( "image_showBackgroundLoads", "0", CVAR_RENDERER | CVAR_BOOL, "1 = print number of outstanding background loads" );
+#if 1
+idCVar idImageManager::image_downSize( "image_downSize", "0", CVAR_RENDERER | CVAR_ROM, "controls texture downsampling" );
+idCVar idImageManager::image_forceDownSize( "image_forceDownSize", "0", CVAR_RENDERER | CVAR_ROM | CVAR_BOOL, "" );
+idCVar idImageManager::image_roundDown( "image_roundDown", "0", CVAR_RENDERER | CVAR_ROM | CVAR_BOOL, "round bad sizes down to nearest power of two" );
+idCVar idImageManager::image_writeNormalTGA( "image_writeNormalTGA", "0", CVAR_RENDERER | CVAR_ROM | CVAR_BOOL, "write .tgas of the final normal maps for debugging" );
+idCVar idImageManager::image_writeNormalTGAPalletized( "image_writeNormalTGAPalletized", "0", CVAR_RENDERER | CVAR_ROM | CVAR_BOOL, "write .tgas of the final palletized normal maps for debugging" );
+idCVar idImageManager::image_writeTGA( "image_writeTGA", "0", CVAR_RENDERER | CVAR_ROM | CVAR_BOOL, "write .tgas of the non normal maps for debugging" );
+idCVar idImageManager::image_downSizeSpecular( "image_downSizeSpecular", "0", CVAR_RENDERER | CVAR_ROM | CVAR_ARCHIVE, "controls specular downsampling" );
+idCVar idImageManager::image_downSizeBump( "image_downSizeBump", "0", CVAR_RENDERER | CVAR_ROM, "controls normal map downsampling" );
+idCVar idImageManager::image_downSizeSpecularLimit( "image_downSizeSpecularLimit", "64", CVAR_RENDERER | CVAR_ROM, "controls specular downsampled limit" );
+idCVar idImageManager::image_downSizeBumpLimit( "image_downSizeBumpLimit", "128", CVAR_RENDERER | CVAR_ROM, "controls normal map downsample limit" );
+idCVar idImageManager::image_downSizeLimit( "image_downSizeLimit", "256", CVAR_RENDERER | CVAR_ROM, "controls diffuse map downsample limit" );
+#else
 idCVar idImageManager::image_downSize( "image_downSize", "0", CVAR_RENDERER | CVAR_ARCHIVE, "controls texture downsampling" );
 idCVar idImageManager::image_forceDownSize( "image_forceDownSize", "0", CVAR_RENDERER | CVAR_ARCHIVE | CVAR_BOOL, "" );
 idCVar idImageManager::image_roundDown( "image_roundDown", "1", CVAR_RENDERER | CVAR_ARCHIVE | CVAR_BOOL, "round bad sizes down to nearest power of two" );
-idCVar idImageManager::image_colorMipLevels( "image_colorMipLevels", "0", CVAR_RENDERER | CVAR_BOOL, "development aid to see texture mip usage" );
-idCVar idImageManager::image_preload( "image_preload", "1", CVAR_RENDERER | CVAR_BOOL | CVAR_ARCHIVE, "if 0, dynamically load all images" );
-idCVar idImageManager::image_useCompression( "image_useCompression", "1", CVAR_RENDERER | CVAR_ARCHIVE | CVAR_BOOL, "0 = force everything to high quality" );
-idCVar idImageManager::image_useAllFormats( "image_useAllFormats", "1", CVAR_RENDERER | CVAR_ARCHIVE | CVAR_BOOL, "allow alpha/intensity/luminance/luminance+alpha" );
-idCVar idImageManager::image_useNormalCompression( "image_useNormalCompression", "2", CVAR_RENDERER | CVAR_ARCHIVE | CVAR_INTEGER, "2 = use rxgb compression for normal maps, 1 = use 256 color compression for normal maps if available" );
-idCVar idImageManager::image_usePrecompressedTextures( "image_usePrecompressedTextures", "1", CVAR_RENDERER | CVAR_ARCHIVE | CVAR_BOOL, "use .dds files if present" );
-idCVar idImageManager::image_writePrecompressedTextures( "image_writePrecompressedTextures", "0", CVAR_RENDERER | CVAR_BOOL, "write .dds files if necessary" );
 idCVar idImageManager::image_writeNormalTGA( "image_writeNormalTGA", "0", CVAR_RENDERER | CVAR_BOOL, "write .tgas of the final normal maps for debugging" );
 idCVar idImageManager::image_writeNormalTGAPalletized( "image_writeNormalTGAPalletized", "0", CVAR_RENDERER | CVAR_BOOL, "write .tgas of the final palletized normal maps for debugging" );
 idCVar idImageManager::image_writeTGA( "image_writeTGA", "0", CVAR_RENDERER | CVAR_BOOL, "write .tgas of the non normal maps for debugging" );
-idCVar idImageManager::image_useOffLineCompression( "image_useOfflineCompression", "0", CVAR_RENDERER | CVAR_BOOL, "write a batch file for offline compression of DDS files" );
-idCVar idImageManager::image_cacheMinK( "image_cacheMinK", "200", CVAR_RENDERER | CVAR_ARCHIVE | CVAR_INTEGER, "maximum KB of precompressed files to read at specification time" );
-idCVar idImageManager::image_cacheMegs( "image_cacheMegs", "20", CVAR_RENDERER | CVAR_ARCHIVE, "maximum MB set aside for temporary loading of full-sized precompressed images" );
-idCVar idImageManager::image_useCache( "image_useCache", "0", CVAR_RENDERER | CVAR_ARCHIVE | CVAR_BOOL, "1 = do background load image caching" );
-idCVar idImageManager::image_showBackgroundLoads( "image_showBackgroundLoads", "0", CVAR_RENDERER | CVAR_BOOL, "1 = print number of outstanding background loads" );
 idCVar idImageManager::image_downSizeSpecular( "image_downSizeSpecular", "0", CVAR_RENDERER | CVAR_ARCHIVE, "controls specular downsampling" );
 idCVar idImageManager::image_downSizeBump( "image_downSizeBump", "0", CVAR_RENDERER | CVAR_ARCHIVE, "controls normal map downsampling" );
 idCVar idImageManager::image_downSizeSpecularLimit( "image_downSizeSpecularLimit", "64", CVAR_RENDERER | CVAR_ARCHIVE, "controls specular downsampled limit" );
 idCVar idImageManager::image_downSizeBumpLimit( "image_downSizeBumpLimit", "128", CVAR_RENDERER | CVAR_ARCHIVE, "controls normal map downsample limit" );
-idCVar idImageManager::image_ignoreHighQuality( "image_ignoreHighQuality", "0", CVAR_RENDERER | CVAR_ARCHIVE, "ignore high quality setting on materials" );
 idCVar idImageManager::image_downSizeLimit( "image_downSizeLimit", "256", CVAR_RENDERER | CVAR_ARCHIVE, "controls diffuse map downsample limit" );
+#endif
 // do this with a pointer, in case we want to make the actual manager
 // a private virtual subclass
 idImageManager	imageManager;
@@ -218,34 +225,6 @@ static void R_Specular2DTableImage( idImage *image ) {
 	image->GenerateImage( (byte *)data, 256, 256, TF_LINEAR, false, TR_CLAMP, TD_HIGH_QUALITY );
 }
 
-
-
-/*
-================
-R_AlphaRampImage
-
-Creates a 0-255 ramp image
-================
-*/
-#if 0
-static void R_AlphaRampImage( idImage *image ) {
-	int		x;
-	byte	data[256][4];
-
-	for (x=0 ; x<256 ; x++) {
-		data[x][0] =
-		data[x][1] =
-		data[x][2] = 255;
-		data[x][3] = x;
-	}
-
-	image->GenerateImage( (byte *)data, 256, 1,
-		TF_NEAREST, false, TR_CLAMP, TD_HIGH_QUALITY );
-}
-#endif
-
-
-
 /*
 ==================
 R_CreateDefaultImage
@@ -369,10 +348,12 @@ static void R_BorderClampImage( idImage *image ) {
 		// can't call qglTexParameterfv yet
 		return;
 	}
+
+	// Disabled for OES2
 	// explicit zero border
-	float	color[4];
-	color[0] = color[1] = color[2] = color[3] = 0;
-	qglTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, color );
+	//float	color[4];
+	//color[0] = color[1] = color[2] = color[3] = 0;
+	//qglTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, color );
 }
 
 static void R_RGBA8Image( idImage *image ) {
@@ -421,7 +402,7 @@ static void R_FlatNormalImage( idImage *image ) {
 	byte	data[DEFAULT_SIZE][DEFAULT_SIZE][4];
 	int		i;
 
-	int red = ( globalImages->image_useNormalCompression.GetInteger() == 1 ) ? 0 : 3;
+	int red = 3;
 	int alpha = ( red == 0 ) ? 3 : 0;
 	// flat normal map for default bunp mapping
 	for ( i = 0 ; i < 4 ; i++ ) {
@@ -438,7 +419,7 @@ static void R_AmbientNormalImage( idImage *image ) {
 	byte	data[DEFAULT_SIZE][DEFAULT_SIZE][4];
 	int		i;
 
-	int red = ( globalImages->image_useNormalCompression.GetInteger() == 1 ) ? 0 : 3;
+	int red = 3;
 	int alpha = ( red == 0 ) ? 3 : 0;
 	// flat normal map for default bunp mapping
 	for ( i = 0 ; i < 4 ; i++ ) {
@@ -730,13 +711,13 @@ void R_FogImage( idImage *image ) {
 	byte	data[FOG_SIZE][FOG_SIZE][4];
 	int		b;
 
-float	step[256];
-int		i;
-float	remaining = 1.0;
-for ( i = 0 ; i < 256 ; i++ ) {
-	step[i] = remaining;
-	remaining *= 0.982f;
-}
+    float	step[256];
+    int		i;
+    float	remaining = 1.0;
+    for ( i = 0 ; i < 256 ; i++ ) {
+	    step[i] = remaining;
+	    remaining *= 0.982f;
+    }
 
 	for (x=0 ; x<FOG_SIZE ; x++) {
 		for (y=0 ; y<FOG_SIZE ; y++) {
@@ -752,7 +733,7 @@ for ( i = 0 ; i < 256 ; i++ ) {
 			} else if ( b > 255 ) {
 				b = 255;
 			}
-b = (byte)(255 * ( 1.0 - step[b] ));
+            b = (byte)(255 * ( 1.0 - step[b] ));
 			if ( x == 0 || x == FOG_SIZE-1 || y == 0 || y == FOG_SIZE-1 ) {
 				b = 255;		// avoid clamping issues
 			}
@@ -954,7 +935,6 @@ static const filterName_t textureFilters[] = {
 	// if these are changed dynamically, it will force another ChangeTextureFilter
 	image_filter.ClearModified();
 	image_anisotropy.ClearModified();
-	image_lodbias.ClearModified();
 
 	string = image_filter.GetString();
 	for ( i = 0; i < 6; i++ ) {
@@ -978,7 +958,6 @@ static const filterName_t textureFilters[] = {
 	} else if ( textureAnisotropy > glConfig.maxTextureAnisotropy ) {
 		textureAnisotropy = glConfig.maxTextureAnisotropy;
 	}
-	textureLODBias = image_lodbias.GetFloat();
 
 	// change all the existing mipmap texture objects with default filtering
 
@@ -991,11 +970,8 @@ static const filterName_t textureFilters[] = {
 		case TT_2D:
 			texEnum = GL_TEXTURE_2D;
 			break;
-		case TT_3D:
-			texEnum = GL_TEXTURE_3D;
-			break;
 		case TT_CUBIC:
-			texEnum = GL_TEXTURE_CUBE_MAP_EXT;
+			texEnum = GL_TEXTURE_CUBE_MAP;
 			break;
 		}
 
@@ -1011,9 +987,6 @@ static const filterName_t textureFilters[] = {
 		if ( glConfig.anisotropicAvailable ) {
 			qglTexParameterf(texEnum, GL_TEXTURE_MAX_ANISOTROPY_EXT, globalImages->textureAnisotropy );
 		}
-		if ( glConfig.textureLODBiasAvailable ) {
-			qglTexParameterf(texEnum, GL_TEXTURE_LOD_BIAS_EXT, globalImages->textureLODBias );
-		}
 	}
 }
 
@@ -1022,7 +995,7 @@ static const filterName_t textureFilters[] = {
 idImage::Reload
 ===============
 */
-void idImage::Reload( bool checkPrecompressed, bool force ) {
+void idImage::Reload( bool force ) {
 	// always regenerate functional images
 	if ( generatorFunction ) {
 		common->DPrintf( "regenerating %s.\n", imgName.c_str() );
@@ -1049,10 +1022,7 @@ void idImage::Reload( bool checkPrecompressed, bool force ) {
 
 	PurgeImage();
 
-	// force no precompressed image check, which will cause it to be reloaded
-	// from source, and another precompressed file generated.
-	// Load is from the front end, so the back end must be synced
-	ActuallyLoadImage( checkPrecompressed, false );
+	ActuallyLoadImage( false );
 }
 
 /*
@@ -1071,7 +1041,6 @@ void R_ReloadImages_f( const idCmdArgs &args ) {
 	int		i;
 	idImage	*image;
 	bool	all;
-	bool	checkPrecompressed;
 
 	// DG: notify the game DLL about the reloadImages command
 	if(gameCallbacks.reloadImagesCB != NULL)
@@ -1083,14 +1052,12 @@ void R_ReloadImages_f( const idCmdArgs &args ) {
 	globalImages->ChangeTextureFilter();
 
 	all = false;
-	checkPrecompressed = false;		// if we are doing this as a vid_restart, look for precompressed like normal
 
 	if ( args.Argc() == 2 ) {
 		if ( !idStr::Icmp( args.Argv(1), "all" ) ) {
 			all = true;
 		} else if ( !idStr::Icmp( args.Argv(1), "reload" ) ) {
 			all = true;
-			checkPrecompressed = true;
 		} else {
 			common->Printf( "USAGE: reloadImages <all>\n" );
 			return;
@@ -1099,7 +1066,7 @@ void R_ReloadImages_f( const idCmdArgs &args ) {
 
 	for ( i = 0 ; i < globalImages->images.Num() ; i++ ) {
 		image = globalImages->images[ i ];
-		image->Reload( checkPrecompressed, all );
+		image->Reload( all );
 	}
 }
 
@@ -1140,9 +1107,7 @@ void R_ListImages_f( const idCmdArgs &args ) {
 	int		totalSize;
 	int		count = 0;
 	int		matchTag = 0;
-	bool	uncompressedOnly = false;
 	bool	unloaded = false;
-	bool	partial = false;
 	bool	cached = false;
 	bool	uncached = false;
 	bool	failed = false;
@@ -1155,12 +1120,8 @@ void R_ListImages_f( const idCmdArgs &args ) {
 	if ( args.Argc() == 1 ) {
 
 	} else if ( args.Argc() == 2 ) {
-		if ( idStr::Icmp( args.Argv( 1 ), "uncompressed" ) == 0 ) {
-			uncompressedOnly = true;
-		} else if ( idStr::Icmp( args.Argv( 1 ), "sorted" ) == 0 ) {
+		if ( idStr::Icmp( args.Argv( 1 ), "sorted" ) == 0 ) {
 			sorted = true;
-		} else if ( idStr::Icmp( args.Argv( 1 ), "partial" ) == 0 ) {
-			partial = true;
 		} else if ( idStr::Icmp( args.Argv( 1 ), "unloaded" ) == 0 ) {
 			unloaded = true;
 		} else if ( idStr::Icmp( args.Argv( 1 ), "cached" ) == 0 ) {
@@ -1188,7 +1149,7 @@ void R_ListImages_f( const idCmdArgs &args ) {
 	}
 
 	if ( failed ) {
-		common->Printf( "usage: listImages [ sorted | partial | unloaded | cached | uncached | tagged | duplicated | touched | classify | showOverSized ]\n" );
+		common->Printf( "usage: listImages [ sorted | unloaded | cached | uncached | tagged | duplicated | touched | classify | showOverSized ]\n" );
 		return;
 	}
 
@@ -1202,26 +1163,16 @@ void R_ListImages_f( const idCmdArgs &args ) {
 	for ( i = 0 ; i < globalImages->images.Num() ; i++ ) {
 		image = globalImages->images[ i ];
 
-		if ( uncompressedOnly ) {
-			if ( ( image->internalFormat >= GL_COMPRESSED_RGB_S3TC_DXT1_EXT && image->internalFormat <= GL_COMPRESSED_RGBA_S3TC_DXT5_EXT )
-				|| image->internalFormat == GL_COLOR_INDEX8_EXT ) {
-				continue;
-			}
-		}
-
 		if ( matchTag && image->classification != matchTag ) {
 			continue;
 		}
 		if ( unloaded && image->texnum != idImage::TEXTURE_NOT_LOADED ) {
 			continue;
 		}
-		if ( partial && !image->isPartialImage ) {
+		if ( cached && ( image->texnum == idImage::TEXTURE_NOT_LOADED ) ) {
 			continue;
 		}
-		if ( cached && ( !image->partialImage || image->texnum == idImage::TEXTURE_NOT_LOADED ) ) {
-			continue;
-		}
-		if ( uncached && ( !image->partialImage || image->texnum != idImage::TEXTURE_NOT_LOADED ) ) {
+		if ( uncached && ( image->texnum != idImage::TEXTURE_NOT_LOADED ) ) {
 			continue;
 		}
 
@@ -1398,18 +1349,7 @@ void idImageManager::SetNormalPalette( void ) {
 	temptable[255*3+1] =
 	temptable[255*3+2] = 128;
 
-	if ( !glConfig.sharedTexturePaletteAvailable ) {
-		return;
-	}
-
-	qglColorTableEXT( GL_SHARED_TEXTURE_PALETTE_EXT,
-					   GL_RGB,
-					   256,
-					   GL_RGB,
-					   GL_UNSIGNED_BYTE,
-					   temptable );
-
-	qglEnable( GL_SHARED_TEXTURE_PALETTE_EXT );
+	return;
 }
 
 /*
@@ -1481,9 +1421,8 @@ idImage *idImageManager::ImageFromFunction( const char *_name, void (*generatorF
 	image->generatorFunction = generatorFunction;
 
 	if ( image_preload.GetBool() ) {
-		// check for precompressed, load is from the front end
 		image->referencedOutsideLevelLoad = true;
-		image->ActuallyLoadImage( true, false );
+		image->ActuallyLoadImage( false );
 	}
 
 	return image;
@@ -1537,9 +1476,6 @@ idImage	*idImageManager::ImageFromFile( const char *_name, textureFilter_t filte
 			if ( image->allowDownSize == allowDownSize && image->depth == depth ) {
 				// note that it is used this level load
 				image->levelLoadReferenced = true;
-				if ( image->partialImage != NULL ) {
-					image->partialImage->levelLoadReferenced = true;
-				}
 				return image;
 			}
 
@@ -1554,21 +1490,16 @@ idImage	*idImageManager::ImageFromFile( const char *_name, textureFilter_t filte
 			if ( image->allowDownSize == allowDownSize && image->depth == depth ) {
 				// the already created one is already the highest quality
 				image->levelLoadReferenced = true;
-				if ( image->partialImage != NULL ) {
-					image->partialImage->levelLoadReferenced = true;
-				}
 				return image;
 			}
 
 			image->allowDownSize = allowDownSize;
 			image->depth = depth;
 			image->levelLoadReferenced = true;
-			if ( image->partialImage != NULL ) {
-				image->partialImage->levelLoadReferenced = true;
-			}
+
 			if ( image_preload.GetBool() && !insideLevelLoad ) {
 				image->referencedOutsideLevelLoad = true;
-				image->ActuallyLoadImage( true, false );	// check for precompressed, load is from front end
+				image->ActuallyLoadImage( false );
 				declManager->MediaPrint( "%ix%i %s (reload for mixed referneces)\n", image->uploadWidth, image->uploadHeight, image->imgName.c_str() );
 			}
 			return image;
@@ -1595,42 +1526,10 @@ idImage	*idImageManager::ImageFromFile( const char *_name, textureFilter_t filte
 
 	image->levelLoadReferenced = true;
 
-	// also create a shrunken version if we are going to dynamically cache the full size image
-	if ( image->ShouldImageBePartialCached() ) {
-		// if we only loaded part of the file, create a new idImage for the shrunken version
-		image->partialImage = new idImage;
-
-		image->partialImage->allowDownSize = allowDownSize;
-		image->partialImage->repeat = repeat;
-		image->partialImage->depth = depth;
-		image->partialImage->type = TT_2D;
-		image->partialImage->cubeFiles = cubeMap;
-		image->partialImage->filter = filter;
-
-		image->partialImage->levelLoadReferenced = true;
-
-		// we don't bother hooking this into the hash table for lookup, but we do add it to the manager
-		// list for listImages
-		globalImages->images.Append( image->partialImage );
-		image->partialImage->imgName = image->imgName;
-		image->partialImage->isPartialImage = true;
-
-		// let the background file loader know that we can load
-		image->precompressedFile = true;
-
-		if ( image_preload.GetBool() && !insideLevelLoad ) {
-			image->partialImage->ActuallyLoadImage( true, false );	// check for precompressed, load is from front end
-			declManager->MediaPrint( "%ix%i %s\n", image->partialImage->uploadWidth, image->partialImage->uploadHeight, image->imgName.c_str() );
-		} else {
-			declManager->MediaPrint( "%s\n", image->imgName.c_str() );
-		}
-		return image;
-	}
-
 	// load it if we aren't in a level preload
 	if ( image_preload.GetBool() && !insideLevelLoad ) {
 		image->referencedOutsideLevelLoad = true;
-		image->ActuallyLoadImage( true, false );	// check for precompressed, load is from front end
+		image->ActuallyLoadImage( false );
 		declManager->MediaPrint( "%ix%i %s\n", image->uploadWidth, image->uploadHeight, image->imgName.c_str() );
 	} else {
 		declManager->MediaPrint( "%s\n", image->imgName.c_str() );
@@ -1785,114 +1684,6 @@ void R_CombineCubeImages_f( const idCmdArgs &args ) {
 	common->SetRefreshOnPrint( false );
 }
 
-
-/*
-==================
-idImage::StartBackgroundImageLoad
-==================
-*/
-void idImage::StartBackgroundImageLoad() {
-	if ( imageManager.numActiveBackgroundImageLoads >= idImageManager::MAX_BACKGROUND_IMAGE_LOADS ) {
-		return;
-	}
-	if ( globalImages->image_showBackgroundLoads.GetBool() ) {
-		common->Printf( "idImage::StartBackgroundImageLoad: %s\n", imgName.c_str() );
-	}
-	backgroundLoadInProgress = true;
-
-	if ( !precompressedFile ) {
-		common->Warning( "idImageManager::StartBackgroundImageLoad: %s wasn't a precompressed file", imgName.c_str() );
-		return;
-	}
-
-	bglNext = globalImages->backgroundImageLoads;
-	globalImages->backgroundImageLoads = this;
-
-	char	filename[MAX_IMAGE_NAME];
-	ImageProgramStringToCompressedFileName( imgName, filename );
-
-	bgl.completed = false;
-	bgl.f = fileSystem->OpenFileRead( filename );
-	if ( !bgl.f ) {
-		common->Warning( "idImageManager::StartBackgroundImageLoad: Couldn't load %s", imgName.c_str() );
-		return;
-	}
-	bgl.file.position = 0;
-	bgl.file.length = bgl.f->Length();
-	if ( bgl.file.length < sizeof( ddsFileHeader_t ) ) {
-		common->Warning( "idImageManager::StartBackgroundImageLoad: %s had a bad file length", imgName.c_str() );
-		return;
-	}
-
-	bgl.file.buffer = R_StaticAlloc( bgl.file.length );
-
-	fileSystem->BackgroundDownload( &bgl );
-
-	imageManager.numActiveBackgroundImageLoads++;
-
-	// purge some images if necessary
-	int		totalSize = 0;
-	for ( idImage *check = globalImages->cacheLRU.cacheUsageNext ; check != &globalImages->cacheLRU ; check = check->cacheUsageNext ) {
-		totalSize += check->StorageSize();
-	}
-	int	needed = this->StorageSize();
-
-	while ( ( totalSize + needed ) > globalImages->image_cacheMegs.GetFloat() * 1024 * 1024 ) {
-		// purge the least recently used
-		idImage	*check = globalImages->cacheLRU.cacheUsagePrev;
-		if ( check->texnum != TEXTURE_NOT_LOADED ) {
-			totalSize -= check->StorageSize();
-			if ( globalImages->image_showBackgroundLoads.GetBool() ) {
-				common->Printf( "purging %s\n", check->imgName.c_str() );
-			}
-			check->PurgeImage();
-		}
-		// remove it from the cached list
-		check->cacheUsageNext->cacheUsagePrev = check->cacheUsagePrev;
-		check->cacheUsagePrev->cacheUsageNext = check->cacheUsageNext;
-		check->cacheUsageNext = NULL;
-		check->cacheUsagePrev = NULL;
-	}
-}
-
-/*
-==================
-R_CompleteBackgroundImageLoads
-
-Do we need to worry about vid_restarts here?
-==================
-*/
-void idImageManager::CompleteBackgroundImageLoads() {
-	idImage	*remainingList = NULL;
-	idImage	*next;
-
-	for ( idImage *image = backgroundImageLoads ; image ; image = next ) {
-		next = image->bglNext;
-		if ( image->bgl.completed ) {
-			numActiveBackgroundImageLoads--;
-			fileSystem->CloseFile( image->bgl.f );
-			// upload the image
-			image->UploadPrecompressedImage( (byte *)image->bgl.file.buffer, image->bgl.file.length );
-			R_StaticFree( image->bgl.file.buffer );
-			if ( image_showBackgroundLoads.GetBool() ) {
-				common->Printf( "R_CompleteBackgroundImageLoad: %s\n", image->imgName.c_str() );
-			}
-		} else {
-			image->bglNext = remainingList;
-			remainingList = image;
-		}
-	}
-	if ( image_showBackgroundLoads.GetBool() ) {
-		static int prev;
-		if ( numActiveBackgroundImageLoads != prev ) {
-			prev = numActiveBackgroundImageLoads;
-			common->Printf( "background Loads: %i\n", numActiveBackgroundImageLoads );
-		}
-	}
-
-	backgroundImageLoads = remainingList;
-}
-
 /*
 ===============
 CheckCvars
@@ -1900,11 +1691,10 @@ CheckCvars
 */
 void idImageManager::CheckCvars() {
 	// textureFilter stuff
-	if ( image_filter.IsModified() || image_anisotropy.IsModified() || image_lodbias.IsModified() ) {
+	if ( image_filter.IsModified() || image_anisotropy.IsModified() ) {
 		ChangeTextureFilter();
 		image_filter.ClearModified();
 		image_anisotropy.ClearModified();
-		image_lodbias.ClearModified();
 	}
 }
 
@@ -1935,18 +1725,7 @@ BindNull
 ===============
 */
 void idImageManager::BindNull() {
-	tmu_t			*tmu;
-
-	tmu = &backEnd.glState.tmu[backEnd.glState.currenttmu];
-
-	if ( tmu->textureType == TT_CUBIC ) {
-		qglDisable( GL_TEXTURE_CUBE_MAP_EXT );
-	} else if ( tmu->textureType == TT_3D ) {
-		qglDisable( GL_TEXTURE_3D );
-	} else if ( tmu->textureType == TT_2D ) {
-		qglDisable( GL_TEXTURE_2D );
-	}
-	tmu->textureType = TT_DISABLED;
+	qglBindTexture( GL_TEXTURE_2D, 0 );
 }
 
 /*
@@ -1983,7 +1762,7 @@ void idImageManager::Init() {
 	fogEnterImage = ImageFromFunction( "_fogEnter", R_FogEnterImage );
 	normalCubeMapImage = ImageFromFunction( "_normalCubeMap", makeNormalizeVectorCubeMap );
 	noFalloffImage = ImageFromFunction( "_noFalloff", R_CreateNoFalloffImage );
-	ImageFromFunction( "_quadratic", R_QuadraticImage );
+	quadraticImage = ImageFromFunction( "_quadratic", R_QuadraticImage );
 
 	// cinematicImage is used for cinematic drawing
 	// scratchImage is used for screen wipes/doublevision etc..
@@ -2057,9 +1836,9 @@ void idImageManager::EndLevelLoad() {
 	int			start = Sys_Milliseconds();
 
 	insideLevelLoad = false;
-	if ( idAsyncNetwork::serverDedicated.GetInteger() ) {
-		return;
-	}
+	//if ( idAsyncNetwork::serverDedicated.GetInteger() ) {
+	//	return;
+	//}
 
 	common->Printf( "----- idImageManager::EndLevelLoad -----\n" );
 
@@ -2091,13 +1870,16 @@ void idImageManager::EndLevelLoad() {
 			continue;
 		}
 
-		if ( image->levelLoadReferenced && image->texnum == idImage::TEXTURE_NOT_LOADED && !image->partialImage ) {
+		if ( image->levelLoadReferenced && image->texnum == idImage::TEXTURE_NOT_LOADED ) {
 //			common->Printf( "Loading %s\n", image->imgName.c_str() );
 			loadCount++;
-			image->ActuallyLoadImage( true, false );
+			image->ActuallyLoadImage( false );
 
 			if ( ( loadCount & 15 ) == 0 ) {
 				session->PacifierUpdate();
+#ifdef __EMSCRIPTEN__
+				emscripten_sleep_with_yield(0);
+#endif
 			}
 		}
 	}

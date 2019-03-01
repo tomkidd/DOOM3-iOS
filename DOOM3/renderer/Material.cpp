@@ -607,7 +607,7 @@ int idMaterial::ParseTerm( idLexer &src ) {
 		return EXP_REG_GLOBAL7;
 	}
 	if ( !token.Icmp( "fragmentPrograms" ) ) {
-		return GetExpressionConstant( (float) glConfig.ARBFragmentProgramAvailable );
+		return GetExpressionConstant( (float) false );
 	}
 
 	if ( !token.Icmp( "sound" ) ) {
@@ -999,9 +999,7 @@ void idMaterial::ParseFragmentMap( idLexer &src, newShaderStage_t *newStage ) {
 		}
 
 		if ( !token.Icmp( "uncompressed" ) || !token.Icmp( "highquality" ) ) {
-			if ( !globalImages->image_ignoreHighQuality.GetInteger() ) {
 				td = TD_HIGH_QUALITY;
-			}
 			continue;
 		}
 		if ( !token.Icmp( "nopicmip" ) ) {
@@ -1256,9 +1254,7 @@ void idMaterial::ParseStage( idLexer &src, const textureRepeat_t trpDefault ) {
 			continue;
 		}
 		if ( !token.Icmp( "uncompressed" ) || !token.Icmp( "highquality" ) ) {
-			if ( !globalImages->image_ignoreHighQuality.GetInteger() ) {
 				td = TD_HIGH_QUALITY;
-			}
 			continue;
 		}
 		if ( !token.Icmp( "forceHighQuality" ) ) {
@@ -1494,20 +1490,20 @@ void idMaterial::ParseStage( idLexer &src, const textureRepeat_t trpDefault ) {
 		}
 		if ( !token.Icmp( "program" ) ) {
 			if ( src.ReadTokenOnLine( &token ) ) {
-				newStage.vertexProgram = R_FindARBProgram( GL_VERTEX_PROGRAM_ARB, token.c_str() );
-				newStage.fragmentProgram = R_FindARBProgram( GL_FRAGMENT_PROGRAM_ARB, token.c_str() );
+				newStage.vertexProgram = -1;
+				newStage.fragmentProgram = -1;
 			}
 			continue;
 		}
 		if ( !token.Icmp( "fragmentProgram" ) ) {
 			if ( src.ReadTokenOnLine( &token ) ) {
-				newStage.fragmentProgram = R_FindARBProgram( GL_FRAGMENT_PROGRAM_ARB, token.c_str() );
+				newStage.fragmentProgram = -1;
 			}
 			continue;
 		}
 		if ( !token.Icmp( "vertexProgram" ) ) {
 			if ( src.ReadTokenOnLine( &token ) ) {
-				newStage.vertexProgram = R_FindARBProgram( GL_VERTEX_PROGRAM_ARB, token.c_str() );
+				newStage.vertexProgram = -1;
 			}
 			continue;
 		}
@@ -1519,8 +1515,8 @@ void idMaterial::ParseStage( idLexer &src, const textureRepeat_t trpDefault ) {
 					SetMaterialFlag( MF_DEFAULTED );
 					continue;
 				}
-				newStage.vertexProgram = R_FindARBProgram( GL_VERTEX_PROGRAM_ARB, "megaTexture.vfp" );
-				newStage.fragmentProgram = R_FindARBProgram( GL_FRAGMENT_PROGRAM_ARB, "megaTexture.vfp" );
+				newStage.vertexProgram = -1;
+				newStage.fragmentProgram = -1;
 				continue;
 			}
 		}
@@ -2727,11 +2723,11 @@ void idMaterial::ReloadImages( bool force ) const
 		if ( stages[i].newStage ) {
 			for ( int j = 0 ; j < stages[i].newStage->numFragmentProgramImages ; j++ ) {
 				if ( stages[i].newStage->fragmentProgramImages[j] ) {
-					stages[i].newStage->fragmentProgramImages[j]->Reload( false, force );
+					stages[i].newStage->fragmentProgramImages[j]->Reload( force );
 				}
 			}
 		} else if ( stages[i].texture.image ) {
-			stages[i].texture.image->Reload( false, force );
+			stages[i].texture.image->Reload( force );
 		}
 	}
 }

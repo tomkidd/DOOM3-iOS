@@ -202,8 +202,6 @@ idPlane	pointLightFrustums[6][6] = {
 
 int	c_caps, c_sils;
 
-static bool	callOptimizer;			// call the preprocessor optimizer after clipping occluders
-
 typedef struct {
 	int		frontCapStart;
 	int		rearCapStart;
@@ -917,62 +915,6 @@ static void R_CreateShadowVolumeInFrustum( const idRenderEntityLocal *ent,
 		return;
 	}
 
-	//--------------- off-line processing ------------------
-
-	// if we are running from dmap, perform the (very) expensive shadow optimizations
-	// to remove internal sil edges and optimize the caps
-	if ( callOptimizer ) {
-		optimizedShadow_t opt;
-
-		// project all of the vertexes to the shadow plane, generating
-		// an equal number of back vertexes
-//		R_ProjectPointsToFarPlane( ent, light, farPlane, firstShadowVert, numShadowVerts );
-
-		opt = SuperOptimizeOccluders( shadowVerts, shadowIndexes + firstShadowIndex, numCapIndexes, farPlane, lightOrigin );
-
-		// pull off the non-optimized data
-		numShadowIndexes = firstShadowIndex;
-		numShadowVerts = firstShadowVert;
-
-		// add the optimized data
-		if ( numShadowIndexes + opt.totalIndexes > MAX_SHADOW_INDEXES
-			|| numShadowVerts + opt.numVerts > MAX_SHADOW_VERTS ) {
-			overflowed = true;
-			common->Printf( "WARNING: overflowed MAX_SHADOW tables, shadow discarded\n" );
-			Mem_Free( opt.verts );
-			Mem_Free( opt.indexes );
-			return;
-		}
-
-		for ( i = 0 ; i < opt.numVerts ; i++ ) {
-			shadowVerts[numShadowVerts+i][0] = opt.verts[i][0];
-			shadowVerts[numShadowVerts+i][1] = opt.verts[i][1];
-			shadowVerts[numShadowVerts+i][2] = opt.verts[i][2];
-			shadowVerts[numShadowVerts+i][3] = 1;
-		}
-		for ( i = 0 ; i < opt.totalIndexes ; i++ ) {
-			int	index = opt.indexes[i];
-			if ( index < 0 || index > opt.numVerts ) {
-				common->Error( "optimized shadow index out of range" );
-			}
-			shadowIndexes[numShadowIndexes+i] = index + numShadowVerts;
-		}
-
-		numShadowVerts += opt.numVerts;
-		numShadowIndexes += opt.totalIndexes;
-
-		// note the index distribution so we can sort all the caps after all the sils
-		indexRef[indexFrustumNumber].frontCapStart = firstShadowIndex;
-		indexRef[indexFrustumNumber].rearCapStart = firstShadowIndex+opt.numFrontCapIndexes;
-		indexRef[indexFrustumNumber].silStart = firstShadowIndex+opt.numFrontCapIndexes+opt.numRearCapIndexes;
-		indexRef[indexFrustumNumber].end = numShadowIndexes;
-		indexFrustumNumber++;
-
-		Mem_Free( opt.verts );
-		Mem_Free( opt.indexes );
-		return;
-	}
-
 	//--------------- real-time processing ------------------
 
 	// the dangling edge "face" is never considered to cast a shadow,
@@ -1243,11 +1185,7 @@ srfTriangles_t *R_CreateShadowVolume( const idRenderEntityLocal *ent,
 	// trades somewhat more overdraw and no cap optimizations for
 	// a very simple generation process
 	if ( optimize == SG_DYNAMIC && r_useTurboShadow.GetBool() ) {
-		if ( tr.backEndRendererHasVertexPrograms && r_useShadowVertexProgram.GetBool() ) {
-			return R_CreateVertexProgramTurboShadowVolume( ent, tri, light, cullInfo );
-		} else {
-			return R_CreateTurboShadowVolume( ent, tri, light, cullInfo );
-		}
+	  return R_CreateVertexProgramTurboShadowVolume(ent, tri, light, cullInfo);
 	}
 
 	R_CalcInteractionFacing( ent, tri, light, cullInfo );
@@ -1268,7 +1206,6 @@ srfTriangles_t *R_CreateShadowVolume( const idRenderEntityLocal *ent,
 	overflowed = false;
 	indexFrustumNumber = 0;
 	capPlaneBits = 0;
-	callOptimizer = (optimize == SG_OFFLINE);
 
 	// the facing information will be the same for all six projections
 	// from a point light, as well as for any directed lights
@@ -1353,7 +1290,7 @@ srfTriangles_t *R_CreateShadowVolume( const idRenderEntityLocal *ent,
 
 	R_AllocStaticTriSurfIndexes( newTri, newTri->numIndexes );
 
-	if ( 1 /* sortCapIndexes */ ) {
+	if ( 1 ) {
 		newTri->shadowCapPlaneBits = capPlaneBits;
 
 		// copy the sil indexes first
@@ -1384,10 +1321,6 @@ srfTriangles_t *R_CreateShadowVolume( const idRenderEntityLocal *ent,
 	} else {
 		newTri->shadowCapPlaneBits = 63;	// we don't have optimized index lists
 		SIMDProcessor->Memcpy( newTri->indexes, shadowIndexes, newTri->numIndexes * sizeof( newTri->indexes[0] ) );
-	}
-
-	if ( optimize == SG_OFFLINE ) {
-		CleanupOptimizedShadowTris( newTri );
 	}
 
 	return newTri;

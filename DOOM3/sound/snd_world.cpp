@@ -49,6 +49,7 @@ void idSoundWorldLocal::Init( idRenderWorld *renderWorld ) {
 	listenerArea = 0;
 	listenerAreaName = "Undefined";
 
+#ifndef IOS
 	if (idSoundSystemLocal::useEFXReverb) {
 		if (!soundSystemLocal.alIsAuxiliaryEffectSlot(listenerSlot)) {
 			alGetError();
@@ -81,6 +82,7 @@ void idSoundWorldLocal::Init( idRenderWorld *renderWorld ) {
 			}
 		}
 	}
+#endif
 
 	gameMsec = 0;
 	game44kHz = 0;
@@ -140,6 +142,7 @@ void idSoundWorldLocal::Shutdown() {
 
 	AVIClose();
 
+#ifndef IOS
 	if (idSoundSystemLocal::useEFXReverb) {
 		if (soundSystemLocal.alIsAuxiliaryEffectSlot(listenerSlot)) {
 			soundSystemLocal.alAuxiliaryEffectSloti(listenerSlot, AL_EFFECTSLOT_EFFECT, AL_EFFECTSLOT_NULL);
@@ -152,6 +155,7 @@ void idSoundWorldLocal::Shutdown() {
 			listenerFilter = AL_FILTER_NULL;
 		}
 	}
+#endif
 
 	for ( i = 0; i < emitters.Num(); i++ ) {
 		if ( emitters[i] ) {
@@ -495,6 +499,7 @@ void idSoundWorldLocal::MixLoop( int current44kHz, int numSpeakers, float *final
 	alListenerfv( AL_POSITION, listenerPosition );
 	alListenerfv( AL_ORIENTATION, listenerOrientation );
 
+#ifndef IOS
 	if (idSoundSystemLocal::useEFXReverb && soundSystemLocal.efxloaded) {
 		ALuint effect = 0;
 		idStr s(listenerArea);
@@ -516,6 +521,7 @@ void idSoundWorldLocal::MixLoop( int current44kHz, int numSpeakers, float *final
 			soundSystemLocal.alAuxiliaryEffectSloti(listenerSlot, AL_EFFECTSLOT_EFFECT, effect);
 		}
 	}
+#endif
 
 	// debugging option to mute all but a single soundEmitter
 	if ( idSoundSystemLocal::s_singleEmitter.GetInteger() > 0 && idSoundSystemLocal::s_singleEmitter.GetInteger() < emitters.Num() ) {
@@ -1787,6 +1793,7 @@ void idSoundWorldLocal::AddChannelContribution( idSoundEmitterLocal *sound, idSo
 #endif
 			alSourcef( chan->openalSource, AL_PITCH, ( slowmoActive && !chan->disallowSlow ) ? ( slowmoSpeed ) : ( 1.0f ) );
 
+#ifndef IOS
 			if (idSoundSystemLocal::useEFXReverb) {
 				if (enviroSuitActive) {
 					alSourcei(chan->openalSource, AL_DIRECT_FILTER, listenerFilter);
@@ -1795,7 +1802,7 @@ void idSoundWorldLocal::AddChannelContribution( idSoundEmitterLocal *sound, idSo
 					alSource3i(chan->openalSource, AL_AUXILIARY_SEND_FILTER, listenerSlot, 0, AL_FILTER_NULL);
 				}
 			}
-
+#endif
 
 			if ( ( !looping && chan->leadinSample->hardwareBuffer ) || ( looping && chan->soundShader->entries[0]->hardwareBuffer ) ) {
 				// handle uncompressed (non streaming) single shot and looping sounds

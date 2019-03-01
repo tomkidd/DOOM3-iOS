@@ -237,7 +237,7 @@ void idMegaTexture::BindForViewOrigin( const idVec3 viewOrigin ) {
 			globalImages->whiteImage->Bind();
 
 			static float	parms[4] = { -2, -2, 0, 1 };	// no contribution
-			qglProgramLocalParameter4fvARB( GL_VERTEX_PROGRAM_ARB, i, parms );
+			//qglProgramLocalParameter4fvARB( GL_VERTEX_PROGRAM_ARB, i, parms );
 		} else {
 			idTextureLevel	*level = &levels[ numLevels-1-i ];
 
@@ -250,7 +250,7 @@ void idMegaTexture::BindForViewOrigin( const idVec3 viewOrigin ) {
 			} else {
 				level->image->Bind();
 			}
-			qglProgramLocalParameter4fvARB( GL_VERTEX_PROGRAM_ARB, i, level->parms );
+			//qglProgramLocalParameter4fvARB( GL_VERTEX_PROGRAM_ARB, i, level->parms );
 		}
 	}
 
@@ -259,13 +259,13 @@ void idMegaTexture::BindForViewOrigin( const idVec3 viewOrigin ) {
 	parms[1] = 0;
 	parms[2] = 0;
 	parms[3] = 1;
-	qglProgramLocalParameter4fvARB( GL_VERTEX_PROGRAM_ARB, 7, parms );
+	//qglProgramLocalParameter4fvARB( GL_VERTEX_PROGRAM_ARB, 7, parms );
 
 	parms[0] = 1;
 	parms[1] = 1;
 	parms[2] = r_terrainScale.GetFloat();
 	parms[3] = 1;
-	qglProgramLocalParameter4fvARB( GL_VERTEX_PROGRAM_ARB, 8, parms );
+	//qglProgramLocalParameter4fvARB( GL_VERTEX_PROGRAM_ARB, 8, parms );
 }
 
 /*
@@ -652,7 +652,7 @@ MakeMegaTexture_f
 Incrementally load a giant tga file and process into the mega texture block format
 ====================
 */
-void idMegaTexture::MakeMegaTexture_f( const idCmdArgs &args ) {
+/*void idMegaTexture::MakeMegaTexture_f( const idCmdArgs &args ) {
 	int		columns, fileSize, numBytes;
 	byte	*pixbuf;
 	int		row, column;
@@ -909,4 +909,4 @@ void idMegaTexture::MakeMegaTexture_f( const idCmdArgs &args ) {
 		R_VerticalFlip( *pic, *width, *height );
 	}
 #endif
-}
+}*/
