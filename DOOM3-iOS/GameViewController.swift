@@ -29,7 +29,7 @@ class GameViewController: UIViewController {
         let documentsDir = try! FileManager().url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path
         #endif
 
-        print("documentsDir: \(documentsDir)")
+//        print("documentsDir: \(documentsDir)")
         
         // todo: fix for DOOM3 -tkidd
         //Sys_SetHomeDir(documentsDir)
@@ -66,7 +66,7 @@ class GameViewController: UIViewController {
             var cargs = argv.map { $0.flatMap { UnsafeMutablePointer<Int8>(strdup($0)) } }
             
             // todo: fix for DOOM3 -tkidd
-            //Sys_Startup(argc, &cargs)
+            Sys_Startup(argc, &cargs)
 
             for ptr in cargs { free(UnsafeMutablePointer(mutating: ptr)) }
 

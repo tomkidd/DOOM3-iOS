@@ -66,8 +66,8 @@
 }
 
 // dummy function to prevent linkage fail
-int SDL_main(int argc, char **argv) {
-    return 0;
-}
+//int SDL_main(int argc, char **argv) {
+//    return 0;
+//}
 
 @end

@@ -10,31 +10,34 @@
 #include <sys/param.h> /* for MAXPATHLEN */
 #include <unistd.h>
 
+// TODO: route around this the right way with IOS macro -tkidd
+
 /* For some reaon, Apple removed setAppleMenu from the headers in 10.4,
  but the method still is there and works. To avoid warnings, we declare
  it ourselves here. */
-@interface NSApplication(SDL_Missing_Methods)
-- (void)setAppleMenu:(NSMenu *)menu;
-@end
+//@interface NSApplication(SDL_Missing_Methods)
+//- (void)setAppleMenu:(NSMenu *)menu;
+//@end
 
 /* Use this flag to determine whether we use SDLMain.nib or not */
 #define		SDL_USE_NIB_FILE	0
 
 /* Use this flag to determine whether we use CPS (docking) or not */
-#define		SDL_USE_CPS		1
-#ifdef SDL_USE_CPS
-/* Portions of CPS.h */
-typedef struct CPSProcessSerNum
-{
-	UInt32		lo;
-	UInt32		hi;
-} CPSProcessSerNum;
-
-extern OSErr	CPSGetCurrentProcess( CPSProcessSerNum *psn);
-extern OSErr	CPSEnableForegroundOperation( CPSProcessSerNum *psn, UInt32 _arg2, UInt32 _arg3, UInt32 _arg4, UInt32 _arg5);
-extern OSErr	CPSSetFrontProcess( CPSProcessSerNum *psn);
-
-#endif /* SDL_USE_CPS */
+//#define        SDL_USE_CPS        1
+#define        SDL_USE_CPS        0
+//#ifdef SDL_USE_CPS
+///* Portions of CPS.h */
+//typedef struct CPSProcessSerNum
+//{
+//    UInt32        lo;
+//    UInt32        hi;
+//} CPSProcessSerNum;
+//
+//extern OSErr    CPSGetCurrentProcess( CPSProcessSerNum *psn);
+//extern OSErr    CPSEnableForegroundOperation( CPSProcessSerNum *psn, UInt32 _arg2, UInt32 _arg3, UInt32 _arg4, UInt32 _arg5);
+//extern OSErr    CPSSetFrontProcess( CPSProcessSerNum *psn);
+//
+//#endif /* SDL_USE_CPS */
 
 static int    gArgc;
 static char  **gArgv;
@@ -64,19 +67,19 @@ static NSString *getApplicationName(void)
 @end
 #endif
 
-@interface NSApplication (SDLApplication)
-@end
-
-@implementation NSApplication (SDLApplication)
-/* Invoked from the Quit menu item */
-- (void)terminate:(id)sender
-{
-    /* Post a SDL_QUIT event */
-    SDL_Event event;
-    event.type = SDL_QUIT;
-    SDL_PushEvent(&event);
-}
-@end
+//@interface NSApplication (SDLApplication)
+//@end
+//
+//@implementation NSApplication (SDLApplication)
+///* Invoked from the Quit menu item */
+//- (void)terminate:(id)sender
+//{
+//    /* Post a SDL_QUIT event */
+//    SDL_Event event;
+//    event.type = SDL_QUIT;
+//    SDL_PushEvent(&event);
+//}
+//@end
 
 /* The main class of the application, the application's delegate */
 @implementation SDLMain
@@ -97,102 +100,102 @@ static NSString *getApplicationName(void)
     }
 }
 
-#if SDL_USE_NIB_FILE
-
-/* Fix menu to contain the real app name instead of "SDL App" */
-- (void)fixMenu:(NSMenu *)aMenu withAppName:(NSString *)appName
-{
-    NSRange aRange;
-    NSEnumerator *enumerator;
-    NSMenuItem *menuItem;
-
-    aRange = [[aMenu title] rangeOfString:@"SDL App"];
-    if (aRange.length != 0)
-        [aMenu setTitle: [[aMenu title] stringByReplacingRange:aRange with:appName]];
-
-    enumerator = [[aMenu itemArray] objectEnumerator];
-    while ((menuItem = [enumerator nextObject]))
-    {
-        aRange = [[menuItem title] rangeOfString:@"SDL App"];
-        if (aRange.length != 0)
-            [menuItem setTitle: [[menuItem title] stringByReplacingRange:aRange with:appName]];
-        if ([menuItem hasSubmenu])
-            [self fixMenu:[menuItem submenu] withAppName:appName];
-    }
-}
-
-#else
-
-static void setApplicationMenu(void)
-{
-    /* warning: this code is very odd */
-    NSMenu *appleMenu;
-    NSMenuItem *menuItem;
-    NSString *title;
-    NSString *appName;
-
-    appName = getApplicationName();
-    appleMenu = [[NSMenu alloc] initWithTitle:@""];
-
-    /* Add menu items */
-    title = [@"About " stringByAppendingString:appName];
-    [appleMenu addItemWithTitle:title action:@selector(orderFrontStandardAboutPanel:) keyEquivalent:@""];
-
-    [appleMenu addItem:[NSMenuItem separatorItem]];
-
-    title = [@"Hide " stringByAppendingString:appName];
-    [appleMenu addItemWithTitle:title action:@selector(hide:) keyEquivalent:@"h"];
-
-    menuItem = (NSMenuItem *)[appleMenu addItemWithTitle:@"Hide Others" action:@selector(hideOtherApplications:) keyEquivalent:@"h"];
-    [menuItem setKeyEquivalentModifierMask:(NSAlternateKeyMask|NSCommandKeyMask)];
-
-    [appleMenu addItemWithTitle:@"Show All" action:@selector(unhideAllApplications:) keyEquivalent:@""];
-
-    [appleMenu addItem:[NSMenuItem separatorItem]];
-
-    title = [@"Quit " stringByAppendingString:appName];
-    [appleMenu addItemWithTitle:title action:@selector(terminate:) keyEquivalent:@"q"];
-
-
-    /* Put menu into the menubar */
-    menuItem = [[NSMenuItem alloc] initWithTitle:@"" action:nil keyEquivalent:@""];
-    [menuItem setSubmenu:appleMenu];
-    [[NSApp mainMenu] addItem:menuItem];
-
-    /* Tell the application object that this is now the application menu */
-    [NSApp setAppleMenu:appleMenu];
-
-    /* Finally give up our references to the objects */
-    [appleMenu release];
-    [menuItem release];
-}
-
-/* Create a window menu */
-static void setupWindowMenu(void)
-{
-    NSMenu      *windowMenu;
-    NSMenuItem  *windowMenuItem;
-    NSMenuItem  *menuItem;
-
-    windowMenu = [[NSMenu alloc] initWithTitle:@"Window"];
-
-    /* "Minimize" item */
-    menuItem = [[NSMenuItem alloc] initWithTitle:@"Minimize" action:@selector(performMiniaturize:) keyEquivalent:@"m"];
-    [windowMenu addItem:menuItem];
-    [menuItem release];
-
-    /* Put menu into the menubar */
-    windowMenuItem = [[NSMenuItem alloc] initWithTitle:@"Window" action:nil keyEquivalent:@""];
-    [windowMenuItem setSubmenu:windowMenu];
-    [[NSApp mainMenu] addItem:windowMenuItem];
-
-    /* Tell the application object that this is now the window menu */
-    [NSApp setWindowsMenu:windowMenu];
-
-    /* Finally give up our references to the objects */
-    [windowMenu release];
-    [windowMenuItem release];
-}
+//#if SDL_USE_NIB_FILE
+//
+///* Fix menu to contain the real app name instead of "SDL App" */
+//- (void)fixMenu:(NSMenu *)aMenu withAppName:(NSString *)appName
+//{
+//    NSRange aRange;
+//    NSEnumerator *enumerator;
+//    NSMenuItem *menuItem;
+//
+//    aRange = [[aMenu title] rangeOfString:@"SDL App"];
+//    if (aRange.length != 0)
+//        [aMenu setTitle: [[aMenu title] stringByReplacingRange:aRange with:appName]];
+//
+//    enumerator = [[aMenu itemArray] objectEnumerator];
+//    while ((menuItem = [enumerator nextObject]))
+//    {
+//        aRange = [[menuItem title] rangeOfString:@"SDL App"];
+//        if (aRange.length != 0)
+//            [menuItem setTitle: [[menuItem title] stringByReplacingRange:aRange with:appName]];
+//        if ([menuItem hasSubmenu])
+//            [self fixMenu:[menuItem submenu] withAppName:appName];
+//    }
+//}
+//
+//#else
+//
+//static void setApplicationMenu(void)
+//{
+//    /* warning: this code is very odd */
+//    NSMenu *appleMenu;
+//    NSMenuItem *menuItem;
+//    NSString *title;
+//    NSString *appName;
+//
+//    appName = getApplicationName();
+//    appleMenu = [[NSMenu alloc] initWithTitle:@""];
+//
+//    /* Add menu items */
+//    title = [@"About " stringByAppendingString:appName];
+//    [appleMenu addItemWithTitle:title action:@selector(orderFrontStandardAboutPanel:) keyEquivalent:@""];
+//
+//    [appleMenu addItem:[NSMenuItem separatorItem]];
+//
+//    title = [@"Hide " stringByAppendingString:appName];
+//    [appleMenu addItemWithTitle:title action:@selector(hide:) keyEquivalent:@"h"];
+//
+//    menuItem = (NSMenuItem *)[appleMenu addItemWithTitle:@"Hide Others" action:@selector(hideOtherApplications:) keyEquivalent:@"h"];
+//    [menuItem setKeyEquivalentModifierMask:(NSAlternateKeyMask|NSCommandKeyMask)];
+//
+//    [appleMenu addItemWithTitle:@"Show All" action:@selector(unhideAllApplications:) keyEquivalent:@""];
+//
+//    [appleMenu addItem:[NSMenuItem separatorItem]];
+//
+//    title = [@"Quit " stringByAppendingString:appName];
+//    [appleMenu addItemWithTitle:title action:@selector(terminate:) keyEquivalent:@"q"];
+//
+//
+//    /* Put menu into the menubar */
+//    menuItem = [[NSMenuItem alloc] initWithTitle:@"" action:nil keyEquivalent:@""];
+//    [menuItem setSubmenu:appleMenu];
+//    [[NSApp mainMenu] addItem:menuItem];
+//
+//    /* Tell the application object that this is now the application menu */
+//    [NSApp setAppleMenu:appleMenu];
+//
+//    /* Finally give up our references to the objects */
+//    [appleMenu release];
+//    [menuItem release];
+//}
+//
+///* Create a window menu */
+//static void setupWindowMenu(void)
+//{
+//    NSMenu      *windowMenu;
+//    NSMenuItem  *windowMenuItem;
+//    NSMenuItem  *menuItem;
+//
+//    windowMenu = [[NSMenu alloc] initWithTitle:@"Window"];
+//
+//    /* "Minimize" item */
+//    menuItem = [[NSMenuItem alloc] initWithTitle:@"Minimize" action:@selector(performMiniaturize:) keyEquivalent:@"m"];
+//    [windowMenu addItem:menuItem];
+//    [menuItem release];
+//
+//    /* Put menu into the menubar */
+//    windowMenuItem = [[NSMenuItem alloc] initWithTitle:@"Window" action:nil keyEquivalent:@""];
+//    [windowMenuItem setSubmenu:windowMenu];
+//    [[NSApp mainMenu] addItem:windowMenuItem];
+//
+//    /* Tell the application object that this is now the window menu */
+//    [NSApp setWindowsMenu:windowMenu];
+//
+//    /* Finally give up our references to the objects */
+//    [windowMenu release];
+//    [windowMenuItem release];
+//}
 
 /* Replacement for NSApplicationMain */
 static void CustomApplicationMain (int argc, char **argv)
@@ -201,36 +204,37 @@ static void CustomApplicationMain (int argc, char **argv)
     SDLMain				*sdlMain;
 
     /* Ensure the application object is initialised */
-    [NSApplication sharedApplication];
+    [UIApplication sharedApplication];
+//    [NSApplication sharedApplication];
 
-#ifdef SDL_USE_CPS
-    {
-        CPSProcessSerNum PSN;
-        /* Tell the dock about us */
-        if (!CPSGetCurrentProcess(&PSN))
-            if (!CPSEnableForegroundOperation(&PSN,0x03,0x3C,0x2C,0x1103))
-                if (!CPSSetFrontProcess(&PSN))
-                    [NSApplication sharedApplication];
-    }
-#endif /* SDL_USE_CPS */
-
-    /* Set up the menubar */
-    [NSApp setMainMenu:[[NSMenu alloc] init]];
-    setApplicationMenu();
-    setupWindowMenu();
+//#ifdef SDL_USE_CPS
+//    {
+//        CPSProcessSerNum PSN;
+//        /* Tell the dock about us */
+//        if (!CPSGetCurrentProcess(&PSN))
+//            if (!CPSEnableForegroundOperation(&PSN,0x03,0x3C,0x2C,0x1103))
+//                if (!CPSSetFrontProcess(&PSN))
+//                    [NSApplication sharedApplication];
+//    }
+//#endif /* SDL_USE_CPS */
+//
+//    /* Set up the menubar */
+//    [NSApp setMainMenu:[[NSMenu alloc] init]];
+//    setApplicationMenu();
+//    setupWindowMenu();
 
     /* Create SDLMain and make it the app delegate */
     sdlMain = [[SDLMain alloc] init];
-    [NSApp setDelegate:sdlMain];
+//    [NSApp setDelegate:sdlMain];
 
     /* Start the main event loop */
-    [NSApp run];
+//    [NSApp run];
 
     [sdlMain release];
     [pool release];
 }
 
-#endif
+//#endif
 
 
 /*
@@ -248,38 +252,38 @@ static void CustomApplicationMain (int argc, char **argv)
  *
  * This message is ignored once the app's mainline has been called.
  */
-- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
-{
-    const char *temparg;
-    size_t arglen;
-    char *arg;
-    char **newargv;
-
-    if (!gFinderLaunch)  /* MacOS is passing command line args. */
-        return FALSE;
-
-    if (gCalledAppMainline)  /* app has started, ignore this document. */
-        return FALSE;
-
-    temparg = [filename UTF8String];
-    arglen = SDL_strlen(temparg) + 1;
-    arg = (char *) SDL_malloc(arglen);
-    if (arg == NULL)
-        return FALSE;
-
-    newargv = (char **) realloc(gArgv, sizeof (char *) * (gArgc + 2));
-    if (newargv == NULL)
-    {
-        SDL_free(arg);
-        return FALSE;
-    }
-    gArgv = newargv;
-
-    SDL_strlcpy(arg, temparg, arglen);
-    gArgv[gArgc++] = arg;
-    gArgv[gArgc] = NULL;
-    return TRUE;
-}
+//- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
+//{
+//    const char *temparg;
+//    size_t arglen;
+//    char *arg;
+//    char **newargv;
+//
+//    if (!gFinderLaunch)  /* MacOS is passing command line args. */
+//        return FALSE;
+//
+//    if (gCalledAppMainline)  /* app has started, ignore this document. */
+//        return FALSE;
+//
+//    temparg = [filename UTF8String];
+//    arglen = SDL_strlen(temparg) + 1;
+//    arg = (char *) SDL_malloc(arglen);
+//    if (arg == NULL)
+//        return FALSE;
+//
+//    newargv = (char **) realloc(gArgv, sizeof (char *) * (gArgc + 2));
+//    if (newargv == NULL)
+//    {
+//        SDL_free(arg);
+//        return FALSE;
+//    }
+//    gArgv = newargv;
+//
+//    SDL_strlcpy(arg, temparg, arglen);
+//    gArgv[gArgc++] = arg;
+//    gArgv[gArgc] = NULL;
+//    return TRUE;
+//}
 
 
 /* Called when the internal event loop has just started running */
@@ -352,7 +356,11 @@ static void CustomApplicationMain (int argc, char **argv)
 
 
 /* Main entry point to executable - should *not* be SDL_main! */
+#ifdef IOS
+int Sys_Startup( int argc, char **argv )
+#else
 int main (int argc, char **argv)
+#endif
 {
     /* Copy the arguments into a global variable */
     /* This is passed if we are launched by double-clicking */
@@ -374,7 +382,11 @@ int main (int argc, char **argv)
 #if SDL_USE_NIB_FILE
     NSApplicationMain (argc, argv);
 #else
+#ifdef IOS
+    SDL_main(argc, argv);
+#else
     CustomApplicationMain (argc, argv);
+#endif
 #endif
     return 0;
 }

@@ -173,6 +173,8 @@ void OSX_GetVideoCard( int& outVendorId, int& outDeviceId )
 	}
 }
 
+#endif
+
 /*
 ===============
 main
@@ -193,7 +195,9 @@ int SDL_main( int argc, char *argv[] ) {
 	else
 		common->Init(0, NULL);
 
+#ifndef IOS
 	[NSApp activateIgnoringOtherApps:YES];
+#endif
 
 	while (1) {
 		common->Frame();
@@ -206,4 +210,3 @@ int SDL_main( int argc, char *argv[] ) {
 	[pool release];
 }
 
-#endif
