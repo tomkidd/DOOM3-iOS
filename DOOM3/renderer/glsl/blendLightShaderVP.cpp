@@ -17,7 +17,8 @@
 
 #include "glsl_shaders.h"
 
-const char * const blendLightShaderVP = MULTILINE_STRING(#version 100
+const char * const blendLightShaderVP = R"(
+#version 100
 precision mediump float;
 
 // In
@@ -53,4 +54,4 @@ void main(void)
   var_TexFog = vec2(dot( u_fogMatrix[0], attr_Vertex ), dot( u_fogMatrix[1], attr_Vertex )) / dot( u_fogMatrix[2], attr_Vertex );
   var_TexFogEnter = vec2( dot( u_fogMatrix[3], attr_Vertex ), 0.5 );
 }
-);
+)";

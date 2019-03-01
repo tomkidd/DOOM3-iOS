@@ -347,7 +347,9 @@ void GLimp_GrabInput(int flags) {
 
 #if SDL_VERSION_ATLEAST(2, 0, 0)
 	SDL_ShowCursor(flags & GRAB_HIDECURSOR ? SDL_DISABLE : SDL_ENABLE);
+#ifndef IOS
 	SDL_SetRelativeMouseMode((grab && (flags & GRAB_HIDECURSOR)) ? SDL_TRUE : SDL_FALSE);
+#endif
 	SDL_SetWindowGrab(window, grab ? SDL_TRUE : SDL_FALSE);
 #else
 	SDL_ShowCursor(flags & GRAB_HIDECURSOR ? SDL_DISABLE : SDL_ENABLE);

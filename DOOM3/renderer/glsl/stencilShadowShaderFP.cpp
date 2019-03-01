@@ -17,7 +17,8 @@
 
 #include "glsl_shaders.h"
 
-const char * const stencilShadowShaderFP = MULTILINE_STRING(#version 100
+const char * const stencilShadowShaderFP = R"(
+#version 100
 precision lowp float;
   
 // Out
@@ -27,4 +28,4 @@ void main(void)
 {
   gl_FragColor = vec4(0,0,0,1.0);
 }
-);
+)";

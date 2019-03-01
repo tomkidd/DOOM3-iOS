@@ -17,7 +17,8 @@
 
 #include "glsl_shaders.h"
 
-const char * const cubeMapShaderFP = MULTILINE_STRING(#version 100
+const char * const cubeMapShaderFP = R"(
+#version 100
 precision mediump float;
 
 // In
@@ -35,4 +36,4 @@ void main(void)
 {
   gl_FragColor = textureCube(u_fragmentCubeMap0, var_TexCoord) * u_glColor * var_Color;
 }
-);
+)";
