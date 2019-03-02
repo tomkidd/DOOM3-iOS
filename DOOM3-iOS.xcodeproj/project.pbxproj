@@ -3148,7 +3148,6 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -3168,8 +3167,6 @@
 					"-Wno-switch",
 					"-Wno-format-security",
 					"-Woverloaded-virtual",
-					"-arch",
-					x86_64,
 				);
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
@@ -3207,7 +3204,6 @@
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -3230,8 +3226,6 @@
 					"-Wno-switch",
 					"-Wno-format-security",
 					"-Woverloaded-virtual",
-					"-arch",
-					x86_64,
 				);
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
@@ -3373,7 +3367,6 @@
 					"$(inherited)",
 					base_EXPORTS,
 					IOS,
-					__arm64__,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
@@ -3429,7 +3422,6 @@
 					"$(inherited)",
 					base_EXPORTS,
 					IOS,
-					__arm64__,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
