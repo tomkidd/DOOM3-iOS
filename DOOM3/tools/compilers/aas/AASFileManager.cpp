@@ -48,7 +48,7 @@ public:
 };
 
 idAASFileManagerLocal			AASFileManagerLocal;
-//idAASFileManager *                AASFileManager = &AASFileManagerLocal;
+idAASFileManager *                AASFileManager = &AASFileManagerLocal;
 
 
 /*
