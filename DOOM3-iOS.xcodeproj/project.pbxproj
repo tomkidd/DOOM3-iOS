@@ -3373,6 +3373,7 @@
 					"$(inherited)",
 					base_EXPORTS,
 					IOS,
+					__arm64__,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
@@ -3428,6 +3429,7 @@
 					"$(inherited)",
 					base_EXPORTS,
 					IOS,
+					__arm64__,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;

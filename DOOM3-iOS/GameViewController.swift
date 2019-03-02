@@ -38,8 +38,8 @@ class GameViewController: UIViewController {
             
             var argv: [String?] = [ Bundle.main.resourcePath! + "/doom3"];
             
-            argv.append("+map")
-            argv.append("game/alphalabs2")
+//            argv.append("+map")
+//            argv.append("game/alphalabs2")
 //            argv.append("\(self.difficulty)")
 
             
