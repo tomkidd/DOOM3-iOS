@@ -661,9 +661,88 @@ sysEvent_t Sys_GetEvent() {
 				common->Warning("unknown user event %u", ev.user.code);
 				continue; // handle next event
 			}
+
+            case SDL_CONTROLLERAXISMOTION:
+                
+//                common->Printf("SDL_CONTROLLERAXISMOTION %i %hd\n", ev.caxis.axis, ev.caxis.value);
+
+                // always run?
+                kbd_polls.Append(kbd_poll_t(K_SHIFT, 1));
+
+                switch (ev.caxis.axis) {
+                    case SDL_CONTROLLER_AXIS_LEFTX:
+                        kbd_polls.Append(kbd_poll_t(97, ev.caxis.value < 0));
+                        kbd_polls.Append(kbd_poll_t(100, ev.caxis.value > 0));
+                        break;
+
+                    case SDL_CONTROLLER_AXIS_LEFTY:
+                        kbd_polls.Append(kbd_poll_t(K_UPARROW, ev.caxis.value < 0));
+                        kbd_polls.Append(kbd_poll_t(K_DOWNARROW, ev.caxis.value > 0));
+                        break;
+
+                    case SDL_CONTROLLER_AXIS_RIGHTX:
+                        kbd_polls.Append(kbd_poll_t(K_RIGHTARROW, ev.caxis.value > 0));
+                        kbd_polls.Append(kbd_poll_t(K_LEFTARROW, ev.caxis.value < 0));
+                        break;
+                        
+                    case SDL_CONTROLLER_AXIS_TRIGGERRIGHT:
+                        kbd_polls.Append(kbd_poll_t(K_CTRL, ev.caxis.value > 0));
+                        break;
+                        
+                    default:
+                        break;
+                }
+                
+                continue;
+                
+            case SDL_CONTROLLERBUTTONDOWN:
+                
+                switch (ev.cbutton.button) {
+                    case SDL_CONTROLLER_BUTTON_LEFTSHOULDER:
+                        kbd_polls.Append(kbd_poll_t(K_MWHEELUP, true));
+                        break;
+                        
+                    case SDL_CONTROLLER_BUTTON_RIGHTSHOULDER:
+                        kbd_polls.Append(kbd_poll_t(K_MWHEELDOWN, true));
+                        break;
+                        
+                    default:
+                        break;
+                }
+                
+                continue;
+                
+            case SDL_CONTROLLERBUTTONUP:
+                switch (ev.cbutton.button) {
+                    case SDL_CONTROLLER_BUTTON_LEFTSHOULDER:
+                        kbd_polls.Append(kbd_poll_t(K_MWHEELUP, false));
+                        break;
+                        
+                    case SDL_CONTROLLER_BUTTON_RIGHTSHOULDER:
+                        kbd_polls.Append(kbd_poll_t(K_MWHEELDOWN, false));
+                        break;
+                        
+                    default:
+                        break;
+                }
+                
+                continue;
+                
+            case SDL_CONTROLLERDEVICEADDED:
+                common->Printf("SDL_CONTROLLERDEVICEADDED\n");
+                continue;
+                
+            case SDL_CONTROLLERDEVICEREMOVED:
+                common->Printf("SDL_CONTROLLERDEVICEREMOVED\n");
+                continue;
+                
+            case SDL_CONTROLLERDEVICEREMAPPED:
+                common->Printf("SDL_CONTROLLERDEVICEREMAPPED\n");
+                continue;
+
 		default:
 			// ok, I don't /really/ care about unknown SDL events. only uncomment this for debugging.
-			// common->Warning("unknown SDL event 0x%x", ev.type);
+//                common->Warning("unknown SDL event 0x%x", ev.type);
 			continue; // handle next event
 		}
 	}
