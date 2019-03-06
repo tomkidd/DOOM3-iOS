@@ -1040,8 +1040,13 @@ idUsercmdGenLocal::Joystick
 */
 void idUsercmdGenLocal::Joystick( void ) {
 	memset( joystickAxis, 0, sizeof( joystickAxis ) );
+    joystickAxis[AXIS_PITCH] = Sys_ReturnJoystickInputAxis(AXIS_PITCH);
+    joystickAxis[AXIS_UP] = Sys_ReturnJoystickInputAxis(AXIS_UP);
+    joystickAxis[AXIS_YAW] = Sys_ReturnJoystickInputAxis(AXIS_YAW);
+    joystickAxis[AXIS_ROLL] = Sys_ReturnJoystickInputAxis(AXIS_ROLL);
+    joystickAxis[AXIS_SIDE] = Sys_ReturnJoystickInputAxis(AXIS_SIDE);
+    joystickAxis[AXIS_FORWARD] = Sys_ReturnJoystickInputAxis(AXIS_FORWARD);
 }
-
 /*
 ================
 idUsercmdGenLocal::UsercmdInterrupt

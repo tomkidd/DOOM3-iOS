@@ -92,6 +92,7 @@ struct mouse_poll_t {
 
 static idList<kbd_poll_t> kbd_polls;
 static idList<mouse_poll_t> mouse_polls;
+static int joystickAxis[MAX_JOYSTICK_AXIS];    // set by joystick events
 
 static byte mapkey(SDL_Keycode key) {
 	switch (key) {
@@ -685,6 +686,11 @@ sysEvent_t Sys_GetEvent() {
                         kbd_polls.Append(kbd_poll_t(K_LEFTARROW, ev.caxis.value < 0));
                         break;
                         
+                    case SDL_CONTROLLER_AXIS_RIGHTY: {
+                        joystickAxis[AXIS_FORWARD] = ev.caxis.value / 16384;
+                        break;
+                    }
+                        
                     case SDL_CONTROLLER_AXIS_TRIGGERRIGHT:
                         kbd_polls.Append(kbd_poll_t(K_CTRL, ev.caxis.value > 0));
                         break;
@@ -841,4 +847,8 @@ Sys_EndMouseInputEvents
 */
 void Sys_EndMouseInputEvents() {
 	mouse_polls.SetNum(0, false);
+}
+
+int Sys_ReturnJoystickInputAxis( const int axis ) {
+    return joystickAxis[axis];
 }
