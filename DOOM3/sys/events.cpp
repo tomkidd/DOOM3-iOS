@@ -712,6 +712,18 @@ sysEvent_t Sys_GetEvent() {
                         kbd_polls.Append(kbd_poll_t(K_MWHEELDOWN, true));
                         break;
                         
+                    case SDL_CONTROLLER_BUTTON_A:
+                        kbd_polls.Append(kbd_poll_t(K_SPACE, true));
+                        break;
+                        
+                    case SDL_CONTROLLER_BUTTON_B:
+                        kbd_polls.Append(kbd_poll_t(99, true));
+                        break;
+                        
+                    case SDL_CONTROLLER_BUTTON_X:
+                        kbd_polls.Append(kbd_poll_t(102, true));
+                        break;
+
                     default:
                         break;
                 }
@@ -728,6 +740,19 @@ sysEvent_t Sys_GetEvent() {
                         kbd_polls.Append(kbd_poll_t(K_MWHEELDOWN, false));
                         break;
                         
+                        
+                    case SDL_CONTROLLER_BUTTON_A:
+                        kbd_polls.Append(kbd_poll_t(K_SPACE, false));
+                        break;
+                        
+                    case SDL_CONTROLLER_BUTTON_B:
+                        kbd_polls.Append(kbd_poll_t(99, false));
+                        break;
+                        
+                    case SDL_CONTROLLER_BUTTON_X:
+                        kbd_polls.Append(kbd_poll_t(102, false));
+                        break;
+
                     default:
                         break;
                 }
