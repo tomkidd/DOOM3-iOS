@@ -38,19 +38,22 @@ class GameViewController: UIViewController {
             
             var argv: [String?] = [ Bundle.main.resourcePath! + "/doom3"];
             
-            argv.append("+map")
-            argv.append("game/alphalabs2")
+//            argv.append("+map")
+//            argv.append("game/alphalabs2")
         //    argv.append("\(self.difficulty)")
 
             
             if self.difficulty >= 0 {
                 argv.append("+set")
-                argv.append("skill")
+                argv.append("g_skill")
                 argv.append("\(self.difficulty)")
             }
             
             if self.newgame {
-                argv.append("+newgame")
+//                argv.append("+startGame")
+//                mars_city1
+                argv.append("+map")
+                argv.append("game/mars_city1")
             }
             
             if !self.selectedSavedGame.isEmpty {

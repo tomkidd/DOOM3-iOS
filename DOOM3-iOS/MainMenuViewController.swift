@@ -18,7 +18,7 @@ class MainMenuViewController: UIViewController {
         super.viewDidLoad()
         
         // DEBUG -tkidd
-        performSegue(withIdentifier: "MozartsGhostSegue", sender: self)
+//        performSegue(withIdentifier: "MozartsGhostSegue", sender: self)
 
         // Do any additional setup after loading the view.
     }
