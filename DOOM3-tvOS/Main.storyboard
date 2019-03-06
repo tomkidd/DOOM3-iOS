@@ -81,7 +81,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ZbM-Ov-oft" kind="show" id="ogQ-yk-2f9"/>
+                                            <segue destination="ZbM-Ov-oft" kind="show" identifier="MozartsGhostSegue" id="ogQ-yk-2f9"/>
                                         </connections>
                                     </button>
                                 </subviews>

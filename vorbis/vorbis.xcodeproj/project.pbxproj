@@ -28,6 +28,27 @@
 		A18E837D2228BA2400822BAB /* floor1.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83632228BA2300822BAB /* floor1.c */; };
 		A18E837E2228BA2400822BAB /* codebook.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83642228BA2300822BAB /* codebook.c */; };
 		A18E83802228BB3F00822BAB /* vorbisfile.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E834D2228BA2100822BAB /* vorbisfile.c */; };
+		A196814A2230400200F06619 /* mdct.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83522228BA2100822BAB /* mdct.c */; };
+		A196814B2230400200F06619 /* codebook.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83642228BA2300822BAB /* codebook.c */; };
+		A196814C2230400200F06619 /* lsp.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83172228BA1F00822BAB /* lsp.c */; };
+		A196814D2230400200F06619 /* bitrate.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83602228BA2300822BAB /* bitrate.c */; };
+		A196814E2230400200F06619 /* smallft.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E831C2228BA1F00822BAB /* smallft.c */; };
+		A196814F2230400200F06619 /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E835B2228BA2200822BAB /* window.c */; };
+		A19681502230400200F06619 /* block.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E835C2228BA2200822BAB /* block.c */; };
+		A19681512230400200F06619 /* lookup.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83582228BA2200822BAB /* lookup.c */; };
+		A19681522230400200F06619 /* psy.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83202228BA1F00822BAB /* psy.c */; };
+		A19681532230400200F06619 /* mapping0.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83542228BA2100822BAB /* mapping0.c */; };
+		A19681542230400200F06619 /* floor0.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E834F2228BA2100822BAB /* floor0.c */; };
+		A19681552230400200F06619 /* floor1.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83632228BA2300822BAB /* floor1.c */; };
+		A19681562230400200F06619 /* lpc.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83612228BA2300822BAB /* lpc.c */; };
+		A19681572230400200F06619 /* synthesis.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83192228BA1F00822BAB /* synthesis.c */; };
+		A19681582230400200F06619 /* sharedbook.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E835D2228BA2200822BAB /* sharedbook.c */; };
+		A19681592230400200F06619 /* analysis.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83182228BA1F00822BAB /* analysis.c */; };
+		A196815A2230400200F06619 /* res0.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E831F2228BA1F00822BAB /* res0.c */; };
+		A196815B2230400200F06619 /* envelope.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83242228BA2000822BAB /* envelope.c */; };
+		A196815C2230400200F06619 /* info.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83592228BA2200822BAB /* info.c */; };
+		A196815D2230400200F06619 /* registry.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E83552228BA2200822BAB /* registry.c */; };
+		A19681662230402500F06619 /* vorbisfile.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E834D2228BA2100822BAB /* vorbisfile.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,11 +70,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A196815F2230400200F06619 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A19681682230402500F06619 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A18E82E92228B96C00822BAB /* libvorbis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libvorbis.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A18E830C2228B9DE00822BAB /* libvorbisfile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libvorbisfile.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18E82E92228B96C00822BAB /* libvorbis-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libvorbis-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18E830C2228B9DE00822BAB /* libvorbisfile-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libvorbisfile-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18E83152228BA1F00822BAB /* envelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = envelope.h; sourceTree = "<group>"; };
 		A18E83162228BA1F00822BAB /* lookup_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lookup_data.h; sourceTree = "<group>"; };
 		A18E83172228BA1F00822BAB /* lsp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lsp.c; sourceTree = "<group>"; };
@@ -122,6 +161,8 @@
 		A18E83822228BC3E00822BAB /* codec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = codec.h; sourceTree = "<group>"; };
 		A18E83832228BC3F00822BAB /* vorbisenc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vorbisenc.h; sourceTree = "<group>"; };
 		A18E83852228BCAB00822BAB /* libogg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libogg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A19681632230400200F06619 /* libvorbis-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libvorbis-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A196816C2230402500F06619 /* libvorbisfile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libvorbisfile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +174,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A18E83092228B9DE00822BAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A196815E2230400200F06619 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A19681672230402500F06619 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -154,8 +209,10 @@
 		A18E82EA2228B96C00822BAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A18E82E92228B96C00822BAB /* libvorbis.a */,
-				A18E830C2228B9DE00822BAB /* libvorbisfile.a */,
+				A18E82E92228B96C00822BAB /* libvorbis-iOS.a */,
+				A18E830C2228B9DE00822BAB /* libvorbisfile-iOS.a */,
+				A19681632230400200F06619 /* libvorbis-tvOS.a */,
+				A196816C2230402500F06619 /* libvorbisfile-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,9 +342,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A18E82E82228B96C00822BAB /* vorbis */ = {
+		A18E82E82228B96C00822BAB /* vorbis-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A18E82F22228B96C00822BAB /* Build configuration list for PBXNativeTarget "vorbis" */;
+			buildConfigurationList = A18E82F22228B96C00822BAB /* Build configuration list for PBXNativeTarget "vorbis-iOS" */;
 			buildPhases = (
 				A18E82E52228B96C00822BAB /* Sources */,
 				A18E82E62228B96C00822BAB /* Frameworks */,
@@ -297,14 +354,14 @@
 			);
 			dependencies = (
 			);
-			name = vorbis;
+			name = "vorbis-iOS";
 			productName = vorbis;
-			productReference = A18E82E92228B96C00822BAB /* libvorbis.a */;
+			productReference = A18E82E92228B96C00822BAB /* libvorbis-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		A18E830B2228B9DE00822BAB /* vorbisfile */ = {
+		A18E830B2228B9DE00822BAB /* vorbisfile-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A18E83122228B9DE00822BAB /* Build configuration list for PBXNativeTarget "vorbisfile" */;
+			buildConfigurationList = A18E83122228B9DE00822BAB /* Build configuration list for PBXNativeTarget "vorbisfile-iOS" */;
 			buildPhases = (
 				A18E83082228B9DE00822BAB /* Sources */,
 				A18E83092228B9DE00822BAB /* Frameworks */,
@@ -314,9 +371,43 @@
 			);
 			dependencies = (
 			);
-			name = vorbisfile;
+			name = "vorbisfile-iOS";
 			productName = vorbisfile;
-			productReference = A18E830C2228B9DE00822BAB /* libvorbisfile.a */;
+			productReference = A18E830C2228B9DE00822BAB /* libvorbisfile-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A19681482230400200F06619 /* vorbis-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A19681602230400200F06619 /* Build configuration list for PBXNativeTarget "vorbis-tvOS" */;
+			buildPhases = (
+				A19681492230400200F06619 /* Sources */,
+				A196815E2230400200F06619 /* Frameworks */,
+				A196815F2230400200F06619 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "vorbis-tvOS";
+			productName = vorbis;
+			productReference = A19681632230400200F06619 /* libvorbis-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A19681642230402500F06619 /* vorbisfile-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A19681692230402500F06619 /* Build configuration list for PBXNativeTarget "vorbisfile-tvOS" */;
+			buildPhases = (
+				A19681652230402500F06619 /* Sources */,
+				A19681672230402500F06619 /* Frameworks */,
+				A19681682230402500F06619 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "vorbisfile-tvOS";
+			productName = vorbisfile;
+			productReference = A196816C2230402500F06619 /* libvorbisfile-tvOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -348,8 +439,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A18E82E82228B96C00822BAB /* vorbis */,
-				A18E830B2228B9DE00822BAB /* vorbisfile */,
+				A18E82E82228B96C00822BAB /* vorbis-iOS */,
+				A18E830B2228B9DE00822BAB /* vorbisfile-iOS */,
+				A19681482230400200F06619 /* vorbis-tvOS */,
+				A19681642230402500F06619 /* vorbisfile-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -387,6 +480,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18E83802228BB3F00822BAB /* vorbisfile.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A19681492230400200F06619 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A196814A2230400200F06619 /* mdct.c in Sources */,
+				A196814B2230400200F06619 /* codebook.c in Sources */,
+				A196814C2230400200F06619 /* lsp.c in Sources */,
+				A196814D2230400200F06619 /* bitrate.c in Sources */,
+				A196814E2230400200F06619 /* smallft.c in Sources */,
+				A196814F2230400200F06619 /* window.c in Sources */,
+				A19681502230400200F06619 /* block.c in Sources */,
+				A19681512230400200F06619 /* lookup.c in Sources */,
+				A19681522230400200F06619 /* psy.c in Sources */,
+				A19681532230400200F06619 /* mapping0.c in Sources */,
+				A19681542230400200F06619 /* floor0.c in Sources */,
+				A19681552230400200F06619 /* floor1.c in Sources */,
+				A19681562230400200F06619 /* lpc.c in Sources */,
+				A19681572230400200F06619 /* synthesis.c in Sources */,
+				A19681582230400200F06619 /* sharedbook.c in Sources */,
+				A19681592230400200F06619 /* analysis.c in Sources */,
+				A196815A2230400200F06619 /* res0.c in Sources */,
+				A196815B2230400200F06619 /* envelope.c in Sources */,
+				A196815C2230400200F06619 /* info.c in Sources */,
+				A196815D2230400200F06619 /* registry.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A19681652230402500F06619 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A19681662230402500F06619 /* vorbisfile.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +689,58 @@
 			};
 			name = Release;
 		};
+		A19681612230400200F06619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A19681622230400200F06619 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A196816A2230402500F06619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A196816B2230402500F06619 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,7 +753,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A18E82F22228B96C00822BAB /* Build configuration list for PBXNativeTarget "vorbis" */ = {
+		A18E82F22228B96C00822BAB /* Build configuration list for PBXNativeTarget "vorbis-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A18E82F32228B96C00822BAB /* Debug */,
@@ -582,11 +762,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A18E83122228B9DE00822BAB /* Build configuration list for PBXNativeTarget "vorbisfile" */ = {
+		A18E83122228B9DE00822BAB /* Build configuration list for PBXNativeTarget "vorbisfile-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A18E83132228B9DE00822BAB /* Debug */,
 				A18E83142228B9DE00822BAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A19681602230400200F06619 /* Build configuration list for PBXNativeTarget "vorbis-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A19681612230400200F06619 /* Debug */,
+				A19681622230400200F06619 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A19681692230402500F06619 /* Build configuration list for PBXNativeTarget "vorbisfile-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A196816A2230402500F06619 /* Debug */,
+				A196816B2230402500F06619 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

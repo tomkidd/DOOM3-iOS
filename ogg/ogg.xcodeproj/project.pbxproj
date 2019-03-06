@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A18E82DC2228B7D100822BAB /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E82DA2228B7D100822BAB /* framing.c */; };
 		A18E82DD2228B7D100822BAB /* bitwise.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E82DB2228B7D100822BAB /* bitwise.c */; };
+		A196816F2230403300F06619 /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E82DA2228B7D100822BAB /* framing.c */; };
+		A19681702230403300F06619 /* bitwise.c in Sources */ = {isa = PBXBuildFile; fileRef = A18E82DB2228B7D100822BAB /* bitwise.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,18 +23,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A19681722230403300F06619 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A18E82C22228B77B00822BAB /* libogg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libogg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18E82C22228B77B00822BAB /* libogg-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libogg-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18E82DA2228B7D100822BAB /* framing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = framing.c; sourceTree = "<group>"; };
 		A18E82DB2228B7D100822BAB /* bitwise.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitwise.c; sourceTree = "<group>"; };
 		A18E82DE2228B80B00822BAB /* ogg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ogg.h; sourceTree = "<group>"; };
 		A18E82DF2228B86900822BAB /* os_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = os_types.h; sourceTree = "<group>"; };
+		A19681762230403300F06619 /* libogg-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libogg-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A18E82BF2228B77B00822BAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A19681712230403300F06619 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,7 +72,8 @@
 		A18E82C32228B77B00822BAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A18E82C22228B77B00822BAB /* libogg.a */,
+				A18E82C22228B77B00822BAB /* libogg-iOS.a */,
+				A19681762230403300F06619 /* libogg-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A18E82C12228B77B00822BAB /* ogg */ = {
+		A18E82C12228B77B00822BAB /* ogg-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A18E82CB2228B77B00822BAB /* Build configuration list for PBXNativeTarget "ogg" */;
+			buildConfigurationList = A18E82CB2228B77B00822BAB /* Build configuration list for PBXNativeTarget "ogg-iOS" */;
 			buildPhases = (
 				A18E82BE2228B77B00822BAB /* Sources */,
 				A18E82BF2228B77B00822BAB /* Frameworks */,
@@ -84,9 +104,26 @@
 			);
 			dependencies = (
 			);
-			name = ogg;
+			name = "ogg-iOS";
 			productName = ogg;
-			productReference = A18E82C22228B77B00822BAB /* libogg.a */;
+			productReference = A18E82C22228B77B00822BAB /* libogg-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A196816D2230403300F06619 /* ogg-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A19681732230403300F06619 /* Build configuration list for PBXNativeTarget "ogg-tvOS" */;
+			buildPhases = (
+				A196816E2230403300F06619 /* Sources */,
+				A19681712230403300F06619 /* Frameworks */,
+				A19681722230403300F06619 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ogg-tvOS";
+			productName = ogg;
+			productReference = A19681762230403300F06619 /* libogg-tvOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -115,7 +152,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A18E82C12228B77B00822BAB /* ogg */,
+				A18E82C12228B77B00822BAB /* ogg-iOS */,
+				A196816D2230403300F06619 /* ogg-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +165,15 @@
 			files = (
 				A18E82DC2228B7D100822BAB /* framing.c in Sources */,
 				A18E82DD2228B7D100822BAB /* bitwise.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A196816E2230403300F06619 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A196816F2230403300F06619 /* framing.c in Sources */,
+				A19681702230403300F06619 /* bitwise.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +318,32 @@
 			};
 			name = Release;
 		};
+		A19681742230403300F06619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A19681752230403300F06619 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -283,11 +356,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A18E82CB2228B77B00822BAB /* Build configuration list for PBXNativeTarget "ogg" */ = {
+		A18E82CB2228B77B00822BAB /* Build configuration list for PBXNativeTarget "ogg-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A18E82CC2228B77B00822BAB /* Debug */,
 				A18E82CD2228B77B00822BAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A19681732230403300F06619 /* Build configuration list for PBXNativeTarget "ogg-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A19681742230403300F06619 /* Debug */,
+				A19681752230403300F06619 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

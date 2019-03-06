@@ -24,9 +24,9 @@
 		A18E838B2228BD1000822BAB /* libvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E82FA2228B96D00822BAB /* libvorbis.a */; };
 		A18E838C2228BD1000822BAB /* libvorbisfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E83892228BD1000822BAB /* libvorbisfile.a */; };
 		A18E839B2228DA1A00822BAB /* libcurl_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E83912228DA1A00822BAB /* libcurl_iOS.a */; };
-		A18E839F2228DB3E00822BAB /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E839C2228DB3D00822BAB /* libcrypto.a */; };
+		A18E839F2228DB3E00822BAB /* libcrypto_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E839C2228DB3D00822BAB /* libcrypto_iOS.a */; };
 		A18E83A02228DB3E00822BAB /* libnghttp2_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E839D2228DB3E00822BAB /* libnghttp2_iOS.a */; };
-		A18E83A12228DB3E00822BAB /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E839E2228DB3E00822BAB /* libssl.a */; };
+		A18E83A12228DB3E00822BAB /* libssl_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E839E2228DB3E00822BAB /* libssl_iOS.a */; };
 		A18E83A32228DC3000822BAB /* reflectionCubeShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828922282ECA00822BAB /* reflectionCubeShaderVP.cpp */; };
 		A18E83A52228DD2D00822BAB /* blendLightShaderVP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828522282ECA00822BAB /* blendLightShaderVP.cpp */; };
 		A18E83A62228DD3700822BAB /* cubeMapShaderFP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E828122282ECA00822BAB /* cubeMapShaderFP.cpp */; };
@@ -72,6 +72,16 @@
 		A18E83D02228E9E600822BAB /* DOOMController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2022222018200D94577 /* DOOMController.mm */; };
 		A196812A2228F3EE00F06619 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2052222018200D94577 /* SDLMain.m */; };
 		A19681342228F3EE00F06619 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2052222018200D94577 /* SDLMain.m */; };
+		A19681B9223040E200F06619 /* libjpeg-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681AF2230406A00F06619 /* libjpeg-tvOS.a */; };
+		A19681BA223040E200F06619 /* libogg-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681B22230406A00F06619 /* libogg-tvOS.a */; };
+		A19681BB223040E200F06619 /* libvorbis-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681B62230406A00F06619 /* libvorbis-tvOS.a */; };
+		A19681BC223040E200F06619 /* libvorbisfile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681B82230406A00F06619 /* libvorbisfile-tvOS.a */; };
+		A19681BE223040E200F06619 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681BD223040E200F06619 /* libz.tbd */; };
+		A19681C0223040F500F06619 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681BF223040F500F06619 /* OpenAL.framework */; };
+		A19681C52230411200F06619 /* libcurl_tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681C12230411100F06619 /* libcurl_tvOS.a */; };
+		A19681C62230411200F06619 /* libnghttp2_tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681C22230411100F06619 /* libnghttp2_tvOS.a */; };
+		A19681C72230411200F06619 /* libcrypto_tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681C32230411100F06619 /* libcrypto_tvOS.a */; };
+		A19681C82230411200F06619 /* libssl_tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681C42230411200F06619 /* libssl_tvOS.a */; };
 		A1B2B2B72222018200D94577 /* AASBuild_gravity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5A2222018100D94577 /* AASBuild_gravity.cpp */; };
 		A1B2B2B82222018200D94577 /* AASBuild_gravity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5A2222018100D94577 /* AASBuild_gravity.cpp */; };
 		A1B2B2B92222018200D94577 /* AASBuild_ledge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5D2222018100D94577 /* AASBuild_ledge.cpp */; };
@@ -666,6 +676,34 @@
 			remoteGlobalIDString = A18E830C2228B9DE00822BAB;
 			remoteInfo = vorbisfile;
 		};
+		A19681AE2230406A00F06619 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A18E81F32227565400822BAB /* jpeg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A19681AC2230404400F06619;
+			remoteInfo = "jpeg-tvOS";
+		};
+		A19681B12230406A00F06619 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A18E82CE2228B77B00822BAB /* ogg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A19681762230403300F06619;
+			remoteInfo = "ogg-tvOS";
+		};
+		A19681B52230406A00F06619 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A18E82F52228B96C00822BAB /* vorbis.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A19681632230400200F06619;
+			remoteInfo = "vorbis-tvOS";
+		};
+		A19681B72230406A00F06619 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A18E82F52228B96C00822BAB /* vorbis.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A196816C2230402500F06619;
+			remoteInfo = "vorbisfile-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -712,10 +750,16 @@
 		A18E82CE2228B77B00822BAB /* ogg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogg.xcodeproj; path = ogg/ogg.xcodeproj; sourceTree = "<group>"; };
 		A18E82F52228B96C00822BAB /* vorbis.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = vorbis.xcodeproj; path = vorbis/vorbis.xcodeproj; sourceTree = "<group>"; };
 		A18E83912228DA1A00822BAB /* libcurl_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl_iOS.a; path = curl/ios/libcurl_iOS.a; sourceTree = "<group>"; };
-		A18E839C2228DB3D00822BAB /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = curl/ios/libcrypto.a; sourceTree = "<group>"; };
+		A18E839C2228DB3D00822BAB /* libcrypto_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto_iOS.a; path = curl/ios/libcrypto_iOS.a; sourceTree = "<group>"; };
 		A18E839D2228DB3E00822BAB /* libnghttp2_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libnghttp2_iOS.a; path = curl/ios/libnghttp2_iOS.a; sourceTree = "<group>"; };
-		A18E839E2228DB3E00822BAB /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = curl/ios/libssl.a; sourceTree = "<group>"; };
+		A18E839E2228DB3E00822BAB /* libssl_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl_iOS.a; path = curl/ios/libssl_iOS.a; sourceTree = "<group>"; };
 		A18E83CA2228DE4500822BAB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A19681BD223040E200F06619 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
+		A19681BF223040F500F06619 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
+		A19681C12230411100F06619 /* libcurl_tvOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl_tvOS.a; path = curl/tvos/libcurl_tvOS.a; sourceTree = "<group>"; };
+		A19681C22230411100F06619 /* libnghttp2_tvOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libnghttp2_tvOS.a; path = curl/tvos/libnghttp2_tvOS.a; sourceTree = "<group>"; };
+		A19681C32230411100F06619 /* libcrypto_tvOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto_tvOS.a; path = curl/tvos/libcrypto_tvOS.a; sourceTree = "<group>"; };
+		A19681C42230411200F06619 /* libssl_tvOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl_tvOS.a; path = curl/tvos/libssl_tvOS.a; sourceTree = "<group>"; };
 		A1B2AF532222018100D94577 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		A1B2AF562222018100D94577 /* compiler_public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compiler_public.h; sourceTree = "<group>"; };
 		A1B2AF582222018100D94577 /* renderbump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderbump.cpp; sourceTree = "<group>"; };
@@ -1335,9 +1379,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18E83CB2228DE4500822BAB /* libz.tbd in Frameworks */,
-				A18E839F2228DB3E00822BAB /* libcrypto.a in Frameworks */,
+				A18E839F2228DB3E00822BAB /* libcrypto_iOS.a in Frameworks */,
 				A18E83A02228DB3E00822BAB /* libnghttp2_iOS.a in Frameworks */,
-				A18E83A12228DB3E00822BAB /* libssl.a in Frameworks */,
+				A18E83A12228DB3E00822BAB /* libssl_iOS.a in Frameworks */,
 				A18E839B2228DA1A00822BAB /* libcurl_iOS.a in Frameworks */,
 				A18E838A2228BD1000822BAB /* libogg.a in Frameworks */,
 				A18E838B2228BD1000822BAB /* libvorbis.a in Frameworks */,
@@ -1363,12 +1407,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19681C52230411200F06619 /* libcurl_tvOS.a in Frameworks */,
+				A19681C62230411200F06619 /* libnghttp2_tvOS.a in Frameworks */,
+				A19681C72230411200F06619 /* libcrypto_tvOS.a in Frameworks */,
+				A19681C82230411200F06619 /* libssl_tvOS.a in Frameworks */,
+				A1B80B1E21FA5D0500560711 /* Metal.framework in Frameworks */,
+				A19681C0223040F500F06619 /* OpenAL.framework in Frameworks */,
+				A19681BE223040E200F06619 /* libz.tbd in Frameworks */,
+				A19681B9223040E200F06619 /* libjpeg-tvOS.a in Frameworks */,
+				A19681BA223040E200F06619 /* libogg-tvOS.a in Frameworks */,
+				A19681BB223040E200F06619 /* libvorbis-tvOS.a in Frameworks */,
+				A19681BC223040E200F06619 /* libvorbisfile-tvOS.a in Frameworks */,
 				A1B80B1921FA5D0500560711 /* CoreAudio.framework in Frameworks */,
 				A1B80B1A21FA5D0500560711 /* QuartzCore.framework in Frameworks */,
 				A1B80B1B21FA5D0500560711 /* AudioToolbox.framework in Frameworks */,
 				A1B80B1C21FA5D0500560711 /* UIKit.framework in Frameworks */,
 				A1B80B1D21FA5D0500560711 /* AVFoundation.framework in Frameworks */,
-				A1B80B1E21FA5D0500560711 /* Metal.framework in Frameworks */,
 				A1B80B1F21FA5D0500560711 /* CoreGraphics.framework in Frameworks */,
 				A1B80B2021FA5D0500560711 /* GameController.framework in Frameworks */,
 				A1B80B2121FA5D0500560711 /* Foundation.framework in Frameworks */,
@@ -1405,10 +1459,16 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A19681C32230411100F06619 /* libcrypto_tvOS.a */,
+				A19681C12230411100F06619 /* libcurl_tvOS.a */,
+				A19681C22230411100F06619 /* libnghttp2_tvOS.a */,
+				A19681C42230411200F06619 /* libssl_tvOS.a */,
+				A19681BF223040F500F06619 /* OpenAL.framework */,
 				A18E83CA2228DE4500822BAB /* libz.tbd */,
-				A18E839C2228DB3D00822BAB /* libcrypto.a */,
+				A19681BD223040E200F06619 /* libz.tbd */,
+				A18E839C2228DB3D00822BAB /* libcrypto_iOS.a */,
 				A18E839D2228DB3E00822BAB /* libnghttp2_iOS.a */,
-				A18E839E2228DB3E00822BAB /* libssl.a */,
+				A18E839E2228DB3E00822BAB /* libssl_iOS.a */,
 				A18E83912228DA1A00822BAB /* libcurl_iOS.a */,
 				A18E82F52228B96C00822BAB /* vorbis.xcodeproj */,
 				A18E82CE2228B77B00822BAB /* ogg.xcodeproj */,
@@ -1494,6 +1554,7 @@
 			isa = PBXGroup;
 			children = (
 				A18E81F82227565500822BAB /* libjpeg.a */,
+				A19681AF2230406A00F06619 /* libjpeg-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1529,6 +1590,7 @@
 			isa = PBXGroup;
 			children = (
 				A18E82D42228B77C00822BAB /* libogg.a */,
+				A19681B22230406A00F06619 /* libogg-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1538,6 +1600,8 @@
 			children = (
 				A18E82FA2228B96D00822BAB /* libvorbis.a */,
 				A18E83892228BD1000822BAB /* libvorbisfile.a */,
+				A19681B62230406A00F06619 /* libvorbis-tvOS.a */,
+				A19681B82230406A00F06619 /* libvorbisfile-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2506,6 +2570,34 @@
 			remoteRef = A18E83882228BD1000822BAB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		A19681AF2230406A00F06619 /* libjpeg-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjpeg-tvOS.a";
+			remoteRef = A19681AE2230406A00F06619 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A19681B22230406A00F06619 /* libogg-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libogg-tvOS.a";
+			remoteRef = A19681B12230406A00F06619 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A19681B62230406A00F06619 /* libvorbis-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libvorbis-tvOS.a";
+			remoteRef = A19681B52230406A00F06619 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A19681B82230406A00F06619 /* libvorbisfile-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libvorbisfile-tvOS.a";
+			remoteRef = A19681B72230406A00F06619 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -3251,7 +3343,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -3274,6 +3366,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DOOM3-tvOS/DOOM3-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/curl/tvos",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.doom3;
@@ -3298,7 +3394,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -3320,6 +3416,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DOOM3-tvOS/DOOM3-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/curl/tvos",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.doom3;
