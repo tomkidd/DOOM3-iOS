@@ -520,8 +520,8 @@
 		A1B2B56A2222018300D94577 /* posix_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1FA2222018200D94577 /* posix_main.cpp */; };
 		A1B2B57D2222018300D94577 /* sys_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2082222018200D94577 /* sys_local.cpp */; };
 		A1B2B57E2222018300D94577 /* sys_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2082222018200D94577 /* sys_local.cpp */; };
-		A1B2B57F2222018300D94577 /* glimp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B20A2222018200D94577 /* glimp.cpp */; };
-		A1B2B5802222018300D94577 /* glimp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B20A2222018200D94577 /* glimp.cpp */; };
+		A1B2B57F2222018300D94577 /* glimp.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B20A2222018200D94577 /* glimp.mm */; };
+		A1B2B5802222018300D94577 /* glimp.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B20A2222018200D94577 /* glimp.mm */; };
 		A1B2B6052222018300D94577 /* events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2772222018200D94577 /* events.cpp */; };
 		A1B2B6062222018300D94577 /* events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2772222018200D94577 /* events.cpp */; };
 		A1B2B6072222018300D94577 /* cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2782222018200D94577 /* cpu.cpp */; };
@@ -1238,7 +1238,7 @@
 		A1B2B2072222018200D94577 /* version.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = version.plist; sourceTree = "<group>"; };
 		A1B2B2082222018200D94577 /* sys_local.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sys_local.cpp; sourceTree = "<group>"; };
 		A1B2B2092222018200D94577 /* doom_icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = doom_icon.h; sourceTree = "<group>"; };
-		A1B2B20A2222018200D94577 /* glimp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glimp.cpp; sourceTree = "<group>"; };
+		A1B2B20A2222018200D94577 /* glimp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = glimp.mm; sourceTree = "<group>"; };
 		A1B2B2772222018200D94577 /* events.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = events.cpp; sourceTree = "<group>"; };
 		A1B2B2782222018200D94577 /* cpu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cpu.cpp; sourceTree = "<group>"; };
 		A1B2B2792222018200D94577 /* sys_public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sys_public.h; sourceTree = "<group>"; };
@@ -2241,7 +2241,7 @@
 				A1B2B2782222018200D94577 /* cpu.cpp */,
 				A1B2B2092222018200D94577 /* doom_icon.h */,
 				A1B2B2772222018200D94577 /* events.cpp */,
-				A1B2B20A2222018200D94577 /* glimp.cpp */,
+				A1B2B20A2222018200D94577 /* glimp.mm */,
 				A1B2B1FC2222018200D94577 /* osx */,
 				A1B2B27A2222018200D94577 /* platform.h */,
 				A1B2B1F82222018200D94577 /* posix */,
@@ -2784,7 +2784,7 @@
 				A1B2B6072222018300D94577 /* cpu.cpp in Sources */,
 				A1B2B53F2222018300D94577 /* ModelOverlay.cpp in Sources */,
 				A1B2B3872222018200D94577 /* CmdArgs.cpp in Sources */,
-				A1B2B57F2222018300D94577 /* glimp.cpp in Sources */,
+				A1B2B57F2222018300D94577 /* glimp.mm in Sources */,
 				A18E83B02228DD3700822BAB /* skyboxCubeShaderVP.cpp in Sources */,
 				A1B2B34F2222018200D94577 /* Dict.cpp in Sources */,
 				A1B2B5312222018300D94577 /* Image_process.cpp in Sources */,
@@ -2903,7 +2903,7 @@
 				A1B2B5542222018300D94577 /* tr_trace.cpp in Sources */,
 				A1B2B5522222018300D94577 /* Model_sprite.cpp in Sources */,
 				A1B2B52A2222018300D94577 /* RenderSystem_init.mm in Sources */,
-				A1B2B5802222018300D94577 /* glimp.cpp in Sources */,
+				A1B2B5802222018300D94577 /* glimp.mm in Sources */,
 				A1B2B4A02222018300D94577 /* Physics_Parametric.cpp in Sources */,
 				A1B2B3902222018200D94577 /* Winding.cpp in Sources */,
 				A1B2B4F22222018300D94577 /* KeyInput.cpp in Sources */,

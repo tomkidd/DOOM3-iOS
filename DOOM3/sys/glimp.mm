@@ -27,6 +27,15 @@ If you have questions concerning this license or the applicable additional terms
 */
 
 #include <SDL.h>
+#include <UIKit/UIKit.h>
+#include <SDL_syswm.h>
+
+#if TARGET_OS_TV
+#import "DOOM3_tvOS-Swift.h"
+#else
+#import "DOOM3_iOS-Swift.h"
+#endif
+
 
 #include "sys/platform.h"
 #include "framework/Licensee.h"
@@ -46,6 +55,20 @@ static SDL_Surface *window = NULL;
 #define SDL_WINDOW_OPENGL SDL_OPENGL
 #define SDL_WINDOW_FULLSCREEN SDL_FULLSCREEN
 #endif
+
+UIViewController* GetSDLViewController(SDL_Window *sdlWindow) {
+    SDL_SysWMinfo systemWindowInfo;
+    SDL_VERSION(&systemWindowInfo.version);
+    if ( ! SDL_GetWindowWMInfo(sdlWindow, &systemWindowInfo)) {
+        // error handle?
+        return nil;
+    }
+    UIWindow *appWindow = systemWindowInfo.info.uikit.window;
+    UIViewController *rootVC = appWindow.rootViewController;
+    return rootVC;
+}
+
+
 
 static void SetSDLIcon()
 {
@@ -232,6 +255,20 @@ bool GLimp_Init(glimpParms_t parms) {
 		common->Warning("No usable GL mode found: %s", SDL_GetError());
 		return false;
 	}
+    
+#if !TARGET_OS_TV
+    // adding on-screen controls -tkidd
+    SDL_uikitviewcontroller *rootVC = (SDL_uikitviewcontroller *)GetSDLViewController(window);
+    NSLog(@"root VC = %@",rootVC);
+    
+    [rootVC.view addSubview:[rootVC fireButtonWithRect:[rootVC.view frame]]];
+    [rootVC.view addSubview:[rootVC jumpButtonWithRect:[rootVC.view frame]]];
+    [rootVC.view addSubview:[rootVC joyStickWithRect:[rootVC.view frame]]];
+    [rootVC.view addSubview:[rootVC buttonStackWithRect:[rootVC.view frame]]];
+    [rootVC.view addSubview:[rootVC f1ButtonWithRect:[rootVC.view frame]]];
+    [rootVC.view addSubview:[rootVC prevWeaponButtonWithRect:[rootVC.view frame]]];
+    [rootVC.view addSubview:[rootVC nextWeaponButtonWithRect:[rootVC.view frame]]];
+#endif
 
 	return true;
 }
