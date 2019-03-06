@@ -241,6 +241,14 @@ extension SDL_uikitviewcontroller {
         
     }
     
+    func Key_Event(key: Int, pressed: Bool) {
+        var event = SDL_Event()
+        event.type = SDL_KEYDOWN.rawValue
+        event.key.keysym.sym = SDL_Keycode(key)
+        event.key.state = Uint8(pressed ? SDL_PRESSED : SDL_RELEASED)
+        SDL_PushEvent(&event)
+    }
+    
     @objc func f1Button(rect: CGRect) -> UIButton {
         f1Button = UIButton(frame: CGRect(x: rect.width - 40, y: 10, width: 30, height: 30))
         f1Button.setTitle(" F1 ", for: .normal)
@@ -265,26 +273,21 @@ extension SDL_uikitviewcontroller {
         nextWeaponButton.addTarget(self, action: #selector(self.nextWeaponReleased), for: .touchUpInside)
         return nextWeaponButton
     }
-
     
     @objc func firePressed(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(137, qboolean(1), qboolean(1))
+        Key_Event(key: SDLK_RCTRL, pressed: true)
     }
     
     @objc func fireReleased(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(137, qboolean(0), qboolean(1))
+        Key_Event(key: SDLK_RCTRL, pressed: false)
     }
     
     @objc func jumpPressed(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(32, qboolean(1), qboolean(1))
+        Key_Event(key: SDLK_SPACE, pressed: true)
     }
     
     @objc func jumpReleased(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(32, qboolean(0), qboolean(1))
+        Key_Event(key: SDLK_SPACE, pressed: false)
     }
     
     @objc func tildePressed(sender: UIButton!) {
@@ -296,63 +299,52 @@ extension SDL_uikitviewcontroller {
     }
     
     @objc func escapePressed(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(27, qboolean(1), qboolean(1))
+        Key_Event(key: SDLK_ESCAPE, pressed: true)
     }
     
     @objc func escapeReleased(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(27, qboolean(0), qboolean(1))
+        Key_Event(key: SDLK_ESCAPE, pressed: false)
     }
     
     @objc func quickSavePressed(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(150, qboolean(1), qboolean(1))
+        Key_Event(key: SDLK_F5, pressed: true)
     }
     
     @objc func quickSaveReleased(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(150, qboolean(0), qboolean(1))
+        Key_Event(key: SDLK_F5, pressed: false)
     }
     
     @objc func quickLoadPressed(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(153, qboolean(1), qboolean(1))
+        Key_Event(key: SDLK_F9, pressed: true)
     }
     
     @objc func quickLoadReleased(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(153, qboolean(0), qboolean(1))
+        Key_Event(key: SDLK_F9, pressed: false)
     }
     
+    // repurposing for flashlight
     @objc func f1Pressed(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(145, qboolean(1), qboolean(1))
+        Key_Event(key: SDLK_f, pressed: true)
     }
     
     @objc func f1Released(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(145, qboolean(0), qboolean(1))
+        Key_Event(key: SDLK_f, pressed: false)
     }
     
     @objc func prevWeaponPressed(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(183, qboolean(1), qboolean(1))
+        Key_Event(key: SDLK_LEFTBRACKET, pressed: true)
     }
     
     @objc func prevWeaponReleased(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(183, qboolean(0), qboolean(1))
+        Key_Event(key: SDLK_LEFTBRACKET, pressed: true)
     }
     
     @objc func nextWeaponPressed(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(184, qboolean(1), qboolean(1))
+        Key_Event(key: SDLK_RIGHTBRACKET, pressed: true)
     }
     
     @objc func nextWeaponReleased(sender: UIButton!) {
-        // todo: fix for DOOM3 -tkidd
-        //Key_Event(184, qboolean(0), qboolean(1))
+        Key_Event(key: SDLK_RIGHTBRACKET, pressed: false)
     }
 
 
@@ -379,23 +371,20 @@ extension SDL_uikitviewcontroller {
 extension SDL_uikitviewcontroller: JoystickDelegate {
     
     func handleJoyStickPosition(x: CGFloat, y: CGFloat) {
-        // todo: fix for DOOM3 -tkidd
-//        if y > 0 {
-//            cl_joyscale_y.0 = Int32(abs(y) * 60)
-//            Key_Event(132, qboolean(1), qboolean(1))
-//            Key_Event(133, qboolean(0), qboolean(1))
-//        } else if y < 0 {
-//            cl_joyscale_y.1 = Int32(abs(y) * 60)
-//            Key_Event(132, qboolean(0), qboolean(1))
-//            Key_Event(133, qboolean(1), qboolean(1))
-//        } else {
-//            cl_joyscale_y.0 = 0
-//            cl_joyscale_y.1 = 0
-//            Key_Event(132, qboolean(0), qboolean(1))
-//            Key_Event(133, qboolean(0), qboolean(1))
-//        }
-//
-//        cl_joyscale_x.0 = Int32(x * 20)
+        
+        var eventY = SDL_Event()
+        eventY.type = SDL_CONTROLLERAXISMOTION.rawValue
+        eventY.caxis.axis = Uint8(SDL_CONTROLLER_AXIS_LEFTY.rawValue)
+        eventY.caxis.value =  -Sint16(y * 10)
+        
+        SDL_PushEvent(&eventY)
+        
+        var eventX = SDL_Event()
+        eventX.type = SDL_CONTROLLERAXISMOTION.rawValue
+        eventX.caxis.axis = Uint8(SDL_CONTROLLER_AXIS_RIGHTX.rawValue)
+        eventX.caxis.value = Sint16(x * 10)
+        
+        SDL_PushEvent(&eventX)
     }
     
     func handleJoyStick(angle: CGFloat, displacement: CGFloat) {

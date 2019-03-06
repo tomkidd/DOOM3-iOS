@@ -3,6 +3,8 @@
 //
 
 #import "AppDelegate.h"
+#include <SDL.h>
+
 //#import "shared.h"
 //#include "client.h"
 //#include "input.h"
