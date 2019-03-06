@@ -26,6 +26,8 @@ If you have questions concerning this license or the applicable additional terms
 ===========================================================================
 */
 
+#import <UIKit/UIKit.h>
+
 #include "sys/platform.h"
 #include "idlib/LangDict.h"
 #include "framework/Licensee.h"
@@ -287,6 +289,16 @@ static bool R_GetModeInfo( int *width, int *height, int mode ) {
 	if ( mode >= s_numVidModes ) {
 		return false;
 	}
+    
+#ifdef IOS
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    CGFloat screenScale = [[UIScreen mainScreen] scale];
+    CGSize screenSize = CGSizeMake(screenBounds.size.width * screenScale, screenBounds.size.height * screenScale);
+
+    *width = screenSize.width;
+    *height = screenSize.height;
+    return true;
+#endif
 
 	if ( mode == -1 ) {
 		*width = r_customWidth.GetInteger();

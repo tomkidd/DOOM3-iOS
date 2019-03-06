@@ -454,8 +454,8 @@
 		A1B2B5262222018300D94577 /* Model_liquid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1C62222018200D94577 /* Model_liquid.cpp */; };
 		A1B2B5272222018300D94577 /* tr_render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1C72222018200D94577 /* tr_render.cpp */; };
 		A1B2B5282222018300D94577 /* tr_render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1C72222018200D94577 /* tr_render.cpp */; };
-		A1B2B5292222018300D94577 /* RenderSystem_init.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1CA2222018200D94577 /* RenderSystem_init.cpp */; };
-		A1B2B52A2222018300D94577 /* RenderSystem_init.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1CA2222018200D94577 /* RenderSystem_init.cpp */; };
+		A1B2B5292222018300D94577 /* RenderSystem_init.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1CA2222018200D94577 /* RenderSystem_init.mm */; };
+		A1B2B52A2222018300D94577 /* RenderSystem_init.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1CA2222018200D94577 /* RenderSystem_init.mm */; };
 		A1B2B52B2222018300D94577 /* RenderWorld_load.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1CB2222018200D94577 /* RenderWorld_load.cpp */; };
 		A1B2B52C2222018300D94577 /* RenderWorld_load.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1CB2222018200D94577 /* RenderWorld_load.cpp */; };
 		A1B2B52D2222018300D94577 /* tr_guisurf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1CC2222018200D94577 /* tr_guisurf.cpp */; };
@@ -1178,7 +1178,7 @@
 		A1B2B1C72222018200D94577 /* tr_render.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tr_render.cpp; sourceTree = "<group>"; };
 		A1B2B1C82222018200D94577 /* simplex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = simplex.h; sourceTree = "<group>"; };
 		A1B2B1C92222018200D94577 /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
-		A1B2B1CA2222018200D94577 /* RenderSystem_init.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderSystem_init.cpp; sourceTree = "<group>"; };
+		A1B2B1CA2222018200D94577 /* RenderSystem_init.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderSystem_init.mm; sourceTree = "<group>"; };
 		A1B2B1CB2222018200D94577 /* RenderWorld_load.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderWorld_load.cpp; sourceTree = "<group>"; };
 		A1B2B1CC2222018200D94577 /* tr_guisurf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tr_guisurf.cpp; sourceTree = "<group>"; };
 		A1B2B1CD2222018200D94577 /* Model_md5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model_md5.cpp; sourceTree = "<group>"; };
@@ -2201,7 +2201,7 @@
 				A1B2B1D52222018200D94577 /* qgl_proc.h */,
 				A1B2B1B42222018200D94577 /* qgl.h */,
 				A1B2B1EE2222018200D94577 /* RenderEntity.cpp */,
-				A1B2B1CA2222018200D94577 /* RenderSystem_init.cpp */,
+				A1B2B1CA2222018200D94577 /* RenderSystem_init.mm */,
 				A1B2B1D12222018200D94577 /* RenderSystem.cpp */,
 				A1B2B1D32222018200D94577 /* RenderSystem.h */,
 				A1B2B1B52222018200D94577 /* RenderWorld_demo.cpp */,
@@ -2654,7 +2654,7 @@
 				A15BF76021FD0819005F4B74 /* GameViewController.swift in Sources */,
 				A18E83B12228DD3700822BAB /* stencilShadowShaderFP.cpp in Sources */,
 				A1B2B3672222018200D94577 /* Quat.cpp in Sources */,
-				A1B2B5292222018300D94577 /* RenderSystem_init.cpp in Sources */,
+				A1B2B5292222018300D94577 /* RenderSystem_init.mm in Sources */,
 				A1B2B6332222018300D94577 /* snd_wavefile.cpp in Sources */,
 				A18E83B42228DD3700822BAB /* zfillClipShaderVP.cpp in Sources */,
 				A1B2B4AF2222018300D94577 /* Clip.cpp in Sources */,
@@ -2902,7 +2902,7 @@
 				A1B2B5382222018300D94577 /* RenderSystem.cpp in Sources */,
 				A1B2B5542222018300D94577 /* tr_trace.cpp in Sources */,
 				A1B2B5522222018300D94577 /* Model_sprite.cpp in Sources */,
-				A1B2B52A2222018300D94577 /* RenderSystem_init.cpp in Sources */,
+				A1B2B52A2222018300D94577 /* RenderSystem_init.mm in Sources */,
 				A1B2B5802222018300D94577 /* glimp.cpp in Sources */,
 				A1B2B4A02222018300D94577 /* Physics_Parametric.cpp in Sources */,
 				A1B2B3902222018200D94577 /* Winding.cpp in Sources */,
