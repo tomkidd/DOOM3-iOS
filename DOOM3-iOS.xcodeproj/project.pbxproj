@@ -532,8 +532,8 @@
 		A1B2B57E2222018300D94577 /* sys_local.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2082222018200D94577 /* sys_local.cpp */; };
 		A1B2B57F2222018300D94577 /* glimp.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B20A2222018200D94577 /* glimp.mm */; };
 		A1B2B5802222018300D94577 /* glimp.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B20A2222018200D94577 /* glimp.mm */; };
-		A1B2B6052222018300D94577 /* events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2772222018200D94577 /* events.cpp */; };
-		A1B2B6062222018300D94577 /* events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2772222018200D94577 /* events.cpp */; };
+		A1B2B6052222018300D94577 /* events.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2772222018200D94577 /* events.mm */; };
+		A1B2B6062222018300D94577 /* events.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2772222018200D94577 /* events.mm */; };
 		A1B2B6072222018300D94577 /* cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2782222018200D94577 /* cpu.cpp */; };
 		A1B2B6082222018300D94577 /* cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B2782222018200D94577 /* cpu.cpp */; };
 		A1B2B6092222018300D94577 /* threads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B27B2222018200D94577 /* threads.cpp */; };
@@ -1283,7 +1283,7 @@
 		A1B2B2082222018200D94577 /* sys_local.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sys_local.cpp; sourceTree = "<group>"; };
 		A1B2B2092222018200D94577 /* doom_icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = doom_icon.h; sourceTree = "<group>"; };
 		A1B2B20A2222018200D94577 /* glimp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = glimp.mm; sourceTree = "<group>"; };
-		A1B2B2772222018200D94577 /* events.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = events.cpp; sourceTree = "<group>"; };
+		A1B2B2772222018200D94577 /* events.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = events.mm; sourceTree = "<group>"; };
 		A1B2B2782222018200D94577 /* cpu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cpu.cpp; sourceTree = "<group>"; };
 		A1B2B2792222018200D94577 /* sys_public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sys_public.h; sourceTree = "<group>"; };
 		A1B2B27A2222018200D94577 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
@@ -1529,23 +1529,23 @@
 		A15BF74921FCF773005F4B74 /* DOOM3-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A1C1204E21FD178100EAD9CB /* dpquake.ttf */,
-				A1B80AF121F98E6400560711 /* DOOM3-iOS.xcassets */,
-				A1B80A0221F438C200560711 /* DOOM3LaunchScreen.storyboard */,
 				A15BF75921FD02AD005F4B74 /* AppDelegate.h */,
 				A15BF75721FD02A0005F4B74 /* AppDelegate.m */,
 				A15BF75A21FD05C8005F4B74 /* bridging.h */,
 				A1C1205F21FE840C00EAD9CB /* CoreGraphics+Additions.swift */,
 				A1C1206622026DED00EAD9CB /* DifficultyViewController.swift */,
+				8D1107310486CEB800E47090 /* DOOM3-Info.plist */,
+				A1B80AF121F98E6400560711 /* DOOM3-iOS.xcassets */,
+				A1B80A0221F438C200560711 /* DOOM3LaunchScreen.storyboard */,
+				A1C1204E21FD178100EAD9CB /* dpquake.ttf */,
 				A1C1267C220908DF00EAD9CB /* Extensions.swift */,
 				A15BF75F21FD0819005F4B74 /* GameViewController.swift */,
 				A1C1205621FE821900EAD9CB /* JoyStickView.swift */,
 				A15BF74A21FCF7E3005F4B74 /* Main.storyboard */,
 				A15BF75D21FD0604005F4B74 /* MainMenuViewController.swift */,
 				A16571B8220B9FD900FE9FC9 /* OptionsViewController.swift */,
-				8D1107310486CEB800E47090 /* DOOM3-Info.plist */,
-				A1C1206121FFC92400EAD9CB /* SDL_uikitviewcontroller+Additions.swift */,
 				A142F96822138D02006A2A17 /* SavedGameViewController.swift */,
+				A1C1206121FFC92400EAD9CB /* SDL_uikitviewcontroller+Additions.swift */,
 			);
 			path = "DOOM3-iOS";
 			sourceTree = "<group>";
@@ -2304,7 +2304,7 @@
 			children = (
 				A1B2B2782222018200D94577 /* cpu.cpp */,
 				A1B2B2092222018200D94577 /* doom_icon.h */,
-				A1B2B2772222018200D94577 /* events.cpp */,
+				A1B2B2772222018200D94577 /* events.mm */,
 				A1B2B20A2222018200D94577 /* glimp.mm */,
 				A1B2B1FC2222018200D94577 /* osx */,
 				A1B2B27A2222018200D94577 /* platform.h */,
@@ -2914,7 +2914,7 @@
 				A1B2B37D2222018200D94577 /* Simd_AltiVec.cpp in Sources */,
 				A1B2B4832222018300D94577 /* Sound.cpp in Sources */,
 				A18E83A72228DD3700822BAB /* diffuseCubeShaderVP.cpp in Sources */,
-				A1B2B6052222018300D94577 /* events.cpp in Sources */,
+				A1B2B6052222018300D94577 /* events.mm in Sources */,
 				A1B2B5272222018300D94577 /* tr_render.cpp in Sources */,
 				A1B2B48B2222018300D94577 /* DebugGraph.cpp in Sources */,
 				A1B2B46D2222018300D94577 /* GameEdit.cpp in Sources */,
@@ -3208,7 +3208,7 @@
 				A1B2B4A62222018300D94577 /* Physics_Monster.cpp in Sources */,
 				A1B2B3602222018200D94577 /* Lcp.cpp in Sources */,
 				A1B2B5402222018300D94577 /* ModelOverlay.cpp in Sources */,
-				A1B2B6062222018300D94577 /* events.cpp in Sources */,
+				A1B2B6062222018300D94577 /* events.mm in Sources */,
 				A1B2B4AA2222018300D94577 /* Push.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

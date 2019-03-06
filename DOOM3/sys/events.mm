@@ -38,6 +38,10 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "sys/sys_public.h"
 
+#if !TARGET_OS_TV
+#import <CoreMotion/CoreMotion.h>
+#endif
+
 #if !SDL_VERSION_ATLEAST(2, 0, 0)
 #define SDL_Keycode SDLKey
 #define SDLK_APPLICATION SDLK_COMPOSE
@@ -92,7 +96,11 @@ struct mouse_poll_t {
 
 static idList<kbd_poll_t> kbd_polls;
 static idList<mouse_poll_t> mouse_polls;
+
 static int joystickAxis[MAX_JOYSTICK_AXIS];    // set by joystick events
+#if !TARGET_OS_TV
+static CMMotionManager *motionManager = nil;
+#endif
 
 static byte mapkey(SDL_Keycode key) {
 	switch (key) {
@@ -289,6 +297,15 @@ void Sys_InitInput() {
 	SDL_EnableUNICODE(1);
 	SDL_EnableKeyRepeat(SDL_DEFAULT_REPEAT_DELAY, SDL_DEFAULT_REPEAT_INTERVAL);
 #endif
+    
+#if !TARGET_OS_TV
+    if (motionManager == nil) {
+        motionManager = [[CMMotionManager alloc] init];
+    }
+    motionManager.deviceMotionUpdateInterval = 0.1;
+    [motionManager startDeviceMotionUpdates];
+#endif
+
 
 	in_kbd.SetModified();
 }
@@ -422,6 +439,12 @@ sysEvent_t Sys_GetEvent() {
 
 		return res;
 	}
+    
+#if !TARGET_OS_TV
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"tiltAiming"] == 1) {
+        joystickAxis[AXIS_FORWARD] = -(([[[motionManager deviceMotion] attitude] roll] - 1.5) * 5);
+    }
+#endif
 
 	// loop until there is an event we care about (will return then) or no more events
 	while(SDL_PollEvent(&ev)) {

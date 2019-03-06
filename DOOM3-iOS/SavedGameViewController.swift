@@ -29,7 +29,7 @@ class SavedGameViewController: UIViewController {
         #if os(tvOS)
         let savesPath = try! FileManager().url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path + "/\(gameDir)/save"
         #else
-        let savesPath = try! FileManager().url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path + "/\(gameDir)/save"
+        let savesPath = try! FileManager().url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path + "/Library/Application Support/dhewm3"
         #endif
         
         do {
