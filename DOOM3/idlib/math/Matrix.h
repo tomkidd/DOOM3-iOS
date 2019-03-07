@@ -776,6 +776,7 @@ public:
 									const float wx, const float wy, const float wz, const float ww );
 					explicit idMat4( const idMat3 &rotation, const idVec3 &translation );
 					explicit idMat4( const float src[ 4 ][ 4 ] );
+          explicit idMat4( const float src[ 16 ] );
 
 	const idVec4 &	operator[]( int index ) const;
 	idVec4 &		operator[]( int index );
@@ -877,6 +878,10 @@ ID_INLINE idMat4::idMat4( const idMat3 &rotation, const idVec3 &translation ) {
 
 ID_INLINE idMat4::idMat4( const float src[ 4 ][ 4 ] ) {
 	memcpy( mat, src, 4 * 4 * sizeof( float ) );
+}
+
+ID_INLINE idMat4::idMat4( const float src[ 16 ] ) {
+  memcpy( mat, src, 16 * sizeof( float ) );
 }
 
 ID_INLINE const idVec4 &idMat4::operator[]( int index ) const {

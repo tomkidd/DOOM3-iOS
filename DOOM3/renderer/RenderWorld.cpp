@@ -1599,7 +1599,7 @@ void idRenderWorldLocal::PushVolumeIntoTree_r( idRenderEntityLocal *def, idRende
 
 	// exact check all the points against the node plane
 	front = back = false;
-#ifdef MACOS_X	//loop unrolling & pre-fetching for performance
+#if defined( MACOS_X ) || defined(IOS)	//loop unrolling & pre-fetching for performance
 	const idVec3 norm = node->plane.Normal();
 	const float plane3 = node->plane[3];
 	float D0, D1, D2, D3;

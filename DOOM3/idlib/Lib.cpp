@@ -26,7 +26,7 @@ If you have questions concerning this license or the applicable additional terms
 ===========================================================================
 */
 
-#if defined( MACOS_X ) || defined(__unix__)
+#if defined( MACOS_X ) || defined(__unix__) || defined(IOS)
 #include <signal.h>
 #include <sys/types.h>
 #endif

@@ -135,10 +135,8 @@ ID_INLINE float idPluecker::operator*( const idPluecker &a ) const {
 }
 
 ID_INLINE idPluecker idPluecker::operator/( const float a ) const {
-	float inva;
-
 	assert( a != 0.0f );
-	inva = 1.0f / a;
+	const float inva = 1.0f / a;
 	return idPluecker( p[0]*inva, p[1]*inva, p[2]*inva, p[3]*inva, p[4]*inva, p[5]*inva );
 }
 
@@ -161,10 +159,8 @@ ID_INLINE idPluecker &idPluecker::operator*=( const float a ) {
 }
 
 ID_INLINE idPluecker &idPluecker::operator/=( const float a ) {
-	float inva;
-
 	assert( a != 0.0f );
-	inva = 1.0f / a;
+	const float inva = 1.0f / a;
 	p[0] *= inva;
 	p[1] *= inva;
 	p[2] *= inva;
@@ -268,7 +264,6 @@ ID_INLINE void idPluecker::FromRay( const idVec3 &start, const idVec3 &dir ) {
 
 ID_INLINE bool idPluecker::ToLine( idVec3 &start, idVec3 &end ) const {
 	idVec3 dir1, dir2;
-	float d;
 
 	dir1[0] = p[3];
 	dir1[1] = -p[1];
@@ -278,7 +273,7 @@ ID_INLINE bool idPluecker::ToLine( idVec3 &start, idVec3 &end ) const {
 	dir2[1] = p[5];
 	dir2[2] = -p[4];
 
-	d = dir2 * dir2;
+	const float d = dir2 * dir2;
 	if ( d == 0.0f ) {
 		return false; // pluecker coordinate does not represent a line
 	}
@@ -290,7 +285,6 @@ ID_INLINE bool idPluecker::ToLine( idVec3 &start, idVec3 &end ) const {
 
 ID_INLINE bool idPluecker::ToRay( idVec3 &start, idVec3 &dir ) const {
 	idVec3 dir1;
-	float d;
 
 	dir1[0] = p[3];
 	dir1[1] = -p[1];
@@ -300,7 +294,7 @@ ID_INLINE bool idPluecker::ToRay( idVec3 &start, idVec3 &dir ) const {
 	dir[1] = p[5];
 	dir[2] = -p[4];
 
-	d = dir * dir;
+	const float d = dir * dir;
 	if ( d == 0.0f ) {
 		return false; // pluecker coordinate does not represent a line
 	}
@@ -328,13 +322,11 @@ ID_INLINE float idPluecker::LengthSqr( void ) const {
 }
 
 ID_INLINE float idPluecker::NormalizeSelf( void ) {
-	float l, d;
-
-	l = LengthSqr();
+	const float l = LengthSqr();
 	if ( l == 0.0f ) {
 		return l; // pluecker coordinate does not represent a line
 	}
-	d = idMath::InvSqrt( l );
+	const float d = idMath::InvSqrt( l );
 	p[0] *= d;
 	p[1] *= d;
 	p[2] *= d;
@@ -345,14 +337,13 @@ ID_INLINE float idPluecker::NormalizeSelf( void ) {
 }
 
 ID_INLINE idPluecker idPluecker::Normalize( void ) const {
-	float d;
 
-	d = LengthSqr();
+	const float d = LengthSqr();
 	if ( d == 0.0f ) {
 		return *this; // pluecker coordinate does not represent a line
 	}
-	d = idMath::InvSqrt( d );
-	return idPluecker( p[0]*d, p[1]*d, p[2]*d, p[3]*d, p[4]*d, p[5]*d );
+	const float d2 = idMath::InvSqrt( d );
+	return idPluecker( p[0]*d2, p[1]*d2, p[2]*d2, p[3]*d2, p[4]*d2, p[5]*d2 );
 }
 
 ID_INLINE int idPluecker::GetDimension( void ) const {
