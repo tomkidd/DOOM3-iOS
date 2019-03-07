@@ -208,6 +208,11 @@ bool GLimp_Init(glimpParms_t parms) {
 			continue;
 		}
 
+    // Initialize ES 2.0 context profile, and do not set any other context flags (it does not work otherwise)
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+
 		context = SDL_GL_CreateContext(window);
 
 		if (SDL_GL_SetSwapInterval(r_swapInterval.GetInteger()) < 0)
@@ -239,7 +244,7 @@ bool GLimp_Init(glimpParms_t parms) {
 		glConfig.isFullscreen = (window->flags & SDL_FULLSCREEN) == SDL_FULLSCREEN;
 #endif
 
-		common->Printf("Using %d color bits, %d depth, %d stencil display\n",
+    common->Printf("Using %d bits per color channel (RGBA), %d bits depth, %d bits stencil\n",
 						channelcolorbits, tdepthbits, tstencilbits);
 
 		glConfig.colorBits = tcolorbits;

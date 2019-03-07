@@ -28,7 +28,7 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>dpquake.ttf</string>
+		<string>Avqest.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>DOOM3LaunchScreen</string>

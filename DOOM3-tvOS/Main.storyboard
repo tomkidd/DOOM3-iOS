@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="dpquake.ttf">
-            <string>DpQuake</string>
+        <array key="Avqest.ttf">
+            <string>AvQest</string>
         </array>
     </customFonts>
     <scenes>
@@ -38,25 +38,25 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="q u a k e  ii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1s-G9-Y44">
                                         <rect key="frame" x="0.0" y="0.0" width="440" height="85"/>
-                                        <fontDescription key="fontDescription" name="DpQuake" family="DpQuake" pointSize="72"/>
+                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="72"/>
                                         <color key="textColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mission pack" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjq-zj-wsy">
                                         <rect key="frame" x="0.0" y="85" width="440" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="DpQuake" family="DpQuake" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="36"/>
                                         <color key="textColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="q u a k e  ii" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0W-da-TTt">
                                         <rect key="frame" x="0.0" y="85" width="440" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="DpQuake" family="DpQuake" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="36"/>
                                         <color key="textColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdG-Gj-xg9">
                                         <rect key="frame" x="0.0" y="85" width="440" height="69"/>
-                                        <fontDescription key="fontDescription" name="DpQuake" family="DpQuake" pointSize="48"/>
+                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="48"/>
                                         <state key="normal" title="new game">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -66,7 +66,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSs-6i-98s">
                                         <rect key="frame" x="0.0" y="154" width="440" height="69"/>
-                                        <fontDescription key="fontDescription" name="DpQuake" family="DpQuake" pointSize="48"/>
+                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="48"/>
                                         <state key="normal" title="load game">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -76,7 +76,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcJ-eO-fk8">
                                         <rect key="frame" x="0.0" y="223" width="440" height="69"/>
-                                        <fontDescription key="fontDescription" name="DpQuake" family="DpQuake" pointSize="48"/>
+                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="48"/>
                                         <state key="normal" title="demo">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -131,7 +131,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOI-0W-Afg">
                                 <rect key="frame" x="94" y="983" width="241" height="87"/>
-                                <fontDescription key="fontDescription" name="DpQuake" family="DpQuake" pointSize="74"/>
+                                <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="74"/>
                                 <color key="textColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -196,7 +196,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phz-D5-rfO">
                                         <rect key="frame" x="44" y="0.0" width="134" height="97"/>
-                                        <fontDescription key="fontDescription" name="DpQuake" family="DpQuake" pointSize="72"/>
+                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="72"/>
                                         <state key="normal" title="easy">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -206,7 +206,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyM-ch-HqE">
                                         <rect key="frame" x="0.0" y="107" width="222" height="97"/>
-                                        <fontDescription key="fontDescription" name="DpQuake" family="DpQuake" pointSize="72"/>
+                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="72"/>
                                         <state key="normal" title="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -216,7 +216,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TW-h4-0A4">
                                         <rect key="frame" x="39" y="214" width="145" height="97"/>
-                                        <fontDescription key="fontDescription" name="DpQuake" family="DpQuake" pointSize="72"/>
+                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="72"/>
                                         <state key="normal" title="hard">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -282,7 +282,7 @@
                             </tableView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ue8-Yw-jCH">
                                 <rect key="frame" x="1318" y="80" width="129" height="59"/>
-                                <fontDescription key="fontDescription" name="DpQuake" family="DpQuake" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="40"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="LOAD">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -319,7 +319,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="doom3background" width="1920" height="1080"/>
+        <image name="doom3background" width="1440" height="810"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ogQ-yk-2f9"/>

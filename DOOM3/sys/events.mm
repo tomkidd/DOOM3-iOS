@@ -718,6 +718,10 @@ sysEvent_t Sys_GetEvent() {
                         kbd_polls.Append(kbd_poll_t(K_CTRL, ev.caxis.value > 0));
                         break;
                         
+                    case SDL_CONTROLLER_AXIS_TRIGGERLEFT:
+                        kbd_polls.Append(kbd_poll_t(102, ev.caxis.value > 0));
+                        break;
+                        
                     default:
                         break;
                 }

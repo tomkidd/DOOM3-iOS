@@ -16,13 +16,13 @@
 		A15BF75E21FD0604005F4B74 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75D21FD0604005F4B74 /* MainMenuViewController.swift */; };
 		A15BF76021FD0819005F4B74 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15BF75F21FD0819005F4B74 /* GameViewController.swift */; };
 		A16571B9220B9FD900FE9FC9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16571B8220B9FD900FE9FC9 /* OptionsViewController.swift */; };
-		A18E826B2227583300822BAB /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E81F82227565500822BAB /* libjpeg.a */; };
+		A18E826B2227583300822BAB /* libjpeg-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E81F82227565500822BAB /* libjpeg-iOS.a */; };
 		A18E827522275A4800822BAB /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E827422275A4700822BAB /* OpenAL.framework */; };
 		A18E827822282AE000822BAB /* draw_gles2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827722282AE000822BAB /* draw_gles2.cpp */; };
 		A18E827922282AE400822BAB /* draw_gles2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A18E827722282AE000822BAB /* draw_gles2.cpp */; };
-		A18E838A2228BD1000822BAB /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E82D42228B77C00822BAB /* libogg.a */; };
-		A18E838B2228BD1000822BAB /* libvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E82FA2228B96D00822BAB /* libvorbis.a */; };
-		A18E838C2228BD1000822BAB /* libvorbisfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E83892228BD1000822BAB /* libvorbisfile.a */; };
+		A18E838A2228BD1000822BAB /* libogg-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E82D42228B77C00822BAB /* libogg-iOS.a */; };
+		A18E838B2228BD1000822BAB /* libvorbis-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E82FA2228B96D00822BAB /* libvorbis-iOS.a */; };
+		A18E838C2228BD1000822BAB /* libvorbisfile-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E83892228BD1000822BAB /* libvorbisfile-iOS.a */; };
 		A18E839B2228DA1A00822BAB /* libcurl_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E83912228DA1A00822BAB /* libcurl_iOS.a */; };
 		A18E839F2228DB3E00822BAB /* libcrypto_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E839C2228DB3D00822BAB /* libcrypto_iOS.a */; };
 		A18E83A02228DB3E00822BAB /* libnghttp2_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E839D2228DB3E00822BAB /* libnghttp2_iOS.a */; };
@@ -82,6 +82,8 @@
 		A19681C62230411200F06619 /* libnghttp2_tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681C22230411100F06619 /* libnghttp2_tvOS.a */; };
 		A19681C72230411200F06619 /* libcrypto_tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681C32230411100F06619 /* libcrypto_tvOS.a */; };
 		A19681C82230411200F06619 /* libssl_tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A19681C42230411200F06619 /* libssl_tvOS.a */; };
+		A19681DC2230D63900F06619 /* Avqest.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A19681DB2230D63700F06619 /* Avqest.ttf */; };
+		A19681DD2230D63900F06619 /* Avqest.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A19681DB2230D63700F06619 /* Avqest.ttf */; };
 		A1B2B2B72222018200D94577 /* AASBuild_gravity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5A2222018100D94577 /* AASBuild_gravity.cpp */; };
 		A1B2B2B82222018200D94577 /* AASBuild_gravity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5A2222018100D94577 /* AASBuild_gravity.cpp */; };
 		A1B2B2B92222018200D94577 /* AASBuild_ledge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2AF5D2222018100D94577 /* AASBuild_ledge.cpp */; };
@@ -618,8 +620,6 @@
 		A1B80B2021FA5D0500560711 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1621FA5D0500560711 /* GameController.framework */; };
 		A1B80B2121FA5D0500560711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1721FA5D0500560711 /* Foundation.framework */; };
 		A1B80B2221FA5D0500560711 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B80B1821FA5D0500560711 /* OpenGLES.framework */; };
-		A1C1205421FD178100EAD9CB /* dpquake.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1C1204E21FD178100EAD9CB /* dpquake.ttf */; };
-		A1C1205521FD178100EAD9CB /* dpquake.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1C1204E21FD178100EAD9CB /* dpquake.ttf */; };
 		A1C1205721FE821900EAD9CB /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1205621FE821900EAD9CB /* JoyStickView.swift */; };
 		A1C1206021FE840D00EAD9CB /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1205F21FE840C00EAD9CB /* CoreGraphics+Additions.swift */; };
 		A1C120632200C27B00EAD9CB /* SDL_uikitviewcontroller+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C1206121FFC92400EAD9CB /* SDL_uikitviewcontroller+Additions.swift */; };
@@ -760,6 +760,7 @@
 		A19681C22230411100F06619 /* libnghttp2_tvOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libnghttp2_tvOS.a; path = curl/tvos/libnghttp2_tvOS.a; sourceTree = "<group>"; };
 		A19681C32230411100F06619 /* libcrypto_tvOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto_tvOS.a; path = curl/tvos/libcrypto_tvOS.a; sourceTree = "<group>"; };
 		A19681C42230411200F06619 /* libssl_tvOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl_tvOS.a; path = curl/tvos/libssl_tvOS.a; sourceTree = "<group>"; };
+		A19681DB2230D63700F06619 /* Avqest.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avqest.ttf; sourceTree = "<group>"; };
 		A1B2AF532222018100D94577 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		A1B2AF562222018100D94577 /* compiler_public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compiler_public.h; sourceTree = "<group>"; };
 		A1B2AF582222018100D94577 /* renderbump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderbump.cpp; sourceTree = "<group>"; };
@@ -1359,7 +1360,6 @@
 		A1B80B1621FA5D0500560711 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		A1B80B1721FA5D0500560711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A1B80B1821FA5D0500560711 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
-		A1C1204E21FD178100EAD9CB /* dpquake.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dpquake.ttf; sourceTree = "<group>"; };
 		A1C1205621FE821900EAD9CB /* JoyStickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyStickView.swift; sourceTree = "<group>"; };
 		A1C1205F21FE840C00EAD9CB /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
 		A1C1206121FFC92400EAD9CB /* SDL_uikitviewcontroller+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SDL_uikitviewcontroller+Additions.swift"; sourceTree = "<group>"; };
@@ -1383,11 +1383,11 @@
 				A18E83A02228DB3E00822BAB /* libnghttp2_iOS.a in Frameworks */,
 				A18E83A12228DB3E00822BAB /* libssl_iOS.a in Frameworks */,
 				A18E839B2228DA1A00822BAB /* libcurl_iOS.a in Frameworks */,
-				A18E838A2228BD1000822BAB /* libogg.a in Frameworks */,
-				A18E838B2228BD1000822BAB /* libvorbis.a in Frameworks */,
-				A18E838C2228BD1000822BAB /* libvorbisfile.a in Frameworks */,
+				A18E838A2228BD1000822BAB /* libogg-iOS.a in Frameworks */,
+				A18E838B2228BD1000822BAB /* libvorbis-iOS.a in Frameworks */,
+				A18E838C2228BD1000822BAB /* libvorbisfile-iOS.a in Frameworks */,
 				A18E827522275A4800822BAB /* OpenAL.framework in Frameworks */,
-				A18E826B2227583300822BAB /* libjpeg.a in Frameworks */,
+				A18E826B2227583300822BAB /* libjpeg-iOS.a in Frameworks */,
 				A1B80AD121F96DAA00560711 /* Metal.framework in Frameworks */,
 				A1B80AD221F96DAA00560711 /* libSDL2.a in Frameworks */,
 				A1B80AD321F96DAA00560711 /* AVFoundation.framework in Frameworks */,
@@ -1529,6 +1529,7 @@
 		A15BF74921FCF773005F4B74 /* DOOM3-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A19681DB2230D63700F06619 /* Avqest.ttf */,
 				A15BF75921FD02AD005F4B74 /* AppDelegate.h */,
 				A15BF75721FD02A0005F4B74 /* AppDelegate.m */,
 				A15BF75A21FD05C8005F4B74 /* bridging.h */,
@@ -1537,7 +1538,6 @@
 				8D1107310486CEB800E47090 /* DOOM3-Info.plist */,
 				A1B80AF121F98E6400560711 /* DOOM3-iOS.xcassets */,
 				A1B80A0221F438C200560711 /* DOOM3LaunchScreen.storyboard */,
-				A1C1204E21FD178100EAD9CB /* dpquake.ttf */,
 				A1C1267C220908DF00EAD9CB /* Extensions.swift */,
 				A15BF75F21FD0819005F4B74 /* GameViewController.swift */,
 				A1C1205621FE821900EAD9CB /* JoyStickView.swift */,
@@ -1553,7 +1553,7 @@
 		A18E81F42227565400822BAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A18E81F82227565500822BAB /* libjpeg.a */,
+				A18E81F82227565500822BAB /* libjpeg-iOS.a */,
 				A19681AF2230406A00F06619 /* libjpeg-tvOS.a */,
 			);
 			name = Products;
@@ -1589,7 +1589,7 @@
 		A18E82CF2228B77B00822BAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A18E82D42228B77C00822BAB /* libogg.a */,
+				A18E82D42228B77C00822BAB /* libogg-iOS.a */,
 				A19681B22230406A00F06619 /* libogg-tvOS.a */,
 			);
 			name = Products;
@@ -1598,8 +1598,8 @@
 		A18E82F62228B96C00822BAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A18E82FA2228B96D00822BAB /* libvorbis.a */,
-				A18E83892228BD1000822BAB /* libvorbisfile.a */,
+				A18E82FA2228B96D00822BAB /* libvorbis-iOS.a */,
+				A18E83892228BD1000822BAB /* libvorbisfile-iOS.a */,
 				A19681B62230406A00F06619 /* libvorbis-tvOS.a */,
 				A19681B82230406A00F06619 /* libvorbisfile-tvOS.a */,
 			);
@@ -2542,31 +2542,31 @@
 			remoteRef = A131F34D21D530B500B4BB5D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A18E81F82227565500822BAB /* libjpeg.a */ = {
+		A18E81F82227565500822BAB /* libjpeg-iOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libjpeg.a;
+			path = "libjpeg-iOS.a";
 			remoteRef = A18E81F72227565500822BAB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A18E82D42228B77C00822BAB /* libogg.a */ = {
+		A18E82D42228B77C00822BAB /* libogg-iOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libogg.a;
+			path = "libogg-iOS.a";
 			remoteRef = A18E82D32228B77C00822BAB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A18E82FA2228B96D00822BAB /* libvorbis.a */ = {
+		A18E82FA2228B96D00822BAB /* libvorbis-iOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libvorbis.a;
+			path = "libvorbis-iOS.a";
 			remoteRef = A18E82F92228B96D00822BAB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A18E83892228BD1000822BAB /* libvorbisfile.a */ = {
+		A18E83892228BD1000822BAB /* libvorbisfile-iOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libvorbisfile.a;
+			path = "libvorbisfile-iOS.a";
 			remoteRef = A18E83882228BD1000822BAB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -2608,7 +2608,7 @@
 				A1B80A4721F96DAA00560711 /* DOOM3LaunchScreen.storyboard in Resources */,
 				A150EBD82222196D001286CF /* base in Resources */,
 				A15BF74B21FCF7E3005F4B74 /* Main.storyboard in Resources */,
-				A1C1205421FD178100EAD9CB /* dpquake.ttf in Resources */,
+				A19681DC2230D63900F06619 /* Avqest.ttf in Resources */,
 				A1B80AF421F98E6500560711 /* DOOM3-iOS.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2618,9 +2618,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C125052204F73000EAD9CB /* Main.storyboard in Resources */,
-				A1C1205521FD178100EAD9CB /* dpquake.ttf in Resources */,
 				A1B80B0521FA5BF200560711 /* DOOM3-tvOS.xcassets in Resources */,
 				A150EBD92222196D001286CF /* base in Resources */,
+				A19681DD2230D63900F06619 /* Avqest.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3463,7 +3463,6 @@
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
 					base_EXPORTS,
 					IOS,
