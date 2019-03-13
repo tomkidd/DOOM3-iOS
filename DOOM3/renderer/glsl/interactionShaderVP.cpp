@@ -19,7 +19,7 @@
 
 const char * const interactionShaderVP = R"(
 #version 100
-precision mediump float;
+precision highp float;
   
 // In
 attribute highp vec4 attr_Vertex;

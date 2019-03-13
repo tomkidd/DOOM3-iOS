@@ -208,10 +208,10 @@ bool GLimp_Init(glimpParms_t parms) {
 			continue;
 		}
 
-    // Initialize ES 2.0 context profile, and do not set any other context flags (it does not work otherwise)
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+        // Initialize ES 2.0 context profile, and do not set any other context flags (it does not work otherwise)
+        SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
+        SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+        SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
 
 		context = SDL_GL_CreateContext(window);
 

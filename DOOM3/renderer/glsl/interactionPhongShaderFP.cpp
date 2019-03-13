@@ -19,7 +19,7 @@
 
 const char * const interactionPhongShaderFP = R"(
 #version 100
-precision mediump float;
+precision highp float;
 
 // In
 varying vec2 var_TexDiffuse;

@@ -19,7 +19,7 @@
 
 const char * const cubeMapShaderFP = R"(
 #version 100
-precision mediump float;
+precision highp float;
 
 // In
 varying vec3 var_TexCoord;
