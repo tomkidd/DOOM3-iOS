@@ -25,20 +25,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doom3box" translatesAutoresizingMaskIntoConstraints="NO" id="m44-b9-4SB">
-                                <rect key="frame" x="175.5" y="0.0" width="316" height="375"/>
+                                <rect key="frame" x="202" y="0.0" width="263" height="375"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="m44-b9-4SB" secondAttribute="height" multiplier="16:19" id="Jov-O4-yRl"/>
+                                    <constraint firstAttribute="width" secondItem="m44-b9-4SB" secondAttribute="height" multiplier="96:137" id="QTT-Vn-8kR"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
-                            <constraint firstItem="m44-b9-4SB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="FJH-bX-fwA"/>
-                            <constraint firstItem="m44-b9-4SB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="L5I-un-G8X"/>
+                            <constraint firstItem="m44-b9-4SB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6p1-qY-R7T"/>
+                            <constraint firstAttribute="bottom" secondItem="m44-b9-4SB" secondAttribute="bottom" id="84p-9D-y0n"/>
+                            <constraint firstItem="m44-b9-4SB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Rx3-5x-x1L"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="SfN-ll-jLj"/>
                             <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
-                            <constraint firstAttribute="bottom" secondItem="m44-b9-4SB" secondAttribute="bottom" id="yNx-B7-e7d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>
