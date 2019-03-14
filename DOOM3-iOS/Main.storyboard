@@ -30,28 +30,28 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eor-e5-7M8">
-                                <rect key="frame" x="525.66666666666663" y="0.0" width="222.33333333333337" height="200"/>
+                                <rect key="frame" x="524" y="0.0" width="224" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1s-G9-Y44">
-                                        <rect key="frame" x="0.0" y="0.0" width="222.33333333333334" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="224" height="50"/>
                                         <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="54"/>
                                         <color key="textColor" red="0.52549019607843139" green="0.8666666666666667" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mission pack" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xM-vb-nIf">
-                                        <rect key="frame" x="0.0" y="50" width="222.33333333333334" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="50" width="224" height="0.0"/>
                                         <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="36"/>
                                         <color key="textColor" red="0.52549019610000003" green="0.86666666670000003" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the reckoning" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCe-6W-2Oc">
-                                        <rect key="frame" x="0.0" y="50" width="222.33333333333334" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="50" width="224" height="0.0"/>
                                         <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="36"/>
                                         <color key="textColor" red="0.52549019610000003" green="0.86666666670000003" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdG-Gj-xg9">
-                                        <rect key="frame" x="0.0" y="50" width="222.33333333333334" height="50"/>
+                                        <rect key="frame" x="0.0" y="50" width="224" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="oxc-yM-MIu"/>
                                         </constraints>
@@ -64,7 +64,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSs-6i-98s">
-                                        <rect key="frame" x="0.0" y="100" width="222.33333333333334" height="50"/>
+                                        <rect key="frame" x="0.0" y="100" width="224" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="a58-um-cvu"/>
                                         </constraints>
@@ -77,7 +77,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cg6-2x-SRT">
-                                        <rect key="frame" x="0.0" y="150" width="222.33333333333334" height="50"/>
+                                        <rect key="frame" x="0.0" y="150" width="224" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Q7x-qo-cjy"/>
                                         </constraints>
@@ -142,7 +142,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOI-0W-Afg">
-                                <rect key="frame" x="48" y="-10" width="136.33333333333334" height="49.333333333333336"/>
+                                <rect key="frame" x="48" y="-10" width="142" height="52"/>
                                 <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="42"/>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -207,7 +207,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjo-ye-d46">
-                                <rect key="frame" x="20" y="310" width="112" height="45"/>
+                                <rect key="frame" x="20" y="308" width="102" height="47"/>
                                 <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="28"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="&lt; BACK">
@@ -254,25 +254,25 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIs-ln-FTU">
-                                <rect key="frame" x="20" y="310" width="112" height="45"/>
+                                <rect key="frame" x="20" y="308" width="102" height="47"/>
                                 <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="28"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="&lt; BACK">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.60392156860000001" green="0.1176470588" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="qsb-ew-6YA" kind="unwind" unwindAction="exitToMainMenuWithSegue:" id="mL1-cv-jgd"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-y2-c2z">
-                                <rect key="frame" x="295" y="32" width="222" height="311"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-y2-c2z">
+                                <rect key="frame" x="246" y="-14.666666666666657" width="320" height="404.33333333333326"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phz-D5-rfO">
-                                        <rect key="frame" x="44" y="0.0" width="134" height="97"/>
+                                        <rect key="frame" x="41" y="0.0" width="238" height="101.33333333333333"/>
                                         <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="72"/>
                                         <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal" title="easy">
+                                        <state key="normal" title="recruit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -280,10 +280,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyM-ch-HqE">
-                                        <rect key="frame" x="0.0" y="107" width="222" height="97"/>
+                                        <rect key="frame" x="54" y="101.33333333333334" width="212" height="101"/>
                                         <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="72"/>
                                         <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal" title="normal">
+                                        <state key="normal" title="marine">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -291,14 +291,25 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TW-h4-0A4">
-                                        <rect key="frame" x="38.666666666666686" y="214" width="145" height="97"/>
+                                        <rect key="frame" x="32" y="202.33333333333331" width="256" height="101"/>
                                         <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="72"/>
                                         <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal" title="hard">
+                                        <state key="normal" title="veteran">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="hardDifficulty:" destination="h0z-nt-sVd" eventType="touchUpInside" id="KJc-QD-skw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaV-0M-nUS">
+                                        <rect key="frame" x="0.0" y="303.33333333333337" width="320" height="101"/>
+                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="72"/>
+                                        <size key="titleShadowOffset" width="3" height="3"/>
+                                        <state key="normal" title="nightmare">
+                                            <color key="titleColor" red="1" green="0.0093617555430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hardDifficulty:" destination="h0z-nt-sVd" eventType="touchUpInside" id="dV7-Gl-Iwh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -353,7 +364,7 @@
                                 </connections>
                             </tableView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGr-rQ-nlJ">
-                                <rect key="frame" x="658" y="302" width="90" height="45"/>
+                                <rect key="frame" x="666" y="302" width="82" height="47"/>
                                 <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="28"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="LOAD">
@@ -365,7 +376,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-oM-wIv">
-                                <rect key="frame" x="64" y="301" width="112" height="45"/>
+                                <rect key="frame" x="64" y="301" width="102" height="47"/>
                                 <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="28"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="&lt; BACK">
@@ -410,6 +421,6 @@
         <image name="doom3background" width="1440" height="810"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="J25-id-i6M"/>
+        <segue reference="Skt-XX-niO"/>
     </inferredMetricsTieBreakers>
 </document>
