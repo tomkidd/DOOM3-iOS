@@ -442,7 +442,8 @@ sysEvent_t Sys_GetEvent() {
     
 #if !TARGET_OS_TV
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"tiltAiming"] == 1) {
-        joystickAxis[AXIS_FORWARD] = -(([[[motionManager deviceMotion] attitude] roll] - 1.5) * 5);
+        printf("MotionManager: %f\n", -(([[[motionManager deviceMotion] attitude] roll] - 1.5) * 5));
+        joystickAxis[AXIS_FORWARD] = -(([[[motionManager deviceMotion] attitude] roll] - 1.5) * 50);
     }
 #endif
 

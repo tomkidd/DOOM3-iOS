@@ -35,6 +35,10 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "framework/UsercmdGen.h"
 
+#ifdef IOS
+#import <Foundation/Foundation.h>
+#endif
+
 /*
 ================
 usercmd_t::ByteSwap
@@ -687,8 +691,17 @@ void idUsercmdGenLocal::JoystickMove( void ) {
 	}
 
 	if ( !ButtonState( UB_STRAFE ) ) {
+
 		viewangles[YAW] += anglespeed * in_yawSpeed.GetFloat() * joystickAxis[AXIS_SIDE];
-		viewangles[PITCH] += anglespeed * in_pitchSpeed.GetFloat() * joystickAxis[AXIS_FORWARD];
+#if !TARGET_OS_TV
+        if ([[NSUserDefaults standardUserDefaults] integerForKey:@"tiltAiming"] == 1) {
+            viewangles[PITCH] = joystickAxis[AXIS_FORWARD];
+        } else {
+            viewangles[PITCH] += anglespeed * in_pitchSpeed.GetFloat() * joystickAxis[AXIS_FORWARD];
+        }
+#else
+        viewangles[PITCH] += anglespeed * in_pitchSpeed.GetFloat() * joystickAxis[AXIS_FORWARD];
+#endif
 	} else {
 		cmd.rightmove = idMath::ClampChar( cmd.rightmove + joystickAxis[AXIS_SIDE] );
 		cmd.forwardmove = idMath::ClampChar( cmd.forwardmove + joystickAxis[AXIS_FORWARD] );

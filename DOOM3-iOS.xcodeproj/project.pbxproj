@@ -382,8 +382,8 @@
 		A1B2B4CE2222018300D94577 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1702222018200D94577 /* Console.cpp */; };
 		A1B2B4CF2222018300D94577 /* DeclAF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1712222018200D94577 /* DeclAF.cpp */; };
 		A1B2B4D02222018300D94577 /* DeclAF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1712222018200D94577 /* DeclAF.cpp */; };
-		A1B2B4D12222018300D94577 /* UsercmdGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1762222018200D94577 /* UsercmdGen.cpp */; };
-		A1B2B4D22222018300D94577 /* UsercmdGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1762222018200D94577 /* UsercmdGen.cpp */; };
+		A1B2B4D12222018300D94577 /* UsercmdGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1762222018200D94577 /* UsercmdGen.mm */; };
+		A1B2B4D22222018300D94577 /* UsercmdGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B1762222018200D94577 /* UsercmdGen.mm */; };
 		A1B2B4D32222018300D94577 /* AsyncClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B17B2222018200D94577 /* AsyncClient.cpp */; };
 		A1B2B4D42222018300D94577 /* AsyncClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B17B2222018200D94577 /* AsyncClient.cpp */; };
 		A1B2B4D52222018300D94577 /* ServerScan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1B2B17E2222018200D94577 /* ServerScan.cpp */; };
@@ -1142,7 +1142,7 @@
 		A1B2B1732222018200D94577 /* DeclManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeclManager.h; sourceTree = "<group>"; };
 		A1B2B1742222018200D94577 /* CVarSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVarSystem.h; sourceTree = "<group>"; };
 		A1B2B1752222018200D94577 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
-		A1B2B1762222018200D94577 /* UsercmdGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UsercmdGen.cpp; sourceTree = "<group>"; };
+		A1B2B1762222018200D94577 /* UsercmdGen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UsercmdGen.mm; sourceTree = "<group>"; };
 		A1B2B1772222018200D94577 /* Session_local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session_local.h; sourceTree = "<group>"; };
 		A1B2B1782222018200D94577 /* CmdSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdSystem.h; sourceTree = "<group>"; };
 		A1B2B17A2222018200D94577 /* NetworkSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkSystem.h; sourceTree = "<group>"; };
@@ -2180,7 +2180,7 @@
 				A1B2B1962222018200D94577 /* Session.cpp */,
 				A1B2B1942222018200D94577 /* Session.h */,
 				A1B2B1A02222018200D94577 /* Unzip.h */,
-				A1B2B1762222018200D94577 /* UsercmdGen.cpp */,
+				A1B2B1762222018200D94577 /* UsercmdGen.mm */,
 				A1B2B16B2222018200D94577 /* UsercmdGen.h */,
 			);
 			path = framework;
@@ -2678,7 +2678,7 @@
 				A1B2B3412222018200D94577 /* Base64.cpp in Sources */,
 				A1B2B4972222018300D94577 /* SysCmds.cpp in Sources */,
 				A1B2B4DF2222018300D94577 /* ioapi.c in Sources */,
-				A1B2B4D12222018300D94577 /* UsercmdGen.cpp in Sources */,
+				A1B2B4D12222018300D94577 /* UsercmdGen.mm in Sources */,
 				A1B2B38F2222018200D94577 /* Winding.cpp in Sources */,
 				A1B2B2F32222018200D94577 /* codec.cpp in Sources */,
 				A1B2B6412222018300D94577 /* snd_world.cpp in Sources */,
@@ -2937,7 +2937,7 @@
 				A1B2B4882222018300D94577 /* Target.cpp in Sources */,
 				A1B2B46A2222018300D94577 /* BrittleFracture.cpp in Sources */,
 				A1B2B48C2222018300D94577 /* DebugGraph.cpp in Sources */,
-				A1B2B4D22222018300D94577 /* UsercmdGen.cpp in Sources */,
+				A1B2B4D22222018300D94577 /* UsercmdGen.mm in Sources */,
 				A1B2B3542222018200D94577 /* Lexer.cpp in Sources */,
 				A1B2B5342222018300D94577 /* RenderWorld_portals.cpp in Sources */,
 				A1B2B4A42222018300D94577 /* Force_Spring.cpp in Sources */,
