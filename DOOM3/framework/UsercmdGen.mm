@@ -692,14 +692,18 @@ void idUsercmdGenLocal::JoystickMove( void ) {
 
 	if ( !ButtonState( UB_STRAFE ) ) {
 
-		viewangles[YAW] += anglespeed * in_yawSpeed.GetFloat() * joystickAxis[AXIS_SIDE];
 #if !TARGET_OS_TV
         if ([[NSUserDefaults standardUserDefaults] integerForKey:@"tiltAiming"] == 1) {
             viewangles[PITCH] = joystickAxis[AXIS_FORWARD];
         } else {
             viewangles[PITCH] += anglespeed * in_pitchSpeed.GetFloat() * joystickAxis[AXIS_FORWARD];
         }
+        cmd.forwardmove = idMath::ClampChar( cmd.forwardmove + (joystickAxis[AXIS_UP] * 50) );
+        viewangles[YAW] += anglespeed * in_yawSpeed.GetFloat() * joystickAxis[AXIS_YAW];
+//        printf("joystickAxis[AXIS_SIDE]: %i\n",joystickAxis[AXIS_SIDE]);
+        cmd.rightmove = idMath::ClampChar( cmd.rightmove + joystickAxis[AXIS_SIDE] );
 #else
+        viewangles[YAW] += anglespeed * in_yawSpeed.GetFloat() * joystickAxis[AXIS_SIDE];
         viewangles[PITCH] += anglespeed * in_pitchSpeed.GetFloat() * joystickAxis[AXIS_FORWARD];
 #endif
 	} else {
@@ -707,7 +711,7 @@ void idUsercmdGenLocal::JoystickMove( void ) {
 		cmd.forwardmove = idMath::ClampChar( cmd.forwardmove + joystickAxis[AXIS_FORWARD] );
 	}
 
-	cmd.upmove = idMath::ClampChar( cmd.upmove + joystickAxis[AXIS_UP] );
+//    cmd.upmove = idMath::ClampChar( cmd.upmove + joystickAxis[AXIS_UP] );
 }
 
 /*

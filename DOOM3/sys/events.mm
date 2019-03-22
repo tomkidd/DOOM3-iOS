@@ -442,7 +442,7 @@ sysEvent_t Sys_GetEvent() {
     
 #if !TARGET_OS_TV
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"tiltAiming"] == 1) {
-        printf("MotionManager: %f\n", -(([[[motionManager deviceMotion] attitude] roll] - 1.5) * 5));
+//        printf("MotionManager: %f\n", -(([[[motionManager deviceMotion] attitude] roll] - 1.5) * 5));
         joystickAxis[AXIS_FORWARD] = -(([[[motionManager deviceMotion] attitude] roll] - 1.5) * 50);
     }
 #endif
@@ -696,21 +696,34 @@ sysEvent_t Sys_GetEvent() {
 
                 switch (ev.caxis.axis) {
                     case SDL_CONTROLLER_AXIS_LEFTX:
-                        kbd_polls.Append(kbd_poll_t(97, ev.caxis.value < 0));
-                        kbd_polls.Append(kbd_poll_t(100, ev.caxis.value > 0));
+//                        printf("SDL_CONTROLLER_AXIS_LEFTX: %hd \n", ev.caxis.value);
+//                        kbd_polls.Append(kbd_poll_t(97, ev.caxis.value < 0));
+//                        kbd_polls.Append(kbd_poll_t(100, ev.caxis.value > 0));
+                        joystickAxis[AXIS_SIDE] = ev.caxis.value / 2;
                         break;
 
                     case SDL_CONTROLLER_AXIS_LEFTY:
-                        kbd_polls.Append(kbd_poll_t(K_UPARROW, ev.caxis.value < 0));
-                        kbd_polls.Append(kbd_poll_t(K_DOWNARROW, ev.caxis.value > 0));
+//                        printf("SDL_CONTROLLER_AXIS_LEFTY: %hd \n", ev.caxis.value);
+//                        kbd_polls.Append(kbd_poll_t(K_UPARROW, ev.caxis.value < 0));
+//                        kbd_polls.Append(kbd_poll_t(K_DOWNARROW, ev.caxis.value > 0));
+                        joystickAxis[AXIS_UP] = -ev.caxis.value / 2;
                         break;
 
                     case SDL_CONTROLLER_AXIS_RIGHTX:
-                        kbd_polls.Append(kbd_poll_t(K_RIGHTARROW, ev.caxis.value > 0));
-                        kbd_polls.Append(kbd_poll_t(K_LEFTARROW, ev.caxis.value < 0));
+//                        printf("SDL_CONTROLLER_AXIS_RIGHTX: %hd \n", ev.caxis.value);
+//                        kbd_polls.Append(kbd_poll_t(K_RIGHTARROW, ev.caxis.value > 0));
+//                        kbd_polls.Append(kbd_poll_t(K_LEFTARROW, ev.caxis.value < 0));
+                        
+                        if (ev.caxis.value > 20 || ev.caxis.value < -20) {
+                            joystickAxis[AXIS_YAW] = -ev.caxis.value / 8192;
+                        } else {
+                            joystickAxis[AXIS_YAW] = -ev.caxis.value;
+                        }
+                        
                         break;
                         
                     case SDL_CONTROLLER_AXIS_RIGHTY: {
+//                        printf("SDL_CONTROLLER_AXIS_RIGHTY: %hd \n", ev.caxis.value);
                         joystickAxis[AXIS_FORWARD] = ev.caxis.value / 16384;
                         break;
                     }
