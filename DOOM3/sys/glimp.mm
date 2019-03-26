@@ -273,6 +273,7 @@ bool GLimp_Init(glimpParms_t parms) {
     [rootVC.view addSubview:[rootVC f1ButtonWithRect:[rootVC.view frame]]];
     [rootVC.view addSubview:[rootVC prevWeaponButtonWithRect:[rootVC.view frame]]];
     [rootVC.view addSubview:[rootVC nextWeaponButtonWithRect:[rootVC.view frame]]];
+    [rootVC.view addSubview:[rootVC pdaButtonWithRect:[rootVC.view frame]]];
 #endif
 
 	return true;

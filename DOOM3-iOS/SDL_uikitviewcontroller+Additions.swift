@@ -25,6 +25,7 @@ extension SDL_uikitviewcontroller {
         static var _f1Button = UIButton()
         static var _prevWeaponButton = UIButton()
         static var _nextWeaponButton = UIButton()
+        static var _pdaButton = UIButton()
  }
     
     var fireButton:UIButton {
@@ -143,7 +144,16 @@ extension SDL_uikitviewcontroller {
             Holder._nextWeaponButton = newValue
         }
     }
-
+    
+    var pdaButton:UIButton {
+        get {
+            return Holder._pdaButton
+        }
+        set(newValue) {
+            Holder._pdaButton = newValue
+        }
+    }
+    
     @objc func fireButton(rect: CGRect) -> UIButton {
         fireButton = UIButton(frame: CGRect(x: rect.width - 155, y: rect.height - 90, width: 75, height: 75))
         fireButton.setTitle("FIRE", for: .normal)
@@ -260,6 +270,17 @@ extension SDL_uikitviewcontroller {
         return f1Button
     }
     
+    @objc func pdaButton(rect: CGRect) -> UIButton {
+        pdaButton = UIButton(frame: CGRect(x: 10, y: rect.height - 40, width: 30, height: 30))
+        pdaButton.setTitle(" PDA ", for: .normal)
+        pdaButton.addTarget(self, action: #selector(self.pdaPressed), for: .touchDown)
+        pdaButton.addTarget(self, action: #selector(self.pdaReleased), for: .touchUpInside)
+        pdaButton.layer.borderColor = UIColor.white.cgColor
+        pdaButton.layer.borderWidth = CGFloat(1)
+        pdaButton.alpha = 0.5
+        return pdaButton
+    }
+    
     @objc func prevWeaponButton(rect: CGRect) -> UIButton {
         prevWeaponButton = UIButton(frame: CGRect(x: (rect.width / 3), y: rect.height/2, width: (rect.width / 3), height: rect.height/2))
         prevWeaponButton.addTarget(self, action: #selector(self.prevWeaponPressed), for: .touchDown)
@@ -329,6 +350,14 @@ extension SDL_uikitviewcontroller {
     
     @objc func f1Released(sender: UIButton!) {
         Key_Event(key: SDLK_f, pressed: false)
+    }
+    
+    @objc func pdaPressed(sender: UIButton!) {
+        Key_Event(key: SDLK_TAB, pressed: true)
+    }
+    
+    @objc func pdaReleased(sender: UIButton!) {
+        Key_Event(key: SDLK_TAB, pressed: false)
     }
     
     @objc func prevWeaponPressed(sender: UIButton!) {
