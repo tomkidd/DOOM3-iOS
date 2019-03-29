@@ -289,9 +289,11 @@ extension SDL_uikitviewcontroller {
     }
     
     @objc func nextWeaponButton(rect: CGRect) -> UIButton {
-        nextWeaponButton = UIButton(frame: CGRect(x: (rect.width / 3), y: 0, width: (rect.width / 3), height: rect.height/2))
+        nextWeaponButton = UIButton(frame: CGRect(x: (rect.width / 3), y: rect.height - rect.height/4, width: (rect.width / 3), height: rect.height/4))
         nextWeaponButton.addTarget(self, action: #selector(self.nextWeaponPressed), for: .touchDown)
         nextWeaponButton.addTarget(self, action: #selector(self.nextWeaponReleased), for: .touchUpInside)
+//        nextWeaponButton.layer.borderColor = UIColor.white.cgColor
+//        nextWeaponButton.layer.borderWidth = CGFloat(1)
         return nextWeaponButton
     }
     
@@ -369,11 +371,17 @@ extension SDL_uikitviewcontroller {
     }
     
     @objc func nextWeaponPressed(sender: UIButton!) {
-        Key_Event(key: SDLK_RIGHTBRACKET, pressed: true)
+//        Key_Event(key: SDLK_RIGHTBRACKET, pressed: true)
+        var wevent = SDL_Event()
+        wevent.type = SDL_MOUSEWHEEL.rawValue
+        wevent.wheel.y = 1
+        
+        SDL_PushEvent(&wevent)
+
     }
     
     @objc func nextWeaponReleased(sender: UIButton!) {
-        Key_Event(key: SDLK_RIGHTBRACKET, pressed: false)
+//        Key_Event(key: K_MWHEELUP, pressed: false)
     }
 
 

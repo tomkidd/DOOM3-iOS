@@ -2523,8 +2523,8 @@ void idCommonLocal::Init(int argc, char** argv) {
 #ifdef __EMSCRIPTEN__
   if (SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO ))
 #else
-    SDL_SetHint(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, "0");
-    SDL_SetHint(SDL_HINT_TOUCH_MOUSE_EVENTS, "0");
+//    SDL_SetHint(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, "0");
+    SDL_SetHint(SDL_HINT_TOUCH_MOUSE_EVENTS, "1");
 
     if ( SDL_Init(
     SDL_INIT_TIMER | SDL_INIT_VIDEO | SDL_INIT_JOYSTICK)) // init joystick to work around SDL 2.0.9 bug #4391

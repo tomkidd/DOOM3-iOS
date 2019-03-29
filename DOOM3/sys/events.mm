@@ -38,6 +38,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "sys/sys_public.h"
 
+#include "Player.h"
+
 #if !TARGET_OS_TV
 #import <CoreMotion/CoreMotion.h>
 #endif
@@ -447,6 +449,8 @@ sysEvent_t Sys_GetEvent() {
     }
 #endif
 
+    idPlayer *player = gameLocal.GetLocalPlayer();
+
 	// loop until there is an event we care about (will return then) or no more events
 	while(SDL_PollEvent(&ev)) {
 		switch (ev.type) {
@@ -630,15 +634,21 @@ sysEvent_t Sys_GetEvent() {
 			switch (ev.button.button) {
 			case SDL_BUTTON_LEFT:
 				res.evValue = K_MOUSE1;
-				mouse_polls.Append(mouse_poll_t(M_ACTION1, ev.button.state == SDL_PRESSED ? 1 : 0));
+                    if ( player )
+                        if ( player->objectiveSystemOpen )
+                            mouse_polls.Append(mouse_poll_t(M_ACTION1, ev.button.state == SDL_PRESSED ? 1 : 0));
 				break;
 			case SDL_BUTTON_MIDDLE:
 				res.evValue = K_MOUSE3;
-				mouse_polls.Append(mouse_poll_t(M_ACTION3, ev.button.state == SDL_PRESSED ? 1 : 0));
+                    if ( player )
+                        if ( player->objectiveSystemOpen )
+                            mouse_polls.Append(mouse_poll_t(M_ACTION3, ev.button.state == SDL_PRESSED ? 1 : 0));
 				break;
 			case SDL_BUTTON_RIGHT:
 				res.evValue = K_MOUSE2;
-				mouse_polls.Append(mouse_poll_t(M_ACTION2, ev.button.state == SDL_PRESSED ? 1 : 0));
+                    if ( player )
+                        if ( player->objectiveSystemOpen )
+                            mouse_polls.Append(mouse_poll_t(M_ACTION2, ev.button.state == SDL_PRESSED ? 1 : 0));
 				break;
 
 #if !SDL_VERSION_ATLEAST(2, 0, 0)
@@ -660,7 +670,7 @@ sysEvent_t Sys_GetEvent() {
 				{
 					int buttonIndex = ev.button.button - SDL_BUTTON_LEFT;
 					res.evValue = K_MOUSE1 + buttonIndex;
-					mouse_polls.Append( mouse_poll_t( M_ACTION1 + buttonIndex, ev.button.state == SDL_PRESSED ? 1 : 0 ) );
+//                    mouse_polls.Append( mouse_poll_t( M_ACTION1 + buttonIndex, ev.button.state == SDL_PRESSED ? 1 : 0 ) );
 				}
 				else
 #endif
@@ -717,7 +727,7 @@ sysEvent_t Sys_GetEvent() {
                         if (ev.caxis.value > 20 || ev.caxis.value < -20) {
                             joystickAxis[AXIS_YAW] = -ev.caxis.value / 8192;
                         } else {
-                            joystickAxis[AXIS_YAW] = -ev.caxis.value;
+                            joystickAxis[AXIS_YAW] = -ev.caxis.value / 2;
                         }
                         
                         break;

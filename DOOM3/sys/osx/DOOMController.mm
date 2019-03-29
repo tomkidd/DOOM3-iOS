@@ -221,8 +221,8 @@ int SDL_main( int argc, char *argv[] ) {
 	else
 		common->Init(0, NULL);
     
-    SDL_SetHint(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, "0");
-    SDL_SetHint(SDL_HINT_TOUCH_MOUSE_EVENTS, "0");
+//    SDL_SetHint(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, "0");
+//    SDL_SetHint(SDL_HINT_TOUCH_MOUSE_EVENTS, "0");
     
     if (!SDL_WasInit(SDL_INIT_GAMECONTROLLER | SDL_INIT_HAPTIC))
     {
