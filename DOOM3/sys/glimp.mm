@@ -113,7 +113,7 @@ bool GLimp_Init(glimpParms_t parms) {
 
 	assert(SDL_WasInit(SDL_INIT_VIDEO));
 
-	Uint32 flags = SDL_WINDOW_OPENGL;
+	Uint32 flags = SDL_WINDOW_OPENGL|SDL_WINDOW_ALLOW_HIGHDPI;
 
 	if (parms.fullScreen)
 		flags |= SDL_WINDOW_FULLSCREEN;
@@ -219,6 +219,9 @@ bool GLimp_Init(glimpParms_t parms) {
 			common->Warning("SDL_GL_SWAP_CONTROL not supported");
 
 		SDL_GetWindowSize(window, &glConfig.vidWidth, &glConfig.vidHeight);
+        
+        glConfig.vidWidth *= [UIScreen mainScreen].scale;
+        glConfig.vidHeight *= [UIScreen mainScreen].scale;
 
 		SetSDLIcon(); // for SDL2  this must be done after creating the window
 

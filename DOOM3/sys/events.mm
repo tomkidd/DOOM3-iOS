@@ -450,7 +450,7 @@ sysEvent_t Sys_GetEvent() {
 #endif
 
     idPlayer *player = gameLocal.GetLocalPlayer();
-
+    
 	// loop until there is an event we care about (will return then) or no more events
 	while(SDL_PollEvent(&ev)) {
 		switch (ev.type) {
