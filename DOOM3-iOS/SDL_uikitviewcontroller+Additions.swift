@@ -313,7 +313,7 @@ extension SDL_uikitviewcontroller {
         pdaButton = UIButton(frame: CGRect(x: 0, y: rect.height - 50, width: 50, height: 50))
         pdaButton.addTarget(self, action: #selector(self.pdaPressed), for: .touchDown)
         pdaButton.addTarget(self, action: #selector(self.pdaReleased), for: .touchUpInside)
-        pdaButton.alpha = 0
+        pdaButton.alpha = 0.5
         return pdaButton
     }
     

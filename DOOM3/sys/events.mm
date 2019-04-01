@@ -726,7 +726,7 @@ sysEvent_t Sys_GetEvent() {
 //                        kbd_polls.Append(kbd_poll_t(K_LEFTARROW, ev.caxis.value < 0));
                         
                         if (ev.caxis.value > 20 || ev.caxis.value < -20) {
-                            joystickAxis[AXIS_YAW] = -ev.caxis.value / 8192;
+                            joystickAxis[AXIS_YAW] = -ev.caxis.value / 16384;
                         } else {
                             joystickAxis[AXIS_YAW] = -ev.caxis.value / 2;
                         }
