@@ -22,10 +22,13 @@ extension SDL_uikitviewcontroller {
         static var _quickLoadButton: UIButton!
         static var _buttonStack = UIStackView(frame: .zero)
         static var _buttonStackExpanded = false
-        static var _f1Button = UIButton()
+        static var _flashlightButton = UIButton()
         static var _prevWeaponButton = UIButton()
         static var _nextWeaponButton = UIButton()
         static var _pdaButton = UIButton()
+        static var _crouchButton = UIButton()
+        static var _reloadButton = UIButton()
+
  }
     
     var fireButton:UIButton {
@@ -118,12 +121,12 @@ extension SDL_uikitviewcontroller {
         }
     }
     
-    var f1Button:UIButton {
+    var flashlightButton:UIButton {
         get {
-            return Holder._f1Button
+            return Holder._flashlightButton
         }
         set(newValue) {
-            Holder._f1Button = newValue
+            Holder._flashlightButton = newValue
         }
     }
     
@@ -154,6 +157,24 @@ extension SDL_uikitviewcontroller {
         }
     }
     
+    var crouchButton:UIButton {
+        get {
+            return Holder._crouchButton
+        }
+        set(newValue) {
+            Holder._crouchButton = newValue
+        }
+    }
+    
+    var reloadButton:UIButton {
+        get {
+            return Holder._reloadButton
+        }
+        set(newValue) {
+            Holder._reloadButton = newValue
+        }
+    }
+    
     @objc func fireButton(rect: CGRect) -> UIButton {
         fireButton = UIButton(frame: CGRect(x: rect.width - 155, y: rect.height - 90, width: 75, height: 75))
         fireButton.setTitle("FIRE", for: .normal)
@@ -164,6 +185,16 @@ extension SDL_uikitviewcontroller {
         return fireButton
     }
     
+    @objc func reloadButton(rect: CGRect) -> UIButton {
+        reloadButton = UIButton(frame: CGRect(x: rect.width - 135, y: rect.height - 135, width: 30, height: 30))
+        reloadButton.setTitle("R", for: .normal)
+        reloadButton.setBackgroundImage(UIImage(named: "JoyStickBase")!, for: .normal)
+        reloadButton.addTarget(self, action: #selector(self.reloadPressed), for: .touchDown)
+        reloadButton.addTarget(self, action: #selector(self.reloadReleased), for: .touchUpInside)
+        reloadButton.alpha = 0.5
+        return reloadButton
+    }
+    
     @objc func jumpButton(rect: CGRect) -> UIButton {
         jumpButton = UIButton(frame: CGRect(x: rect.width - 90, y: rect.height - 135, width: 75, height: 75))
         jumpButton.setTitle("JUMP", for: .normal)
@@ -172,6 +203,16 @@ extension SDL_uikitviewcontroller {
         jumpButton.addTarget(self, action: #selector(self.jumpReleased), for: .touchUpInside)
         jumpButton.alpha = 0.5
         return jumpButton
+    }
+    
+    @objc func crouchButton(rect: CGRect) -> UIButton {
+        crouchButton = UIButton(frame: CGRect(x: rect.width - 65, y: rect.height - 40, width: 30, height: 30))
+        crouchButton.setTitle("C", for: .normal)
+        crouchButton.setBackgroundImage(UIImage(named: "JoyStickBase")!, for: .normal)
+        crouchButton.addTarget(self, action: #selector(self.crouchPressed), for: .touchDown)
+        crouchButton.addTarget(self, action: #selector(self.crouchReleased), for: .touchUpInside)
+        crouchButton.alpha = 0.5
+        return crouchButton
     }
     
     @objc func joyStick(rect: CGRect) -> JoyStickView {
@@ -259,23 +300,19 @@ extension SDL_uikitviewcontroller {
         SDL_PushEvent(&event)
     }
     
-    @objc func f1Button(rect: CGRect) -> UIButton {
-        f1Button = UIButton(frame: CGRect(x: rect.width - 62, y: 15, width: 52, height: 26))
-        f1Button.setImage(UIImage(named: "flashlight"), for: .normal)
-        f1Button.addTarget(self, action: #selector(self.f1Pressed), for: .touchDown)
-        f1Button.addTarget(self, action: #selector(self.f1Released), for: .touchUpInside)
-//        f1Button.layer.borderColor = UIColor.white.cgColor
-//        f1Button.layer.borderWidth = CGFloat(1)
-        f1Button.alpha = 0.5
-        return f1Button
+    @objc func flashlightButton(rect: CGRect) -> UIButton {
+        flashlightButton = UIButton(frame: CGRect(x: rect.width - 62, y: 15, width: 52, height: 26))
+        flashlightButton.setImage(UIImage(named: "flashlight"), for: .normal)
+        flashlightButton.addTarget(self, action: #selector(self.flashlightPressed), for: .touchDown)
+        flashlightButton.addTarget(self, action: #selector(self.flashlightReleased), for: .touchUpInside)
+        flashlightButton.alpha = 0.5
+        return flashlightButton
     }
     
     @objc func pdaButton(rect: CGRect) -> UIButton {
         pdaButton = UIButton(frame: CGRect(x: 0, y: rect.height - 50, width: 50, height: 50))
         pdaButton.addTarget(self, action: #selector(self.pdaPressed), for: .touchDown)
         pdaButton.addTarget(self, action: #selector(self.pdaReleased), for: .touchUpInside)
-//        pdaButton.layer.borderColor = UIColor.white.cgColor
-//        pdaButton.layer.borderWidth = CGFloat(1)
         pdaButton.alpha = 0
         return pdaButton
     }
@@ -291,8 +328,6 @@ extension SDL_uikitviewcontroller {
         nextWeaponButton = UIButton(frame: CGRect(x: (rect.width / 3), y: rect.height - rect.height/4, width: (rect.width / 3), height: rect.height/4))
         nextWeaponButton.addTarget(self, action: #selector(self.nextWeaponPressed), for: .touchDown)
         nextWeaponButton.addTarget(self, action: #selector(self.nextWeaponReleased), for: .touchUpInside)
-//        nextWeaponButton.layer.borderColor = UIColor.white.cgColor
-//        nextWeaponButton.layer.borderWidth = CGFloat(1)
         return nextWeaponButton
     }
     
@@ -334,6 +369,7 @@ extension SDL_uikitviewcontroller {
     
     @objc func quickSaveReleased(sender: UIButton!) {
         Key_Event(key: SDLK_F5, pressed: false)
+        toggleStack()
     }
     
     @objc func quickLoadPressed(sender: UIButton!) {
@@ -342,14 +378,15 @@ extension SDL_uikitviewcontroller {
     
     @objc func quickLoadReleased(sender: UIButton!) {
         Key_Event(key: SDLK_F9, pressed: false)
+        toggleStack()
     }
     
     // repurposing for flashlight
-    @objc func f1Pressed(sender: UIButton!) {
+    @objc func flashlightPressed(sender: UIButton!) {
         Key_Event(key: SDLK_f, pressed: true)
     }
     
-    @objc func f1Released(sender: UIButton!) {
+    @objc func flashlightReleased(sender: UIButton!) {
         Key_Event(key: SDLK_f, pressed: false)
     }
     
@@ -370,7 +407,6 @@ extension SDL_uikitviewcontroller {
     }
     
     @objc func nextWeaponPressed(sender: UIButton!) {
-//        Key_Event(key: SDLK_RIGHTBRACKET, pressed: true)
         var wevent = SDL_Event()
         wevent.type = SDL_MOUSEWHEEL.rawValue
         wevent.wheel.y = 1
@@ -382,11 +418,25 @@ extension SDL_uikitviewcontroller {
     @objc func nextWeaponReleased(sender: UIButton!) {
 //        Key_Event(key: K_MWHEELUP, pressed: false)
     }
+    
+    @objc func crouchPressed(sender: UIButton!) {
+        Key_Event(key: SDLK_c, pressed: true)
+    }
+    
+    @objc func crouchReleased(sender: UIButton!) {
+        Key_Event(key: SDLK_c, pressed: false)
+    }
+    
+    @objc func reloadPressed(sender: UIButton!) {
+        Key_Event(key: SDLK_r, pressed: true)
+    }
+    
+    @objc func reloadReleased(sender: UIButton!) {
+        Key_Event(key: SDLK_r, pressed: false)
+    }
 
-
-    @objc func expand(_ sender: Any) {
+    func toggleStack() {
         buttonStackExpanded = !buttonStackExpanded
-        
         UIView.animate(withDuration: 0.5) {
             self.expandButton.setTitle(self.buttonStackExpanded ? " < " : " > ", for: .normal)
             self.expandButton.alpha = self.buttonStackExpanded ? 1 : 0.5
@@ -399,7 +449,10 @@ extension SDL_uikitviewcontroller {
             self.quickSaveButton.isHidden = !self.buttonStackExpanded
             self.quickSaveButton.alpha = self.buttonStackExpanded ? 1 : 0
         }
-        
+    }
+    
+    @objc func expand(_ sender: Any) {
+        toggleStack()
     }
     
 }

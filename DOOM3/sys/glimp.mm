@@ -273,10 +273,12 @@ bool GLimp_Init(glimpParms_t parms) {
     [rootVC.view addSubview:[rootVC jumpButtonWithRect:[rootVC.view frame]]];
     [rootVC.view addSubview:[rootVC joyStickWithRect:[rootVC.view frame]]];
     [rootVC.view addSubview:[rootVC buttonStackWithRect:[rootVC.view frame]]];
-    [rootVC.view addSubview:[rootVC f1ButtonWithRect:[rootVC.view frame]]];
+    [rootVC.view addSubview:[rootVC flashlightButtonWithRect:[rootVC.view frame]]];
 //    [rootVC.view addSubview:[rootVC prevWeaponButtonWithRect:[rootVC.view frame]]];
     [rootVC.view addSubview:[rootVC nextWeaponButtonWithRect:[rootVC.view frame]]];
     [rootVC.view addSubview:[rootVC pdaButtonWithRect:[rootVC.view frame]]];
+    [rootVC.view addSubview:[rootVC reloadButtonWithRect:[rootVC.view frame]]];
+    [rootVC.view addSubview:[rootVC crouchButtonWithRect:[rootVC.view frame]]];
 #endif
 
 	return true;
