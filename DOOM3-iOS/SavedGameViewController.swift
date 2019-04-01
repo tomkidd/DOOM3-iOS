@@ -27,13 +27,13 @@ class SavedGameViewController: UIViewController {
         gameDir = "base"
         
         #if os(tvOS)
-        let savesPath = try! FileManager().url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path + "/\(gameDir)/save"
+        let savesPath = try! FileManager().url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path + "/../Library/Application Support/dhewm3/\(gameDir)/savegames"
         #else
-        let savesPath = try! FileManager().url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path + "/Library/Application Support/dhewm3"
+        let savesPath = try! FileManager().url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path + "/../Library/Application Support/dhewm3/\(gameDir)/savegames"
         #endif
         
         do {
-            saves = try FileManager.default.contentsOfDirectory(atPath: savesPath)
+            saves = try FileManager.default.contentsOfDirectory(atPath: savesPath).filter{ $0.contains(".save") }
             savesList.reloadData()
         } catch {
             print(error.localizedDescription)

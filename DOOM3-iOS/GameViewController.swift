@@ -57,7 +57,7 @@ class GameViewController: UIViewController {
             }
             
             if !self.selectedSavedGame.isEmpty {
-                argv.append("+load")
+                argv.append("+loadGame")
                 argv.append(self.selectedSavedGame)
             }
             
