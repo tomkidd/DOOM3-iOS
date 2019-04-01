@@ -260,24 +260,23 @@ extension SDL_uikitviewcontroller {
     }
     
     @objc func f1Button(rect: CGRect) -> UIButton {
-        f1Button = UIButton(frame: CGRect(x: rect.width - 40, y: 10, width: 30, height: 30))
-        f1Button.setTitle(" F1 ", for: .normal)
+        f1Button = UIButton(frame: CGRect(x: rect.width - 62, y: 15, width: 52, height: 26))
+        f1Button.setImage(UIImage(named: "flashlight"), for: .normal)
         f1Button.addTarget(self, action: #selector(self.f1Pressed), for: .touchDown)
         f1Button.addTarget(self, action: #selector(self.f1Released), for: .touchUpInside)
-        f1Button.layer.borderColor = UIColor.white.cgColor
-        f1Button.layer.borderWidth = CGFloat(1)
+//        f1Button.layer.borderColor = UIColor.white.cgColor
+//        f1Button.layer.borderWidth = CGFloat(1)
         f1Button.alpha = 0.5
         return f1Button
     }
     
     @objc func pdaButton(rect: CGRect) -> UIButton {
-        pdaButton = UIButton(frame: CGRect(x: 10, y: rect.height - 40, width: 30, height: 30))
-        pdaButton.setTitle(" PDA ", for: .normal)
+        pdaButton = UIButton(frame: CGRect(x: 0, y: rect.height - 50, width: 50, height: 50))
         pdaButton.addTarget(self, action: #selector(self.pdaPressed), for: .touchDown)
         pdaButton.addTarget(self, action: #selector(self.pdaReleased), for: .touchUpInside)
-        pdaButton.layer.borderColor = UIColor.white.cgColor
-        pdaButton.layer.borderWidth = CGFloat(1)
-        pdaButton.alpha = 0.5
+//        pdaButton.layer.borderColor = UIColor.white.cgColor
+//        pdaButton.layer.borderWidth = CGFloat(1)
+        pdaButton.alpha = 0
         return pdaButton
     }
     

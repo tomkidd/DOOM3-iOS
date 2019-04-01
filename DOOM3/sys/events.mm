@@ -635,19 +635,20 @@ sysEvent_t Sys_GetEvent() {
 			case SDL_BUTTON_LEFT:
 				res.evValue = K_MOUSE1;
                     if ( player )
-                        if ( player->objectiveSystemOpen )
+                        if ( player->objectiveSystemOpen || player->GuiActive() )
                             mouse_polls.Append(mouse_poll_t(M_ACTION1, ev.button.state == SDL_PRESSED ? 1 : 0));
+//                        else
 				break;
 			case SDL_BUTTON_MIDDLE:
 				res.evValue = K_MOUSE3;
                     if ( player )
-                        if ( player->objectiveSystemOpen )
+                        if ( player->objectiveSystemOpen || player->GuiActive() )
                             mouse_polls.Append(mouse_poll_t(M_ACTION3, ev.button.state == SDL_PRESSED ? 1 : 0));
 				break;
 			case SDL_BUTTON_RIGHT:
 				res.evValue = K_MOUSE2;
                     if ( player )
-                        if ( player->objectiveSystemOpen )
+                        if ( player->objectiveSystemOpen || player->GuiActive() )
                             mouse_polls.Append(mouse_poll_t(M_ACTION2, ev.button.state == SDL_PRESSED ? 1 : 0));
 				break;
 
