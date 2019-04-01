@@ -31,9 +31,17 @@ If you have questions concerning this license or the applicable additional terms
 #include <SDL_syswm.h>
 
 #if TARGET_OS_TV
+#if _D3XP
+#import "DOOM3xp_tvOS-Swift.h"
+#else
 #import "DOOM3_tvOS-Swift.h"
+#endif
+#else
+#if _D3XP
+#import "DOOM3xp_iOS-Swift.h"
 #else
 #import "DOOM3_iOS-Swift.h"
+#endif
 #endif
 
 

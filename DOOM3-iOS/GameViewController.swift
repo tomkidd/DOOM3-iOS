@@ -56,6 +56,13 @@ class GameViewController: UIViewController {
                 argv.append("game/mars_city1")
             }
             
+            // Mission Pack
+            #if _D3XP
+            argv.append("+set")
+            argv.append("fs_game")
+            argv.append("d3xp")
+            #endif
+            
             if !self.selectedSavedGame.isEmpty {
                 argv.append("+loadGame")
                 argv.append(self.selectedSavedGame)
