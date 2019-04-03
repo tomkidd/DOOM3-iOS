@@ -100,12 +100,21 @@
                                     <segue destination="ZbM-Ov-oft" kind="show" identifier="MozartsGhostSegue" id="J25-id-i6M"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdH-fG-M2W">
+                                <rect key="frame" x="491" y="0.0" width="118" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="HIX-3q-dFS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qC1-tp-PXt" firstAttribute="trailing" secondItem="pvT-lZ-3zr" secondAttribute="trailing" constant="20" id="4ef-nX-Fq2"/>
+                            <constraint firstItem="GdH-fG-M2W" firstAttribute="trailing" secondItem="WE9-jb-ZdU" secondAttribute="trailing" id="9XW-xE-2Et"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Eor-e5-7M8" secondAttribute="trailing" id="9ia-g1-Hgb"/>
                             <constraint firstAttribute="top" secondItem="WE9-jb-ZdU" secondAttribute="top" id="HgZ-Bg-Ae8"/>
+                            <constraint firstItem="GdH-fG-M2W" firstAttribute="top" secondItem="WE9-jb-ZdU" secondAttribute="top" id="Pux-ej-COI"/>
+                            <constraint firstItem="GdH-fG-M2W" firstAttribute="bottom" secondItem="WE9-jb-ZdU" secondAttribute="bottom" id="SkW-jQ-qdM"/>
                             <constraint firstItem="pvT-lZ-3zr" firstAttribute="bottom" secondItem="qC1-tp-PXt" secondAttribute="bottom" id="VoM-oF-GbR"/>
                             <constraint firstItem="Eor-e5-7M8" firstAttribute="top" secondItem="Nhk-ED-EMS" secondAttribute="top" id="W5D-hB-2j6"/>
                             <constraint firstAttribute="trailing" secondItem="WE9-jb-ZdU" secondAttribute="trailing" constant="203" id="XBR-Fl-bah">
@@ -118,6 +127,8 @@
                     <navigationItem key="navigationItem" id="bJL-Du-FQP"/>
                     <connections>
                         <outlet property="backgroundImage" destination="WE9-jb-ZdU" id="vPE-kB-hVx"/>
+                        <outlet property="gradientView" destination="GdH-fG-M2W" id="A2v-ia-CjP"/>
+                        <outlet property="menuStack" destination="Eor-e5-7M8" id="vEd-TU-vO9"/>
                         <outlet property="subtitle1" destination="3xM-vb-nIf" id="5ce-6d-YjJ"/>
                         <outlet property="subtitle2" destination="jCe-6W-2Oc" id="btv-Ae-5nR"/>
                         <outlet property="titleLabel" destination="i1s-G9-Y44" id="IjE-5h-xlW"/>
@@ -247,7 +258,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doom3background" translatesAutoresizingMaskIntoConstraints="NO" id="clm-3X-Zgg">
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doom3background" translatesAutoresizingMaskIntoConstraints="NO" id="clm-3X-Zgg">
                                 <rect key="frame" x="0.0" y="-41" width="812" height="457"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="clm-3X-Zgg" secondAttribute="height" multiplier="16:9" id="awC-8I-936"/>
@@ -274,6 +285,7 @@
                                         <size key="titleShadowOffset" width="3" height="3"/>
                                         <state key="normal" title="recruit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.086274509799999996" green="0.047058823530000002" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="easyDifficulty:" destination="h0z-nt-sVd" eventType="touchUpInside" id="SWc-lL-ahr"/>
@@ -285,6 +297,7 @@
                                         <size key="titleShadowOffset" width="3" height="3"/>
                                         <state key="normal" title="marine">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.086274509799999996" green="0.047058823530000002" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="normalDifficulty:" destination="h0z-nt-sVd" eventType="touchUpInside" id="oLS-CO-wj9"/>
@@ -296,6 +309,7 @@
                                         <size key="titleShadowOffset" width="3" height="3"/>
                                         <state key="normal" title="veteran">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.086274509799999996" green="0.047058823530000002" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="hardDifficulty:" destination="h0z-nt-sVd" eventType="touchUpInside" id="KJc-QD-skw"/>
@@ -307,6 +321,7 @@
                                         <size key="titleShadowOffset" width="3" height="3"/>
                                         <state key="normal" title="nightmare">
                                             <color key="titleColor" red="1" green="0.0093617555430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.086274509799999996" green="0.047058823530000002" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="hardDifficulty:" destination="h0z-nt-sVd" eventType="touchUpInside" id="dV7-Gl-Iwh"/>
@@ -315,7 +330,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.047058823530000002" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iIs-ln-FTU" firstAttribute="leading" secondItem="BgP-W1-HJj" secondAttribute="leading" constant="20" id="AKp-Sl-r5m"/>
                             <constraint firstItem="clm-3X-Zgg" firstAttribute="leading" secondItem="BgP-W1-HJj" secondAttribute="leading" id="DBE-Hm-WBC"/>
@@ -421,6 +436,6 @@
         <image name="doom3background" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="J25-id-i6M"/>
+        <segue reference="Skt-XX-niO"/>
     </inferredMetricsTieBreakers>
 </document>

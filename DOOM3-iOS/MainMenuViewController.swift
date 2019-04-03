@@ -13,6 +13,8 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitle1: UILabel!
     @IBOutlet weak var subtitle2: UILabel!
+    @IBOutlet var gradientView: UIView!
+    @IBOutlet var menuStack: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,18 @@ class MainMenuViewController: UIViewController {
     }
     
     @IBAction func exitToMainMenu(segue: UIStoryboardSegue) {
+    }
+    
+    override func viewDidLayoutSubviews() {
+        if let gv = gradientView {
+            let gradient = CAGradientLayer()
+            gradient.frame = gv.bounds
+            gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+            gradient.startPoint = CGPoint(x: 0, y: 0.5)
+            gradient.endPoint = CGPoint (x: 1, y: 0.5)
+            gv.layer.insertSublayer(gradient, at: 0)
+            self.view.bringSubviewToFront(self.menuStack)
+        }
     }
 
     /*
