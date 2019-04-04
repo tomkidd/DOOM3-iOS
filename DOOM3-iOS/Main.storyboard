@@ -159,7 +159,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="top" secondItem="iOI-0W-Afg" secondAttribute="top" constant="10" id="4WM-ih-oce"/>
                             <constraint firstItem="iOI-0W-Afg" firstAttribute="leading" secondItem="0Y3-kc-ye4" secondAttribute="leading" constant="4" id="QZq-zJ-IB7"/>
@@ -436,6 +436,6 @@
         <image name="doom3background" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Skt-XX-niO"/>
+        <segue reference="BYG-YZ-3MD"/>
     </inferredMetricsTieBreakers>
 </document>

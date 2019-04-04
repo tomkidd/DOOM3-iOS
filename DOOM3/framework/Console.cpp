@@ -1230,7 +1230,8 @@ void	idConsoleLocal::Draw( bool forceFullScreen ) {
 	}
 
 	if ( com_showFPS.GetBool() ) {
-		y = SCR_DrawFPS( 0 );
+        // for some reason I have to do this too -tkidd
+//        y = SCR_DrawFPS( 0 );
 	}
 
 	if ( com_showMemoryUsage.GetBool() ) {

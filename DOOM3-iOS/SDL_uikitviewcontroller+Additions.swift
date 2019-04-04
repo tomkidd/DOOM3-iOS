@@ -28,9 +28,8 @@ extension SDL_uikitviewcontroller {
         static var _pdaButton = UIButton()
         static var _crouchButton = UIButton()
         static var _reloadButton = UIButton()
+    }
 
- }
-    
     var fireButton:UIButton {
         get {
             return Holder._fireButton
