@@ -575,7 +575,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/",
-					"/Users/tomkidd/Documents/GitHub/DOOM3-iOS/ogg",
+					"$(PROJECT_DIR)/../ogg",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -632,7 +632,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/",
-					"/Users/tomkidd/Documents/GitHub/DOOM3-iOS/ogg",
+					"$(PROJECT_DIR)/../ogg",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
