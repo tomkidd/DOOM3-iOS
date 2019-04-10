@@ -1,6 +1,6 @@
 <img align="left" width="100" height="100" src="https://raw.githubusercontent.com/tomkidd/DOOM3-iOS/master/icon_doom3.png">  
 
-#&nbsp;&nbsp;DOOM 3 for iOS and tvOS for Apple TV
+#  DOOM 3 for iOS and tvOS for Apple TV
 
 &nbsp;
 
