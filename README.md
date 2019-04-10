@@ -1,6 +1,12 @@
-#  DOOM 3 for iOS and tvOS for Apple TV
+<img align="left" width="100" height="100" src="https://raw.githubusercontent.com/tomkidd/DOOM3-iOS/master/icon_doom3.png">  
+
+#&nbsp;&nbsp;DOOM 3 for iOS and tvOS for Apple TV
+
+&nbsp;
 
 This is my port of DOOM 3 for iOS, running in modern resolutions including the full width of the iPhone X. I have also made a target and version for tvOS to run on Apple TV.
+
+![screenshot](https://raw.githubusercontent.com/tomkidd/DOOM3-iOS/master/ss_doom3.png)
 
 Features
 
@@ -30,5 +36,7 @@ This port was based on [dhewm3](https://dhewm3.org/) and uses [SDL for iOS](http
 [Video of DOOM 3 running on an iPhone X](https://www.youtube.com/watch?v=KEaeWKSfgB8)
 
 <!--[Video of DOOM 3 running on an Apple TV](https://www.youtube.com/watch?v=jjO2pAVgb84)-->
+
+I have also made apps for [*Wolfenstein 3-D*](https://github.com/tomkidd/Wolf3D-iOS), [*DOOM*, *DOOM II* and *Final DOOM*](https://github.com/tomkidd/DOOM-iOS), [*Quake*](https://github.com/tomkidd/Quake-iOS), [*Quake II*](https://github.com/tomkidd/Quake2-iOS), [*Quake III: Arena*](https://github.com/tomkidd/Quake3-iOS) and [*Return to Castle Wolfenstein*](https://github.com/tomkidd/RTCW-iOS). 
 
 Have fun. For any questions I can be reached at tomkidd@gmail.com
