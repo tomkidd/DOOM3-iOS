@@ -70,9 +70,9 @@ bool Sys_GetPath(sysPath_t type, idStr &path) {
 	switch(type) {
 	case PATH_BASE:
 #ifdef IOS
-		strncpy(buf, [ [ [ NSBundle mainBundle ] resourcePath ] cString ], MAXPATHLEN );
+		strncpy(buf, [ [ [ NSBundle mainBundle ] resourcePath ] UTF8String ], MAXPATHLEN );
 #else
-        strncpy(buf, [ [ [ NSBundle mainBundle ] bundlePath ] cString ], MAXPATHLEN );
+        strncpy(buf, [ [ [ NSBundle mainBundle ] bundlePath ] UTF8String ], MAXPATHLEN );
 
         snap = strrchr(buf, '/');
 		if (snap)
