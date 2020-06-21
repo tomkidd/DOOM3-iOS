@@ -10,7 +10,6 @@ import Foundation
 extension UIColor {
     convenience init(rgba: String) {
         let scanner = Scanner(string: rgba)
-        scanner.scanLocation = 0
         
         var rgbValue: UInt64 = 0
         
