@@ -51,7 +51,7 @@ void idSysLocal::OpenURL( const char *url, bool doexit ) {
 
 
 	[[ UIApplication sharedApplication] openURL: [ NSURL URLWithString:
-		[ NSString stringWithCString: url ] ] ];
+		[ NSString stringWithUTF8String: url ] ] ];
 
 	if ( doexit ) {
 		quit_spamguard = true;
@@ -75,7 +75,7 @@ OSX_GetLocalizedString
 */
 const char* OSX_GetLocalizedString( const char* key )
 {
-	NSString *string = [ [ NSBundle mainBundle ] localizedStringForKey:[ NSString stringWithCString: key ]
+	NSString *string = [ [ NSBundle mainBundle ] localizedStringForKey:[ NSString stringWithUTF8String: key ]
 													 value:@"No translation" table:nil];
 	return [string UTF8String];
 }
