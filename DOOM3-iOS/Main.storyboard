@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B6S-26-QQH">
-    <device id="retina5_9" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B6S-26-QQH">
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,28 +27,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eor-e5-7M8">
-                                <rect key="frame" x="524" y="0.0" width="224" height="200"/>
+                                <rect key="frame" x="532" y="0.0" width="220" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1s-G9-Y44">
-                                        <rect key="frame" x="0.0" y="0.0" width="224" height="50"/>
-                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="54"/>
-                                        <color key="textColor" red="0.52549019607843139" green="0.8666666666666667" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mission pack" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xM-vb-nIf">
-                                        <rect key="frame" x="0.0" y="50" width="224" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="36"/>
-                                        <color key="textColor" red="0.52549019610000003" green="0.86666666670000003" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the reckoning" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCe-6W-2Oc">
-                                        <rect key="frame" x="0.0" y="50" width="224" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="36"/>
-                                        <color key="textColor" red="0.52549019610000003" green="0.86666666670000003" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdG-Gj-xg9">
-                                        <rect key="frame" x="0.0" y="50" width="224" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="oxc-yM-MIu"/>
                                         </constraints>
@@ -64,7 +43,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSs-6i-98s">
-                                        <rect key="frame" x="0.0" y="100" width="224" height="50"/>
+                                        <rect key="frame" x="0.0" y="50" width="220" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="a58-um-cvu"/>
                                         </constraints>
@@ -77,7 +56,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cg6-2x-SRT">
-                                        <rect key="frame" x="0.0" y="150" width="224" height="50"/>
+                                        <rect key="frame" x="0.0" y="100" width="220" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Q7x-qo-cjy"/>
                                         </constraints>
@@ -129,9 +108,6 @@
                         <outlet property="backgroundImage" destination="WE9-jb-ZdU" id="vPE-kB-hVx"/>
                         <outlet property="gradientView" destination="GdH-fG-M2W" id="A2v-ia-CjP"/>
                         <outlet property="menuStack" destination="Eor-e5-7M8" id="vEd-TU-vO9"/>
-                        <outlet property="subtitle1" destination="3xM-vb-nIf" id="5ce-6d-YjJ"/>
-                        <outlet property="subtitle2" destination="jCe-6W-2Oc" id="btv-Ae-5nR"/>
-                        <outlet property="titleLabel" destination="i1s-G9-Y44" id="IjE-5h-xlW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHd-Mz-pIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -155,7 +131,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOI-0W-Afg">
                                 <rect key="frame" x="48" y="-10" width="142" height="52"/>
                                 <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="42"/>
-                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -432,10 +408,10 @@
             <point key="canvasLocation" x="1001" y="1714"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="J25-id-i6M"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="doom3background" width="1920" height="1080"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="BYG-YZ-3MD"/>
-    </inferredMetricsTieBreakers>
 </document>

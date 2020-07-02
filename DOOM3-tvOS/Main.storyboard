@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="appleTV" orientation="landscape">
-        <adaptation id="light"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="16097" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B6S-26-QQH">
+    <device id="appleTV" appearance="light"/>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,28 +32,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eor-e5-7M8">
-                                <rect key="frame" x="1402" y="60" width="408" height="305"/>
+                                <rect key="frame" x="1594" y="60" width="220" height="144"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="q u a k e  ii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1s-G9-Y44">
-                                        <rect key="frame" x="0.0" y="0.0" width="408" height="89"/>
-                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="72"/>
-                                        <color key="textColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mission pack" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjq-zj-wsy">
-                                        <rect key="frame" x="0.0" y="89" width="408" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="36"/>
-                                        <color key="textColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="q u a k e  ii" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0W-da-TTt">
-                                        <rect key="frame" x="0.0" y="89" width="408" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="36"/>
-                                        <color key="textColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdG-Gj-xg9">
-                                        <rect key="frame" x="0.0" y="89" width="408" height="72"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="72"/>
                                         <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="48"/>
                                         <state key="normal" title="new game">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,23 +45,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSs-6i-98s">
-                                        <rect key="frame" x="0.0" y="161" width="408" height="72"/>
+                                        <rect key="frame" x="0.0" y="72" width="220" height="72"/>
                                         <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="48"/>
                                         <state key="normal" title="load game">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="3mE-73-FRT" kind="show" id="w5G-xU-cO0"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcJ-eO-fk8">
-                                        <rect key="frame" x="0.0" y="233" width="408" height="72"/>
-                                        <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="48"/>
-                                        <state key="normal" title="demo">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="ZbM-Ov-oft" kind="show" identifier="MozartsGhostSegue" id="ogQ-yk-2f9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -102,9 +72,6 @@
                     <navigationItem key="navigationItem" id="bJL-Du-FQP"/>
                     <connections>
                         <outlet property="backgroundImage" destination="WE9-jb-ZdU" id="jBU-WO-f6O"/>
-                        <outlet property="subtitle1" destination="gjq-zj-wsy" id="MVq-JP-mfs"/>
-                        <outlet property="subtitle2" destination="d0W-da-TTt" id="jyF-S9-ed0"/>
-                        <outlet property="titleLabel" destination="i1s-G9-Y44" id="2W4-hp-l39"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHd-Mz-pIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,7 +99,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOI-0W-Afg">
                                 <rect key="frame" x="94" y="978" width="250" height="92"/>
                                 <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="74"/>
-                                <color key="textColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -171,7 +138,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gi6-6U-7e0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3266" y="704"/>
+            <point key="canvasLocation" x="-3753" y="654"/>
         </scene>
         <!--Difficulty View Controller-->
         <scene sceneID="8QR-uC-TkX">
@@ -311,7 +278,7 @@
                             <constraint firstAttribute="trailing" secondItem="k81-eM-yLI" secondAttribute="trailing" id="Mdy-Gg-9x6"/>
                             <constraint firstItem="3sX-c9-5ah" firstAttribute="top" secondItem="gAB-dP-Ik6" secondAttribute="top" constant="20" id="REg-jn-d3V"/>
                             <constraint firstItem="k81-eM-yLI" firstAttribute="leading" secondItem="JYh-jo-iGc" secondAttribute="leading" id="Upb-yo-nRv"/>
-                            <constraint firstItem="3sX-c9-5ah" firstAttribute="top" secondItem="s2z-pn-jqI" secondAttribute="bottom" constant="20" id="fMr-7S-YgC"/>
+                            <constraint firstItem="3sX-c9-5ah" firstAttribute="top" secondItem="gAB-dP-Ik6" secondAttribute="top" constant="20" id="fMr-7S-YgC"/>
                             <constraint firstItem="3sX-c9-5ah" firstAttribute="leading" secondItem="gAB-dP-Ik6" secondAttribute="leading" constant="20" id="oFJ-kn-Egs"/>
                             <constraint firstItem="k81-eM-yLI" firstAttribute="width" secondItem="k81-eM-yLI" secondAttribute="height" multiplier="16:9" id="r6e-Yj-eZa"/>
                             <constraint firstItem="ue8-Yw-jCH" firstAttribute="leading" secondItem="3sX-c9-5ah" secondAttribute="trailing" constant="8" id="x0e-uF-r3k"/>
@@ -328,10 +295,10 @@
             <point key="canvasLocation" x="-1205" y="2794"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="doom3background" width="1440" height="810"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Skt-XX-niO"/>
+        <segue reference="vu2-zQ-5dr"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="doom3background" width="1920" height="1080"/>
+    </resources>
 </document>

@@ -6,14 +6,16 @@
 //
 
 #import "AppDelegate.h"
-//#import "MainMenuViewController.h"
 
 @implementation SDLUIKitDelegate (customDelegate)
 
 // hijack the the SDL_UIKitAppDelegate to use the UIApplicationDelegate we implement here
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 + (NSString *)getAppDelegateClassName {
     return @"AppDelegate";
 }
+#pragma clang diagnostic pop
 
 @end
 
@@ -36,17 +38,9 @@
 {
     [self performSelector:@selector(hideLaunchScreen) withObject:nil afterDelay:0.0];
 
-#if !TARGET_OS_TV
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
-#endif
-    
     self.uiwindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.uiwindow.backgroundColor = [UIColor blackColor];
     
-//    NSString *controllerName = (IS_IPAD() ? @"MainMenuViewController-iPad" : @"MainMenuViewController-iPhone");
-//    self.mainViewController = [[MainMenuViewController alloc] initWithNibName:controllerName bundle:nil];
-//    self.uiwindow.rootViewController = self.mainViewController;
-
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
 
     rootNavigationController = (UINavigationController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"RootNC"];
@@ -64,10 +58,5 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     [super applicationWillResignActive:application];
 }
-
-// dummy function to prevent linkage fail
-//int SDL_main(int argc, char **argv) {
-//    return 0;
-//}
 
 @end

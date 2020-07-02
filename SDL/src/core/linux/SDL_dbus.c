@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2018 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2020 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -111,8 +111,19 @@ LoadDBUSLibrary(void)
 void
 SDL_DBus_Init(void)
 {
-    if (!dbus.session_conn && LoadDBUSLibrary() != -1) {
+    static SDL_bool is_dbus_available = SDL_TRUE;
+    if (!is_dbus_available) {
+        return;  /* don't keep trying if this fails. */
+    }
+
+    if (!dbus.session_conn) {
         DBusError err;
+
+        if (LoadDBUSLibrary() == -1) {
+            is_dbus_available = SDL_FALSE;  /* can't load at all? Don't keep trying. */
+            return;  /* oh well */
+        }
+
         dbus.error_init(&err);
         dbus.session_conn = dbus.bus_get_private(DBUS_BUS_SESSION, &err);
         if (!dbus.error_is_set(&err)) {
@@ -121,6 +132,7 @@ SDL_DBus_Init(void)
         if (dbus.error_is_set(&err)) {
             dbus.error_free(&err);
             SDL_DBus_Quit();
+            is_dbus_available = SDL_FALSE;
             return;  /* oh well */
         }
         dbus.connection_set_exit_on_disconnect(dbus.system_conn, 0);
@@ -154,15 +166,11 @@ SDL_DBus_Quit(void)
 SDL_DBusContext *
 SDL_DBus_GetContext(void)
 {
-    if(!dbus_handle || !dbus.session_conn){
+    if (!dbus_handle || !dbus.session_conn) {
         SDL_DBus_Init();
     }
     
-    if(dbus_handle && dbus.session_conn){
-        return &dbus;
-    } else {
-        return NULL;
-    }
+    return (dbus_handle && dbus.session_conn) ? &dbus : NULL;
 }
 
 static SDL_bool
@@ -310,7 +318,11 @@ SDL_DBus_QueryProperty(const char *node, const char *path, const char *interface
 void
 SDL_DBus_ScreensaverTickle(void)
 {
-    SDL_DBus_CallVoidMethod("org.gnome.ScreenSaver", "/org/gnome/ScreenSaver", "org.gnome.ScreenSaver", "SimulateUserActivity", DBUS_TYPE_INVALID);
+    if (screensaver_cookie == 0) {  /* no need to tickle if we're inhibiting. */
+        /* org.gnome.ScreenSaver is the legacy interface, but it'll either do nothing or just be a second harmless tickle on newer systems, so we leave it for now. */
+        SDL_DBus_CallVoidMethod("org.gnome.ScreenSaver", "/org/gnome/ScreenSaver", "org.gnome.ScreenSaver", "SimulateUserActivity", DBUS_TYPE_INVALID);
+        SDL_DBus_CallVoidMethod("org.freedesktop.ScreenSaver", "/org/freedesktop/ScreenSaver", "org.freedesktop.ScreenSaver", "SimulateUserActivity", DBUS_TYPE_INVALID);
+    }
 }
 
 SDL_bool

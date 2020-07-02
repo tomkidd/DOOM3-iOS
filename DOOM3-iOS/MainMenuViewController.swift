@@ -10,9 +10,6 @@ import UIKit
 class MainMenuViewController: UIViewController {
 
     @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitle1: UILabel!
-    @IBOutlet weak var subtitle2: UILabel!
     @IBOutlet var gradientView: UIView!
     @IBOutlet var menuStack: UIStackView!
     

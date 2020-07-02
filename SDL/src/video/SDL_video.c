@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2018 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2020 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -37,9 +37,9 @@
 #include "SDL_opengl.h"
 #endif /* SDL_VIDEO_OPENGL */
 
-#if SDL_VIDEO_OPENGL_ES
+#if SDL_VIDEO_OPENGL_ES && !SDL_VIDEO_OPENGL
 #include "SDL_opengles.h"
-#endif /* SDL_VIDEO_OPENGL_ES */
+#endif /* SDL_VIDEO_OPENGL_ES && !SDL_VIDEO_OPENGL */
 
 /* GL and GLES2 headers conflict on Linux 32 bits */
 #if SDL_VIDEO_OPENGL_ES2 && !SDL_VIDEO_OPENGL
@@ -63,9 +63,6 @@ static VideoBootStrap *bootstrap[] = {
 #endif
 #if SDL_VIDEO_DRIVER_X11
     &X11_bootstrap,
-#endif
-#if SDL_VIDEO_DRIVER_MIR
-    &MIR_bootstrap,
 #endif
 #if SDL_VIDEO_DRIVER_WAYLAND
     &Wayland_bootstrap,
@@ -111,6 +108,9 @@ static VideoBootStrap *bootstrap[] = {
 #endif
 #if SDL_VIDEO_DRIVER_QNX
     &QNX_bootstrap,
+#endif
+#if SDL_VIDEO_DRIVER_OFFSCREEN
+    &OFFSCREEN_bootstrap,
 #endif
 #if SDL_VIDEO_DRIVER_DUMMY
     &DUMMY_bootstrap,
@@ -664,6 +664,12 @@ SDL_GetDisplayDriverData(int displayIndex)
     return _this->displays[displayIndex].driverdata;
 }
 
+SDL_bool
+SDL_IsVideoContextExternal(void)
+{
+    return SDL_GetHintBoolean(SDL_HINT_VIDEO_EXTERNAL_CONTEXT, SDL_FALSE);
+}
+
 const char *
 SDL_GetDisplayName(int displayIndex)
 {
@@ -700,12 +706,24 @@ SDL_GetDisplayBounds(int displayIndex, SDL_Rect * rect)
     return 0;  /* !!! FIXME: should this be an error if (rect==NULL) ? */
 }
 
-int SDL_GetDisplayUsableBounds(int displayIndex, SDL_Rect * rect)
+static int
+ParseDisplayUsableBoundsHint(SDL_Rect *rect)
+{
+    const char *hint = SDL_GetHint(SDL_HINT_DISPLAY_USABLE_BOUNDS);
+    return hint && (SDL_sscanf(hint, "%d,%d,%d,%d", &rect->x, &rect->y, &rect->w, &rect->h) == 4);
+}
+
+int
+SDL_GetDisplayUsableBounds(int displayIndex, SDL_Rect * rect)
 {
     CHECK_DISPLAY_INDEX(displayIndex, -1);
 
     if (rect) {
         SDL_VideoDisplay *display = &_this->displays[displayIndex];
+
+        if ((displayIndex == 0) && ParseDisplayUsableBoundsHint(rect)) {
+            return 0;
+        }
 
         if (_this->GetDisplayUsableBounds) {
             if (_this->GetDisplayUsableBounds(_this, display, rect) == 0) {
@@ -1437,7 +1455,7 @@ SDL_CreateWindow(const char *title, int x, int y, int w, int h, Uint32 flags)
 
     /* Some platforms have OpenGL enabled by default */
 #if (SDL_VIDEO_OPENGL && __MACOSX__) || __IPHONEOS__ || __ANDROID__ || __NACL__
-    if (!_this->is_dummy && !(flags & SDL_WINDOW_VULKAN)) {
+    if (!_this->is_dummy && !(flags & SDL_WINDOW_VULKAN) && !SDL_IsVideoContextExternal()) {
         flags |= SDL_WINDOW_OPENGL;
     }
 #endif
@@ -1639,6 +1657,7 @@ SDL_RecreateWindow(SDL_Window * window, Uint32 flags)
         window->surface->flags &= ~SDL_DONTFREE;
         SDL_FreeSurface(window->surface);
         window->surface = NULL;
+        window->surface_valid = SDL_FALSE;
     }
     if (_this->DestroyWindowFramebuffer) {
         _this->DestroyWindowFramebuffer(_this, window);
@@ -1656,6 +1675,12 @@ SDL_RecreateWindow(SDL_Window * window, Uint32 flags)
         } else {
             SDL_GL_UnloadLibrary();
         }
+    } else if (window->flags & SDL_WINDOW_OPENGL) {
+        SDL_GL_UnloadLibrary();
+        if (SDL_GL_LoadLibrary(NULL) < 0) {
+            return -1;
+        }
+        loaded_opengl = SDL_TRUE;
     }
 
     if ((window->flags & SDL_WINDOW_VULKAN) != (flags & SDL_WINDOW_VULKAN)) {
@@ -1897,7 +1922,6 @@ SDL_SetWindowPosition(SDL_Window * window, int x, int y)
         if (_this->SetWindowPosition) {
             _this->SetWindowPosition(_this, window);
         }
-        SDL_SendWindowEvent(window, SDL_WINDOWEVENT_MOVED, x, y);
     }
 }
 
@@ -2209,12 +2233,25 @@ SDL_MaximizeWindow(SDL_Window * window)
     }
 }
 
+static SDL_bool
+CanMinimizeWindow(SDL_Window * window)
+{
+    if (!_this->MinimizeWindow) {
+        return SDL_FALSE;
+    }
+    return SDL_TRUE;
+}
+
 void
 SDL_MinimizeWindow(SDL_Window * window)
 {
     CHECK_WINDOW_MAGIC(window,);
 
     if (window->flags & SDL_WINDOW_MINIMIZED) {
+        return;
+    }
+
+    if (!CanMinimizeWindow(window)) {
         return;
     }
 
@@ -2643,6 +2680,15 @@ ShouldMinimizeOnFocusLoss(SDL_Window * window)
 #ifdef __MACOSX__
     if (SDL_strcmp(_this->name, "cocoa") == 0) {  /* don't do this for X11, etc */
         if (Cocoa_IsWindowInFullscreenSpace(window)) {
+            return SDL_FALSE;
+        }
+    }
+#endif
+
+#ifdef __ANDROID__
+    {
+        extern SDL_bool Android_JNI_ShouldMinimizeOnFocusLoss(void);
+        if (! Android_JNI_ShouldMinimizeOnFocusLoss()) {
             return SDL_FALSE;
         }
     }
@@ -3818,9 +3864,12 @@ SDL_IsScreenKeyboardShown(SDL_Window *window)
 #if SDL_VIDEO_DRIVER_X11
 #include "x11/SDL_x11messagebox.h"
 #endif
+#if SDL_VIDEO_DRIVER_HAIKU
+#include "haiku/SDL_bmessagebox.h"
+#endif
 
 
-#if SDL_VIDEO_DRIVER_WINDOWS || SDL_VIDEO_DRIVER_WINRT || SDL_VIDEO_DRIVER_COCOA || SDL_VIDEO_DRIVER_UIKIT || SDL_VIDEO_DRIVER_X11
+#if SDL_VIDEO_DRIVER_WINDOWS || SDL_VIDEO_DRIVER_WINRT || SDL_VIDEO_DRIVER_COCOA || SDL_VIDEO_DRIVER_UIKIT || SDL_VIDEO_DRIVER_X11 || SDL_VIDEO_DRIVER_HAIKU
 static SDL_bool SDL_MessageboxValidForDriver(const SDL_MessageBoxData *messageboxdata, SDL_SYSWM_TYPE drivertype)
 {
     SDL_SysWMinfo info;
@@ -3910,6 +3959,13 @@ SDL_ShowMessageBox(const SDL_MessageBoxData *messageboxdata, int *buttonid)
     if (retval == -1 &&
         SDL_MessageboxValidForDriver(messageboxdata, SDL_SYSWM_X11) &&
         X11_ShowMessageBox(messageboxdata, buttonid) == 0) {
+        retval = 0;
+    }
+#endif
+#if SDL_VIDEO_DRIVER_HAIKU
+    if (retval == -1 &&
+        SDL_MessageboxValidForDriver(messageboxdata, SDL_SYSWM_HAIKU) &&
+        HAIKU_ShowMessageBox(messageboxdata, buttonid) == 0) {
         retval = 0;
     }
 #endif
@@ -4155,6 +4211,27 @@ void SDL_Vulkan_GetDrawableSize(SDL_Window * window, int *w, int *h)
         _this->Vulkan_GetDrawableSize(_this, window, w, h);
     } else {
         SDL_GetWindowSize(window, w, h);
+    }
+}
+
+SDL_MetalView
+SDL_Metal_CreateView(SDL_Window * window)
+{
+    CHECK_WINDOW_MAGIC(window, NULL);
+
+    if (_this->Metal_CreateView) {
+        return _this->Metal_CreateView(_this, window);
+    } else {
+        SDL_SetError("Metal is not supported.");
+        return NULL;
+    }
+}
+
+void
+SDL_Metal_DestroyView(SDL_MetalView view)
+{
+    if (_this && view && _this->Metal_DestroyView) {
+        _this->Metal_DestroyView(_this, view);
     }
 }
 

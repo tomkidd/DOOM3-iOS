@@ -20,9 +20,6 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var gameDir = ""
-        gameDir = "base"
-        
         #if os(tvOS)
         let documentsDir = try! FileManager().url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path
         #else

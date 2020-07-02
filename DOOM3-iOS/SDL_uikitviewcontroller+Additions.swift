@@ -331,19 +331,19 @@ extension SDL_uikitviewcontroller {
     }
     
     @objc func firePressed(sender: UIButton!) {
-        Key_Event(key: SDLK_RCTRL, pressed: true)
+        Key_Event(key: Int(SDLK_RCTRL.rawValue), pressed: true)
     }
     
     @objc func fireReleased(sender: UIButton!) {
-        Key_Event(key: SDLK_RCTRL, pressed: false)
+        Key_Event(key: Int(SDLK_RCTRL.rawValue), pressed: false)
     }
     
     @objc func jumpPressed(sender: UIButton!) {
-        Key_Event(key: SDLK_SPACE, pressed: true)
+        Key_Event(key: Int(SDLK_SPACE.rawValue), pressed: true)
     }
     
     @objc func jumpReleased(sender: UIButton!) {
-        Key_Event(key: SDLK_SPACE, pressed: false)
+        Key_Event(key: Int(SDLK_SPACE.rawValue), pressed: false)
     }
     
     @objc func tildePressed(sender: UIButton!) {
@@ -355,54 +355,54 @@ extension SDL_uikitviewcontroller {
     }
     
     @objc func escapePressed(sender: UIButton!) {
-        Key_Event(key: SDLK_ESCAPE, pressed: true)
+        Key_Event(key: Int(SDLK_ESCAPE.rawValue), pressed: true)
     }
     
     @objc func escapeReleased(sender: UIButton!) {
-        Key_Event(key: SDLK_ESCAPE, pressed: false)
+        Key_Event(key: Int(SDLK_ESCAPE.rawValue), pressed: false)
     }
     
     @objc func quickSavePressed(sender: UIButton!) {
-        Key_Event(key: SDLK_F5, pressed: true)
+        Key_Event(key: Int(SDLK_F5.rawValue), pressed: true)
     }
     
     @objc func quickSaveReleased(sender: UIButton!) {
-        Key_Event(key: SDLK_F5, pressed: false)
+        Key_Event(key: Int(SDLK_F5.rawValue), pressed: false)
         toggleStack()
     }
     
     @objc func quickLoadPressed(sender: UIButton!) {
-        Key_Event(key: SDLK_F9, pressed: true)
+        Key_Event(key: Int(SDLK_F9.rawValue), pressed: true)
     }
     
     @objc func quickLoadReleased(sender: UIButton!) {
-        Key_Event(key: SDLK_F9, pressed: false)
+        Key_Event(key: Int(SDLK_F9.rawValue), pressed: false)
         toggleStack()
     }
     
     // repurposing for flashlight
     @objc func flashlightPressed(sender: UIButton!) {
-        Key_Event(key: SDLK_f, pressed: true)
+        Key_Event(key: Int(SDLK_f.rawValue), pressed: true)
     }
     
     @objc func flashlightReleased(sender: UIButton!) {
-        Key_Event(key: SDLK_f, pressed: false)
+        Key_Event(key: Int(SDLK_f.rawValue), pressed: false)
     }
     
     @objc func pdaPressed(sender: UIButton!) {
-        Key_Event(key: SDLK_TAB, pressed: true)
+        Key_Event(key: Int(SDLK_TAB.rawValue), pressed: true)
     }
     
     @objc func pdaReleased(sender: UIButton!) {
-        Key_Event(key: SDLK_TAB, pressed: false)
+        Key_Event(key: Int(SDLK_TAB.rawValue), pressed: false)
     }
     
     @objc func prevWeaponPressed(sender: UIButton!) {
-        Key_Event(key: SDLK_LEFTBRACKET, pressed: true)
+        Key_Event(key: Int(SDLK_LEFTBRACKET.rawValue), pressed: true)
     }
     
     @objc func prevWeaponReleased(sender: UIButton!) {
-        Key_Event(key: SDLK_LEFTBRACKET, pressed: true)
+        Key_Event(key: Int(SDLK_LEFTBRACKET.rawValue), pressed: true)
     }
     
     @objc func nextWeaponPressed(sender: UIButton!) {
@@ -419,19 +419,19 @@ extension SDL_uikitviewcontroller {
     }
     
     @objc func crouchPressed(sender: UIButton!) {
-        Key_Event(key: SDLK_c, pressed: true)
+        Key_Event(key: Int(SDLK_c.rawValue), pressed: true)
     }
     
     @objc func crouchReleased(sender: UIButton!) {
-        Key_Event(key: SDLK_c, pressed: false)
+        Key_Event(key: Int(SDLK_c.rawValue), pressed: false)
     }
     
     @objc func reloadPressed(sender: UIButton!) {
-        Key_Event(key: SDLK_r, pressed: true)
+        Key_Event(key: Int(SDLK_r.rawValue), pressed: true)
     }
     
     @objc func reloadReleased(sender: UIButton!) {
-        Key_Event(key: SDLK_r, pressed: false)
+        Key_Event(key: Int(SDLK_r.rawValue), pressed: false)
     }
 
     func toggleStack() {

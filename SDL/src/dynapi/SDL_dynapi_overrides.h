@@ -1,6 +1,6 @@
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2018 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2020 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -701,3 +701,51 @@
 #define SDL_JoystickGetDevicePlayerIndex SDL_JoystickGetDevicePlayerIndex_REAL
 #define SDL_JoystickGetPlayerIndex SDL_JoystickGetPlayerIndex_REAL
 #define SDL_GameControllerGetPlayerIndex SDL_GameControllerGetPlayerIndex_REAL
+#define SDL_RenderFlush SDL_RenderFlush_REAL
+#define SDL_RenderDrawPointF SDL_RenderDrawPointF_REAL
+#define SDL_RenderDrawPointsF SDL_RenderDrawPointsF_REAL
+#define SDL_RenderDrawLineF SDL_RenderDrawLineF_REAL
+#define SDL_RenderDrawLinesF SDL_RenderDrawLinesF_REAL
+#define SDL_RenderDrawRectF SDL_RenderDrawRectF_REAL
+#define SDL_RenderDrawRectsF SDL_RenderDrawRectsF_REAL
+#define SDL_RenderFillRectF SDL_RenderFillRectF_REAL
+#define SDL_RenderFillRectsF SDL_RenderFillRectsF_REAL
+#define SDL_RenderCopyF SDL_RenderCopyF_REAL
+#define SDL_RenderCopyExF SDL_RenderCopyExF_REAL
+#define SDL_GetTouchDeviceType SDL_GetTouchDeviceType_REAL
+#define SDL_UIKitRunApp SDL_UIKitRunApp_REAL
+#define SDL_SIMDGetAlignment SDL_SIMDGetAlignment_REAL
+#define SDL_SIMDAlloc SDL_SIMDAlloc_REAL
+#define SDL_SIMDFree SDL_SIMDFree_REAL
+#define SDL_RWsize SDL_RWsize_REAL
+#define SDL_RWseek SDL_RWseek_REAL
+#define SDL_RWtell SDL_RWtell_REAL
+#define SDL_RWread SDL_RWread_REAL
+#define SDL_RWwrite SDL_RWwrite_REAL
+#define SDL_RWclose SDL_RWclose_REAL
+#define SDL_LoadFile SDL_LoadFile_REAL
+#define SDL_Metal_CreateView SDL_Metal_CreateView_REAL
+#define SDL_Metal_DestroyView SDL_Metal_DestroyView_REAL
+#define SDL_LockTextureToSurface SDL_LockTextureToSurface_REAL
+#define SDL_HasARMSIMD SDL_HasARMSIMD_REAL
+#define SDL_strtokr SDL_strtokr_REAL
+#define SDL_wcsstr SDL_wcsstr_REAL
+#define SDL_wcsncmp SDL_wcsncmp_REAL
+#define SDL_GameControllerTypeForIndex SDL_GameControllerTypeForIndex_REAL
+#define SDL_GameControllerGetType SDL_GameControllerGetType_REAL
+#define SDL_GameControllerFromPlayerIndex SDL_GameControllerFromPlayerIndex_REAL
+#define SDL_GameControllerSetPlayerIndex SDL_GameControllerSetPlayerIndex_REAL
+#define SDL_JoystickFromPlayerIndex SDL_JoystickFromPlayerIndex_REAL
+#define SDL_JoystickSetPlayerIndex SDL_JoystickSetPlayerIndex_REAL
+#define SDL_SetTextureScaleMode SDL_SetTextureScaleMode_REAL
+#define SDL_GetTextureScaleMode SDL_GetTextureScaleMode_REAL
+#define SDL_OnApplicationWillTerminate SDL_OnApplicationWillTerminate_REAL
+#define SDL_OnApplicationDidReceiveMemoryWarning SDL_OnApplicationDidReceiveMemoryWarning_REAL
+#define SDL_OnApplicationWillResignActive SDL_OnApplicationWillResignActive_REAL
+#define SDL_OnApplicationDidEnterBackground SDL_OnApplicationDidEnterBackground_REAL
+#define SDL_OnApplicationWillEnterForeground SDL_OnApplicationWillEnterForeground_REAL
+#define SDL_OnApplicationDidBecomeActive SDL_OnApplicationDidBecomeActive_REAL
+#define SDL_OnApplicationDidChangeStatusBarOrientation SDL_OnApplicationDidChangeStatusBarOrientation_REAL
+#define SDL_GetAndroidSDKVersion SDL_GetAndroidSDKVersion_REAL
+#define SDL_isupper SDL_isupper_REAL
+#define SDL_islower SDL_islower_REAL
