@@ -30,5 +30,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Automatic</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>DOOM 3 would like to remain connected to nearby bluetooth Game Controllers and Game Pads even when you’re not using the app.</string>
 </dict>
 </plist>
