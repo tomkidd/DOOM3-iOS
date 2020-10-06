@@ -36,7 +36,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eor-e5-7M8">
                                 <rect key="frame" x="1402" y="60" width="408" height="305"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="q u a k e  ii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1s-G9-Y44">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1s-G9-Y44">
                                         <rect key="frame" x="0.0" y="0.0" width="408" height="89"/>
                                         <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="72"/>
                                         <color key="textColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,7 +48,7 @@
                                         <color key="textColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="q u a k e  ii" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0W-da-TTt">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0W-da-TTt">
                                         <rect key="frame" x="0.0" y="89" width="408" height="0.0"/>
                                         <fontDescription key="fontDescription" name="AvQest" family="AvQest" pointSize="36"/>
                                         <color key="textColor" red="0.52561199670000003" green="0.86642056700000003" blue="0.69806873800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
