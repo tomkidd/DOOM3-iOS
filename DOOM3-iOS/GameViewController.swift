@@ -20,17 +20,6 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        #if os(tvOS)
-        let documentsDir = try! FileManager().url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path
-        #else
-        let documentsDir = try! FileManager().url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path
-        #endif
-
-//        print("documentsDir: \(documentsDir)")
-        
-        // todo: fix for DOOM3 -tkidd
-        //Sys_SetHomeDir(documentsDir)
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // Change `2.0` to the desired number of seconds.
             
             var argv: [String?] = [ Bundle.main.resourcePath! + "/doom3"];
@@ -39,7 +28,13 @@ class GameViewController: UIViewController {
 //            argv.append("game/alphalabs2")
         //    argv.append("\(self.difficulty)")
 
-            
+            #if os(tvOS)
+                let savesPath = try! FileManager().url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path
+                argv.append("+set")
+                argv.append("fs_savepath")
+                argv.append(savesPath)
+            #endif
+
             if self.difficulty >= 0 {
                 argv.append("+set")
                 argv.append("g_skill")
