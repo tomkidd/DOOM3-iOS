@@ -40,21 +40,23 @@ class GameViewController: UIViewController {
                 argv.append("g_skill")
                 argv.append("\(self.difficulty)")
             }
-            
-            if self.newgame {
-//                argv.append("+startGame")
-//                mars_city1
-                argv.append("+map")
-                argv.append("game/mars_city1")
-            }
-            
+
             // Mission Pack
             #if _D3XP
-            argv.append("+set")
-            argv.append("fs_game")
-            argv.append("d3xp")
+                argv.append("+set")
+                argv.append("fs_game")
+                argv.append("d3xp")
+
+                let startMap = "erebus1"
+            #else
+                let startMap = "mars_city1"
             #endif
-            
+
+            if self.newgame {
+                argv.append("+map")
+                argv.append("game/\(startMap)")
+            }
+
             if !self.selectedSavedGame.isEmpty {
                 argv.append("+loadGame")
                 argv.append(self.selectedSavedGame)
