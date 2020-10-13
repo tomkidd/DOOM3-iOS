@@ -698,14 +698,13 @@ void idUsercmdGenLocal::JoystickMove( void ) {
         } else {
             viewangles[PITCH] += anglespeed * in_pitchSpeed.GetFloat() * joystickAxis[AXIS_FORWARD];
         }
-        cmd.forwardmove = idMath::ClampChar( cmd.forwardmove + (joystickAxis[AXIS_UP] * 50) );
-        viewangles[YAW] += anglespeed * in_yawSpeed.GetFloat() * joystickAxis[AXIS_YAW];
-//        printf("joystickAxis[AXIS_SIDE]: %i\n",joystickAxis[AXIS_SIDE]);
-        cmd.rightmove = idMath::ClampChar( cmd.rightmove + joystickAxis[AXIS_SIDE] );
 #else
-        viewangles[YAW] += anglespeed * in_yawSpeed.GetFloat() * joystickAxis[AXIS_SIDE];
         viewangles[PITCH] += anglespeed * in_pitchSpeed.GetFloat() * joystickAxis[AXIS_FORWARD];
 #endif
+		cmd.forwardmove = idMath::ClampChar( cmd.forwardmove + (joystickAxis[AXIS_UP] * 50) );
+		viewangles[YAW] += anglespeed * in_yawSpeed.GetFloat() * joystickAxis[AXIS_YAW];
+//        printf("joystickAxis[AXIS_SIDE]: %i\n",joystickAxis[AXIS_SIDE]);
+		cmd.rightmove = idMath::ClampChar( cmd.rightmove + joystickAxis[AXIS_SIDE] );
 	} else {
 		cmd.rightmove = idMath::ClampChar( cmd.rightmove + joystickAxis[AXIS_SIDE] );
 		cmd.forwardmove = idMath::ClampChar( cmd.forwardmove + joystickAxis[AXIS_FORWARD] );
