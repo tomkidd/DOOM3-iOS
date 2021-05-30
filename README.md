@@ -1,3 +1,7 @@
+<hr>
+<img align="left" width="50" height="50" src="https://schnapple.com/wp-content/uploads/2021/05/m1_small.jpg">
+I'm trying to fund an M1 Mac to keep old games running on new Macs. If you'd like to help you can contribute here: https://ko-fi.com/schnapple
+<hr>
 <img align="left" width="100" height="100" src="https://raw.githubusercontent.com/tomkidd/DOOM3-iOS/master/icon_doom3.png">  
 
 #  DOOM 3 for iOS and tvOS for Apple TV
@@ -25,9 +29,9 @@ You will need to provide your own copies of the `base` and `d3xp` directories fr
 
 There are two Xcode project files, one for DOOM 3, `DOOM3-iOS.xcodeproj`, and one for the expansion pack, `DOOM3xp-iOS.xcodeproj`. You will need to drag your directories into the project and select "Create Folder References". The `base` folder needs to be added to the DOOM 3 project and target, while both the `base` and `d3xp` folders need to be added to the expansion pack project. The folders will be blue if you've done it right:
 
-![folders](https://github.com/tomkidd/DOOM3-iOS/raw/master/folders.png)
+![folders](https://raw.githubusercontent.com/tomkidd/DOOM3-iOS/master/folders.png)
 
-![foldersxp](https://github.com/tomkidd/DOOM3-iOS/raw/master/foldersxp.png)
+![foldersxp](https://raw.githubusercontent.com/tomkidd/DOOM3-iOS/master/foldersxp.png)
 
 You can read a lengthy blog article on how I did all this [here](http://schnapple.com/doom-3-for-ios-and-tvos-for-apple-tv/).
 
