@@ -1,7 +1,3 @@
-<hr>
-<img align="left" width="50" height="50" src="https://schnapple.com/wp-content/uploads/2021/05/m1_small.jpg">
-I'm trying to fund an M1 Mac to keep old games running on new Macs. If you'd like to help you can contribute here: https://ko-fi.com/schnapple
-<hr>
 <img align="left" width="100" height="100" src="https://raw.githubusercontent.com/tomkidd/DOOM3-iOS/master/icon_doom3.png">  
 
 #  DOOM 3 for iOS and tvOS for Apple TV
