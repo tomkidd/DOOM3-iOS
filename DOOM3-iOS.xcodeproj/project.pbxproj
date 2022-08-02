@@ -725,7 +725,7 @@
 /* Begin PBXFileReference section */
 		8D1107310486CEB800E47090 /* DOOM3-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DOOM3-Info.plist"; sourceTree = "<group>"; };
 		A142F96822138D02006A2A17 /* SavedGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedGameViewController.swift; sourceTree = "<group>"; };
-		A150EBD72222196D001286CF /* base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = base; path = ../../doom3xcode/Debug/base; sourceTree = "<group>"; };
+		A150EBD72222196D001286CF /* base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = base; path = "../../../Library/Application Support/dhewm3/base"; sourceTree = "<group>"; };
 		A15BF74A21FCF7E3005F4B74 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A15BF75721FD02A0005F4B74 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A15BF75921FD02AD005F4B74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -2474,7 +2474,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					A1B80A4521F96DAA00560711 = {
 						DevelopmentTeam = 9UY8SFDNQ8;
@@ -3480,6 +3480,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = NO;
 				CLANG_WARN_PRAGMA_PACK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = NO;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = NO;
@@ -3536,6 +3537,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = NO;
 				CLANG_WARN_PRAGMA_PACK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = NO;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = NO;
