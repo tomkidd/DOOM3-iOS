@@ -1,13 +1,7 @@
-//
-//  GameViewController.swift
-//  DOOM3-iOS
-//
-//  Created by Tom Kidd on 1/26/19.
-//
-
 import UIKit
+import GameController
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, JoystickDelegate {
     
     var difficulty = -1
     var newgame = false
@@ -16,18 +10,25 @@ class GameViewController: UIViewController {
     @IBOutlet weak var loadingLabel: UILabel!
 
     var selectedSavedGame = ""
-
+    
+    // New properties for joystick and controller support
+    var joyStickView: JoyStickView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set up touch-based joystick
+        joyStickView = JoyStickView(frame: CGRect(x: 50, y: 50, width: 100, height: 100))
+        joyStickView.delegate = self
+        view.addSubview(joyStickView)
+        
+        // Set up controller input system
+        ControllerInputSystem.shared.delegate = self
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // Change `2.0` to the desired number of seconds.
             
             var argv: [String?] = [ Bundle.main.resourcePath! + "/doom3"];
             
-//            argv.append("+map")
-//            argv.append("game/alphalabs2")
-        //    argv.append("\(self.difficulty)")
-
             #if os(tvOS)
                 let savesPath = try! FileManager().url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true).path
                 argv.append("+set")
@@ -78,8 +79,25 @@ class GameViewController: UIViewController {
             Sys_Startup(argc, &cargs)
 
             for ptr in cargs { free(UnsafeMutablePointer(mutating: ptr)) }
-
         }
+    }
+    
+    // MARK: - JoystickDelegate methods
+    
+    func handleJoyStick(angle: CGFloat, displacement: CGFloat) {
+        // Handle joystick input (works for both touch and controller)
+        print("Angle: \(angle), Displacement: \(displacement)")
+        // Add your game logic here to handle joystick input
+        // You might want to call a method in your game engine to move the player
+        // For example: movePlayer(angle: angle, displacement: displacement)
+    }
+    
+    func handleJoyStickPosition(x: CGFloat, y: CGFloat) {
+        // Handle joystick position (works for both touch and controller)
+        print("X: \(x), Y: \(y)")
+        // Add your game logic here to handle joystick position
+        // You might want to call a method in your game engine to move the player
+        // For example: movePlayer(x: x, y: y)
     }
     
     #if os(iOS)
@@ -92,15 +110,4 @@ class GameViewController: UIViewController {
         return .bottom
     }
     #endif
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
